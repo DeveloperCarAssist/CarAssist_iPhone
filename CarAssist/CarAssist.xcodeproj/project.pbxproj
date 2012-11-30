@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
+		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
+		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
+		37E717A916690D2400F6B11F /* ProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E717A716690D2400F6B11F /* ProfilController.xib */; };
+		37E717AC16690FCF00F6B11F /* CarListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717AB16690FCF00F6B11F /* CarListService.m */; };
 		400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8481668F0F100D6217B /* UIKit.framework */; };
 		400DF84B1668F0F100D6217B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF84A1668F0F100D6217B /* Foundation.framework */; };
 		400DF84D1668F0F100D6217B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF84C1668F0F100D6217B /* CoreGraphics.framework */; };
@@ -45,6 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
+		37E717A016690CAB00F6B11F /* Profil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profil.m; sourceTree = "<group>"; };
+		37E717A516690D2400F6B11F /* ProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilController.h; sourceTree = "<group>"; };
+		37E717A616690D2400F6B11F /* ProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilController.m; sourceTree = "<group>"; };
+		37E717A716690D2400F6B11F /* ProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilController.xib; sourceTree = "<group>"; };
+		37E717AA16690FCF00F6B11F /* CarListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListService.h; sourceTree = "<group>"; };
+		37E717AB16690FCF00F6B11F /* CarListService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListService.m; sourceTree = "<group>"; };
 		400DF8441668F0F100D6217B /* CarAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		400DF8481668F0F100D6217B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		400DF84A1668F0F100D6217B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -207,6 +221,9 @@
 				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
 				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
 				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
+				37E717A516690D2400F6B11F /* ProfilController.h */,
+				37E717A616690D2400F6B11F /* ProfilController.m */,
+				37E717A716690D2400F6B11F /* ProfilController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -216,6 +233,10 @@
 			children = (
 				400DF8931669080600D6217B /* WarningLight.h */,
 				400DF8941669080600D6217B /* WarningLight.m */,
+				37E7179B16690C5E00F6B11F /* Car.h */,
+				37E7179C16690C5E00F6B11F /* Car.m */,
+				37E7179F16690CAB00F6B11F /* Profil.h */,
+				37E717A016690CAB00F6B11F /* Profil.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -225,6 +246,8 @@
 			children = (
 				400DF8971669082600D6217B /* WarningLightStockService.h */,
 				400DF8981669082600D6217B /* WarningLightStockService.m */,
+				37E717AA16690FCF00F6B11F /* CarListService.h */,
+				37E717AB16690FCF00F6B11F /* CarListService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -309,6 +332,7 @@
 				400DF8861668F1D700D6217B /* AppIcon_iPhone_gross.png in Resources */,
 				400DF88D1669056900D6217B /* WarningViewController.xib in Resources */,
 				400DF89E1669085E00D6217B /* WarningLightCollectionViewController.xib in Resources */,
+				37E717A916690D2400F6B11F /* ProfilController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +375,10 @@
 				400DF8991669082600D6217B /* WarningLightStockService.m in Sources */,
 				400DF89D1669085E00D6217B /* WarningLightCollectionViewController.m in Sources */,
 				400DF8A116690A9900D6217B /* WarningLightCollectionViewCell.m in Sources */,
+				37E7179D16690C5E00F6B11F /* Car.m in Sources */,
+				37E717A116690CAB00F6B11F /* Profil.m in Sources */,
+				37E717A816690D2400F6B11F /* ProfilController.m in Sources */,
+				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +553,7 @@
 				400DF87F1668F0F200D6217B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		400DF8801668F0F200D6217B /* Build configuration list for PBXNativeTarget "CarAssistTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +562,7 @@
 				400DF8821668F0F200D6217B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
