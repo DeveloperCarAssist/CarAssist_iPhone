@@ -39,6 +39,7 @@
 		400DF8AD166910BF00D6217B /* parkbremse.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A9166910BF00D6217B /* parkbremse.png */; };
 		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
+		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		400DF8A9166910BF00D6217B /* parkbremse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkbremse.png; sourceTree = "<group>"; };
 		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				400DF8A7166910BF00D6217B /* bremsanlage.png */,
+				400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */,
 				400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */,
 				400DF8A9166910BF00D6217B /* parkbremse.png */,
 				400DF8AA166910BF00D6217B /* warnleuchte.png */,
@@ -338,6 +341,7 @@
 				400DF8AC166910BF00D6217B /* feststellbremsenleuchte.png in Resources */,
 				400DF8AD166910BF00D6217B /* parkbremse.png in Resources */,
 				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
+				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
