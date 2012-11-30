@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// Main ViewContainer
+@property (nonatomic) UITabBarController* tabBarController;
+
 @property (strong, nonatomic) ViewController *viewController;
 
 @end

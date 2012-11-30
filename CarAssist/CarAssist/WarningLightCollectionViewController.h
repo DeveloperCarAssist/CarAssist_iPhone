@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WarningLightStockService.h"
 
 @interface WarningLightCollectionViewController : UIViewController
+
+@property (nonatomic) WarningLightStockService* warningLightStockService;
+@property (nonatomic) IBOutlet UICollectionView* warningLightCollectionView;
 
 @end

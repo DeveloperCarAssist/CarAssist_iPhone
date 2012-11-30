@@ -15,9 +15,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    UITabBarItem* tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Peter" image:nil tag:1];
+    [self.viewController setTabBarItem:tabBarItem];
+    
+    self.tabBarController.viewControllers = [NSArray arrayWithObject:self.viewController];
+
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
