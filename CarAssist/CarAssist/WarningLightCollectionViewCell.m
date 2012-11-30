@@ -7,6 +7,7 @@
 //
 
 #import "WarningLightCollectionViewCell.h"
+#import <QuartzCore/CoreAnimation.h>
 
 @interface WarningLightCollectionViewCell()
 
@@ -32,6 +33,10 @@
       
         [self setBackgroundView:view];
         [self.contentView addSubview:self.imageView];
+        
+        self.layer.cornerRadius = 10;
+        self.layer.masksToBounds = YES;
+    
       
 
     }
