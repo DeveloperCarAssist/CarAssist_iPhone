@@ -32,6 +32,13 @@
 		400DF89D1669085E00D6217B /* WarningLightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */; };
 		400DF89E1669085E00D6217B /* WarningLightCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */; };
 		400DF8A116690A9900D6217B /* WarningLightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */; };
+		400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF8A316690C7600D6217B /* WarningLightViewController.m */; };
+		400DF8A616690C7600D6217B /* WarningLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A416690C7600D6217B /* WarningLightViewController.xib */; };
+		400DF8AB166910BF00D6217B /* bremsanlage.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A7166910BF00D6217B /* bremsanlage.png */; };
+		400DF8AC166910BF00D6217B /* feststellbremsenleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */; };
+		400DF8AD166910BF00D6217B /* parkbremse.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A9166910BF00D6217B /* parkbremse.png */; };
+		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
+		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,14 @@
 		400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WarningLightCollectionViewController.xib; sourceTree = "<group>"; };
 		400DF89F16690A9900D6217B /* WarningLightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightCollectionViewCell.h; sourceTree = "<group>"; };
 		400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightCollectionViewCell.m; sourceTree = "<group>"; };
+		400DF8A216690C7600D6217B /* WarningLightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightViewController.h; sourceTree = "<group>"; };
+		400DF8A316690C7600D6217B /* WarningLightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightViewController.m; sourceTree = "<group>"; };
+		400DF8A416690C7600D6217B /* WarningLightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WarningLightViewController.xib; sourceTree = "<group>"; };
+		400DF8A7166910BF00D6217B /* bremsanlage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bremsanlage.png; sourceTree = "<group>"; };
+		400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feststellbremsenleuchte.png; sourceTree = "<group>"; };
+		400DF8A9166910BF00D6217B /* parkbremse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkbremse.png; sourceTree = "<group>"; };
+		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
+		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */,
 				400DF84B1668F0F100D6217B /* Foundation.framework in Frameworks */,
 				400DF84D1668F0F100D6217B /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +146,7 @@
 		400DF8471668F0F100D6217B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				400DF8AF166912C400D6217B /* QuartzCore.framework */,
 				400DF8481668F0F100D6217B /* UIKit.framework */,
 				400DF84A1668F0F100D6217B /* Foundation.framework */,
 				400DF84C1668F0F100D6217B /* CoreGraphics.framework */,
@@ -190,6 +207,10 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				400DF8A7166910BF00D6217B /* bremsanlage.png */,
+				400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */,
+				400DF8A9166910BF00D6217B /* parkbremse.png */,
+				400DF8AA166910BF00D6217B /* warnleuchte.png */,
 				400DF8851668F1D700D6217B /* AppIcon_iPhone_gross.png */,
 				400DF8831668F1A000D6217B /* AppIcon_iPhone_klein.png */,
 			);
@@ -207,6 +228,9 @@
 				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
 				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
 				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
+				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
+				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
+				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -309,6 +333,11 @@
 				400DF8861668F1D700D6217B /* AppIcon_iPhone_gross.png in Resources */,
 				400DF88D1669056900D6217B /* WarningViewController.xib in Resources */,
 				400DF89E1669085E00D6217B /* WarningLightCollectionViewController.xib in Resources */,
+				400DF8A616690C7600D6217B /* WarningLightViewController.xib in Resources */,
+				400DF8AB166910BF00D6217B /* bremsanlage.png in Resources */,
+				400DF8AC166910BF00D6217B /* feststellbremsenleuchte.png in Resources */,
+				400DF8AD166910BF00D6217B /* parkbremse.png in Resources */,
+				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +380,7 @@
 				400DF8991669082600D6217B /* WarningLightStockService.m in Sources */,
 				400DF89D1669085E00D6217B /* WarningLightCollectionViewController.m in Sources */,
 				400DF8A116690A9900D6217B /* WarningLightCollectionViewCell.m in Sources */,
+				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,10 @@
 
 #import "WarningLightCollectionViewController.h"
 #import "WarningLight.h"
-// #import "WarningLightViewController.h"
+#import "WarningLightViewController.h"
 #import "WarningLightCollectionViewCell.h"
 
-@interface WarningLightCollectionViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface WarningLightCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 
@@ -30,39 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Warnleuchten";
     [self.warningLightCollectionView registerClass:WarningLightCollectionViewCell.class forCellWithReuseIdentifier:@"WarningLightCollectionViewCell"];
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.warningLightStockService.warningLights.count;
-}
-
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    WarningLight* currentWarningLight = [self.warningLightStockService.warningLights objectAtIndex:indexPath.row];
-    
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:@"standard"];
-    }
-    
-    cell.textLabel.text = currentWarningLight.name;
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    WarningLight* currentWarningLight = [self.warningLightStockService.warningLights objectAtIndex:indexPath.row];
-    WarningLightViewController* viewController = [[WarningLightViewController alloc] initWithWarningLight: currentWarningLight];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
-
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

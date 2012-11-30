@@ -7,6 +7,7 @@
 //
 
 #import "WarningViewController.h"
+#import "WarningLightCollectionViewController.h"
 
 @interface WarningViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,12 +19,12 @@
 {
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"Störungen";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -34,14 +35,37 @@
                                       reuseIdentifier:@"standard"];
     }
     
-    cell.textLabel.text = @"Warnleuchten";
+    UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsanlage" ofType:@"png"]];
+    
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"Warnleuchten";
+
+            [cell.imageView setImage:warningLightCategoryImage];
+            break;
+        case 1:
+            cell.textLabel.text = @"Pannenhilfe";
+            break;
+        case 2:
+            cell.textLabel.text = @"Vertragswerkstätten";
+            break;
+        case 3:
+            cell.textLabel.text = @"Störung beheben";
+            break;
+        default:
+            cell.textLabel.text = @"Einer zu viel :P";
+            break;
+    }
+    ;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WarningLightContainerViewController* viewController = [[WarningLightContainerViewController alloc] init];
-    [self.navigationController pushViewController:viewController animated:YES];
+    if (indexPath.row == 0) {
+        WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 @end
