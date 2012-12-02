@@ -22,6 +22,10 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
+    self.profilController=  [[ProfilController alloc] init];
+    self.ProfilNavigationController= [[UINavigationController alloc] initWithRootViewController:self.profilController];
+
+    
     self.tabBarController = [[UITabBarController alloc] init];
 
     UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:nil tag:1];
@@ -30,9 +34,12 @@
     UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image:nil tag:2];
     [self.warningNavigationController setTabBarItem:tabBarItem2];
     
+    UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:nil tag:3];
+    [self.ProfilNavigationController setTabBarItem:tabBarItem3];
+    
     
     NSArray *viewControllers = [NSArray arrayWithObjects:self.serviceNavigationController,
-                                self.warningNavigationController,nil];
+                                self.warningNavigationController, self.ProfilNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
     

@@ -26,9 +26,11 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     self.profil=[[Profil alloc] initWithExampleData];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
@@ -42,14 +44,14 @@
 
 -(IBAction) editButtonpressed:(id)sender
 {
-    if (self.wahr) {
+    if (!self.wahr) {
         [self.firstName setEnabled:YES];
         [self.lastName setEnabled:YES];
       //  [self.carModell setEnabled:YES];
       //  [self.carProducer setEnabled:YES];
         [self.emailAdress setEnabled:YES];
         [self.lieblingsKEKSEEE setEnabled:true];
-        self.wahr = FALSE;
+        self.wahr=FALSE;
     }
     else
     {
