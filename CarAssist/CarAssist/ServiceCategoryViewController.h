@@ -11,4 +11,8 @@
 
 @interface ServiceCategoryViewController : UIViewController
 @property (nonatomic) ServiceGuideStockService *serviceGuideStockService;
+@property (nonatomic) IBOutlet UITableView* serviceGuideTableView;
+@property (nonatomic) IBOutlet UISearchBar* serviceSearchBar;
+
+
 @end

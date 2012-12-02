@@ -15,4 +15,6 @@
  */
 @property (nonatomic) NSMutableDictionary* guides;
 
+- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText;
+
 @end
