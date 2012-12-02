@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Car.h"
 #import "Profil.h"
+#import "ProducerViewController.h"
 
 @interface CarProfilViewController : UIViewController
 
 @property (nonatomic) IBOutlet UITextField *modell,*producer,*radio,*navigation,*seatHeater;
+@property IBOutlet UIButton *modelButton;
 @property Car *car;
 @property Profil *profil;
 //Der Controller wird mit einem Car geöffnet wenn dieses Verändert wird
@@ -22,6 +24,8 @@
 
 //SpeicherButton
 -(IBAction)saveButtonPressed:(id)sender;
+//Wenn auf den ModellButton Gedrückt wird
+-(IBAction)modellButtonPressd:(id)sender;
 
 -(IBAction) returnButton:(UITextField*)sender;
 @end

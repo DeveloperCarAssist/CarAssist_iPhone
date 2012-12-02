@@ -48,12 +48,20 @@ return self;
     // Do any additional setup after loading the view from its nib.
     
     [self.modell setText: self.car.modell];
+    [self.modelButton setTitle:self.car.modell  forState:UIControlStateNormal];
     [self.producer setText:self.car.producer];
     [self.radio setText:self.car.radio];
     [self.navigation setText:self.car.navigation];
     [self.seatHeater setText: self.car.seatHeater];
 }
 
+-(IBAction)modellButtonPressd:(id)sender
+{
+    /**
+    ProducerViewController *producercontroller = [[ProducerViewController alloc] init];
+     [self.navigationController pushViewController:producercontroller animated:YES];
+     **/
+}
 -(IBAction)saveButtonPressed:(id)sender
 {
     if(self.newCar)
