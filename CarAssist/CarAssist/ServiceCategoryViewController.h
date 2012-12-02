@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServiceGuideStockService.h"
 
 @interface ServiceCategoryViewController : UIViewController
-
+@property (nonatomic) ServiceGuideStockService *serviceGuideStockService;
 @end
