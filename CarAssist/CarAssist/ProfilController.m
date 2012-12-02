@@ -21,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+            self.profil=[[Profil alloc] initWithExampleData];
     }
     return self;
 }
@@ -29,7 +30,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.profil=[[Profil alloc] initWithDefault];
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
     [self.firstName setText:self.profil.vorname];
@@ -45,8 +45,8 @@
     if (self.wahr) {
         [self.firstName setEnabled:YES];
         [self.lastName setEnabled:YES];
-        [self.carModell setEnabled:YES];
-        [self.carProducer setEnabled:YES];
+      //  [self.carModell setEnabled:YES];
+      //  [self.carProducer setEnabled:YES];
         [self.emailAdress setEnabled:YES];
         [self.lieblingsKEKSEEE setEnabled:true];
         self.wahr = FALSE;
@@ -54,11 +54,15 @@
     else
     {
         [self.firstName setEnabled:FALSE];
+        self.profil.vorname=[self.firstName text];
         [self.lastName setEnabled:FALSE];
+         self.profil.nachname=[self.lastName text];
         [self.carModell setEnabled:FALSE];
         [self.carProducer setEnabled:FALSE];
         [self.emailAdress setEnabled:FALSE];
+         self.profil.emailAdresse=[self.emailAdress text];
         [self.lieblingsKEKSEEE setEnabled:false];
+         self.profil.lieblingsKEKSEEE=[self.lieblingsKEKSEEE text];
         self.wahr = true;
     }
 }

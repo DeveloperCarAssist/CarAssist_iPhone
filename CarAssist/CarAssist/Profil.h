@@ -13,6 +13,6 @@
 @property (strong) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
 @property Car *car;
 
--(Profil*) initWithDefault;
+-(Profil*) initWithExampleData;
 
 @end

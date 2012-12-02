@@ -11,5 +11,5 @@
 @interface Car : NSObject
 @property NSString *modell, *producer, *radio, *navigation, *seatHeater;
 
--(Car*) initWithDefault;
+-(Car*) initWithExampleData;
 @end

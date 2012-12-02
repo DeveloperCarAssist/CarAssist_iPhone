@@ -19,7 +19,7 @@
 {
     self =  [super init];
     if(self) {
-                Car *car = [[Car alloc ]initWithDefault];
+                Car *car = [[Car alloc ]initWithExampleData];
     self.producerlist= [[NSMutableArray alloc] initWithObjects: car.producer, nil];
         self.modelList= [[NSMutableDictionary alloc] initWithCapacity: self.producerlist.count];
         NSMutableArray *forBMW = [[NSMutableArray alloc] initWithObjects: car , nil];
