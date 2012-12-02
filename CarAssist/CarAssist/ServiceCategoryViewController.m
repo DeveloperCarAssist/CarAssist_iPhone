@@ -71,6 +71,11 @@
     return cell;
 }
 
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellAccessoryDetailDisclosureButton;
+}
+
 /* Indexliste am Rand. Wird zunächst nicht benötigt.
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return [self.serviceGuideStockService.guides allKeys];

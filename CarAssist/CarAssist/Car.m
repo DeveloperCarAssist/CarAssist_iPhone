@@ -23,4 +23,18 @@
     }
     return self;
 }
+
+-(Car*) initNewCar
+{
+    self = [super init];
+    if (self)
+    {
+        self.modell=@"Geben Sie hier ihr Modell ein";
+        self.producer=@"Geben Sie hier ihr Hersteller ein";
+        self.radio=@"Standard";
+        self.seatHeater=@"Standard";
+        self.navigation=@"Standard";
+    }
+    return self;
+}
 @end
