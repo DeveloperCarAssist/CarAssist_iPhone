@@ -71,9 +71,29 @@
     return cell;
 }
 
+/* Indexliste am Rand. Wird zunächst nicht benötigt.
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.serviceGuideStockService.guides allKeys];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    // return sth
+}
+*/
+
+- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSString *key = [keys objectAtIndex:section];
+    return key;
+    
+}
+
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
+        // TODO: Ansicht eines einzelnen Guides erzeugen 
         //WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
         //[self.navigationController pushViewController:viewController animated:YES];
     }
