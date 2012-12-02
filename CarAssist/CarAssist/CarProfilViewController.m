@@ -69,6 +69,11 @@ self.car.navigation = [self.navigation text];
 self.car.seatHeater = [self.seatHeater text];
 }
 
+-(IBAction) returnButton:(UITextField*)sender
+{
+    [sender resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
