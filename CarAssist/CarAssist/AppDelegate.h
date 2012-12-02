@@ -32,5 +32,4 @@
 // Profil Controllers
 @property (nonatomic) ProfilController* profilController;
 @property (nonatomic) UINavigationController* ProfilNavigationController;
-
 @end
