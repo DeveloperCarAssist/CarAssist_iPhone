@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		375C713B166B808700B48C11 /* AutoProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7139166B808700B48C11 /* AutoProfilController.m */; };
 		375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C713A166B808700B48C11 /* AutoProfilController.xib */; };
+		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
+		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
+		375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7155166B93EE00B48C11 /* CarProfilViewController.m */; };
+		375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7156166B93EF00B48C11 /* CarProfilViewController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -71,6 +75,12 @@
 		375C7138166B808700B48C11 /* AutoProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoProfilController.h; sourceTree = "<group>"; };
 		375C7139166B808700B48C11 /* AutoProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoProfilController.m; sourceTree = "<group>"; };
 		375C713A166B808700B48C11 /* AutoProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoProfilController.xib; sourceTree = "<group>"; };
+		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
+		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
+		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
+		375C7154166B93EE00B48C11 /* CarProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarProfilViewController.h; sourceTree = "<group>"; };
+		375C7155166B93EE00B48C11 /* CarProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarProfilViewController.m; sourceTree = "<group>"; };
+		375C7156166B93EF00B48C11 /* CarProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarProfilViewController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -287,6 +297,12 @@
 				661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */,
 				661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */,
 				661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */,
+				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
+				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
+				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
+				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
+				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
+				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,6 +446,8 @@
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
 				375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */,
 				661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */,
+				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
+				375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +500,8 @@
 				40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */,
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
+				375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */,
+				375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

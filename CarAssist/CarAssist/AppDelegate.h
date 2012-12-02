@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ServiceCategoryViewController.h"
 #import "WarningCategoryViewController.h"
+#import "ProfilController.h"
 
 @class ViewController;
 
@@ -27,4 +28,8 @@
 @property (nonatomic) ServiceCategoryViewController* serviceViewController;
 @property (nonatomic) UINavigationController* serviceNavigationController;
 
+
+// Profil Controllers
+@property (nonatomic) ProfilController* profilController;
+@property (nonatomic) UINavigationController* ProfilNavigationController;
 @end
