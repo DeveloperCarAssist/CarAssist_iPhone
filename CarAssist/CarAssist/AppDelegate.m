@@ -22,7 +22,7 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
-    self.profilController=  [[ProfilController alloc] init];
+    self.profilController=  [[ProfilController alloc] initWithProfil: [[Profil alloc] initWithExampleData]];
     self.ProfilNavigationController= [[UINavigationController alloc] initWithRootViewController:self.profilController];
 
     
