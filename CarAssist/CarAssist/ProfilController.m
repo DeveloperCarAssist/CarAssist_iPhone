@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.profil=[[Profil alloc] initWithDefault];
+    self.profil=[[Profil alloc] initWithExampleData];
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
     [self.firstName setText:self.profil.vorname];

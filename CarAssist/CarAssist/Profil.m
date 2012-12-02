@@ -10,12 +10,12 @@
 
 @implementation Profil
 
--(Profil*) initWithDefault
+-(Profil*) initWithExampleData
 {
     self = [super init];
     if (self)
     {
-        self.car=[[Car alloc]initWithDefault];
+        self.car=[[Car alloc]initWithExampleData];
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";

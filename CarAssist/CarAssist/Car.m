@@ -10,7 +10,7 @@
 
 @implementation Car
 
--(Car*) initWithDefault
+-(Car*) initWithExampleData
 {
     self = [super init];
     if (self)
