@@ -15,9 +15,12 @@
 @property (nonatomic) IBOutlet UITextField *modell,*producer,*radio,*navigation,*seatHeater;
 @property Car *car;
 @property Profil *profil;
-
+//Der Controller wird mit einem Car geöffnet wenn dieses Verändert wird
 -(CarProfilViewController*) initWithCar: (Car*) car;
+//Der Controller wird mit einem Profil erstellt, wenn ein neues Auto erstellt wird
 -(CarProfilViewController*) initWithProfil: (Profil*) profil;
+
+//SpeicherButton
 -(IBAction)saveButtonPressed:(id)sender;
 
 -(IBAction) returnButton:(UITextField*)sender;
