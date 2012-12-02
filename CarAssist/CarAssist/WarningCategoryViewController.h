@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WarningViewController : UIViewController
+@interface WarningCategoryViewController : UIViewController
 
 @end

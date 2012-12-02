@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WarningViewController.h"
+#import "WarningCategoryViewController.h"
 
 @class ViewController;
 
@@ -19,7 +19,7 @@
 @property (nonatomic) UITabBarController* tabBarController;
 
 // Warning Controllers
-@property (nonatomic) WarningViewController* warningViewController;
+@property (nonatomic) WarningCategoryViewController* warningViewController;
 @property (nonatomic) UINavigationController* warningNavigationController;
 
 @end

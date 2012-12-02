@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "WarningViewController.h"
+#import "WarningCategoryViewController.h"
 #import "WarningLightCollectionViewController.h"
 
-@interface WarningViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation WarningViewController
+@implementation WarningCategoryViewController
 
 - (void)viewDidLoad
 {

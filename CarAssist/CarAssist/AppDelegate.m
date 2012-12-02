@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.warningViewController = [[WarningViewController alloc] init];
+    self.warningViewController = [[WarningCategoryViewController alloc] init];
     self.warningNavigationController = [[UINavigationController alloc] initWithRootViewController:self.warningViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
