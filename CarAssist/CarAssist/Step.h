@@ -12,4 +12,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *desc;
 @property (nonatomic) UIImage *image;
+
+- (Step*) initWithName: (NSString*) name Description: (NSString*) desc AndImage: (UIImage*) image;
+
 @end

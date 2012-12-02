@@ -10,6 +10,9 @@
 
 @interface ServiceGuideStockService : NSObject
 
-@property (nonatomic) NSDictionary* guides;
+/**
+ * Maped vom Kategorie-Namen auf die Liste von Anleitungen dieser Kategorie.
+ */
+@property (nonatomic) NSMutableDictionary* guides;
 
 @end

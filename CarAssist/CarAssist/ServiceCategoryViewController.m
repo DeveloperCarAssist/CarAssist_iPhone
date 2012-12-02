@@ -7,6 +7,8 @@
 //
 
 #import "ServiceCategoryViewController.h"
+#import "ServiceGuideStockService.h"
+#import "Guide.h"
 
 @interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -14,12 +16,11 @@
 
 @implementation ServiceCategoryViewController
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.serviceGuideStockService = [[ServiceGuideStockService alloc] init];
     }
     return self;
 }
@@ -36,10 +37,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    return [keys count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // todo: dynamisch
-    return 4;
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
+    
+    return guidesOfCategory.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,41 +56,44 @@
     
      
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
-    /*
+    
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
+        
+        NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+        NSString *key = [keys objectAtIndex:indexPath.section];
+        NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
+        Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
+        cell.textLabel.text = guide.name;
     }
     
-    UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];
-    
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.text = @"Warnleuchten";
-            
-            [cell.imageView setImage:warningLightCategoryImage];
-            break;
-        case 1:
-            cell.textLabel.text = @"Pannenhilfe";
-            break;
-        case 2:
-            cell.textLabel.text = @"Vertragswerkstätten";
-            break;
-        case 3:
-            cell.textLabel.text = @"Störung beheben";
-            break;
-        default:
-            cell.textLabel.text = @"Einer zu viel :P";
-            break;
-    }
-    ;
-    */
     return cell;
 }
+
+/* Indexliste am Rand. Wird zunächst nicht benötigt.
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.serviceGuideStockService.guides allKeys];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    // return sth
+}
+*/
+
+- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSString *key = [keys objectAtIndex:section];
+    return key;
+    
+}
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
+        // TODO: Ansicht eines einzelnen Guides erzeugen 
         //WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
         //[self.navigationController pushViewController:viewController animated:YES];
     }

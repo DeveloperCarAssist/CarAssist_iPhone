@@ -52,6 +52,9 @@
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
 		40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* ServiceGuideStockService.m */; };
+		40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */; };
+		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
+		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
 		661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */; };
@@ -136,6 +139,12 @@
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
 		40C3274F166B89BB00BC049B /* ServiceGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockService.h; sourceTree = "<group>"; };
 		40C32750166B89BB00BC049B /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
+		40C32757166B942F00BC049B /* ServiceGuideStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockServiceTest.h; sourceTree = "<group>"; };
+		40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockServiceTest.m; sourceTree = "<group>"; };
+		40C3275E166B9A5400BC049B /* StepTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTests.h; sourceTree = "<group>"; };
+		40C3275F166B9A5400BC049B /* StepTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTests.m; sourceTree = "<group>"; };
+		40C32762166B9A6100BC049B /* GuideTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideTests.h; sourceTree = "<group>"; };
+		40C32763166B9A6100BC049B /* GuideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTests.m; sourceTree = "<group>"; };
 		40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightStockServiceTest.h; sourceTree = "<group>"; };
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
@@ -339,6 +348,10 @@
 			children = (
 				40F8501E166B84A900366DDE /* WarningLightTest.h */,
 				40F8501F166B84A900366DDE /* WarningLightTest.m */,
+				40C3275E166B9A5400BC049B /* StepTests.h */,
+				40C3275F166B9A5400BC049B /* StepTests.m */,
+				40C32762166B9A6100BC049B /* GuideTests.h */,
+				40C32763166B9A6100BC049B /* GuideTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -348,6 +361,8 @@
 			children = (
 				40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */,
 				40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */,
+				40C32757166B942F00BC049B /* ServiceGuideStockServiceTest.h */,
+				40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -507,6 +522,9 @@
 				400DF87A1668F0F200D6217B /* CarAssistTests.m in Sources */,
 				40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */,
 				40F85021166B84A900366DDE /* WarningLightTest.m in Sources */,
+				40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */,
+				40C32760166B9A5400BC049B /* StepTests.m in Sources */,
+				40C32764166B9A6100BC049B /* GuideTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
