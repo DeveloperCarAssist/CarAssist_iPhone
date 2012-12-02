@@ -10,7 +10,7 @@
 #import "ServiceGuideStockService.h"
 #import "Guide.h"
 
-@interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @end
 
@@ -29,13 +29,13 @@
 {
     [super viewDidLoad];
     self.title = @"Service";
+    
+    // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+    [self.view addGestureRecognizer:tapRecognizer];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSArray *keys = [self.serviceGuideStockService.guides allKeys];
@@ -94,7 +94,6 @@
 }
 
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
@@ -104,6 +103,25 @@
     }
 }
 
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [self.serviceGuideStockService reduceServiceGuidesWithSearchText: searchText];
+    [self.serviceGuideTableView reloadData];
+}
 
+/**
+ * Schließt das Keyboard, wenn Suchen gedrückt wird.
+ */
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.serviceSearchBar resignFirstResponder];
+}
+
+/**
+ * Schließt das Keyboard.
+ */
+-(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
+    [self.serviceSearchBar resignFirstResponder];
+}
 
 @end

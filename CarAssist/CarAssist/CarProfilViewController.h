@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "Car.h"
+#import "Profil.h"
 
 @interface CarProfilViewController : UIViewController
 
 @property (nonatomic) IBOutlet UITextField *modell,*producer,*radio,*navigation,*seatHeater;
 @property Car *car;
+@property Profil *profil;
 
 -(CarProfilViewController*) initWithCar: (Car*) car;
+-(CarProfilViewController*) initWithProfil: (Profil*) profil;
+-(IBAction)saveButtonPressed:(id)sender;
 
+-(IBAction) returnButton:(UITextField*)sender;
 @end

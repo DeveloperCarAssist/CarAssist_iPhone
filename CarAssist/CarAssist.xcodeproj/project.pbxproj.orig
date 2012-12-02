@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		375C713B166B808700B48C11 /* AutoProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7139166B808700B48C11 /* AutoProfilController.m */; };
 		375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C713A166B808700B48C11 /* AutoProfilController.xib */; };
+		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
+		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
+		375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7155166B93EE00B48C11 /* CarProfilViewController.m */; };
+		375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7156166B93EF00B48C11 /* CarProfilViewController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -48,12 +52,22 @@
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
 		40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* ServiceGuideStockService.m */; };
+		40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */; };
+		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
+		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
 		661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */; };
 		661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */; };
 		661E1A46166B896000493F54 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A45166B896000493F54 /* Guide.m */; };
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
+<<<<<<< HEAD
+		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
+		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
+=======
+		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
+		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
+>>>>>>> ae78333e6d5e5da809236c349cd7b61f11db8257
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +84,12 @@
 		375C7138166B808700B48C11 /* AutoProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoProfilController.h; sourceTree = "<group>"; };
 		375C7139166B808700B48C11 /* AutoProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoProfilController.m; sourceTree = "<group>"; };
 		375C713A166B808700B48C11 /* AutoProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoProfilController.xib; sourceTree = "<group>"; };
+		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
+		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
+		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
+		375C7154166B93EE00B48C11 /* CarProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarProfilViewController.h; sourceTree = "<group>"; };
+		375C7155166B93EE00B48C11 /* CarProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarProfilViewController.m; sourceTree = "<group>"; };
+		375C7156166B93EF00B48C11 /* CarProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarProfilViewController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -126,6 +146,12 @@
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
 		40C3274F166B89BB00BC049B /* ServiceGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockService.h; sourceTree = "<group>"; };
 		40C32750166B89BB00BC049B /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
+		40C32757166B942F00BC049B /* ServiceGuideStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockServiceTest.h; sourceTree = "<group>"; };
+		40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockServiceTest.m; sourceTree = "<group>"; };
+		40C3275E166B9A5400BC049B /* StepTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTests.h; sourceTree = "<group>"; };
+		40C3275F166B9A5400BC049B /* StepTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTests.m; sourceTree = "<group>"; };
+		40C32762166B9A6100BC049B /* GuideTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideTests.h; sourceTree = "<group>"; };
+		40C32763166B9A6100BC049B /* GuideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTests.m; sourceTree = "<group>"; };
 		40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightStockServiceTest.h; sourceTree = "<group>"; };
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
@@ -137,6 +163,15 @@
 		661E1A45166B896000493F54 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
 		661E1A47166B8A4300493F54 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
 		661E1A48166B8A4300493F54 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+=======
+		661E1A5A166BA98C00493F54 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepView.h; sourceTree = "<group>"; };
+		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
+		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
+>>>>>>> ae78333e6d5e5da809236c349cd7b61f11db8257
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +319,21 @@
 				661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */,
 				661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */,
 				661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */,
+				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
+				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
+				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
+				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
+				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
+				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
+<<<<<<< HEAD
+				8F2F6565166BA73D00613701 /* GuideViewController.h */,
+				8F2F6566166BA73D00613701 /* GuideViewController.m */,
+				8F2F6567166BA73D00613701 /* GuideViewController.xib */,
+=======
+				661E1A5A166BA98C00493F54 /* StepView.h */,
+				661E1A5B166BA98C00493F54 /* StepView.m */,
+				661E1A5C166BA98C00493F54 /* StepView.xib */,
+>>>>>>> ae78333e6d5e5da809236c349cd7b61f11db8257
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -323,6 +373,10 @@
 			children = (
 				40F8501E166B84A900366DDE /* WarningLightTest.h */,
 				40F8501F166B84A900366DDE /* WarningLightTest.m */,
+				40C3275E166B9A5400BC049B /* StepTests.h */,
+				40C3275F166B9A5400BC049B /* StepTests.m */,
+				40C32762166B9A6100BC049B /* GuideTests.h */,
+				40C32763166B9A6100BC049B /* GuideTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +386,8 @@
 			children = (
 				40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */,
 				40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */,
+				40C32757166B942F00BC049B /* ServiceGuideStockServiceTest.h */,
+				40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -425,6 +481,13 @@
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
 				375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */,
 				661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */,
+				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
+				375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */,
+<<<<<<< HEAD
+				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
+=======
+				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
+>>>>>>> ae78333e6d5e5da809236c349cd7b61f11db8257
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,12 +537,16 @@
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
 				375C713B166B808700B48C11 /* AutoProfilController.m in Sources */,
 				661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */,
-<<<<<<< HEAD
 				40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */,
-=======
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
->>>>>>> 38be32f056d31fa07636577e9b9ebd6ad6969d37
+				375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */,
+				375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */,
+<<<<<<< HEAD
+				8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */,
+=======
+				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
+>>>>>>> ae78333e6d5e5da809236c349cd7b61f11db8257
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +557,9 @@
 				400DF87A1668F0F200D6217B /* CarAssistTests.m in Sources */,
 				40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */,
 				40F85021166B84A900366DDE /* WarningLightTest.m in Sources */,
+				40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */,
+				40C32760166B9A5400BC049B /* StepTests.m in Sources */,
+				40C32764166B9A6100BC049B /* GuideTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
