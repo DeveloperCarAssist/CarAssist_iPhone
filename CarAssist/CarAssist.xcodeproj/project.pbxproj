@@ -61,6 +61,8 @@
 		661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */; };
 		661E1A46166B896000493F54 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A45166B896000493F54 /* Guide.m */; };
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
+		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
+		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,9 @@
 		661E1A45166B896000493F54 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
 		661E1A47166B8A4300493F54 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
 		661E1A48166B8A4300493F54 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
+		661E1A5A166BA98C00493F54 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepView.h; sourceTree = "<group>"; };
+		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
+		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +314,9 @@
 				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
 				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
 				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
+				661E1A5A166BA98C00493F54 /* StepView.h */,
+				661E1A5B166BA98C00493F54 /* StepView.m */,
+				661E1A5C166BA98C00493F54 /* StepView.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 				661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */,
 				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
 				375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */,
+				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +521,7 @@
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
 				375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */,
 				375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */,
+				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
