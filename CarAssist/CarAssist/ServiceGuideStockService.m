@@ -13,6 +13,7 @@
 @interface ServiceGuideStockService ()
 
 @property (nonatomic) NSArray* allGuides;
+@property (nonatomic) NSArray* reducedGuides;
 
 @end
 
@@ -24,7 +25,6 @@
     
     if (self)
     {
-        self.guides = [NSMutableDictionary dictionary];
         [self initServiceGuides];
         [self initGuideDictionary];
     }
@@ -88,6 +88,7 @@
     [allGuides addObject:guide];
     
     self.allGuides = allGuides;
+    self.reducedGuides = allGuides;
 }
 
 /**
@@ -96,10 +97,11 @@
  */
 - (void) initGuideDictionary
 {
+    self.guides = [NSMutableDictionary dictionary];
     NSMutableSet* serviceCategories = [NSMutableArray array];
     
     
-    for (Guide* guide in self.allGuides) {
+    for (Guide* guide in self.reducedGuides) {
         [serviceCategories addObject: guide.categoryName];
     }
     
@@ -108,10 +110,35 @@
         [self.guides setObject:guidesOfCategory forKey:categoryName];
     }
     
-    for (Guide* guide in self.allGuides) {
+    for (Guide* guide in self.reducedGuides) {
         NSMutableArray* guidesOfCategory = [self.guides objectForKey:guide.categoryName];
         [guidesOfCategory addObject:guide];
     }
+}
+
+/**
+ * Aktualisiert das Dictionary, so dass nur Anleitungen enthalten sind, in denen der searchText enthalten ist.
+ *
+ */
+- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText
+{
+    NSMutableArray* guides = [NSMutableArray array];
+    
+    if ([searchText isEqualToString:@""])
+    {
+        self.reducedGuides = self.allGuides;
+    }
+    else
+    {
+        for (Guide* guide in self.allGuides) {
+            if ([guide.name rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound) {
+                [guides addObject:guide];
+            }
+        }
+        
+        self.reducedGuides = guides;
+    }
+    [self initGuideDictionary];
 }
 
 @end
