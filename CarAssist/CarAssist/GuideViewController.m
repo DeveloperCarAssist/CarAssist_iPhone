@@ -7,6 +7,7 @@
 //
 
 #import "GuideViewController.h"
+#import "StepView.h"
 
 @interface GuideViewController ()
 
@@ -14,51 +15,37 @@
 
 @implementation GuideViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id) initWithGuide:(Guide *)guide
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super init];
+    if(self)
+    {
+        self.guide = guide;
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
-	/* TODO: alter Code - durch neuen ersetzen
-     [super viewDidLoad];
-     
-     StepModel *step;
-     
-     StepModelGenerator *generate = [[StepModelGenerator alloc]init];
-     step = generate.generate;
-     int steps = 0;
-     
-     while (step != nil)
-     {
-     CGRect frame;
-     frame.origin.x = self.scrollView.frame.size.width * steps;
-     frame.origin.y = 0;
-     frame.size = self.scrollView.frame.size;
-     
-     StepView *subView = [[StepView alloc] initWithFrame:frame];
-     
-     subView.titleLabel.text = step.title;
-     subView.descriptionLabel.text = step.desc;
-     subView.descriptionLabel.numberOfLines = 5;
-     
-     
-     [self.scrollView addSubview:subView];
-     
-     step = step.descendant;
-     steps++;
-     }
-     
-     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * steps, self.scrollView.frame.size.height - 40);
-     */
+    NSArray *steps = self.guide.steps; // Array von Step
+    for (int i = 0; i<steps.count; i++) {
+        CGRect frame;
+        frame.origin.x = i * self.scrollView.frame.size.width;
+        frame.origin.y = 0;
+        frame.size = self.scrollView.frame.size;
+        
+        Step *step = [steps objectAtIndex:i];
+        StepView *subView = [[StepView alloc] initWithFrame:frame];
+        subView.nameLabel.text = step.name;
+
+        [self.scrollView addSubview:subView];
+    }
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * steps.count, self.scrollView.frame.size.height);
+    
+    self.title = self.guide.name;
 }
 
 - (void)didReceiveMemoryWarning

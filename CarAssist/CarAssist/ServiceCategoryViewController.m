@@ -9,6 +9,7 @@
 #import "ServiceCategoryViewController.h"
 #import "ServiceGuideStockService.h"
 #import "Guide.h"
+#import "GuideViewController.h"
 
 @interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -31,8 +32,8 @@
     self.title = @"Service";
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
-    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
-    [self.view addGestureRecognizer:tapRecognizer];
+    // UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+    // [self.view addGestureRecognizer:tapRecognizer];
 }
 
 
@@ -96,11 +97,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        // TODO: Ansicht eines einzelnen Guides erzeugen 
-        //WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
-        //[self.navigationController pushViewController:viewController animated:YES];
-    }
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSString *key = [keys objectAtIndex:indexPath.section];
+    NSArray *guides = [self.serviceGuideStockService.guides objectForKey:key];
+    
+    GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[guides objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText

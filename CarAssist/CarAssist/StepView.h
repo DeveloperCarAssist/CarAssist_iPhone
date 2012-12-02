@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Step.h"
 
 @interface StepView : UIView
 @property IBOutlet UIView *mainView;
-@property IBOutlet UILabel *name;
+@property IBOutlet UILabel *nameLabel;
 @end

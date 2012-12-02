@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Guide.h"
 
 @interface GuideViewController : UIViewController
 @property (nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic) Guide *guide;
+-(id) initWithGuide:(Guide *)guide;
 @end
