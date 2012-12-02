@@ -58,7 +58,7 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUISearchBar" id="89307173">
+					<object class="IBUISearchBar" id="624041758">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{320, 44}</string>
@@ -134,7 +134,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">serviceSearchBar</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="89307173"/>
+						<reference key="destination" ref="624041758"/>
 					</object>
 					<int key="connectionID">29</int>
 				</object>
@@ -157,7 +157,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="89307173"/>
+						<reference key="source" ref="624041758"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">28</int>
@@ -175,11 +175,11 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="918894689">
+							<object class="IBNSLayoutConstraint" id="1067959002">
 								<reference key="firstItem" ref="1066644615"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
-								<reference key="secondItem" ref="89307173"/>
+								<reference key="secondItem" ref="624041758"/>
 								<int key="secondAttribute">4</int>
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
@@ -240,7 +240,7 @@
 								<int key="contentType">3</int>
 							</object>
 							<object class="IBNSLayoutConstraint" id="548811792">
-								<reference key="firstItem" ref="89307173"/>
+								<reference key="firstItem" ref="624041758"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="191373211"/>
@@ -255,8 +255,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="148259950">
-								<reference key="firstItem" ref="89307173"/>
+							<object class="IBNSLayoutConstraint" id="250843376">
+								<reference key="firstItem" ref="624041758"/>
 								<int key="firstAttribute">6</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="191373211"/>
@@ -271,8 +271,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="305834430">
-								<reference key="firstItem" ref="89307173"/>
+							<object class="IBNSLayoutConstraint" id="185434307">
+								<reference key="firstItem" ref="624041758"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="191373211"/>
@@ -287,8 +287,8 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
+							<reference ref="624041758"/>
 							<reference ref="1066644615"/>
-							<reference ref="89307173"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -326,17 +326,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="89307173"/>
+						<reference key="object" ref="624041758"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
-						<reference key="object" ref="305834430"/>
+						<reference key="object" ref="185434307"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
-						<reference key="object" ref="148259950"/>
+						<reference key="object" ref="250843376"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -346,7 +346,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">26</int>
-						<reference key="object" ref="918894689"/>
+						<reference key="object" ref="1067959002"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -358,13 +358,13 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array key="1.IBViewMetadataConstraints">
-					<reference ref="305834430"/>
-					<reference ref="148259950"/>
+					<reference ref="185434307"/>
+					<reference ref="250843376"/>
 					<reference ref="548811792"/>
 					<reference ref="768444526"/>
 					<reference ref="724840456"/>
 					<reference ref="549242420"/>
-					<reference ref="918894689"/>
+					<reference ref="1067959002"/>
 				</array>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<boolean value="NO" key="12.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
@@ -397,17 +397,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ServiceCategoryViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">closeKeyboard:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">closeKeyboard:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">closeKeyboard:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="serviceGuideTableView">UITableView</string>
 						<string key="serviceSearchBar">UISearchBar</string>

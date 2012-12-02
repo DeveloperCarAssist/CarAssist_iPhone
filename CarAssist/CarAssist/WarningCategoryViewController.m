@@ -38,15 +38,16 @@
     }
     
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];
+    UIImage* breakdownServiceCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pannenhilfe" ofType:@"png"]];
     
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"Warnleuchten";
-
             [cell.imageView setImage:warningLightCategoryImage];
             break;
         case 1:
             cell.textLabel.text = @"Pannenhilfe";
+            [cell.imageView setImage:breakdownServiceCategoryImage];
             break;
         case 2:
             cell.textLabel.text = @"Vertragswerkstätten";
@@ -58,7 +59,7 @@
             cell.textLabel.text = @"Einer zu viel :P";
             break;
     }
-    ;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

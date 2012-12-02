@@ -55,6 +55,7 @@
 		40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */; };
 		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
 		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
+		40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C32767166BAEAD00BC049B /* pannenhilfe.png */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
 		661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */; };
@@ -149,6 +150,7 @@
 		40C3275F166B9A5400BC049B /* StepTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTests.m; sourceTree = "<group>"; };
 		40C32762166B9A6100BC049B /* GuideTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideTests.h; sourceTree = "<group>"; };
 		40C32763166B9A6100BC049B /* GuideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTests.m; sourceTree = "<group>"; };
+		40C32767166BAEAD00BC049B /* pannenhilfe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pannenhilfe.png; sourceTree = "<group>"; };
 		40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightStockServiceTest.h; sourceTree = "<group>"; };
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40C32767166BAEAD00BC049B /* pannenhilfe.png */,
 				400DF8A7166910BF00D6217B /* bremsanlage.png */,
 				400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */,
 				400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */,
@@ -474,6 +477,7 @@
 				661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */,
 				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
 				375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */,
+				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
 				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
 				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
 			);
