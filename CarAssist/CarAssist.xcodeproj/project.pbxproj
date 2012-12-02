@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		375C713B166B808700B48C11 /* AutoProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7139166B808700B48C11 /* AutoProfilController.m */; };
-		375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C713A166B808700B48C11 /* AutoProfilController.xib */; };
 		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
 		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
 		375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7155166B93EE00B48C11 /* CarProfilViewController.m */; };
 		375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7156166B93EF00B48C11 /* CarProfilViewController.xib */; };
+		375C716E166BB48200B48C11 /* ProducerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C716C166BB48200B48C11 /* ProducerViewController.m */; };
+		375C716F166BB48200B48C11 /* ProducerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C716D166BB48200B48C11 /* ProducerViewController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -55,16 +55,17 @@
 		40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */; };
 		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
 		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
+		40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C32767166BAEAD00BC049B /* pannenhilfe.png */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
 		661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */; };
 		661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */; };
 		661E1A46166B896000493F54 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A45166B896000493F54 /* Guide.m */; };
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
-		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
-		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
+		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
+		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,15 +79,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		375C7138166B808700B48C11 /* AutoProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoProfilController.h; sourceTree = "<group>"; };
-		375C7139166B808700B48C11 /* AutoProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoProfilController.m; sourceTree = "<group>"; };
-		375C713A166B808700B48C11 /* AutoProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoProfilController.xib; sourceTree = "<group>"; };
 		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
 		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
 		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
 		375C7154166B93EE00B48C11 /* CarProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarProfilViewController.h; sourceTree = "<group>"; };
 		375C7155166B93EE00B48C11 /* CarProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarProfilViewController.m; sourceTree = "<group>"; };
 		375C7156166B93EF00B48C11 /* CarProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarProfilViewController.xib; sourceTree = "<group>"; };
+		375C716B166BB48200B48C11 /* ProducerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerViewController.h; sourceTree = "<group>"; };
+		375C716C166BB48200B48C11 /* ProducerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProducerViewController.m; sourceTree = "<group>"; };
+		375C716D166BB48200B48C11 /* ProducerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProducerViewController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		40C3275F166B9A5400BC049B /* StepTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTests.m; sourceTree = "<group>"; };
 		40C32762166B9A6100BC049B /* GuideTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideTests.h; sourceTree = "<group>"; };
 		40C32763166B9A6100BC049B /* GuideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTests.m; sourceTree = "<group>"; };
+		40C32767166BAEAD00BC049B /* pannenhilfe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pannenhilfe.png; sourceTree = "<group>"; };
 		40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightStockServiceTest.h; sourceTree = "<group>"; };
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
@@ -160,12 +162,12 @@
 		661E1A45166B896000493F54 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
 		661E1A47166B8A4300493F54 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
 		661E1A48166B8A4300493F54 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
-		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
-		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
-		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 		661E1A5A166BA98C00493F54 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepView.h; sourceTree = "<group>"; };
 		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
+		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40C32767166BAEAD00BC049B /* pannenhilfe.png */,
 				400DF8A7166910BF00D6217B /* bremsanlage.png */,
 				400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */,
 				400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */,
@@ -307,9 +310,6 @@
 				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
 				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
 				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
-				375C7138166B808700B48C11 /* AutoProfilController.h */,
-				375C7139166B808700B48C11 /* AutoProfilController.m */,
-				375C713A166B808700B48C11 /* AutoProfilController.xib */,
 				661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */,
 				661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */,
 				661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */,
@@ -325,6 +325,9 @@
 				661E1A5A166BA98C00493F54 /* StepView.h */,
 				661E1A5B166BA98C00493F54 /* StepView.m */,
 				661E1A5C166BA98C00493F54 /* StepView.xib */,
+				375C716B166BB48200B48C11 /* ProducerViewController.h */,
+				375C716C166BB48200B48C11 /* ProducerViewController.m */,
+				375C716D166BB48200B48C11 /* ProducerViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -470,12 +473,13 @@
 				400DF8AD166910BF00D6217B /* parkbremse.png in Resources */,
 				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
-				375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */,
 				661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */,
 				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
 				375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */,
+				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
 				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
 				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
+				375C716F166BB48200B48C11 /* ProducerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +527,6 @@
 				37E717A816690D2400F6B11F /* ProfilController.m in Sources */,
 				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
-				375C713B166B808700B48C11 /* AutoProfilController.m in Sources */,
 				661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */,
 				40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */,
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
@@ -532,6 +535,7 @@
 				375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */,
 				8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */,
 				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
+				375C716E166BB48200B48C11 /* ProducerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

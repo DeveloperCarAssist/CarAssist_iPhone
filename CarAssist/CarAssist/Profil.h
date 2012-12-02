@@ -13,7 +13,7 @@
 @property (strong) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
 @property NSMutableArray *carList;
 @property Car *car;
-
+// Erstellt ein Profil mit Beispiel Daten
 -(Profil*) initWithExampleData;
 
 @end

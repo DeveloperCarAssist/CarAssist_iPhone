@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface CarListService : NSObject
+//Erstellt eine AutoListenService mit Beispieldaten
 -(CarListService*) initWithExampleData;
-
+//Gibt alle Hersteller zurück
 -(NSArray*) giveAllProducer;
+//gibt alle Modelle für einen Hersteller an
 -(NSArray*) giveAllCarModels: (NSString*) fromProducer;
 @end
