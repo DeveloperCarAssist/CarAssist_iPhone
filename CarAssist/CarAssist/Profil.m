@@ -15,7 +15,10 @@
     self = [super init];
     if (self)
     {
+        Car *car = [[Car alloc ]initWithExampleData];
+        
         self.car=[[Car alloc]initWithExampleData];
+        self.carList=[[NSMutableArray alloc] initWithObjects: car , nil];
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";

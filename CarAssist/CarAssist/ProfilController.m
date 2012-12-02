@@ -51,7 +51,7 @@
       //  [self.carProducer setEnabled:YES];
         [self.emailAdress setEnabled:YES];
         [self.lieblingsKEKSEEE setEnabled:true];
-        self.wahr=FALSE;
+        self.wahr=TRUE;
     }
     else
     {
@@ -65,7 +65,7 @@
          self.profil.emailAdresse=[self.emailAdress text];
         [self.lieblingsKEKSEEE setEnabled:false];
          self.profil.lieblingsKEKSEEE=[self.lieblingsKEKSEEE text];
-        self.wahr = true;
+        self.wahr = FALSE;
     }
 }
 
@@ -76,6 +76,8 @@
 
 -(IBAction) carChangeButtonPressed:(id)sender
 {
+    CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
+     [self.navigationController pushViewController:carcontroller animated:YES];
     
 }
 
