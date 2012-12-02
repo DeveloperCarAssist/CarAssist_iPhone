@@ -15,7 +15,9 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        
+        [[NSBundle mainBundle] loadNibNamed:@"StepView" owner:self options:nil];
+        self.mainView.bounds = self.bounds;
+        [self addSubview: self.mainView];
     }
     
     return self;

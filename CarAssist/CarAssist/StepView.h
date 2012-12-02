@@ -10,5 +10,5 @@
 
 @interface StepView : UIView
 @property IBOutlet UIView *mainView;
-
+@property IBOutlet UILabel *name;
 @end
