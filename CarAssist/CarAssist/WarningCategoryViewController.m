@@ -15,11 +15,13 @@
 
 @implementation WarningCategoryViewController
 
+
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     self.title = @"Störungen";
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
