@@ -16,12 +16,21 @@
 
 @implementation ProfilController
 
+-(ProfilController*) initWithProfil: (Profil*) profil
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.profil=profil;
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-            self.profil=[[Profil alloc] initWithExampleData];
     }
     return self;
 }
@@ -30,10 +39,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view from its nib.
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
+viewWillAppear: TRUE;
+}
+-(void)viewWillAppear:(BOOL)animated
+{
     [self.firstName setText:self.profil.vorname];
     [self.lastName setText:self.profil.nachname];
     [self.carModell setText:self.profil.car.modell];

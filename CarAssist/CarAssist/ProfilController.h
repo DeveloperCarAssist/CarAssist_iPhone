@@ -8,13 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "CarFavoritViewController.h"
+#import "Profil.h"
 
 @interface ProfilController : UIViewController
+@property IBOutlet UITextField *firstName, *lastName, *carModell, *carProducer, *emailAdress,*lieblingsKEKSEEE;
+
+-(ProfilController*) initWithProfil: (Profil*) profil;
 
 
 -(IBAction) editButtonpressed:(id)sender;
 -(IBAction) returnButton:(UITextField*)sender;
 -(IBAction) carDetailButtonPressed:(id)sender;
 -(IBAction) carChangeButtonPressed:(id)sender;
-@property IBOutlet UITextField *firstName, *lastName, *carModell, *carProducer, *emailAdress,*lieblingsKEKSEEE;
+
+
+
 @end

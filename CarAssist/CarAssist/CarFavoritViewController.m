@@ -42,15 +42,16 @@
 
 -(void)addCarButtonClicked
 {
-    Car *car = [[Car alloc] initNewCar];    
-    [self.profil.carList addObject: car];
-    self.profil.car= car;
-    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+    
+    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithProfil: self.profil];
     [self.navigationController pushViewController:carprofilcontroller animated:YES];
 
     
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
