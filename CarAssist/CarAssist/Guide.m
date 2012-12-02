@@ -10,4 +10,15 @@
 
 @implementation Guide
 
+- (Guide*) initWithName: (NSString*) name CategoryName: (NSString*) categoryName AndSteps: (NSArray*) steps
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.steps = steps;
+        self.categoryName = categoryName;
+    }
+    return self;
+}
+
 @end
