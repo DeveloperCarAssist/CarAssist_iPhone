@@ -474,9 +474,12 @@
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
 				375C713B166B808700B48C11 /* AutoProfilController.m in Sources */,
 				661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */,
+<<<<<<< HEAD
 				40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */,
+=======
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
+>>>>>>> 38be32f056d31fa07636577e9b9ebd6ad6969d37
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
