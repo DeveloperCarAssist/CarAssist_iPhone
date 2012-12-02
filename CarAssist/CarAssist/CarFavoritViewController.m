@@ -36,12 +36,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
+    [self.navigationItem setRightBarButtonItem: button];
+}
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+-(void)addCarButtonClicked
+{
+    Car *car = [[Car alloc] initNewCar];    
+    [self.profil.carList addObject: car];
+    self.profil.car= car;
+    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+    [self.navigationController pushViewController:carprofilcontroller animated:YES];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +69,7 @@
 {
 
     // Return the number of rows in the section.
-    return self.profil.carList.count + 1;
+    return self.profil.carList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,30 +79,21 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-     if (indexPath.row < self.profil.carList.count) {
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     cell.textLabel.text= car.modell;
-     }
-    else
-    {
-        cell.textLabel.text= @"Neues Auto Hinzufügen";
-    }
+
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < self.profil.carList.count) {
+
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     self.profil.car= car;
-    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] init];
+    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
      [self.navigationController pushViewController:carprofilcontroller animated:YES];
-    }
-    else
-    {
-#warning Noch implemntieren
-    }
+    
 }
 
 

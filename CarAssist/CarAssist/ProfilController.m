@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     self.profil=[[Profil alloc] initWithExampleData];
+
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
