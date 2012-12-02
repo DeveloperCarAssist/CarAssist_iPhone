@@ -19,7 +19,7 @@
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";
-        self.lieblingsKEKSEEE=@"Oreo";
+        self.lieblingsKEKSEEE=@"Oreo Keks";
     }
     return self;
 }
