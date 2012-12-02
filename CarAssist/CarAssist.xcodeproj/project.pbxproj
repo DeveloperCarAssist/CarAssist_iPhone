@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375C713B166B808700B48C11 /* AutoProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7139166B808700B48C11 /* AutoProfilController.m */; };
+		375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C713A166B808700B48C11 /* AutoProfilController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -58,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		375C7138166B808700B48C11 /* AutoProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoProfilController.h; sourceTree = "<group>"; };
+		375C7139166B808700B48C11 /* AutoProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoProfilController.m; sourceTree = "<group>"; };
+		375C713A166B808700B48C11 /* AutoProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoProfilController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -251,6 +256,9 @@
 				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
 				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
 				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
+				375C7138166B808700B48C11 /* AutoProfilController.h */,
+				375C7139166B808700B48C11 /* AutoProfilController.m */,
+				375C713A166B808700B48C11 /* AutoProfilController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 				400DF8AD166910BF00D6217B /* parkbremse.png in Resources */,
 				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
+				375C713C166B808700B48C11 /* AutoProfilController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +422,7 @@
 				37E717A816690D2400F6B11F /* ProfilController.m in Sources */,
 				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
+				375C713B166B808700B48C11 /* AutoProfilController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
