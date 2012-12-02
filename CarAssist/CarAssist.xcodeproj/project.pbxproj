@@ -47,6 +47,8 @@
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
 		661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */; };
 		661E1A43166B759D00493F54 /* ServiceCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */; };
+		661E1A46166B896000493F54 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A45166B896000493F54 /* Guide.m */; };
+		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,10 @@
 		661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCategoryViewController.h; sourceTree = "<group>"; };
 		661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCategoryViewController.m; sourceTree = "<group>"; };
 		661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCategoryViewController.xib; sourceTree = "<group>"; };
+		661E1A44166B896000493F54 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
+		661E1A45166B896000493F54 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
+		661E1A47166B8A4300493F54 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
+		661E1A48166B8A4300493F54 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +278,10 @@
 				37E7179C16690C5E00F6B11F /* Car.m */,
 				37E7179F16690CAB00F6B11F /* Profil.h */,
 				37E717A016690CAB00F6B11F /* Profil.m */,
+				661E1A44166B896000493F54 /* Guide.h */,
+				661E1A45166B896000493F54 /* Guide.m */,
+				661E1A47166B8A4300493F54 /* Step.h */,
+				661E1A48166B8A4300493F54 /* Step.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -423,6 +433,8 @@
 				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
 				661E1A42166B759D00493F54 /* ServiceCategoryViewController.m in Sources */,
+				661E1A46166B896000493F54 /* Guide.m in Sources */,
+				661E1A49166B8A4300493F54 /* Step.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
