@@ -11,5 +11,8 @@
 @interface Guide : NSObject
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *categoryName;
-@property (nonatomic) NSMutableArray *steps;
+@property (nonatomic) NSArray *steps;
+
+- (Guide*) initWithName: (NSString*) name CategoryName: (NSString*) categoryName AndSteps: (NSArray*) steps;
+
 @end

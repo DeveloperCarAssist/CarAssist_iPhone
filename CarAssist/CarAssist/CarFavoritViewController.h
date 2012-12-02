@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profil.h"
+#import "CarProfilViewController.h"
 
 @interface CarFavoritViewController : UITableViewController
 
+-(id) initWithProfil: (Profil*) profil;
 @end

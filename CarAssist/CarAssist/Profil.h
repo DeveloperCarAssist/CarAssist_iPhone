@@ -11,6 +11,7 @@
 
 @interface Profil : NSObject
 @property (strong) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
+@property NSArray *carList;
 @property Car *car;
 
 -(Profil*) initWithExampleData;

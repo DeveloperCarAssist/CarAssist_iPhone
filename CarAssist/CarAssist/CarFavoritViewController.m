@@ -9,7 +9,7 @@
 #import "CarFavoritViewController.h"
 
 @interface CarFavoritViewController ()
-
+@property (strong) Profil *profil;
 @end
 
 @implementation CarFavoritViewController
@@ -21,6 +21,16 @@
         // Custom initialization
     }
     return self;
+}
+
+-(id) initWithProfil: (Profil*) profil
+{
+    self = [super init];
+    if (self) {
+        self.profil = profil;
+    }
+    return self;
+    
 }
 
 - (void)viewDidLoad
@@ -44,16 +54,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return self.profil.carList.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,11 +72,32 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    // Configure the cell...
+     if (indexPath.row < self.profil.carList.count) {
+    Car *car = [self.profil.carList objectAtIndex: indexPath.row];
+    cell.textLabel.text= car.modell;
+     }
+    else
+    {
+        cell.textLabel.text= @"Neues Auto Hinzufügen";
+    }
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row < self.profil.carList.count) {
+    Car *car = [self.profil.carList objectAtIndex: indexPath.row];
+    self.profil.car= car;
+    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] init];
+     [self.navigationController pushViewController:carprofilcontroller animated:YES];
+    }
+    else
+    {
+#warning Noch implemntieren
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -110,15 +140,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
+
 
 @end
