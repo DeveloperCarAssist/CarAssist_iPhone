@@ -12,4 +12,5 @@
 @property NSString *modell, *producer, *radio, *navigation, *seatHeater;
 
 -(Car*) initWithExampleData;
+-(Car*) initNewCar;
 @end

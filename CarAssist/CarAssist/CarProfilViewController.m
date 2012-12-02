@@ -22,11 +22,24 @@
     }
     return self;
 }
-
+-(CarProfilViewController*) initWithCar: (Car*) car
+{
+    self = [super init];
+    if (self) {
+        self.car=car;
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.modell setText: self.car.modell];
+    [self.producer setText:self.car.producer];
+    [self.radio setText:self.car.radio];
+    [self.navigation setText:self.car.navigation];
+    [self.seatHeater setText: self.car.seatHeater];
 }
 
 - (void)didReceiveMemoryWarning
