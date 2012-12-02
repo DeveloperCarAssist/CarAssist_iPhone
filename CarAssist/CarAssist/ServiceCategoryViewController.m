@@ -1,37 +1,53 @@
 //
-//  WarningViewController.m
+//  ServiceCategoryViewController.m
 //  CarAssist
 //
-//  Created by 0witt on 30.11.12.
+//  Created by 0thuerin on 02.12.12.
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "WarningCategoryViewController.h"
-#import "WarningLightCollectionViewController.h"
+#import "ServiceCategoryViewController.h"
 
-@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation WarningCategoryViewController
+@implementation ServiceCategoryViewController
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-    self.title = @"Störungen";
-    
+    self.title = @"Service";
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // todo: dynamisch
     return 4;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+     
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
+    /*
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
@@ -42,7 +58,7 @@
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"Warnleuchten";
-
+            
             [cell.imageView setImage:warningLightCategoryImage];
             break;
         case 1:
@@ -59,15 +75,18 @@
             break;
     }
     ;
+    */
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
-        [self.navigationController pushViewController:viewController animated:YES];
+        //WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
+        //[self.navigationController pushViewController:viewController animated:YES];
     }
 }
+
+
 
 @end

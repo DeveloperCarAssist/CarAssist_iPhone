@@ -18,12 +18,24 @@
 
     self.warningViewController = [[WarningCategoryViewController alloc] init];
     self.warningNavigationController = [[UINavigationController alloc] initWithRootViewController:self.warningViewController];
+
+    self.serviceViewController = [[ServiceCategoryViewController alloc] init];
+    self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    UITabBarItem* tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Peter" image:nil tag:1];
-    [self.warningNavigationController setTabBarItem:tabBarItem];
+
+    UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:nil tag:1];
+    [self.serviceNavigationController setTabBarItem:tabBarItem1];
     
-    self.tabBarController.viewControllers = [NSArray arrayWithObject:self.warningNavigationController];
+    UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image:nil tag:2];
+    [self.warningNavigationController setTabBarItem:tabBarItem2];
+    
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects:self.serviceNavigationController,
+                                self.warningNavigationController,nil];
+    
+    self.tabBarController.viewControllers = viewControllers;
+    
 
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

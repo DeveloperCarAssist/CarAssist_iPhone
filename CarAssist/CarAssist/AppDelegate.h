@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServiceCategoryViewController.h"
 #import "WarningCategoryViewController.h"
 
 @class ViewController;
@@ -21,5 +22,9 @@
 // Warning Controllers
 @property (nonatomic) WarningCategoryViewController* warningViewController;
 @property (nonatomic) UINavigationController* warningNavigationController;
+
+// Service Controllers
+@property (nonatomic) ServiceCategoryViewController* serviceViewController;
+@property (nonatomic) UINavigationController* serviceNavigationController;
 
 @end
