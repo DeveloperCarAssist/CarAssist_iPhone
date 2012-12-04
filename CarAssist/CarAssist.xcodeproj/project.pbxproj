@@ -27,8 +27,6 @@
 		400DF85B1668F0F200D6217B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF85A1668F0F200D6217B /* Default.png */; };
 		400DF85D1668F0F200D6217B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF85C1668F0F200D6217B /* Default@2x.png */; };
 		400DF85F1668F0F200D6217B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF85E1668F0F200D6217B /* Default-568h@2x.png */; };
-		400DF8621668F0F200D6217B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF8611668F0F200D6217B /* ViewController.m */; };
-		400DF8651668F0F200D6217B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8631668F0F200D6217B /* ViewController.xib */; };
 		400DF86D1668F0F200D6217B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF86C1668F0F200D6217B /* SenTestingKit.framework */; };
 		400DF86E1668F0F200D6217B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8481668F0F100D6217B /* UIKit.framework */; };
 		400DF86F1668F0F200D6217B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF84A1668F0F100D6217B /* Foundation.framework */; };
@@ -110,9 +108,6 @@
 		400DF85A1668F0F200D6217B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		400DF85C1668F0F200D6217B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		400DF85E1668F0F200D6217B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		400DF8601668F0F200D6217B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		400DF8611668F0F200D6217B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		400DF8641668F0F200D6217B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		400DF86B1668F0F200D6217B /* CarAssistTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarAssistTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		400DF86C1668F0F200D6217B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		400DF8741668F0F200D6217B /* CarAssistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarAssistTests-Info.plist"; sourceTree = "<group>"; };
@@ -195,6 +190,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E725FEF166E665100942382 /* Warning */ = {
+			isa = PBXGroup;
+			children = (
+				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
+				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
+				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
+				400DF89F16690A9900D6217B /* WarningLightCollectionViewCell.h */,
+				400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */,
+				400DF8891669056900D6217B /* WarningCategoryViewController.h */,
+				400DF88A1669056900D6217B /* WarningCategoryViewController.m */,
+				400DF88B1669056900D6217B /* WarningCategoryViewController.xib */,
+				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
+				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
+				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
+			);
+			name = Warning;
+			sourceTree = "<group>";
+		};
+		2E725FF1166E666100942382 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				37E717A516690D2400F6B11F /* ProfilController.h */,
+				37E717A616690D2400F6B11F /* ProfilController.m */,
+				37E717A716690D2400F6B11F /* ProfilController.xib */,
+				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
+				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
+				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
+				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
+				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
+				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
+				375C716B166BB48200B48C11 /* ProducerViewController.h */,
+				375C716C166BB48200B48C11 /* ProducerViewController.m */,
+				375C716D166BB48200B48C11 /* ProducerViewController.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		2E725FF2166E666A00942382 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */,
+				661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */,
+				661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */,
+				8F2F6565166BA73D00613701 /* GuideViewController.h */,
+				8F2F6566166BA73D00613701 /* GuideViewController.m */,
+				8F2F6567166BA73D00613701 /* GuideViewController.xib */,
+				661E1A5A166BA98C00493F54 /* StepView.h */,
+				661E1A5B166BA98C00493F54 /* StepView.m */,
+				661E1A5C166BA98C00493F54 /* StepView.xib */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2E725FF3166E667A00942382 /* Manual */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manual;
+			sourceTree = "<group>";
+		};
 		400DF8391668F0F100D6217B = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +290,6 @@
 				400DF8881669051700D6217B /* Controller */,
 				400DF8571668F0F100D6217B /* AppDelegate.h */,
 				400DF8581668F0F100D6217B /* AppDelegate.m */,
-				400DF8601668F0F200D6217B /* ViewController.h */,
-				400DF8611668F0F200D6217B /* ViewController.m */,
-				400DF8631668F0F200D6217B /* ViewController.xib */,
 				400DF84F1668F0F100D6217B /* Supporting Files */,
 			);
 			path = CarAssist;
@@ -296,38 +348,10 @@
 		400DF8881669051700D6217B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				400DF89F16690A9900D6217B /* WarningLightCollectionViewCell.h */,
-				400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */,
-				400DF8891669056900D6217B /* WarningCategoryViewController.h */,
-				400DF88A1669056900D6217B /* WarningCategoryViewController.m */,
-				400DF88B1669056900D6217B /* WarningCategoryViewController.xib */,
-				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
-				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
-				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
-				37E717A516690D2400F6B11F /* ProfilController.h */,
-				37E717A616690D2400F6B11F /* ProfilController.m */,
-				37E717A716690D2400F6B11F /* ProfilController.xib */,
-				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
-				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
-				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
-				661E1A3F166B759D00493F54 /* ServiceCategoryViewController.h */,
-				661E1A40166B759D00493F54 /* ServiceCategoryViewController.m */,
-				661E1A41166B759D00493F54 /* ServiceCategoryViewController.xib */,
-				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
-				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
-				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
-				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
-				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
-				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
-				8F2F6565166BA73D00613701 /* GuideViewController.h */,
-				8F2F6566166BA73D00613701 /* GuideViewController.m */,
-				8F2F6567166BA73D00613701 /* GuideViewController.xib */,
-				661E1A5A166BA98C00493F54 /* StepView.h */,
-				661E1A5B166BA98C00493F54 /* StepView.m */,
-				661E1A5C166BA98C00493F54 /* StepView.xib */,
-				375C716B166BB48200B48C11 /* ProducerViewController.h */,
-				375C716C166BB48200B48C11 /* ProducerViewController.m */,
-				375C716D166BB48200B48C11 /* ProducerViewController.xib */,
+				2E725FF3166E667A00942382 /* Manual */,
+				2E725FF2166E666A00942382 /* Service */,
+				2E725FF1166E666100942382 /* Settings */,
+				2E725FEF166E665100942382 /* Warning */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -461,7 +485,6 @@
 				400DF85B1668F0F200D6217B /* Default.png in Resources */,
 				400DF85D1668F0F200D6217B /* Default@2x.png in Resources */,
 				400DF85F1668F0F200D6217B /* Default-568h@2x.png in Resources */,
-				400DF8651668F0F200D6217B /* ViewController.xib in Resources */,
 				400DF8841668F1A000D6217B /* AppIcon_iPhone_klein.png in Resources */,
 				400DF8861668F1D700D6217B /* AppIcon_iPhone_gross.png in Resources */,
 				400DF88D1669056900D6217B /* WarningCategoryViewController.xib in Resources */,
@@ -516,7 +539,6 @@
 			files = (
 				400DF8551668F0F100D6217B /* main.m in Sources */,
 				400DF8591668F0F100D6217B /* AppDelegate.m in Sources */,
-				400DF8621668F0F200D6217B /* ViewController.m in Sources */,
 				400DF88C1669056900D6217B /* WarningCategoryViewController.m in Sources */,
 				400DF8951669080600D6217B /* WarningLight.m in Sources */,
 				400DF8991669082600D6217B /* WarningLightStockService.m in Sources */,
@@ -569,14 +591,6 @@
 				400DF8521668F0F100D6217B /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		400DF8631668F0F200D6217B /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				400DF8641668F0F200D6217B /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		400DF8751668F0F200D6217B /* InfoPlist.strings */ = {
