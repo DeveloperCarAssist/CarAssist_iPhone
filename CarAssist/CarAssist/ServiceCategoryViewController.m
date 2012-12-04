@@ -61,13 +61,13 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
-        
-        NSArray *keys = [self.serviceGuideStockService.guides allKeys];
-        NSString *key = [keys objectAtIndex:indexPath.section];
-        NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
-        Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
-        cell.textLabel.text = guide.name;
     }
+    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSString *key = [keys objectAtIndex:indexPath.section];
+    NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
+    Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
+    cell.textLabel.text = guide.name;
+    
     
     return cell;
 }
