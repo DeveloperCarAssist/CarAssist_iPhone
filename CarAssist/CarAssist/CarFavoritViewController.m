@@ -38,6 +38,7 @@
     [super viewDidLoad];
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: button];
+    [self.navigationItem setTitle: @"Profil"];
 }
 
 -(void)addCarButtonClicked
