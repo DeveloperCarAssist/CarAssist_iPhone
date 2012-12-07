@@ -16,6 +16,8 @@
 		375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */; };
 		375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */; };
+		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
+		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -97,6 +99,9 @@
 		375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_service Kopie.png"; sourceTree = "<group>"; };
 		375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profil Kopie.png"; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_stoerung Kopie.png"; sourceTree = "<group>"; };
+		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -232,13 +237,16 @@
 				37E717A716690D2400F6B11F /* ProfilController.xib */,
 				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
 				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
-				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
 				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
+				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
 				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
 				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
 				375C716B166BB48200B48C11 /* ProducerViewController.h */,
 				375C716C166BB48200B48C11 /* ProducerViewController.m */,
 				375C716D166BB48200B48C11 /* ProducerViewController.xib */,
+				375F8E7E16723C7D00FAD821 /* SettingsViewController.h */,
+				375F8E7F16723C7D00FAD821 /* SettingsViewController.m */,
+				375F8E8016723C7D00FAD821 /* SettingsViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -551,6 +559,7 @@
 				375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */,
 				8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */,
 				8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */,
+				375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +615,7 @@
 				8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */,
 				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
 				375C716E166BB48200B48C11 /* ProducerViewController.m in Sources */,
+				375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "ServiceCategoryViewController.h"
 #import "WarningCategoryViewController.h"
 #import "ProfilController.h"
+#import "SettingsViewController.h"
 
 @class ViewController;
 
@@ -30,6 +31,6 @@
 
 
 // Profil Controllers
-@property (nonatomic) ProfilController* profilController;
+@property (nonatomic) SettingsViewController* profilController;
 @property (nonatomic) UINavigationController* ProfilNavigationController;
 @end
