@@ -10,7 +10,7 @@
 #import "Profil.h"
 #import "CarProfilViewController.h"
 
-@interface CarFavoritViewController : UITableViewController
+@interface CarFavoritViewController : UITableViewController <UIActionSheetDelegate>
 
 -(id) initWithProfil: (Profil*) profil;
 @end

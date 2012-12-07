@@ -559,9 +559,12 @@
 				375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */,
 				375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */,
 				375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */,
+<<<<<<< HEAD
 				8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */,
 				8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */,
 				375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */,
+=======
+>>>>>>> 0500c351bf224fc258189312ee87e8a198c7e21e
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
