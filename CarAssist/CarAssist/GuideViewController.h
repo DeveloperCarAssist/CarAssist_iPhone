@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Guide.h"
 
-@interface GuideViewController : UIViewController
+@interface GuideViewController : UIViewController <UIScrollViewDelegate>
 @property (nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) Guide *guide;
+@property IBOutlet UIPageControl *pageControl;
 -(id) initWithGuide:(Guide *)guide;
 @end

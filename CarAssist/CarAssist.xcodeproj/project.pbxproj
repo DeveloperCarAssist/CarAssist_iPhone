@@ -67,8 +67,8 @@
 		8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35B1672204500B7F5DE /* tabbar_profil.png */; };
 		8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35C1672204500B7F5DE /* tabbar_service.png */; };
 		8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */; };
-		8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3621672282300B7F5DE /* schritt_10.jpeg */; };
-		8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* schritt_20.jpeg */; };
+		8FF1F3641672282300B7F5DE /* reifenwechsel_schritt_10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */; };
+		8FF1F3651672282300B7F5DE /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,8 +171,8 @@
 		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
-		8FF1F3621672282300B7F5DE /* schritt_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schritt_10.jpeg; sourceTree = "<group>"; };
-		8FF1F3631672282300B7F5DE /* schritt_20.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schritt_20.jpeg; sourceTree = "<group>"; };
+		8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reifenwechsel_schritt_10.jpeg; sourceTree = "<group>"; };
+		8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reifenwechsel_schritt_20.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,8 +435,8 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
-				8FF1F3621672282300B7F5DE /* schritt_10.jpeg */,
-				8FF1F3631672282300B7F5DE /* schritt_20.jpeg */,
+				8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */,
+				8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */,
 			);
 			name = ServiceImages;
 			sourceTree = "<group>";
@@ -537,8 +537,8 @@
 				8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */,
 				8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */,
 				8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */,
-				8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */,
-				8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */,
+				8FF1F3641672282300B7F5DE /* reifenwechsel_schritt_10.jpeg in Resources */,
+				8FF1F3651672282300B7F5DE /* reifenwechsel_schritt_20.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,4 +12,7 @@
 @interface StepView : UIView
 @property IBOutlet UIView *mainView;
 @property IBOutlet UILabel *nameLabel;
+@property IBOutlet UIImageView *imageView;
+@property IBOutlet UITextView *textView;
+
 @end
