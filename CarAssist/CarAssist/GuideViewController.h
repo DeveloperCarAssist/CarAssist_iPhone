@@ -14,4 +14,5 @@
 @property (nonatomic) Guide *guide;
 @property IBOutlet UIPageControl *pageControl;
 -(id) initWithGuide:(Guide *)guide;
+-(IBAction)changePage:(id)sender;
 @end

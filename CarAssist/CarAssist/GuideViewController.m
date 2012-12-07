@@ -62,5 +62,12 @@
     self.title = self.guide.name;
 }
 
+-(IBAction)changePage:(id)sender
+{
+    UIPageControl *pageControl = sender;
+    NSInteger currentPage = pageControl.currentPage;
+    CGPoint offset = CGPointMake(currentPage * self.scrollView.frame.size.width, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
 
 @end
