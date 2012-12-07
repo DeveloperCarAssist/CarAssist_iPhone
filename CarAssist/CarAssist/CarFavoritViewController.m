@@ -80,9 +80,17 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+  
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     cell.textLabel.text= car.modell;
-
+    if (car == self.profil.car)
+    {
+        //[cell.imageView setImage: asdasd]; Image für Ausgewähltes Auto
+    }
+    else
+    {
+     //       [cell.imageView setImage:breakdownServiceCategoryImage]; Image für nicht ausgewählte Autos
+    }
     
     return cell;
 }
