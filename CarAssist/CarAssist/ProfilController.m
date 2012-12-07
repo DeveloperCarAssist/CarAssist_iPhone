@@ -40,6 +40,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    [self.navigationItem setTitle: @"Profil"];
     // Do any additional setup after loading the view from its nib.
 viewWillAppear: TRUE;
 }
