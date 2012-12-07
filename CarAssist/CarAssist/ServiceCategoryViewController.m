@@ -81,7 +81,7 @@
     NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
     Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = guide.name;
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
