@@ -41,7 +41,7 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
-viewWillAppear: TRUE;
+viewWillAppear: YES;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -62,7 +62,7 @@ viewWillAppear: TRUE;
       //  [self.carProducer setEnabled:YES];
         [self.emailAdress setEnabled:YES];
         [self.lieblingsKEKSEEE setEnabled:true];
-        self.wahr=TRUE;
+        self.wahr=YES;
     }
     else
     {
@@ -76,7 +76,7 @@ viewWillAppear: TRUE;
          self.profil.emailAdresse=[self.emailAdress text];
         [self.lieblingsKEKSEEE setEnabled:false];
          self.profil.lieblingsKEKSEEE=[self.lieblingsKEKSEEE text];
-        self.wahr = FALSE;
+        self.wahr = NO;
     }
 }
 

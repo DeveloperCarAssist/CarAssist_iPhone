@@ -14,5 +14,6 @@
 @property (nonatomic) IBOutlet UITableView* serviceGuideTableView;
 @property (nonatomic) IBOutlet UISearchBar* serviceSearchBar;
 
+@property (nonatomic) UITapGestureRecognizer* tapRecognizer;
 
 @end
