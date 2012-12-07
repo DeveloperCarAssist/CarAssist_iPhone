@@ -32,11 +32,25 @@
     self.title = @"Service";
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
-    // UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
-    // [self.view addGestureRecognizer:tapRecognizer];
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+    NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
+     UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
+     UIKeyboardWillHideNotification object:nil];
 }
 
+-(void) keyboardWillShow:(NSNotification*) note
+{
+    [self.view addGestureRecognizer:self.tapRecognizer];
+}
 
+-(void) keyboardWillHide:(NSNotification*) note
+{
+    [self.view removeGestureRecognizer:self.tapRecognizer];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSArray *keys = [self.serviceGuideStockService.guides allKeys];

@@ -70,6 +70,8 @@
 		8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35B1672204500B7F5DE /* tabbar_profil.png */; };
 		8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35C1672204500B7F5DE /* tabbar_service.png */; };
 		8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */; };
+		8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3621672282300B7F5DE /* schritt_10.jpeg */; };
+		8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* schritt_20.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +177,8 @@
 		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
+		8FF1F3621672282300B7F5DE /* schritt_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schritt_10.jpeg; sourceTree = "<group>"; };
+		8FF1F3631672282300B7F5DE /* schritt_20.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schritt_20.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +349,7 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8FF1F361167227F100B7F5DE /* ServiceImages */,
 				8FF1F3591672201900B7F5DE /* Icons */,
 				40C32767166BAEAD00BC049B /* pannenhilfe.png */,
 				400DF8A7166910BF00D6217B /* bremsanlage.png */,
@@ -434,6 +439,15 @@
 				8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
+			isa = PBXGroup;
+			children = (
+				8FF1F3621672282300B7F5DE /* schritt_10.jpeg */,
+				8FF1F3631672282300B7F5DE /* schritt_20.jpeg */,
+			);
+			name = ServiceImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +549,8 @@
 				375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */,
 				375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */,
 				375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */,
+				8FF1F3641672282300B7F5DE /* schritt_10.jpeg in Resources */,
+				8FF1F3651672282300B7F5DE /* schritt_20.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
