@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Car.h"
+#import "AccessoryService.h"
 @interface RadioPickerController : UIViewController < UIPickerViewDataSource, UIPickerViewDelegate >
--(RadioPickerController*) initWithCar: (Car*) car;
+@property IBOutlet UIImageView *imageView;
+-(RadioPickerController*) initWithCar: (Car*) car andAccessoryService:(AccessoryService*) accessoryService;
 @end
