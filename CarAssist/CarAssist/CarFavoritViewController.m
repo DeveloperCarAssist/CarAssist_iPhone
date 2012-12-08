@@ -78,10 +78,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIImage* favoriteCar = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"favorit" ofType:@"png"]];
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [cell.imageView setImage:favoriteCar];
     }
   
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
