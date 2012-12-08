@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Car.h"
 @interface CarDataViewController : UITableViewController
-
+@property (nonatomic) IBOutlet UIPickerView* radio;
 -(CarDataViewController*)initWithCar: (Car*)car;
 @end

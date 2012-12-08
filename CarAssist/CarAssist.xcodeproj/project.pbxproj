@@ -18,6 +18,8 @@
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
 		37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB892A167372F60098EFA3 /* CarDataViewController.xib */; };
+		37BB893C16737F2F0098EFA3 /* RadioPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB893A16737F2F0098EFA3 /* RadioPickerController.m */; };
+		37BB893D16737F2F0098EFA3 /* RadioPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB893B16737F2F0098EFA3 /* RadioPickerController.xib */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
@@ -105,6 +107,9 @@
 		37BB8928167372F60098EFA3 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDataViewController.h; sourceTree = "<group>"; };
 		37BB8929167372F60098EFA3 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataViewController.m; sourceTree = "<group>"; };
 		37BB892A167372F60098EFA3 /* CarDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDataViewController.xib; sourceTree = "<group>"; };
+		37BB893916737F2F0098EFA3 /* RadioPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioPickerController.h; sourceTree = "<group>"; };
+		37BB893A16737F2F0098EFA3 /* RadioPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioPickerController.m; sourceTree = "<group>"; };
+		37BB893B16737F2F0098EFA3 /* RadioPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioPickerController.xib; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
@@ -240,6 +245,7 @@
 		2E725FF1166E666100942382 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				37BB893116737E260098EFA3 /* CarDataView */,
 				37E717A516690D2400F6B11F /* ProfilController.h */,
 				37E717A616690D2400F6B11F /* ProfilController.m */,
 				37E717A716690D2400F6B11F /* ProfilController.xib */,
@@ -255,9 +261,6 @@
 				40959AE616724F04001A1E86 /* CarListSelectorViewController.h */,
 				40959AE716724F04001A1E86 /* CarListSelectorViewController.m */,
 				40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */,
-				37BB8928167372F60098EFA3 /* CarDataViewController.h */,
-				37BB8929167372F60098EFA3 /* CarDataViewController.m */,
-				37BB892A167372F60098EFA3 /* CarDataViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -283,6 +286,19 @@
 			children = (
 			);
 			name = Manual;
+			sourceTree = "<group>";
+		};
+		37BB893116737E260098EFA3 /* CarDataView */ = {
+			isa = PBXGroup;
+			children = (
+				37BB8928167372F60098EFA3 /* CarDataViewController.h */,
+				37BB8929167372F60098EFA3 /* CarDataViewController.m */,
+				37BB892A167372F60098EFA3 /* CarDataViewController.xib */,
+				37BB893916737F2F0098EFA3 /* RadioPickerController.h */,
+				37BB893A16737F2F0098EFA3 /* RadioPickerController.m */,
+				37BB893B16737F2F0098EFA3 /* RadioPickerController.xib */,
+			);
+			name = CarDataView;
 			sourceTree = "<group>";
 		};
 		400DF8391668F0F100D6217B = {
@@ -584,6 +600,7 @@
 				375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */,
 				40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */,
 				37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */,
+				37BB893D16737F2F0098EFA3 /* RadioPickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +659,7 @@
 				40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */,
 				405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */,
 				37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */,
+				37BB893C16737F2F0098EFA3 /* RadioPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

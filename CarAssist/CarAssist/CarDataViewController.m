@@ -7,6 +7,7 @@
 //
 
 #import "CarDataViewController.h"
+#import "RadioPickerController.h"
 
 @interface CarDataViewController ()
 @property Car* car;
@@ -70,24 +71,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-    }
+    UITableViewCell *cell;
     int row = indexPath.row;
     if(indexPath.section ==0)
     {
-        
+        static NSString *CellIdentifier = @"Cell1";
+         cell= [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
         if(row == 0)
         {
             cell.textLabel.text=@"Hersteller";
             cell.detailTextLabel.text=self.car.producer;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         }
         if(row == 1)
         {
             cell.textLabel.text=@"Modell";
             cell.detailTextLabel.text=self.car.modell;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         }
         
@@ -95,7 +99,11 @@
     
     if(indexPath.section == 1)
     {
-    
+        static NSString *CellIdentifier = @"Cell2";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        }
         if(row == 0)
         {
             cell.textLabel.text=@"Radio";
@@ -120,7 +128,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+   if(indexPath.section == 1 && indexPath.row == 0)
+   {
+       RadioPickerController* radioController = [[RadioPickerController alloc] initWithCar: self.car];
+     //  radioController.view.frame = CGRectMake(0, 70, radioController.view.frame.size.width, radioController.view.frame.size.height);
+       [self.navigationController pushViewController: radioController animated:YES];
+       
+       // Override point for customization after application launch
+     //  [self.view makeKeyAndVisible];
+   }
 }
 
 -(NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
