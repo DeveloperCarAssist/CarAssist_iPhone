@@ -70,7 +70,7 @@
     int i = -1;
     if(section==0)
     {
-        i=2;
+        i=3;
     }
     if (section == 1) {
         i=3;
@@ -84,7 +84,9 @@
     int row = indexPath.row;
     if(indexPath.section ==0)
     {
-        static NSString *CellIdentifier = @"Cell1";
+        if(row <= 1)
+        {
+            static NSString *CellIdentifier = @"Cell1";
          cell= [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
@@ -96,14 +98,29 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         }
-        if(row == 1)
+                if(row == 1)
+                {
+                cell.textLabel.text=@"Modell";
+                cell.detailTextLabel.text=self.car.modell;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+            }
+        }
+        else
         {
-            cell.textLabel.text=@"Modell";
-            cell.detailTextLabel.text=self.car.modell;
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            static NSString *CellIdentifier = @"Cell2";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+            }
+            if(row == 2)
+            {
+                cell.textLabel.text=@"Bezeichnung";
+                cell.detailTextLabel.text=self.car.name;
+            }
+
 
         }
-        
     }
     
     if(indexPath.section == 1)
