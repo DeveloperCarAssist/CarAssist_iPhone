@@ -37,4 +37,40 @@
     }
     return self;
 }
+
+-(BOOL) isEqual:(Car*)car
+{
+    if (![self.modell isEqualToString:car.modell]) {
+        return NO;
+    }
+    
+    if (![self.producer isEqualToString:car.producer]) {
+        return NO;
+    }
+    
+    if (![self.radio isEqualToString:car.radio]) {
+        return NO;
+    }
+    
+    if (![self.seatHeater isEqualToString:car.seatHeater]) {
+        return NO;
+    }
+    
+    if (![self.navigation isEqualToString:car.navigation]) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(NSUInteger) hash
+{
+    // TODO: implement better Hashcode?
+    NSUInteger hash = (self.modell.length * self.producer.length);
+    return hash;
+}
+
+
+
+
 @end
