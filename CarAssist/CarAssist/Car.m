@@ -20,7 +20,7 @@
         self.radio=@"Standard";
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
-        self.name=@"Klaus sein Auto";
+        self.name=@"Klaus' Auto";
     }
     return self;
 }
