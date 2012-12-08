@@ -20,6 +20,7 @@
         self.radio=@"Standard";
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
+        self.name=@"Klaus sein Auto";
     }
     return self;
 }
@@ -60,6 +61,9 @@
         return NO;
     }
     
+    if (![self.name isEqualToString:car.name]) {
+        return NO;
+    }
     return YES;
 }
 
