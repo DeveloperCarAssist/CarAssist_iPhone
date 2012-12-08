@@ -12,6 +12,11 @@
 @property NSMutableArray *producerlist;
 @property NSMutableDictionary *modelList;
 
+
+@property (nonatomic) NSArray* allCars;
+@property (nonatomic) NSArray* reducedCars;
+
+
 @end
 @implementation CarListService
 
@@ -19,8 +24,8 @@
 {
     self =  [super init];
     if(self) {
-                Car *car = [[Car alloc ]initWithExampleData];
-    self.producerlist= [[NSMutableArray alloc] initWithObjects: car.producer, nil];
+        Car *car = [[Car alloc ]initWithExampleData];
+        self.producerlist= [NSMutableArray arrayWithObject: car.producer];
         self.modelList= [[NSMutableDictionary alloc] initWithCapacity: self.producerlist.count];
         NSMutableArray *forBMW = [[NSMutableArray alloc] initWithObjects: car , nil];
         [self.modelList setObject: forBMW forKey: car.producer];
@@ -37,4 +42,41 @@
 {
     return [self.modelList objectForKey: fromProducer];
 }
+
+
+
+
+- (CarListService*) init
+{
+    self = [super init];
+    if (self) {
+        [self initCars];
+        [self initCarDictionary];
+    }
+    return self;
+}
+
+- (void) initCars
+{
+    NSMutableArray* allCars = [NSMutableArray array];
+    
+    
+    
+    
+    
+}
+
+- (void) initCarDictionary
+{
+    
+}
+
+
+
+
+
+
+
+
+
 @end

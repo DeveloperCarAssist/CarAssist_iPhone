@@ -7,8 +7,9 @@
 //
 
 #import "CarFavoritViewController.h"
+#import "CarListSelectorViewController.h"
 
-@interface CarFavoritViewController ()
+@interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profil *profil;
 @end
 
@@ -36,8 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
-    [self.navigationItem setRightBarButtonItem: button];
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
+    [self.navigationItem setRightBarButtonItem: addButton];
     [self.navigationItem setTitle: @"Profil"];
 }
 
@@ -111,10 +112,8 @@
 {
     if (buttonIndex == 0)
     {
-    //Hier Modellliste Pushen
-#warning Modelliste Pushen bitte ;)
-        // CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithProfil: self.profil];
-        // [self.navigationController pushViewController:carprofilcontroller animated:YES];
+        CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self];
+        [self.navigationController pushViewController:controller animated:YES];
     }
     
     if(buttonIndex == 1)
@@ -125,6 +124,12 @@
     {
         //Hier Fahrgestellnummer Scannen View Controller Pushen
     }
+}
+
+- (void) carHasBeenSelected:(Car *)selectedCar
+{
+    [self.profil.carList addObject:selectedCar];
+    [self.carFavoriteTableView reloadData];
 }
 
 @end

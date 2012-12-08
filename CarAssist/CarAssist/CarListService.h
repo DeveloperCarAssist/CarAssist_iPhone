@@ -15,4 +15,7 @@
 -(NSArray*) giveAllProducer;
 //gibt alle Modelle für einen Hersteller an
 -(NSArray*) giveAllCarModels: (NSString*) fromProducer;
+
+@property (nonatomic) NSMutableDictionary* cars;
+
 @end

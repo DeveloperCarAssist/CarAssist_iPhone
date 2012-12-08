@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.carListService = [[CarListService alloc] init];
+        self.carListService = [[CarListService alloc] initWithExampleData];
         self.delegate = delegate;
     }
     return self;
@@ -110,9 +110,21 @@
 /**
  * Diese Methode sorgt für das Speichern des ausgewählten Autos
  */
-- (void) carSaveButtonClicked
+- (void) saveCarButtonClicked
 {
-    
+    if (self.selectedCar) {
+        [self.delegate carHasBeenSelected:self.selectedCar];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Auto gewählt!"
+                                                        message:@"Bitte wählen Sie ein Auto aus."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 /**

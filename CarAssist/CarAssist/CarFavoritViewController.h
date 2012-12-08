@@ -12,5 +12,7 @@
 
 @interface CarFavoritViewController : UITableViewController <UIActionSheetDelegate>
 
+@property (nonatomic) IBOutlet UITableView* carFavoriteTableView;
+
 -(id) initWithProfil: (Profil*) profil;
 @end
