@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Car.h"
 #import "Profil.h"
-#import "ProducerViewController.h"
 
 @interface CarProfilViewController : UIViewController
 

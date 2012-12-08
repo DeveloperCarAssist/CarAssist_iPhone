@@ -7,6 +7,8 @@
 
 #import "CarListService.h"
 #import "Car.h"
+#import "NSString+CarAssistString.h"
+
 @interface CarListService()
 
 @property NSMutableArray *producerlist;
@@ -19,32 +21,6 @@
 
 @end
 @implementation CarListService
-
--(CarListService*) initWithExampleData
-{
-    self =  [super init];
-    if(self) {
-        Car *car = [[Car alloc ]initWithExampleData];
-        self.producerlist= [NSMutableArray arrayWithObject: car.producer];
-        self.modelList= [[NSMutableDictionary alloc] initWithCapacity: self.producerlist.count];
-        NSMutableArray *forBMW = [[NSMutableArray alloc] initWithObjects: car , nil];
-        [self.modelList setObject: forBMW forKey: car.producer];
-    }
-    return self;
-}
-
--(NSArray*) giveAllProducer
-{
-    return self.producerlist;
-}
-
--(NSArray*) giveAllCarModels: (NSString*) fromProducer
-{
-    return [self.modelList objectForKey: fromProducer];
-}
-
-
-
 
 - (CarListService*) init
 {
@@ -60,23 +36,64 @@
 {
     NSMutableArray* allCars = [NSMutableArray array];
     
+    Car* car = [[Car alloc] initWithExampleData];
+    [allCars addObject:car];
     
     
-    
-    
+    self.allCars = allCars;
+    self.reducedCars = allCars;
 }
 
+/**
+ * Initialisiert das Dictionary mit den Autos.
+ *
+ */
 - (void) initCarDictionary
 {
+    self.cars = [NSMutableDictionary dictionary];
+    NSMutableSet* carProducers = [NSMutableArray array];
     
+    // Alle keys holen (Hersteller)
+    for (Car* car in self.reducedCars) {
+        [carProducers addObject: car.producer];
+    }
+    
+    // Keys (Hersteller) mappen auf leere Liste.
+    for (NSString* producer in carProducers) {
+        NSMutableArray* carsFromProducer = [NSMutableArray array];
+        [self.cars setObject:carsFromProducer forKey:producer];
+    }
+    
+    // Liste der Hersteller mit entsprechenden Autos füllen.
+    for (Car* car in self.reducedCars) {
+        NSMutableArray* carsFromProducer = [self.cars objectForKey:car.producer];
+        [carsFromProducer addObject:car];
+    }
 }
 
-
-
-
-
-
-
-
+/**
+ * Aktualisiert das Dictionary, so dass nur Autos enthalten sind, deren Hersteller oder Name den searchText enthalten.
+ */
+- (void) reduceCarsWithSearchText: (NSString*) searchText
+{
+    NSMutableArray* cars = [NSMutableArray array];
+    
+    if ([searchText isEqualToString:@""])
+    {
+        self.reducedCars = self.allCars;
+    }
+    else
+    {
+        for (Car* car in self.allCars) {
+            if ([car.modell containsSubstring:searchText] || [car.producer containsSubstring:searchText]) {
+                [cars addObject:car];
+            }
+        }
+        
+        self.reducedCars = cars;
+    }
+    
+    [self initCarDictionary];
+}
 
 @end

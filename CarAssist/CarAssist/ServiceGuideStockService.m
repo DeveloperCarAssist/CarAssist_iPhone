@@ -106,16 +106,18 @@
     self.guides = [NSMutableDictionary dictionary];
     NSMutableSet* serviceCategories = [NSMutableArray array];
     
-    
+    // Alle keys holen (Kategorien)
     for (Guide* guide in self.reducedGuides) {
         [serviceCategories addObject: guide.categoryName];
     }
     
+    // Keys (Kategorien) mappen auf leere Liste.
     for (NSString* categoryName in serviceCategories) {
         NSMutableArray* guidesOfCategory = [NSMutableArray array];
         [self.guides setObject:guidesOfCategory forKey:categoryName];
     }
     
+    // Liste der Kategorien mit entsprechenden Anleitungen füllen.
     for (Guide* guide in self.reducedGuides) {
         NSMutableArray* guidesOfCategory = [self.guides objectForKey:guide.categoryName];
         [guidesOfCategory addObject:guide];

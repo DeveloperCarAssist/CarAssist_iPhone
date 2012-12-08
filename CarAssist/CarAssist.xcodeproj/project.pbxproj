@@ -11,8 +11,6 @@
 		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
 		375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7155166B93EE00B48C11 /* CarProfilViewController.m */; };
 		375C7158166B93EF00B48C11 /* CarProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7156166B93EF00B48C11 /* CarProfilViewController.xib */; };
-		375C716E166BB48200B48C11 /* ProducerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C716C166BB48200B48C11 /* ProducerViewController.m */; };
-		375C716F166BB48200B48C11 /* ProducerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C716D166BB48200B48C11 /* ProducerViewController.xib */; };
 		375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */; };
 		375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */; };
@@ -54,6 +52,7 @@
 		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
+		405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FB2811673754D00024934 /* NSString+CarAssistString.m */; };
 		40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40959AE716724F04001A1E86 /* CarListSelectorViewController.m */; };
 		40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */; };
 		40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* ServiceGuideStockService.m */; };
@@ -95,9 +94,6 @@
 		375C7154166B93EE00B48C11 /* CarProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarProfilViewController.h; sourceTree = "<group>"; };
 		375C7155166B93EE00B48C11 /* CarProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarProfilViewController.m; sourceTree = "<group>"; };
 		375C7156166B93EF00B48C11 /* CarProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarProfilViewController.xib; sourceTree = "<group>"; };
-		375C716B166BB48200B48C11 /* ProducerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProducerViewController.h; sourceTree = "<group>"; };
-		375C716C166BB48200B48C11 /* ProducerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProducerViewController.m; sourceTree = "<group>"; };
-		375C716D166BB48200B48C11 /* ProducerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProducerViewController.xib; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_service Kopie.png"; sourceTree = "<group>"; };
 		375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profil Kopie.png"; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_stoerung Kopie.png"; sourceTree = "<group>"; };
@@ -155,6 +151,8 @@
 		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
+		405FB2801673754D00024934 /* NSString+CarAssistString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CarAssistString.h"; sourceTree = "<group>"; };
+		405FB2811673754D00024934 /* NSString+CarAssistString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CarAssistString.m"; sourceTree = "<group>"; };
 		40959AE616724F04001A1E86 /* CarListSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListSelectorViewController.h; sourceTree = "<group>"; };
 		40959AE716724F04001A1E86 /* CarListSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListSelectorViewController.m; sourceTree = "<group>"; };
 		40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListSelectorViewController.xib; sourceTree = "<group>"; };
@@ -246,9 +244,6 @@
 				375C7154166B93EE00B48C11 /* CarProfilViewController.h */,
 				375C7155166B93EE00B48C11 /* CarProfilViewController.m */,
 				375C7156166B93EF00B48C11 /* CarProfilViewController.xib */,
-				375C716B166BB48200B48C11 /* ProducerViewController.h */,
-				375C716C166BB48200B48C11 /* ProducerViewController.m */,
-				375C716D166BB48200B48C11 /* ProducerViewController.xib */,
 				375F8E7E16723C7D00FAD821 /* SettingsViewController.h */,
 				375F8E7F16723C7D00FAD821 /* SettingsViewController.m */,
 				375F8E8016723C7D00FAD821 /* SettingsViewController.xib */,
@@ -317,6 +312,7 @@
 		400DF84E1668F0F100D6217B /* CarAssist */ = {
 			isa = PBXGroup;
 			children = (
+				405FB27E167373FA00024934 /* Util */,
 				400DF8961669081800D6217B /* Services */,
 				400DF892166907E700D6217B /* Model */,
 				400DF8881669051700D6217B /* Controller */,
@@ -418,6 +414,15 @@
 				40C32750166B89BB00BC049B /* ServiceGuideStockService.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		405FB27E167373FA00024934 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				405FB2801673754D00024934 /* NSString+CarAssistString.h */,
+				405FB2811673754D00024934 /* NSString+CarAssistString.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		40F85023166B84B300366DDE /* Model */ = {
@@ -558,7 +563,6 @@
 				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
 				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
 				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
-				375C716F166BB48200B48C11 /* ProducerViewController.xib in Resources */,
 				8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */,
 				8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */,
 				8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */,
@@ -625,9 +629,9 @@
 				375C7157166B93EF00B48C11 /* CarProfilViewController.m in Sources */,
 				8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */,
 				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
-				375C716E166BB48200B48C11 /* ProducerViewController.m in Sources */,
 				375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */,
 				40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */,
+				405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

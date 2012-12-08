@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.carListService = [[CarListService alloc] initWithExampleData];
+        self.carListService = [[CarListService alloc] init];
         self.delegate = delegate;
     }
     return self;
@@ -55,39 +55,39 @@
     [self.view removeGestureRecognizer:self.tapRecognizer];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.carListService giveAllProducer].count;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.carListService.cars allKeys].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray* producers = [self.carListService giveAllProducer];
-    NSArray* models = [self.carListService giveAllCarModels:[producers objectAtIndex: section]];
-    
-    return models.count;
+    NSString* producer = [[self.carListService.cars allKeys] objectAtIndex:section];
+    NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
+    return modelsFromProducer.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
     
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
     }
-    NSArray* producers = [self.carListService giveAllProducer];
-    NSArray* models = [self.carListService giveAllCarModels:[producers objectAtIndex: indexPath.section]];
-    Car* currentModel = [models objectAtIndex:indexPath.row];
-    cell.textLabel.text = currentModel.modell;
+        
+    NSString* producer = [[self.carListService.cars allKeys] objectAtIndex:indexPath.section];
+    NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
+    Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
     
+    cell.textLabel.text = currentModel.modell;
+        
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-    NSArray* producers = [self.carListService giveAllProducer];
-    NSString* currentProducer = [producers objectAtIndex:section];
+    
+    NSString* currentProducer = [[self.carListService.cars allKeys] objectAtIndex:section];
     return currentProducer;
     
 }
@@ -95,16 +95,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray* producers = [self.carListService giveAllProducer];
-    NSArray* models = [self.carListService giveAllCarModels:[producers objectAtIndex: indexPath.section]];
-    self.selectedCar = [models objectAtIndex:indexPath.row];
+
+    NSString* producer = [[self.carListService.cars allKeys] objectAtIndex:indexPath.section];
+    NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
+    Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
+    self.selectedCar = currentModel;
     
 }
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-//    [self.serviceGuideStockService reduceServiceGuidesWithSearchText: searchText];
-//    [self.serviceGuideTableView reloadData];
+    [self.carListService reduceCarsWithSearchText: searchText];
+    [self.carSelectionTableView reloadData];
 }
 
 /**
@@ -118,11 +120,7 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Auto gewählt!"
-                                                        message:@"Bitte wählen Sie ein Auto aus."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Auto gewählt!" message:@"Bitte wählen Sie ein Auto aus." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 }
