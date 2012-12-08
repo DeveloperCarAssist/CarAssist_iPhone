@@ -8,6 +8,7 @@
 
 #import "CarFavoritViewController.h"
 #import "CarListSelectorViewController.h"
+#import "CarDataViewController.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profil *profil;
@@ -102,7 +103,8 @@
 
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     self.profil.car= car;
-    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+   // CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+    CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: self.profil.car];
      [self.navigationController pushViewController:carprofilcontroller animated:YES];
     
 }
