@@ -7,17 +7,22 @@
 //
 
 #import "RadioPickerController.h"
+#import "AccessoryService.h"
 
 @interface RadioPickerController ()
 @property Car* car;
+@property NSString *radio;
+@property AccessoryService *accessoryService;
 @end
 
 @implementation RadioPickerController
--(RadioPickerController*) initWithCar: (Car*) car
+-(RadioPickerController*) initWithCar: (Car*) car andAccessoryService:(AccessoryService*) accessoryService
 {
     self = [super init];
     if (self) {
         self.car=car;
+        self.title=@"Radio";
+        self.accessoryService = accessoryService;
     }
     return self;
     
@@ -34,9 +39,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+            [self.imageView setImage: [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Autoradio" ofType:@"jpeg"]]];
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action: @selector(doneButtonPressed)];
+    [self.navigationItem setRightBarButtonItem: addButton];
 }
 
+-(void)doneButtonPressed
+{
+     self.car.radio=self.radio;
+     [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -48,15 +60,16 @@
 }
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
     
-   return 2;
+   return [self.accessoryService.radios count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return @"Hallo";
+    return [self.accessoryService.radios objectAtIndex: row];
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
+self.radio = [self.accessoryService.radios objectAtIndex: row];
+    
 }
 
 @end

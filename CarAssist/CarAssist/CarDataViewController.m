@@ -8,9 +8,11 @@
 
 #import "CarDataViewController.h"
 #import "RadioPickerController.h"
+#import "AccessoryService.h"
 
 @interface CarDataViewController ()
 @property Car* car;
+@property AccessoryService *accessory;
 @end
 
 @implementation CarDataViewController
@@ -20,6 +22,9 @@
     self = [super init];
     if (self) {
         self.car=car;
+        self.title= @"Autoprofil";
+        self.accessory= [[AccessoryService alloc] init];
+        
     }
     return self;
 }
@@ -41,6 +46,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableview reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,7 +139,7 @@
 {
    if(indexPath.section == 1 && indexPath.row == 0)
    {
-       RadioPickerController* radioController = [[RadioPickerController alloc] initWithCar: self.car];
+       RadioPickerController* radioController = [[RadioPickerController alloc] initWithCar: self.car andAccessoryService:self.accessory];
      //  radioController.view.frame = CGRectMake(0, 70, radioController.view.frame.size.width, radioController.view.frame.size.height);
        [self.navigationController pushViewController: radioController animated:YES];
        
