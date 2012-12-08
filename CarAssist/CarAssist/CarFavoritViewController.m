@@ -88,7 +88,11 @@
     }
   
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
-    cell.textLabel.text= car.modell;
+    NSString *string = [NSString stringWithFormat:@" %@ - %@ ",car.modell, car.name ];
+
+    
+        
+    cell.textLabel.text= string;
     if (car == self.profil.car)
     {
         //[cell.imageView setImage: asdasd]; Image für Ausgewähltes Auto
