@@ -46,7 +46,7 @@
 {
     UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: @"Abbruch" destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
     
-    [sheet showInView: self.view];
+    [sheet showFromToolbar: self.navigationController.toolbar];
 
     
 }
