@@ -8,6 +8,7 @@
 
 #import "CarFavoritViewController.h"
 #import "CarListSelectorViewController.h"
+#import "CarDataViewController.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profil *profil;
@@ -46,7 +47,7 @@
 {
     UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: @"Abbruch" destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
     
-    [sheet showInView: self.view];
+    [sheet showFromToolbar: self.navigationController.toolbar];
 
     
 }
@@ -102,7 +103,8 @@
 
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     self.profil.car= car;
-    CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+   // CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
+    CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: self.profil.car];
      [self.navigationController pushViewController:carprofilcontroller animated:YES];
     
 }
