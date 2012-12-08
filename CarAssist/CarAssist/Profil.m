@@ -10,6 +10,11 @@
 
 @implementation Profil
 
+    static Profil* instance;
+
+
+
+
 -(Profil*) initWithExampleData
 {
     self = [super init];
@@ -25,6 +30,15 @@
         self.lieblingsKEKSEEE=@"Oreo Keks";
     }
     return self;
+}
+
++ (Profil*) getProfil
+{
+    if (!instance) {
+        instance = [[Profil alloc] initWithExampleData];
+    }
+    
+    return instance;
 }
 
 @end
