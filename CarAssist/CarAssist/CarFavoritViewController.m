@@ -130,8 +130,8 @@
 
 - (void) carHasBeenSelected:(Car *)selectedCar
 {
-    [self.profil.carList addObject:selectedCar];
-    [self.carFavoriteTableView reloadData];
+        [self.profil.carList addObject:selectedCar];
+        [self.carFavoriteTableView reloadData];
 }
 
 @end

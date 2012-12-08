@@ -10,10 +10,11 @@
 #import "Car.h"
 
 @interface Profil : NSObject
-@property (strong) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
-@property NSMutableArray *carList;
-@property Car *car;
-// Erstellt ein Profil mit Beispiel Daten
--(Profil*) initWithExampleData;
+@property (nonatomic) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
+@property (nonatomic) NSMutableArray *carList;
+@property (nonatomic) Car *car;
+
+// gibt das singleton Profil zurück.
++ (Profil*) getProfil;
 
 @end

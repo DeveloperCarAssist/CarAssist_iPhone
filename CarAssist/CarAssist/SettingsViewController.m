@@ -16,21 +16,13 @@
 
 @implementation SettingsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
--(SettingsViewController*) initWithProfil: (Profil*) profil
+
+-(SettingsViewController*) init
 {
     self = [super init];
     if (self) {
-        // Custom initialization
-        self.profil=profil;
+        self.profil = [Profil getProfil];
     }
     return self;
 }
