@@ -9,6 +9,7 @@
 #import "ServiceGuideStockService.h"
 #import "Step.h"
 #import "Guide.h"
+#import "NSString+CarAssistString.h"
 
 @interface ServiceGuideStockService ()
 
@@ -124,30 +125,45 @@
     }
 }
 
-/**
- * Aktualisiert das Dictionary, so dass nur Anleitungen enthalten sind, in denen der searchText enthalten ist.
- *
- */
-- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText
+
+- (void) reduceReducedGuidesWithSearchText: (NSString*) searchText
 {
     NSMutableArray* guides = [NSMutableArray array];
     
-    if ([searchText isEqualToString:@""])
+    if (![searchText isEqualToString:@""])
     {
-        self.reducedGuides = self.allGuides;
-    }
-    else
-    {
-        for (Guide* guide in self.allGuides) {
-            if ([guide.name rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound) {
+        for (Guide* guide in self.reducedGuides) {
+            if ([guide.name containsSubstring:searchText] || [guide.categoryName containsSubstring:searchText]) {
                 [guides addObject:guide];
             }
         }
         
         self.reducedGuides = guides;
     }
+}
+
+
+
+/**
+ * Aktualisiert das Dictionary, so dass nur Anleitungen enthalten sind, in denen der searchText enthalten ist. Mit Leerzeichen getrennte Worte werden als 2 verschiedene Suchbegriffe aufgefasst.
+ *
+ */
+- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText
+{
+    NSArray* searchItems = [searchText componentsSeparatedByString:@" "];
+    
+    self.reducedGuides = self.allGuides;
+    
+    for (NSString* searchItem in searchItems) {
+        [self reduceReducedGuidesWithSearchText: searchItem];
+    }
     
     [self initGuideDictionary];
 }
+
+
+
+
+
 
 @end

@@ -71,20 +71,14 @@
     }
 }
 
-/**
- * Aktualisiert das Dictionary, so dass nur Autos enthalten sind, deren Hersteller oder Name den searchText enthalten.
- */
-- (void) reduceCarsWithSearchText: (NSString*) searchText
+
+- (void) reduceReducedCarsWithSearchText: (NSString*) searchText
 {
     NSMutableArray* cars = [NSMutableArray array];
     
-    if ([searchText isEqualToString:@""])
+    if (![searchText isEqualToString:@""])
     {
-        self.reducedCars = self.allCars;
-    }
-    else
-    {
-        for (Car* car in self.allCars) {
+        for (Car* car in self.reducedCars) {
             if ([car.modell containsSubstring:searchText] || [car.producer containsSubstring:searchText]) {
                 [cars addObject:car];
             }
@@ -93,7 +87,24 @@
         self.reducedCars = cars;
     }
     
+}
+
+/**
+ * Aktualisiert das Dictionary, so dass nur Autos enthalten sind, deren Hersteller oder Name den searchText enthalten.
+ */
+- (void) reduceCarsWithSearchText: (NSString*) searchText
+{
+    NSArray* searchItems = [searchText componentsSeparatedByString:@" "];
+    
+    self.reducedCars = self.allCars;
+    
+    for (NSString* searchItem in searchItems) {
+        [self reduceReducedCarsWithSearchText: searchItem];
+    }
+    
     [self initCarDictionary];
 }
+
+
 
 @end
