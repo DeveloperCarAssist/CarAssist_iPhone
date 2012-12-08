@@ -10,10 +10,13 @@
 
 @implementation Profil
 
-    static Profil* instance;
+// singleton-instance
+static Profil* instance;
 
-
-
+- (id) init
+{
+    [NSException raise:@"The Class Profile is a singleton. You are not allowed to initialize it. Use getProfile instead!" format:@"foo of %d is invalid"];
+}
 
 -(Profil*) initWithExampleData
 {

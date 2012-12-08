@@ -13,8 +13,8 @@
 @property (nonatomic) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
 @property (nonatomic) NSMutableArray *carList;
 @property (nonatomic) Car *car;
-// Erstellt ein Profil mit Beispiel Daten
--(Profil*) initWithExampleData;
+
+// gibt das singleton Profil zurück.
 + (Profil*) getProfil;
 
 @end

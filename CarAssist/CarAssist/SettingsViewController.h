@@ -10,5 +10,4 @@
 #import "Profil.h"
 @interface SettingsViewController : UITableViewController
 
--(SettingsViewController*) initWithProfil: (Profil*) profil;
 @end
