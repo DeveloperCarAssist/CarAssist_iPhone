@@ -57,7 +57,7 @@
      */
     
     
-    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen wechseln" CategoryName: @"Reifen" AndSteps: steps];
+    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
     [allGuides addObject:guide];
     
     //---------------------------------------------------------------------------------------------------------------------------------------
