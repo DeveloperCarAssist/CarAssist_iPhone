@@ -10,7 +10,7 @@
 
 @implementation Car
 
--(Car*) initWithExampleData
+-(Car*) initWithExampleDataBmwZ4
 {
     self = [super init];
     if (self)
@@ -21,6 +21,21 @@
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
         self.name=@"Klaus' Auto";
+    }
+    return self;
+}
+
+-(Car*) initWithExampleDataVWGolfIV
+{
+    self = [super init];
+    if (self)
+    {
+        self.modell=@"Golf IV 1.6";
+        self.producer=@"VW";
+        self.radio=@"Beta";
+        self.seatHeater=@"Standard";
+        self.navigation=@"kein";
+        self.name=@"Gerds Auto";
     }
     return self;
 }

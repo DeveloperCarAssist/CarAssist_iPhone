@@ -24,10 +24,10 @@ static Profil* instance;
     self = [super init];
     if (self)
     {
-        Car *car = [[Car alloc ]initWithExampleData];
+//        Car *car = [[Car alloc ]initWithExampleDataBmwZ4];
         
-        self.car=[[Car alloc]initWithExampleData];
-        self.carList=[[NSMutableArray alloc] initWithObjects: car , nil];
+        self.car=[[Car alloc]initWithExampleDataBmwZ4];
+        self.carList=[[NSMutableArray alloc] initWithObjects: self.car , nil];
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";

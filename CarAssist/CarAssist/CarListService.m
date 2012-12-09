@@ -36,9 +36,10 @@
 {
     NSMutableArray* allCars = [NSMutableArray array];
     
-    Car* car = [[Car alloc] initWithExampleData];
+    Car* car = [[Car alloc] initWithExampleDataBmwZ4];
     [allCars addObject:car];
-    
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
+    [allCars addObject:car];
     
     self.allCars = allCars;
     self.reducedCars = allCars;
