@@ -82,13 +82,9 @@
     Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = guide.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
-}
-
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellAccessoryDetailDisclosureButton;
 }
 
 /* Indexliste am Rand. Wird zunächst nicht benötigt.
