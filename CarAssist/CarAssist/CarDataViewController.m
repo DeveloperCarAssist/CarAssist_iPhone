@@ -142,7 +142,7 @@
         }
         if(row == 2)
         {
-            cell.textLabel.text=@"seatHeater";
+            cell.textLabel.text=@"Sitzheizung";
             cell.detailTextLabel.text=self.car.seatHeater;
         }
     }
