@@ -80,11 +80,12 @@
 {
     UIImage* favoriteCar = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"favorit" ofType:@"png"]];
     
+    UIImage* noFavoriteCar = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kein_favorit" ofType:@"png"]];
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        [cell.imageView setImage:favoriteCar];
     }
   
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
@@ -95,10 +96,12 @@
     cell.textLabel.text= string;
     if (car == self.profil.car)
     {
+        [cell.imageView setImage:favoriteCar];
         //[cell.imageView setImage: asdasd]; Image für Ausgewähltes Auto
     }
     else
     {
+        [cell.imageView setImage:noFavoriteCar];
      //       [cell.imageView setImage:breakdownServiceCategoryImage]; Image für nicht ausgewählte Autos
     }
     
