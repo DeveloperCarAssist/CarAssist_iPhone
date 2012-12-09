@@ -43,4 +43,10 @@ static Profil* instance;
     return instance;
 }
 
+-(void)setCar:(Car *)car
+{
+    _car = car;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"defaultCarChanged" object:self];
+}
+
 @end
