@@ -23,9 +23,7 @@ static Profil* instance;
 {
     self = [super init];
     if (self)
-    {
-//        Car *car = [[Car alloc ]initWithExampleDataBmwZ4];
-        
+    {   
         self.car=[[Car alloc]initWithExampleDataBmwZ4];
         self.carList=[[NSMutableArray alloc] initWithObjects: self.car , nil];
         self.vorname=@"Klaus";
