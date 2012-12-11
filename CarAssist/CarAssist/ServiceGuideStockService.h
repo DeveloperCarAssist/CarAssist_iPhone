@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Car.h"
 
 @interface ServiceGuideStockService : NSObject
 
@@ -16,5 +17,5 @@
 @property (nonatomic) NSMutableDictionary* guides;
 
 - (void) reduceServiceGuidesWithSearchText: (NSString*) searchText;
-
+-(ServiceGuideStockService*) initWithCar:(Car *) car;
 @end

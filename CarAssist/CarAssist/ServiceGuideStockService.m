@@ -20,24 +20,57 @@
 
 @implementation ServiceGuideStockService
 
+//
+//  Service leer initialisieren
+//
 - (ServiceGuideStockService*) init
 {
     self = [super init];
     
     if (self)
     {
-        [self initServiceGuides];
+        NSMutableArray* allGuides = [NSMutableArray array];
+        self.allGuides = allGuides;
+        self.reducedGuides = allGuides;
+        
         [self initGuideDictionary];
     }
     
     return self;
 }
+//
+//  Service für ein spezifisches Fahrzeug initialisieren
+//  TODO: Testdaten nicht mehr hart codieren sondern aus einer
+//  Datenquelle laden
+//
+-(ServiceGuideStockService*) initWithCar:(Car *) car
+{
+    self = [super init];
+    if(self)
+    {
+        switch (car.unid)
+        {
+            case 1:
+                [self initServiceGuidesWithExampleDataBmwZ4];
+                [self initGuideDictionary];
+                break;
+            case 2:
+                [self initServiceGuidesWithExampleDataVWGolfIV];
+                [self initGuideDictionary];
+                break;
+            default:
+                @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"no service data for selected car" userInfo:nil];
+                break;
+        }
+    }
+    return self;
+}
 
 /**
- * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik
+ * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 1. Testfahrzeug
  *
  */
-- (void) initServiceGuides
+- (void) initServiceGuidesWithExampleDataBmwZ4
 {
     NSMutableArray* allGuides = [NSMutableArray array];
     NSMutableArray* steps = [NSMutableArray array];
@@ -50,6 +83,9 @@
     */
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_20" ofType:@"jpeg"]];
     step = [[Step alloc] initWithName: @"Wagenheber ansetzen" Description:@"Setzen Sie den Wagenheber an der Karosserie markierten Stelle an. Heben Sie den Wagen nur leicht an, bis das Rad knapp über dem Boden schwebt." AndImage:image];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den BMW." AndImage:nil ];
     [steps addObject:step];
     
     /* alter Text
@@ -97,6 +133,34 @@
     self.allGuides = allGuides;
     self.reducedGuides = allGuides;
 }
+
+/**
+ * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 2. Testfahrzeug
+ *
+ */
+- (void) initServiceGuidesWithExampleDataVWGolfIV
+{
+    NSMutableArray* allGuides = [NSMutableArray array];
+    NSMutableArray* steps = [NSMutableArray array];
+    
+    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_10" ofType:@"jpeg"]];
+    Step* step = [[Step alloc] initWithName: @"Radmuttern lösen" Description:@"Verwenden Sie das Radkreuz zum Lösen der Radmuttern. Wechseln Sie nur einen Reifen zur Zeit. Um mehr Kraft aufzuwenden, verwenden Sie Ihren Fuß als Hebel. Lösen Sie die Radmuttern nur leicht an." AndImage:image];
+    [steps addObject:step];
+
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_20" ofType:@"jpeg"]];
+    step = [[Step alloc] initWithName: @"Wagenheber ansetzen" Description:@"Setzen Sie den Wagenheber an der Karosserie markierten Stelle an. Heben Sie den Wagen nur leicht an, bis das Rad knapp über dem Boden schwebt." AndImage:image];
+    [steps addObject:step];
+
+    step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den Golf." AndImage:nil ];
+    [steps addObject:step];
+    
+    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    self.allGuides = allGuides;
+    self.reducedGuides = allGuides;
+}
+
 
 /**
  * Initialisiert das Dictionary mit den Anleitungen.
