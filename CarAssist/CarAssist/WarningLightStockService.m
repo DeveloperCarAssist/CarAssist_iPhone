@@ -11,18 +11,29 @@
 
 @implementation WarningLightStockService
 
--(WarningLightStockService*) init
+-(WarningLightStockService*) initWithCar:(Car *) car
 {
     self = [super init];
     if (self)
     {
-        [self initWarningLights];
+        switch (car.unid)
+        {
+            case 1:
+                [self initWarningLightsBmwZ4];
+                break;
+            case 2:
+                [self initWarningLightsVWGolfIV];
+                break;
+            default:
+                @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"no service data for selected car" userInfo:nil];
+                break;
+        }
     }
     
     return self;
 }
 
--(void) initWarningLights
+-(void) initWarningLightsBmwZ4
 {
     NSMutableArray* warningLights = [NSMutableArray array];
     
@@ -41,6 +52,19 @@
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parkbremse" ofType:@"png"]];
     warningLight = [[WarningLight alloc] initWithName:@"Parkbremse Warnleuchte" Info:@"Eine noch andere Information" AndImage:image];
     [warningLights addObject:warningLight];
+    
+    self.warningLights = warningLights;
+    
+}
+
+-(void) initWarningLightsVWGolfIV
+{
+    NSMutableArray* warningLights = [NSMutableArray array];
+    
+    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchte" ofType:@"png"]];
+    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"Warnleuchte" Info:@"Eine Information" AndImage:image];
+    [warningLights addObject:warningLight];
+    
     
     self.warningLights = warningLights;
     

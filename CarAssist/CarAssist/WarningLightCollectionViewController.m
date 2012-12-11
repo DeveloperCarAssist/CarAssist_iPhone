@@ -10,6 +10,8 @@
 #import "WarningLight.h"
 #import "WarningLightViewController.h"
 #import "WarningLightCollectionViewCell.h"
+#import "Profil.h"
+#import "Car.h"
 
 @interface WarningLightCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -20,18 +22,36 @@
 - (WarningLightCollectionViewController*)init
 {
     self = [super init];
-     
-     if (self) {
-         self.warningLightStockService = [[WarningLightStockService alloc] init];
-     }
     return self;
+}
+-(void)dealloc
+{
+    // Abmeldung am NotificationCenter, wenn das Objekt selbst gelöscht wird
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Service mit dem Standardwagen des Profils initialisieren
+    Car *car = [[Profil getProfil] car];
+    self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
+    
+    // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
+    
     self.title = @"Warnleuchten";
     [self.warningLightCollectionView registerClass:WarningLightCollectionViewCell.class forCellWithReuseIdentifier:@"WarningLightCollectionViewCell"];
+}
+
+// Nachricht defaultCarChanged behandeln
+-(void)defaultCarChanged:(NSNotification *)notification
+{
+    Car *car = [notification.userInfo objectForKey:@"car"];
+    self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
+    [self.navigationController popToRootViewControllerAnimated:false];
+    [self.warningLightCollectionView reloadData];
 }
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

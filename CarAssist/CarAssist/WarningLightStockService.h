@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Car.h"
 
 @interface WarningLightStockService : NSObject
 
 @property (nonatomic) NSArray* warningLights;
-
+// Konstruktor
+-(WarningLightStockService*) initWithCar:(Car *) car;
 @end
