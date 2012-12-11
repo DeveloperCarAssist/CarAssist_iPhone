@@ -46,7 +46,8 @@ static Profil* instance;
 -(void)setCar:(Car *)car
 {
     _car = car;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"defaultCarChanged" object:self];
+    NSDictionary *userinfo = [NSDictionary dictionaryWithObject:car forKey:@"car"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"defaultCarChanged" object:self userInfo:userinfo];
 }
 
 @end
