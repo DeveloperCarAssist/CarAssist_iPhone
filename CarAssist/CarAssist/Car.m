@@ -15,6 +15,7 @@
     self = [super init];
     if (self)
     {
+        self.unid=1;
         self.modell=@"Z4";
         self.producer=@"BMW";
         self.radio=@"Standard";
@@ -30,6 +31,7 @@
     self = [super init];
     if (self)
     {
+        self.unid=2;
         self.modell=@"Golf IV 1.6";
         self.producer=@"VW";
         self.radio=@"Beta";
@@ -45,6 +47,7 @@
     self = [super init];
     if (self)
     {
+        self.unid=0;
         self.modell=@"";
         self.producer=@"";
         self.radio=@"Standard";

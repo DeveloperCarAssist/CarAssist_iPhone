@@ -10,10 +10,11 @@
 
 @interface Car : NSObject
 @property NSString *modell, *producer, *radio, *navigation, *seatHeater, *name;
-// Initiallisiert Autos mit Beispiel Daten
+@property NSInteger unid;
+// Initiallisiert Autos mit Beispieldaten
 -(Car*) initWithExampleDataBmwZ4;
 -(Car*) initWithExampleDataVWGolfIV;
-// Initiallisieren ein Leer Auto ohne zusatz
+// Initiallisiert ein leeres Auto ohne Zusatz
 -(Car*) initNewCar;
 
 @end
