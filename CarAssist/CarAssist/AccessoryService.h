@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Car.h"
 
 @interface AccessoryService : NSObject
 @property (nonatomic) NSArray* radios;
+// Konstruktor
+-(AccessoryService*) initWithCar:(Car *) car;
 @end
