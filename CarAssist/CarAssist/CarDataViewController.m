@@ -23,7 +23,7 @@
     if (self) {
         self.car=car;
         self.title= @"Autoprofil";
-        self.accessory= [[AccessoryService alloc] init];
+        self.accessory= [[AccessoryService alloc] initWithCar:car];
         
     }
     return self;
