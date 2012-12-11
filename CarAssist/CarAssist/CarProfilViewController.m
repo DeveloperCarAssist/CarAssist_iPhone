@@ -31,7 +31,7 @@
     }
     return self;
 }
--(CarProfilViewController*) initWithProfil: (Profil*) profil
+-(CarProfilViewController*) initWithProfil: (Profile*) profil
 {
     self = [super init];
     if (self) {
@@ -47,9 +47,9 @@ return self;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.modell setText: self.car.modell];
-    [self.modelButton setTitle:self.car.modell  forState:UIControlStateNormal];
-    [self.producer setText:self.car.producer];
+    [self.modell setText: self.car.model];
+    [self.modelButton setTitle:self.car.model  forState:UIControlStateNormal];
+    [self.producer setText:self.car.manufacturer];
     [self.radio setText:self.car.radio];
     [self.navigation setText:self.car.navigation];
     [self.seatHeater setText: self.car.seatHeater];
@@ -70,8 +70,8 @@ return self;
         [self.profil.carList addObject: self.car];
         self.newCar=NO;
     }
-self.car.modell = [self.modell text];
-self.car.producer = [self.producer text];
+self.car.model = [self.modell text];
+self.car.manufacturer = [self.producer text];
 self.car.radio = [self.radio text];
 self.car.navigation = [self.navigation text];
 self.car.seatHeater = [self.seatHeater text];

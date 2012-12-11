@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CarFavoritViewController.h"
-#import "Profil.h"
+#import "Profile.h"
 
 @interface ProfilController : UIViewController
 @property IBOutlet UITextField *firstName, *lastName, *carModell, *carProducer, *emailAdress,*lieblingsKEKSEEE;
 //Erstellt ein ProfilController und stellt das Profil grapisch da
--(ProfilController*) initWithProfil: (Profil*) profil;
+-(ProfilController*) initWithProfil: (Profile*) profil;
 
 //Wenn der "Persönliche Daten ändern" Butten gedrückt wird
 -(IBAction) editButtonpressed:(id)sender;

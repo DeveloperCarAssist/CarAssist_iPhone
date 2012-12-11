@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Profil.h"
+#import "Profile.h"
 @interface SettingsViewController : UITableViewController
 
 @end

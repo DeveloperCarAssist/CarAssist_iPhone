@@ -56,7 +56,7 @@
     
     // Alle keys holen (Hersteller)
     for (Car* car in self.reducedCars) {
-        [carProducers addObject: car.producer];
+        [carProducers addObject: car.manufacturer];
     }
     
     // Keys (Hersteller) mappen auf leere Liste.
@@ -67,7 +67,7 @@
     
     // Liste der Hersteller mit entsprechenden Autos füllen.
     for (Car* car in self.reducedCars) {
-        NSMutableArray* carsFromProducer = [self.cars objectForKey:car.producer];
+        NSMutableArray* carsFromProducer = [self.cars objectForKey:car.manufacturer];
         [carsFromProducer addObject:car];
     }
 }
@@ -80,7 +80,7 @@
     if (![searchText isEqualToString:@""])
     {
         for (Car* car in self.reducedCars) {
-            if ([car.modell containsSubstring:searchText] || [car.producer containsSubstring:searchText]) {
+            if ([car.model containsSubstring:searchText] || [car.manufacturer containsSubstring:searchText]) {
                 [cars addObject:car];
             }
         }

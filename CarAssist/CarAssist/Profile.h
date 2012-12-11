@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Car.h"
 
-@interface Profil : NSObject
+@interface Profile : NSObject
 @property (nonatomic) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE;
 @property (nonatomic) NSMutableArray *carList;
 @property (nonatomic) Car *car;
 
 // gibt das singleton Profil zurück.
-+ (Profil*) getProfil;
++ (Profile*) getProfile;
 
 @end

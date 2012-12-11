@@ -16,12 +16,12 @@
     if (self)
     {
         self.unid=1;
-        self.modell=@"Z4";
-        self.producer=@"BMW";
+        self.model=@"Z4";
+        self.manufacturer=@"BMW";
         self.radio=@"Standard";
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
-        self.name=@"Klaus' Auto";
+        self.owner=@"Klaus' Auto";
     }
     return self;
 }
@@ -32,12 +32,12 @@
     if (self)
     {
         self.unid=2;
-        self.modell=@"Golf IV 1.6";
-        self.producer=@"VW";
+        self.model=@"Golf IV 1.6";
+        self.manufacturer=@"VW";
         self.radio=@"Beta";
         self.seatHeater=@"Standard";
         self.navigation=@"kein";
-        self.name=@"Gerds Auto";
+        self.owner=@"Gerds Auto";
     }
     return self;
 }
@@ -48,8 +48,8 @@
     if (self)
     {
         self.unid=0;
-        self.modell=@"";
-        self.producer=@"";
+        self.model=@"";
+        self.manufacturer=@"";
         self.radio=@"Standard";
         self.seatHeater=@"Standard";
         self.navigation=@"Standard";
@@ -59,11 +59,11 @@
 
 -(BOOL) isEqual:(Car*)car
 {
-    if (![self.modell isEqualToString:car.modell]) {
+    if (![self.model isEqualToString:car.model]) {
         return NO;
     }
     
-    if (![self.producer isEqualToString:car.producer]) {
+    if (![self.manufacturer isEqualToString:car.manufacturer]) {
         return NO;
     }
     
@@ -79,7 +79,7 @@
         return NO;
     }
     
-    if (![self.name isEqualToString:car.name]) {
+    if (![self.owner isEqualToString:car.owner]) {
         return NO;
     }
     return YES;
@@ -88,7 +88,7 @@
 -(NSUInteger) hash
 {
     // TODO: implement better Hashcode?
-    NSUInteger hash = (self.modell.length * self.producer.length);
+    NSUInteger hash = (self.model.length * self.manufacturer.length);
     return hash;
 }
 

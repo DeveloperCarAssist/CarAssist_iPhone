@@ -10,7 +10,7 @@
 #import "WarningLight.h"
 #import "WarningLightViewController.h"
 #import "WarningLightCollectionViewCell.h"
-#import "Profil.h"
+#import "Profile.h"
 #import "Car.h"
 
 @interface WarningLightCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
     // Service mit dem Standardwagen des Profils initialisieren
-    Car *car = [[Profil getProfil] car];
+    Car *car = [[Profile getProfile] car];
     self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
     
     // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde

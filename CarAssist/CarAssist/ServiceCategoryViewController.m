@@ -10,7 +10,7 @@
 #import "ServiceGuideStockService.h"
 #import "GuideViewController.h"
 #import "Guide.h"
-#import "Profil.h"
+#import "Profile.h"
 #import "Car.h"
 
 @interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
@@ -41,7 +41,7 @@
     self.title = @"Service";
     
     // Service mit dem Standardwagen des Profils initialisieren
-    Car *car = [[Profil getProfil] car];
+    Car *car = [[Profile getProfile] car];
     self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.

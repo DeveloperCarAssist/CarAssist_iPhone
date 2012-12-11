@@ -23,7 +23,7 @@
 		37BB893F16738BD40098EFA3 /* Autoradio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 37BB893E16738BD40098EFA3 /* Autoradio.jpeg */; };
 		37BB8942167391210098EFA3 /* AccessoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8941167391210098EFA3 /* AccessoryService.m */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
-		37E717A116690CAB00F6B11F /* Profil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profil.m */; };
+		37E717A116690CAB00F6B11F /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profile.m */; };
 		37E717A816690D2400F6B11F /* ProfilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A616690D2400F6B11F /* ProfilController.m */; };
 		37E717A916690D2400F6B11F /* ProfilController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E717A716690D2400F6B11F /* ProfilController.xib */; };
 		37E717AC16690FCF00F6B11F /* CarListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717AB16690FCF00F6B11F /* CarListService.m */; };
@@ -119,8 +119,8 @@
 		37BB8941167391210098EFA3 /* AccessoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryService.m; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
-		37E7179F16690CAB00F6B11F /* Profil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profil.h; sourceTree = "<group>"; };
-		37E717A016690CAB00F6B11F /* Profil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profil.m; sourceTree = "<group>"; };
+		37E7179F16690CAB00F6B11F /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		37E717A016690CAB00F6B11F /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		37E717A516690D2400F6B11F /* ProfilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilController.h; sourceTree = "<group>"; };
 		37E717A616690D2400F6B11F /* ProfilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilController.m; sourceTree = "<group>"; };
 		37E717A716690D2400F6B11F /* ProfilController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilController.xib; sourceTree = "<group>"; };
@@ -428,8 +428,8 @@
 				400DF8941669080600D6217B /* WarningLight.m */,
 				37E7179B16690C5E00F6B11F /* Car.h */,
 				37E7179C16690C5E00F6B11F /* Car.m */,
-				37E7179F16690CAB00F6B11F /* Profil.h */,
-				37E717A016690CAB00F6B11F /* Profil.m */,
+				37E7179F16690CAB00F6B11F /* Profile.h */,
+				37E717A016690CAB00F6B11F /* Profile.m */,
 				661E1A44166B896000493F54 /* Guide.h */,
 				661E1A45166B896000493F54 /* Guide.m */,
 				661E1A47166B8A4300493F54 /* Step.h */,
@@ -660,7 +660,7 @@
 				400DF89D1669085E00D6217B /* WarningLightCollectionViewController.m in Sources */,
 				400DF8A116690A9900D6217B /* WarningLightCollectionViewCell.m in Sources */,
 				37E7179D16690C5E00F6B11F /* Car.m in Sources */,
-				37E717A116690CAB00F6B11F /* Profil.m in Sources */,
+				37E717A116690CAB00F6B11F /* Profile.m in Sources */,
 				37E717A816690D2400F6B11F /* ProfilController.m in Sources */,
 				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,

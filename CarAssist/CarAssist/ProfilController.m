@@ -7,16 +7,16 @@
 //
 
 #import "ProfilController.h"
-#import "Profil.h"
+#import "Profile.h"
 
 @interface ProfilController ()
 @property BOOL wahr;
-@property Profil* profil;
+@property Profile* profil;
 @end
 
 @implementation ProfilController
 
--(ProfilController*) initWithProfil: (Profil*) profil
+-(ProfilController*) initWithProfil: (Profile*) profil
 {
     self = [super init];
     if (self) {
@@ -48,8 +48,8 @@ viewWillAppear: YES;
 {
     [self.firstName setText:self.profil.vorname];
     [self.lastName setText:self.profil.nachname];
-    [self.carModell setText:self.profil.car.modell];
-    [self.carProducer setText:self.profil.car.producer];
+    [self.carModell setText:self.profil.car.model];
+    [self.carProducer setText:self.profil.car.manufacturer];
     [self.emailAdress setText:self.profil.emailAdresse];
     [self.lieblingsKEKSEEE setText:self.profil.lieblingsKEKSEEE];
 }

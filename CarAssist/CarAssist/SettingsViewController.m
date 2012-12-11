@@ -8,10 +8,10 @@
 
 #import "SettingsViewController.h"
 #import "CarFavoritViewController.h"
-#import "Profil.h"
+#import "Profile.h"
 
 @interface SettingsViewController ()
-@property Profil* profil;
+@property Profile* profil;
 @end
 
 @implementation SettingsViewController
@@ -22,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        self.profil = [Profil getProfil];
+        self.profil = [Profile getProfile];
     }
     return self;
 }

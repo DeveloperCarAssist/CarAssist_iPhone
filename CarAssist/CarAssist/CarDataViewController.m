@@ -94,14 +94,14 @@
         if(row == 0)
         {
             cell.textLabel.text=@"Hersteller";
-            cell.detailTextLabel.text=self.car.producer;
+            cell.detailTextLabel.text=self.car.manufacturer;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         }
                 if(row == 1)
                 {
                 cell.textLabel.text=@"Modell";
-                cell.detailTextLabel.text=self.car.modell;
+                cell.detailTextLabel.text=self.car.model;
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
             }
@@ -116,7 +116,7 @@
             if(row == 2)
             {
                 cell.textLabel.text=@"Bezeichnung";
-                cell.detailTextLabel.text=self.car.name;
+                cell.detailTextLabel.text=self.car.owner;
             }
 
 

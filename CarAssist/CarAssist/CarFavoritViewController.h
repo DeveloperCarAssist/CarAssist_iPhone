@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Profil.h"
+#import "Profile.h"
 #import "CarProfilViewController.h"
 
 @interface CarFavoritViewController : UITableViewController <UIActionSheetDelegate>
 
 @property (nonatomic) IBOutlet UITableView* carFavoriteTableView;
 
--(id) initWithProfil: (Profil*) profil;
+-(id) initWithProfil: (Profile*) profil;
 @end

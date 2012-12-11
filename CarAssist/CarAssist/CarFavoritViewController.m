@@ -11,7 +11,7 @@
 #import "CarDataViewController.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
-@property (strong) Profil *profil;
+@property (strong) Profile *profil;
 @end
 
 @implementation CarFavoritViewController
@@ -25,7 +25,7 @@
     return self;
 }
 
--(id) initWithProfil: (Profil*) profil
+-(id) initWithProfil: (Profile*) profil
 {
     self = [super init];
     if (self) {
@@ -89,7 +89,7 @@
     }
   
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
-    NSString *string = [NSString stringWithFormat:@" %@ - %@ ",car.modell, car.name ];
+    NSString *string = [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
 
     
         

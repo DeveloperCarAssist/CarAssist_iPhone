@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Car : NSObject
-@property NSString *modell, *producer, *radio, *navigation, *seatHeater, *name;
+@property NSString *model, *manufacturer, *radio, *navigation, *seatHeater, *owner;
 @property NSInteger unid;
 // Initiallisiert Autos mit Beispieldaten
 -(Car*) initWithExampleDataBmwZ4;

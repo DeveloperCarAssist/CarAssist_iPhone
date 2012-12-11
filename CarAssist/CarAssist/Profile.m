@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 Universität Hamburg. All rights reserved.
 //
 
-#import "Profil.h"
+#import "Profile.h"
 
-@implementation Profil
+@implementation Profile
 
 // singleton-instance
-static Profil* instance;
+static Profile* instance;
 
 - (id) init
 {
@@ -19,7 +19,7 @@ static Profil* instance;
     return nil;
 }
 
--(Profil*) initWithExampleData
+-(Profile*) initWithExampleData
 {
     self = [super init];
     if (self)
@@ -34,10 +34,10 @@ static Profil* instance;
     return self;
 }
 
-+ (Profil*) getProfil
++ (Profile*) getProfile
 {
     if (!instance) {
-        instance = [[Profil alloc] initWithExampleData];
+        instance = [[Profile alloc] initWithExampleData];
     }
     
     return instance;

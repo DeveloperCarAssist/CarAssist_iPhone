@@ -7,7 +7,7 @@
 //
 
 #import "CarListSelectorViewController.h"
-#import "Profil.h"
+#import "Profile.h"
 
 @interface CarListSelectorViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -81,7 +81,7 @@
     NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
     Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = currentModel.modell;
+    cell.textLabel.text = currentModel.model;
         
     return cell;
 }
@@ -116,7 +116,7 @@
 - (void) saveCarButtonClicked
 {
     if (self.selectedCar) {
-        if ([[Profil getProfil].carList containsObject:self.selectedCar])
+        if ([[Profile getProfile].carList containsObject:self.selectedCar])
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
