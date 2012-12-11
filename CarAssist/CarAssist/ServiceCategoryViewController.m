@@ -8,8 +8,10 @@
 
 #import "ServiceCategoryViewController.h"
 #import "ServiceGuideStockService.h"
-#import "Guide.h"
 #import "GuideViewController.h"
+#import "Guide.h"
+#import "Profil.h"
+#import "Car.h"
 
 @interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -17,23 +19,38 @@
 
 @implementation ServiceCategoryViewController
 
-- (id)init
+
+- (void)dealloc {
+    // Abmeldung am notification center, wenn das Objekt selbst gelöscht wird
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+// Nachricht defaultCarChanged behandeln
+-(void)defaultCarChanged:(NSNotification *)notification
 {
-    self = [super init];
-    if (self) {
-        self.serviceGuideStockService = [[ServiceGuideStockService alloc] init];
-    }
-    return self;
+    Car *car = [notification.userInfo objectForKey:@"car"];
+    self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar: car];
+    [self.navigationController popToRootViewControllerAnimated:false];
+    [self.serviceGuideTableView reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.title = @"Service";
+    
+    // Service mit dem Standardwagen des Profils initialisieren
+    Car *car = [[Profil getProfil] car];
+    self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+    
+    // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
+    [nc addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
     
     [nc addObserver:self selector:@selector(keyboardWillShow:) name:
      UIKeyboardWillShowNotification object:nil];
