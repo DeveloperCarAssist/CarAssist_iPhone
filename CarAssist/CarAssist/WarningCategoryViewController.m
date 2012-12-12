@@ -38,7 +38,7 @@
 // Nachricht defaultCarChanged behandeln
 -(void)defaultCarChanged:(NSNotification *)notification
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController popToViewController:self animated:NO];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
