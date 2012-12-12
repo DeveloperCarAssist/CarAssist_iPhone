@@ -120,7 +120,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: self.profil.car];
+    Car *car = [self.profil.carList objectAtIndex:indexPath.row];
+    CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: car];
      [self.navigationController pushViewController:carprofilcontroller animated:YES];
     
 }
