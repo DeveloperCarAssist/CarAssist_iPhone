@@ -50,7 +50,6 @@
 {
     Car *car = [notification.userInfo objectForKey:@"car"];
     self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
-    [self.navigationController popToRootViewControllerAnimated:false];
     [self.warningLightCollectionView reloadData];
 }
 

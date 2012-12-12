@@ -25,6 +25,20 @@
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
+}
+-(void)dealloc
+{
+    // Abmeldung am NotificationCenter, wenn das Objekt selbst gelöscht wird
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+// Nachricht defaultCarChanged behandeln
+-(void)defaultCarChanged:(NSNotification *)notification
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
