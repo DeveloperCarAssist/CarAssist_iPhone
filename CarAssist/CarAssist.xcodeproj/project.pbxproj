@@ -80,6 +80,10 @@
 		8F1FB4781674CBB8000D1D04 /* kein_favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1FB4771674CBB8000D1D04 /* kein_favorit.png */; };
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
 		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
+		8F7D5192167878C600E41D4D /* background_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518E167878C600E41D4D /* background_bedienung.png */; };
+		8F7D5193167878C600E41D4D /* background_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518F167878C600E41D4D /* background_profil.png */; };
+		8F7D5194167878C600E41D4D /* background_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D5190167878C600E41D4D /* background_service.png */; };
+		8F7D5195167878C600E41D4D /* background_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D5191167878C600E41D4D /* background_stoerung.png */; };
 		8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35B1672204500B7F5DE /* tabbar_profil.png */; };
 		8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35C1672204500B7F5DE /* tabbar_service.png */; };
 		8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */; };
@@ -202,6 +206,10 @@
 		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		8F7D518E167878C600E41D4D /* background_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_bedienung.png; sourceTree = "<group>"; };
+		8F7D518F167878C600E41D4D /* background_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_profil.png; sourceTree = "<group>"; };
+		8F7D5190167878C600E41D4D /* background_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_service.png; sourceTree = "<group>"; };
+		8F7D5191167878C600E41D4D /* background_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stoerung.png; sourceTree = "<group>"; };
 		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
@@ -395,6 +403,7 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F7D518C1678779A00E41D4D /* Backgrounds */,
 				37BB893E16738BD40098EFA3 /* Autoradio.jpeg */,
 				8FF1F361167227F100B7F5DE /* ServiceImages */,
 				8FF1F3591672201900B7F5DE /* Icons */,
@@ -484,6 +493,17 @@
 				40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				8F7D518E167878C600E41D4D /* background_bedienung.png */,
+				8F7D518F167878C600E41D4D /* background_profil.png */,
+				8F7D5190167878C600E41D4D /* background_service.png */,
+				8F7D5191167878C600E41D4D /* background_stoerung.png */,
+			);
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 		8FF1F3591672201900B7F5DE /* Icons */ = {
@@ -618,6 +638,10 @@
 				37BB893F16738BD40098EFA3 /* Autoradio.jpeg in Resources */,
 				405FB2931673982F00024934 /* default_car.png in Resources */,
 				8F1FB4781674CBB8000D1D04 /* kein_favorit.png in Resources */,
+				8F7D5192167878C600E41D4D /* background_bedienung.png in Resources */,
+				8F7D5193167878C600E41D4D /* background_profil.png in Resources */,
+				8F7D5194167878C600E41D4D /* background_service.png in Resources */,
+				8F7D5195167878C600E41D4D /* background_stoerung.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
