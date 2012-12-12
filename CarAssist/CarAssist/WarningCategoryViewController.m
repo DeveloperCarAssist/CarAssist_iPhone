@@ -8,6 +8,7 @@
 
 #import "WarningCategoryViewController.h"
 #import "WarningLightCollectionViewController.h"
+#import "Utils.h"
 
 @interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -22,6 +23,8 @@
     [super viewDidLoad];
     self.title = @"Störungen";
     
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -35,6 +38,7 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
+        cell.textLabel.textColor = [UIColor whiteColor];
     }
     
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];

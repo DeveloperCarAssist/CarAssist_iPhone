@@ -123,6 +123,7 @@
         }
         else
         {
+            [Profile getProfile].car = self.selectedCar;
             [self.delegate carHasBeenSelected:self.selectedCar];
             [self.navigationController popViewControllerAnimated:YES];
         }

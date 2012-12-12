@@ -9,6 +9,8 @@
 #import "CarFavoritViewController.h"
 #import "CarListSelectorViewController.h"
 #import "CarDataViewController.h"
+#import "CarFavoriteViewCell.h"
+#import "Utils.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profile *profil;
@@ -41,6 +43,9 @@
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: addButton];
     [self.navigationItem setTitle: @"Profil"];
+    
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
 }
 
 -(void)addCarButtonClicked
@@ -97,50 +102,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CarFavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CarFavoriteViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [cell.favoriteCarButton addTarget:self action:@selector(changeDefaultCar:event:) forControlEvents:UIControlEventTouchDown];
     }
   
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     
-    // "Favorit setzen" Buttons erzeugen
-    CGFloat cellWidth = cell.frame.size.width;
-    CGFloat cellHeight = cell.frame.size.height - 2.0f; // ein wenig kleiner damit die Rahmenlinien nicht überzeichnet werden
-    UIImage* favoriteCar = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"favorit" ofType:@"png"]];
-    UIImage* noFavoriteCar = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kein_favorit" ofType:@"png"]];
-    UIButton *changeDefaultCarButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [changeDefaultCarButton addTarget:self action:@selector(changeDefaultCar:event:) forControlEvents:UIControlEventTouchDown];
-    changeDefaultCarButton.frame = CGRectMake(10.0f, 1.0f, cellHeight,cellHeight);
-
-    // Zelle beschriften. cell.textLabel kann hier nicht verwendet werden, weil
-    // der Button den Text überlappen würde. Deshalb erzeugen wir unser eigenes Label
-    // und bestimmen die Anzeigeposition selbst.
-    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(cellHeight + 20.0f,1.0f,cellWidth - cellHeight - 10.0f, cellHeight)];
-    textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
-    
-    if (car == self.profil.car)
-    {
-        [changeDefaultCarButton setImage:favoriteCar forState:UIControlStateNormal];
-        textLabel.font = [UIFont boldSystemFontOfSize:16.0f];
-    }
-    else
-    {
-        [changeDefaultCarButton setImage:noFavoriteCar forState:UIControlStateNormal];
-        textLabel.font = [UIFont systemFontOfSize:16.0f];
-    }
-    [cell addSubview:changeDefaultCarButton];
-    [cell addSubview:textLabel];
+    cell.favorite = (car == self.profil.car);
+    cell.textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    Car *car = [self.profil.carList objectAtIndex: indexPath.row];
-    self.profil.car= car;
-   // CarProfilViewController *carprofilcontroller = [[CarProfilViewController alloc] initWithCar: self.profil.car];
     CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: self.profil.car];
      [self.navigationController pushViewController:carprofilcontroller animated:YES];
     
@@ -150,8 +129,19 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [self.profil.carList removeObjectAtIndex:indexPath.row];
-        [self.carFavoriteTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        if([self.profil.carList objectAtIndex:indexPath.row] == self.profil.car)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hinweis"
+                                                            message:@"Sie können den als Favorit markierten Wagen nicht löschen."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else
+        {
+            [self.profil.carList removeObjectAtIndex:indexPath.row];
+            [self.carFavoriteTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
     }
 }
 

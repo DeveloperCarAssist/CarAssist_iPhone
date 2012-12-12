@@ -12,6 +12,7 @@
 #import "Guide.h"
 #import "Profile.h"
 #import "Car.h"
+#import "Utils.h"
 
 @interface ServiceCategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -39,6 +40,10 @@
     [super viewDidLoad];
     
     self.title = @"Service";
+    
+    // Hintergrundgrafik einbinden
+    self.serviceGuideTableView.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
@@ -92,6 +97,7 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
+        cell.textLabel.textColor = [UIColor whiteColor];
     }
     NSArray *keys = [self.serviceGuideStockService.guides allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];

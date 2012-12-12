@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "CarFavoritViewController.h"
 #import "Profile.h"
+#import "Utils.h"
 
 @interface SettingsViewController ()
 @property Profile* profil;
@@ -31,6 +32,9 @@
 {
     [super viewDidLoad];
     [self.navigationItem setTitle: @"Profil"];
+    
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -65,6 +69,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.textLabel.textColor = [UIColor whiteColor];
     }
     
     int pos = indexPath.row;
@@ -78,6 +83,7 @@
     if (pos == 2) {
        cell.textLabel.text=@"Werkstätten";
     }
+
     return cell;
 }
 
