@@ -76,6 +76,8 @@
 		8F1FB4781674CBB8000D1D04 /* kein_favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1FB4771674CBB8000D1D04 /* kein_favorit.png */; };
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
 		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
+		8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D16167B82390011C02F /* ManualCategoryViewController.m */; };
+		8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideStockService.m */; };
 		8F7D5192167878C600E41D4D /* background_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518E167878C600E41D4D /* background_bedienung.png */; };
 		8F7D5193167878C600E41D4D /* background_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518F167878C600E41D4D /* background_profil.png */; };
 		8F7D5194167878C600E41D4D /* background_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D5190167878C600E41D4D /* background_service.png */; };
@@ -203,6 +205,10 @@
 		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		8F796D15167B82390011C02F /* ManualCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualCategoryViewController.h; sourceTree = "<group>"; };
+		8F796D16167B82390011C02F /* ManualCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualCategoryViewController.m; sourceTree = "<group>"; };
+		8F796D1C167B84F00011C02F /* ManualGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideStockService.h; sourceTree = "<group>"; };
+		8F796D1D167B84F00011C02F /* ManualGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualGuideStockService.m; sourceTree = "<group>"; };
 		8F7D518E167878C600E41D4D /* background_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_bedienung.png; sourceTree = "<group>"; };
 		8F7D518F167878C600E41D4D /* background_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_profil.png; sourceTree = "<group>"; };
 		8F7D5190167878C600E41D4D /* background_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_service.png; sourceTree = "<group>"; };
@@ -297,6 +303,8 @@
 		2E725FF3166E667A00942382 /* Manual */ = {
 			isa = PBXGroup;
 			children = (
+				8F796D15167B82390011C02F /* ManualCategoryViewController.h */,
+				8F796D16167B82390011C02F /* ManualCategoryViewController.m */,
 			);
 			name = Manual;
 			sourceTree = "<group>";
@@ -455,6 +463,8 @@
 				37BB8940167391210098EFA3 /* AccessoryService.h */,
 				37BB8941167391210098EFA3 /* AccessoryService.m */,
 				8FF793C8167B70F3008ADB97 /* GuideStockService.h */,
+				8F796D1C167B84F00011C02F /* ManualGuideStockService.h */,
+				8F796D1D167B84F00011C02F /* ManualGuideStockService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -726,6 +736,8 @@
 				8F7D519B1678825200E41D4D /* Utils.m in Sources */,
 				8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */,
 				8FF793BA167B64E6008ADB97 /* ServiceCategoryViewController.m in Sources */,
+				8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */,
+				8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
