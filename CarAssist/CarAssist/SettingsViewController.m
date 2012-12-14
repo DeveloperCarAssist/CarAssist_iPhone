@@ -23,7 +23,7 @@
 {
     self = [super init];
     if (self) {
-        self.profil = [Profile getProfile];
+            self.profil = [Profile getProfile];
     }
     return self;
 }
@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self.navigationItem setTitle: @"Profil"];
     
     // Hintergrundgrafik einbinden

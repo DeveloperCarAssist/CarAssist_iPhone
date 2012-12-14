@@ -16,6 +16,7 @@
 
 
 @property (nonatomic) NSArray* allCars;
+//Liste für Suche
 @property (nonatomic) NSArray* reducedCars;
 
 
@@ -89,11 +90,27 @@
     }
     
 }
+/**
+ * Diese Methode kriegt eine Fahrgestellnummer und liefer das dazugehörige Auto.
+ */
+-(Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber
+{
+    for (int i = 0 ; i < self.allCars.count; i++)
+    {
+        Car* automobil = [self.allCars objectAtIndex: i];
+        if ( [automobil.vehicalIdentNumber isEqual: vehicalIdentNumber])
+        {
+            return automobil;
+        }
+    }
+    return nil;
+}
 
 /**
  * Aktualisiert das Dictionary, so dass nur Autos enthalten sind, deren Hersteller oder Name den searchText enthalten.
  */
 - (void) reduceCarsWithSearchText: (NSString*) searchText
+
 {
     NSArray* searchItems = [searchText componentsSeparatedByString:@" "];
     

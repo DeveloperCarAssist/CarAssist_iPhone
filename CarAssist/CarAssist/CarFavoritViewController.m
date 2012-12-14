@@ -11,6 +11,7 @@
 #import "CarDataViewController.h"
 #import "CarFavoriteViewCell.h"
 #import "Utils.h"
+#import "CarListService.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profile *profil;
@@ -158,12 +159,51 @@
     if(buttonIndex == 1)
     {
         //Hier Fahrgestellnummer eigeben View Controller Pushen
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bitte Fahrgestellnummer Eingeben:"
+                                                        message:nil
+                                                       delegate:self
+                                              cancelButtonTitle:@"Done"
+                                              otherButtonTitles:nil];
+        alert.alertViewStyle=UIAlertViewStylePlainTextInput;
+        [alert show];
     }
     if(buttonIndex==2)
     {
         //Hier Fahrgestellnummer Scannen View Controller Pushen
     }
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  if([alertView.title isEqual: @"Bitte Fahrgestellnummer Eingeben:"])
+  {
+      UITextField *vin = [alertView textFieldAtIndex:0];
+      CarListService *carListService = [[CarListService alloc] init];
+     Car* car = [carListService returnCarByVehicalIdentNumber: vin.text];
+      if(car)
+      {
+          if ([[Profile getProfile].carList containsObject:car])
+          {
+              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+              [alert show];
+          }
+          else
+          {
+          [self carHasBeenSelected: car];
+          }
+      }
+      else
+      {
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung"
+                                                          message:@"Nummer Leider nicht gefunden"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+          [alert show];
+      }
+  }
+}
+
 
 - (void) carHasBeenSelected:(Car *)selectedCar
 {

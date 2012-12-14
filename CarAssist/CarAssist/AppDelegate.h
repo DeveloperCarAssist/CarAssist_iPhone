@@ -32,4 +32,7 @@
 // Profil Controllers
 @property (nonatomic) SettingsViewController* settingsViewController;
 @property (nonatomic) UINavigationController* settingsNavigationController;
+
+//Eine Variable um später zu sehen ob die App zum erstenmal gestartet wird
+@property (nonatomic) Boolean secondStart;
 @end
