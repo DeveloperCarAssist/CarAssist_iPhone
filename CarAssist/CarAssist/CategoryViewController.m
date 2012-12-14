@@ -53,15 +53,15 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray *keys = [self.guideStockService.guides allKeys];
     return [keys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray *keys = [self.guideStockService.guides allKeys];
     NSString *key = [keys objectAtIndex:section];
-    NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
+    NSArray *guidesOfCategory = [self.guideStockService.guides objectForKey: key];
     
     return guidesOfCategory.count;
 }
@@ -77,9 +77,9 @@
                                       reuseIdentifier:@"standard"];
         cell.textLabel.textColor = [UIColor whiteColor];
     }
-    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray *keys = [self.guideStockService.guides allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
-    NSArray *guidesOfCategory = [self.serviceGuideStockService.guides objectForKey: key];
+    NSArray *guidesOfCategory = [self.guideStockService.guides objectForKey: key];
     Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = guide.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -90,7 +90,7 @@
 
 /* Indexliste am Rand. Wird zunächst nicht benötigt.
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.serviceGuideStockService.guides allKeys];
+    return [self.guideStockService.guides allKeys];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
@@ -99,7 +99,7 @@
 */
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray *keys = [self.guideStockService.guides allKeys];
     NSString *key = [keys objectAtIndex:section];
     return key;
     
@@ -111,9 +111,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray *keys = [self.guideStockService.guides allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
-    NSArray *guides = [self.serviceGuideStockService.guides objectForKey:key];
+    NSArray *guides = [self.guideStockService.guides objectForKey:key];
     
     GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[guides objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:viewController animated:YES];
@@ -121,7 +121,7 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    [self.serviceGuideStockService reduceGuidesWithSearchText: searchText];
+    [self.guideStockService reduceGuidesWithSearchText: searchText];
     [self.serviceGuideTableView reloadData];
 }
 

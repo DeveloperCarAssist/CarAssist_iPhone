@@ -28,7 +28,7 @@
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
-    self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
+    self.guideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
     
 	// Do any additional setup after loading the view.
 }
@@ -39,7 +39,7 @@
 -(void)defaultCarChanged:(NSNotification *)notification
 {
  Car *car = [notification.userInfo objectForKey:@"car"];
- self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar: car];
+ self.guideStockService = [[ServiceGuideStockService alloc] initWithCar: car];
  [self.navigationController popToRootViewControllerAnimated:false];
  [self.serviceGuideTableView reloadData];
 }
