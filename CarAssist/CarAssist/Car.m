@@ -20,7 +20,6 @@
         self.model = @"Z4";
         self.manufacturer = @"BMW";
         self.equipmentPackage.radio = @"Radio Professional";
-        
         self.equipmentPackage.navigationDevice = @"TomTom";
         self.owner=@"Klaus' Auto";
         self.vehicalIdentNumber=@"1";
@@ -38,7 +37,7 @@
         self.model = @"Golf IV 1.6";
         self.manufacturer = @"VW";
         self.equipmentPackage.radio=@"Beta";
-
+        self.vehicalIdentNumber = @"2";
         self.equipmentPackage.navigationDevice = @"kein";
         self.owner = @"Gerds Auto";
     }
