@@ -70,10 +70,10 @@
     int i = -1;
     if(section==0)
     {
-        i=3;
+        i=2;
     }
     if (section == 1) {
-        i=3;
+        i=4;
     }
     return i;
 }
@@ -98,29 +98,15 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         }
-                if(row == 1)
-                {
-                cell.textLabel.text=@"Modell";
-                cell.detailTextLabel.text=self.car.model;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-            }
-        }
-        else
+        if(row == 1)
         {
-            static NSString *CellIdentifier = @"Cell2";
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-            }
-            if(row == 2)
-            {
-                cell.textLabel.text=@"Bezeichnung";
-                cell.detailTextLabel.text=self.car.owner;
-            }
-
+            cell.textLabel.text=@"Modell";
+            cell.detailTextLabel.text=self.car.model;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         }
+        }
+
     }
     
     if(indexPath.section == 1)
@@ -130,10 +116,11 @@
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         }
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         if(row == 0)
         {
-            cell.textLabel.text=@"Radio";
-            cell.detailTextLabel.text=self.car.radio;
+            cell.textLabel.text=@"Bezeichnung";
+            cell.detailTextLabel.text=self.car.owner;
         }
         if(row == 1)
         {
@@ -145,6 +132,10 @@
             cell.textLabel.text=@"Sitzheizung";
             cell.detailTextLabel.text=self.car.seatHeater;
         }
+        if (row == 3) {
+            cell.textLabel.text=@"Radio";
+            cell.detailTextLabel.text=self.car.radio;
+        }
     }
     return cell;
 }
@@ -154,7 +145,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   if(indexPath.section == 1 && indexPath.row == 0)
+   if(indexPath.section == 1 && indexPath.row == 3)
    {
        RadioPickerController* radioController = [[RadioPickerController alloc] initWithCar: self.car andAccessoryService:self.accessory];
      //  radioController.view.frame = CGRectMake(0, 70, radioController.view.frame.size.width, radioController.view.frame.size.height);
@@ -168,11 +159,11 @@
 -(NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
     if(section == 0)
     {
-        return @"Daten";
+        return @"Fahrzeug";
     }
     if(section == 1)
     {
-        return @"Ausstattung";
+        return @"Ausstattung & Daten";
     }
     return nil;
 }
