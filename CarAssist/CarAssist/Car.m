@@ -22,6 +22,7 @@
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
         self.owner=@"Klaus' Auto";
+        self.vehicalIdentNumber=@"1";
     }
     return self;
 }
@@ -38,6 +39,7 @@
         self.seatHeater=@"Standard";
         self.navigation=@"kein";
         self.owner=@"Gerds Auto";
+        self.vehicalIdentNumber=@"2";
     }
     return self;
 }
