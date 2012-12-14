@@ -47,7 +47,7 @@
 
 -(void)doneButtonPressed
 {
-     self.car.radio=self.radio;
+     self.car.equipmentPackage.radio=self.radio;
      [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning
