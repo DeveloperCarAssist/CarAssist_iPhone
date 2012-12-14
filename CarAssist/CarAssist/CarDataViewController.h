@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Car.h"
+#import "CarSettingsHelper.h"
+
 @interface CarDataViewController : UITableViewController
+
 @property (nonatomic) IBOutlet UITableView *tableview;
+
+@property (nonatomic) CarSettingsHelper* carSettingsHelper;
+
 -(CarDataViewController*)initWithCar: (Car*)car;
+
+
 @end

@@ -15,12 +15,13 @@
     self = [super init];
     if (self)
     {
+        [self standardInit];
         self.unid=1;
-        self.model=@"Z4";
-        self.manufacturer=@"BMW";
-        self.radio=@"Radio Professional";
-        self.seatHeater=@"Standard";
-        self.navigation=@"TomTom";
+        self.model = @"Z4";
+        self.manufacturer = @"BMW";
+        self.equipmentPackage.radio = @"Radio Professional";
+        
+        self.equipmentPackage.navigationDevice = @"TomTom";
         self.owner=@"Klaus' Auto";
     }
     return self;
@@ -31,13 +32,14 @@
     self = [super init];
     if (self)
     {
-        self.unid=2;
-        self.model=@"Golf IV 1.6";
-        self.manufacturer=@"VW";
-        self.radio=@"Beta";
-        self.seatHeater=@"Standard";
-        self.navigation=@"kein";
-        self.owner=@"Gerds Auto";
+        [self standardInit];
+        self.unid = 2;
+        self.model = @"Golf IV 1.6";
+        self.manufacturer = @"VW";
+        self.equipmentPackage.radio=@"Beta";
+
+        self.equipmentPackage.navigationDevice = @"kein";
+        self.owner = @"Gerds Auto";
     }
     return self;
 }
@@ -47,12 +49,12 @@
     self = [super init];
     if (self)
     {
+        [self standardInit];
         self.unid=0;
-        self.model=@"";
-        self.manufacturer=@"";
-        self.radio=@"Standard";
-        self.seatHeater=@"Standard";
-        self.navigation=@"Standard";
+        self.model = @"";
+        self.manufacturer = @"";
+        self.equipmentPackage.radio = @"Standard";
+        self.equipmentPackage.navigationDevice = @"Standard";
     }
     return self;
 }
@@ -67,15 +69,23 @@
         return NO;
     }
     
-    if (![self.radio isEqualToString:car.radio]) {
+    if (![self.equipmentPackage.radio isEqualToString:car.equipmentPackage.radio]) {
         return NO;
     }
     
-    if (![self.seatHeater isEqualToString:car.seatHeater]) {
+    if (![self.equipmentPackage.seats isEqualToString:car.equipmentPackage.seats]) {
         return NO;
     }
     
-    if (![self.navigation isEqualToString:car.navigation]) {
+    if (![self.equipmentPackage.navigationDevice isEqualToString:car.equipmentPackage.navigationDevice]) {
+        return NO;
+    }
+    
+    if (![self.equipmentPackage.steeringWheel isEqualToString:car.equipmentPackage.steeringWheel]) {
+        return NO;
+    }
+    
+    if (![self.gearbox isEqualToString:car.gearbox]) {
         return NO;
     }
     
@@ -93,6 +103,17 @@
 }
 
 
-
+- (void) standardInit
+{
+    self.unid = 0;
+    
+    self.model = @"Standard";
+    self.manufacturer = @"Standard";
+    self.owner = @"Standard";
+    self.gearbox = @"Standard";
+    self.insurance = @"Standard";
+    self.garage = @"Standard";
+    self.equipmentPackage = [[CarEquipmentPackage alloc] init];
+}
 
 @end

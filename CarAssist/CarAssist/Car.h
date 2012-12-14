@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CarEquipmentPackage.h"
 
 @interface Car : NSObject
-@property NSString *model, *manufacturer, *radio, *navigation, *seatHeater, *owner;
-@property NSInteger unid;
+@property (nonatomic) NSString *model, *manufacturer, *owner, *gearbox, *insurance, *garage;
+@property (nonatomic) CarEquipmentPackage* equipmentPackage;
+@property (nonatomic) NSInteger unid;
 // Initiallisiert Autos mit Beispieldaten
 -(Car*) initWithExampleDataBmwZ4;
 -(Car*) initWithExampleDataVWGolfIV;

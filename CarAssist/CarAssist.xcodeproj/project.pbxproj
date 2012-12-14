@@ -57,6 +57,8 @@
 		405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FB2811673754D00024934 /* NSString+CarAssistString.m */; };
 		405FB28C167394C000024934 /* favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB28B167394C000024934 /* favorit.png */; };
 		405FB2931673982F00024934 /* default_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB2921673982F00024934 /* default_car.png */; };
+		4075613E167B6B7700242741 /* CarSettingsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4075613D167B6B7700242741 /* CarSettingsHelper.m */; };
+		40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40756140167B6DFB00242741 /* CarEquipmentPackage.m */; };
 		40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40959AE716724F04001A1E86 /* CarListSelectorViewController.m */; };
 		40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */; };
 		40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* ServiceGuideStockService.m */; };
@@ -168,6 +170,10 @@
 		405FB2811673754D00024934 /* NSString+CarAssistString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CarAssistString.m"; sourceTree = "<group>"; };
 		405FB28B167394C000024934 /* favorit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorit.png; sourceTree = "<group>"; };
 		405FB2921673982F00024934 /* default_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_car.png; sourceTree = "<group>"; };
+		4075613C167B6B7700242741 /* CarSettingsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSettingsHelper.h; sourceTree = "<group>"; };
+		4075613D167B6B7700242741 /* CarSettingsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSettingsHelper.m; sourceTree = "<group>"; };
+		4075613F167B6DFB00242741 /* CarEquipmentPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarEquipmentPackage.h; sourceTree = "<group>"; };
+		40756140167B6DFB00242741 /* CarEquipmentPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarEquipmentPackage.m; sourceTree = "<group>"; };
 		40959AE616724F04001A1E86 /* CarListSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListSelectorViewController.h; sourceTree = "<group>"; };
 		40959AE716724F04001A1E86 /* CarListSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListSelectorViewController.m; sourceTree = "<group>"; };
 		40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListSelectorViewController.xib; sourceTree = "<group>"; };
@@ -299,6 +305,8 @@
 		37BB893116737E260098EFA3 /* CarDataView */ = {
 			isa = PBXGroup;
 			children = (
+				4075613C167B6B7700242741 /* CarSettingsHelper.h */,
+				4075613D167B6B7700242741 /* CarSettingsHelper.m */,
 				37BB8928167372F60098EFA3 /* CarDataViewController.h */,
 				37BB8929167372F60098EFA3 /* CarDataViewController.m */,
 				37BB892A167372F60098EFA3 /* CarDataViewController.xib */,
@@ -433,6 +441,8 @@
 				661E1A45166B896000493F54 /* Guide.m */,
 				661E1A47166B8A4300493F54 /* Step.h */,
 				661E1A48166B8A4300493F54 /* Step.m */,
+				4075613F167B6DFB00242741 /* CarEquipmentPackage.h */,
+				40756140167B6DFB00242741 /* CarEquipmentPackage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -694,6 +704,8 @@
 				37BB8942167391210098EFA3 /* AccessoryService.m in Sources */,
 				8F7D519B1678825200E41D4D /* Utils.m in Sources */,
 				8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */,
+				4075613E167B6B7700242741 /* CarSettingsHelper.m in Sources */,
+				40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

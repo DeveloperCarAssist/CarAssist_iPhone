@@ -12,7 +12,7 @@
 
 @interface CarDataViewController ()
 @property Car* car;
-@property AccessoryService *accessory;
+@property AccessoryService* accessory;
 @end
 
 @implementation CarDataViewController
@@ -24,7 +24,7 @@
         self.car=car;
         self.title= @"Autoprofil";
         self.accessory= [[AccessoryService alloc] initWithCar:car];
-        
+        self.carSettingsHelper = [[CarSettingsHelper alloc] initWithCar: car];
     }
     return self;
 }
@@ -52,91 +52,33 @@
     [self.tableview reloadData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return self.carSettingsHelper.settings.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    int i = -1;
-    if(section==0)
-    {
-        i=2;
-    }
-    if (section == 1) {
-        i=4;
-    }
-    return i;
+    NSArray* sectionArray = [self.carSettingsHelper.settings  objectAtIndex:section];
+    return sectionArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
-    int row = indexPath.row;
-    if(indexPath.section ==0)
-    {
-        if(row <= 1)
-        {
-            static NSString *CellIdentifier = @"Cell1";
-         cell= [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        }
-        if(row == 0)
-        {
-            cell.textLabel.text=@"Hersteller";
-            cell.detailTextLabel.text=self.car.manufacturer;
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-        }
-        if(row == 1)
-        {
-            cell.textLabel.text=@"Modell";
-            cell.detailTextLabel.text=self.car.model;
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-        }
-        }
-
+    NSArray* sectionArray = [self.carSettingsHelper.settings objectAtIndex:indexPath.section];
+    
+    static NSString* CellIdentifier = @"Cell2";
+    UITableViewCell* cell= [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    if(indexPath.section == 1)
-    {
-        static NSString *CellIdentifier = @"Cell2";
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-        }
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-        if(row == 0)
-        {
-            cell.textLabel.text=@"Bezeichnung";
-            cell.detailTextLabel.text=self.car.owner;
-        }
-        if(row == 1)
-        {
-            cell.textLabel.text=@"Navigation";
-            cell.detailTextLabel.text=self.car.navigation;
-        }
-        if(row == 2)
-        {
-            cell.textLabel.text=@"Sitzheizung";
-            cell.detailTextLabel.text=self.car.seatHeater;
-        }
-        if (row == 3) {
-            cell.textLabel.text=@"Radio";
-            cell.detailTextLabel.text=self.car.radio;
-        }
-    }
+    NSString* setting = [sectionArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = setting;
+    cell.detailTextLabel.text = [self.carSettingsHelper.settingsData objectForKey:setting];
+    
     return cell;
 }
 
@@ -145,27 +87,64 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   if(indexPath.section == 1 && indexPath.row == 3)
-   {
-       RadioPickerController* radioController = [[RadioPickerController alloc] initWithCar: self.car andAccessoryService:self.accessory];
-     //  radioController.view.frame = CGRectMake(0, 70, radioController.view.frame.size.width, radioController.view.frame.size.height);
-       [self.navigationController pushViewController: radioController animated:YES];
-       
-       // Override point for customization after application launch
-     //  [self.view makeKeyAndVisible];
-   }
+    switch (indexPath.section) {
+        case 0:
+            // Fahrzeug
+            if (indexPath.row == 2) {
+                // Bezeichnung
+            }
+            break;
+        case 1:
+            // Ausstattung
+            switch (indexPath.row) {
+                case 0:
+                    // Ausstattungspaket
+                    break;
+                case 1:
+                    // Navigationsgerät
+                    break;
+                case 2:
+                    // Radio
+                    break;
+                case 3:
+                    // Lenkrad
+                    break;
+                case 4:
+                    // Sitze
+                    break;
+                case 5:
+                    // Getriebe
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+        case 2:
+            // Dienstleister
+            switch (indexPath.row) {
+                case 0:
+                    // Versicherung
+                    break;
+                case 1:
+                    // Werkstätten
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
 }
 
+
+
 -(NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-    if(section == 0)
-    {
-        return @"Fahrzeug";
-    }
-    if(section == 1)
-    {
-        return @"Ausstattung & Daten";
-    }
-    return nil;
+    return [self.carSettingsHelper.sections objectAtIndex:section];
 }
+
+
 
 @end
