@@ -26,13 +26,13 @@
     
     self.tabBarController = [[UITabBarController alloc] init];
 
-    UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:[UIImage imageNamed:@"tabbar_service Kopie.png"]  tag:1]; 
+    UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:[UIImage imageNamed:@"tabbar_service_small"]  tag:1]; 
     [self.serviceNavigationController setTabBarItem:tabBarItem1];
     
-    UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image: [UIImage imageNamed:@"tabbar_stoerung Kopie.png"]  tag:2];
+    UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image: [UIImage imageNamed:@"tabbar_stoerung_small"]  tag:2];
     [self.warningNavigationController setTabBarItem:tabBarItem2];
     
-    UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil Kopie.png"] tag:3];
+    UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil_small"] tag:3];
     [self.settingsNavigationController setTabBarItem:tabBarItem3];
     
     

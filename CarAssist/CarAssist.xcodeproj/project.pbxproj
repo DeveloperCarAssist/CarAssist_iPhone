@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
 		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
-		375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */; };
-		375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */; };
-		375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */; };
+		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
+		375F8E7716722A2700FAD821 /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil_small.png */; };
+		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
@@ -101,9 +101,9 @@
 		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
 		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
 		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
-		375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_service Kopie.png"; sourceTree = "<group>"; };
-		375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profil Kopie.png"; sourceTree = "<group>"; };
-		375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_stoerung Kopie.png"; sourceTree = "<group>"; };
+		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
+		375F8E7616722A2700FAD821 /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil_small.png; sourceTree = "<group>"; };
+		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -506,9 +506,9 @@
 				405FB2921673982F00024934 /* default_car.png */,
 				405FB28B167394C000024934 /* favorit.png */,
 				8F1FB4771674CBB8000D1D04 /* kein_favorit.png */,
-				375F8E7816722A3000FAD821 /* tabbar_stoerung Kopie.png */,
-				375F8E7616722A2700FAD821 /* tabbar_profil Kopie.png */,
-				375F8E73167226CC00FAD821 /* tabbar_service Kopie.png */,
+				375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */,
+				375F8E7616722A2700FAD821 /* tabbar_profil_small.png */,
+				375F8E73167226CC00FAD821 /* tabbar_service_small.png */,
 				8FF1F35B1672204500B7F5DE /* tabbar_profil.png */,
 				8FF1F35C1672204500B7F5DE /* tabbar_service.png */,
 				8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */,
@@ -618,10 +618,10 @@
 				8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */,
 				8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */,
 				8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */,
-				375F8E74167226CC00FAD821 /* tabbar_service Kopie.png in Resources */,
+				375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */,
 				8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */,
-				375F8E7716722A2700FAD821 /* tabbar_profil Kopie.png in Resources */,
-				375F8E7916722A3000FAD821 /* tabbar_stoerung Kopie.png in Resources */,
+				375F8E7716722A2700FAD821 /* tabbar_profil_small.png in Resources */,
+				375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */,
 				375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */,
 				40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */,
 				37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */,
