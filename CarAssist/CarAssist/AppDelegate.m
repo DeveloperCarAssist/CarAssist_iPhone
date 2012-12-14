@@ -20,8 +20,8 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
-    self.profilController=  [[SettingsViewController alloc] init];
-    self.ProfilNavigationController= [[UINavigationController alloc] initWithRootViewController:self.profilController];
+    self.settingsViewController=  [[SettingsViewController alloc] init];
+    self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
 
     
     self.tabBarController = [[UITabBarController alloc] init];
@@ -33,11 +33,11 @@
     [self.warningNavigationController setTabBarItem:tabBarItem2];
     
     UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil Kopie.png"] tag:3];
-    [self.ProfilNavigationController setTabBarItem:tabBarItem3];
+    [self.settingsNavigationController setTabBarItem:tabBarItem3];
     
     
     NSArray *viewControllers = [NSArray arrayWithObjects:self.serviceNavigationController,
-                                self.warningNavigationController, self.ProfilNavigationController, nil];
+                                self.warningNavigationController, self.settingsNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
     
