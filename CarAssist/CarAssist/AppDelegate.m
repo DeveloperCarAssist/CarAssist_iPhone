@@ -22,7 +22,7 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
-    self.settingsViewController=  [[SettingsViewController alloc] init];
+    self.settingsViewController=  [[SettingsViewController alloc] initWithFirstStart: !self.secondStart];
     self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
     
     
@@ -42,22 +42,10 @@
                                 self.warningNavigationController, self.settingsNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
-
-    if(!self.secondStart)
-    {
-        self.secondStart = YES;
-        FirstStartViewController *firstController = [[FirstStartViewController alloc] initWithUiWindow:self.window andTabBarController: self.tabBarController];
-        UINavigationController* firstStartNavigationController= [[UINavigationController alloc] initWithRootViewController:firstController];
-        
-        self.window.rootViewController = firstStartNavigationController;
-        [self.window makeKeyAndVisible];
-    }
-    else
-    {        
+    self.tabBarController.selectedViewController=self.settingsNavigationController;
+     
         self.window.rootViewController = self.tabBarController;
         [self.window makeKeyAndVisible];
-        
-    }
 
     return YES;
 }

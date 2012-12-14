@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "Profile.h"
 @interface SettingsViewController : UITableViewController
-
+-(SettingsViewController*) initWithFirstStart: (BOOL) firstStart;
 @end

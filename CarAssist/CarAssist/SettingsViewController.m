@@ -13,17 +13,19 @@
 
 @interface SettingsViewController ()
 @property Profile* profil;
+@property BOOL firstStart;
 @end
 
 @implementation SettingsViewController
 
 
 
--(SettingsViewController*) init
+-(SettingsViewController*) initWithFirstStart: (BOOL) firstStart
 {
     self = [super init];
     if (self) {
             self.profil = [Profile getProfile];
+        self.firstStart = firstStart;
     }
     return self;
 }
@@ -36,7 +38,12 @@
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    if(self.firstStart)
+    {
+        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: self.firstStart];
+        [self.navigationController pushViewController:carcontroller animated:YES];
 
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -133,7 +140,7 @@
 {
     int pos = indexPath.row;
     if (pos == 0) {
-            CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
+        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: NO];
             [self.navigationController pushViewController:carcontroller animated:YES];
     }
     if (pos == 1) {

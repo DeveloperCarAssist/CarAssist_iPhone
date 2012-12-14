@@ -25,7 +25,7 @@ static Profile* instance;
     if (self)
     {   
         //self.car=[[Car alloc]initWithExampleDataBmwZ4];
-        //self.carList=[[NSMutableArray alloc] initWithObjects: self.car , nil];
+        self.carList=[[NSMutableArray alloc] init];
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";
