@@ -7,15 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Car.h"
+#import "GuideStockService.h"
 
-@interface ServiceGuideStockService : NSObject
-
-/**
- * Maped vom Kategorie-Namen auf die Liste von Anleitungen dieser Kategorie.
- */
-@property (nonatomic) NSMutableDictionary* guides;
-
-- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText;
--(ServiceGuideStockService*) initWithCar:(Car *) car;
+@interface ServiceGuideStockService : NSObject <GuideStockService>
 @end

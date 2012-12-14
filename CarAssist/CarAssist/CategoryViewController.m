@@ -7,12 +7,9 @@
 //
 
 #import "CategoryViewController.h"
-#import "ServiceGuideStockService.h"
 #import "GuideViewController.h"
 #import "Guide.h"
-#import "Profile.h"
 #import "Car.h"
-#import "Utils.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -26,28 +23,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-// Nachricht defaultCarChanged behandeln
--(void)defaultCarChanged:(NSNotification *)notification
-{
-    Car *car = [notification.userInfo objectForKey:@"car"];
-    self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar: car];
-    [self.navigationController popToRootViewControllerAnimated:false];
-    [self.serviceGuideTableView reloadData];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.title = @"Service";
-    
-    // Hintergrundgrafik einbinden
-    self.serviceGuideTableView.backgroundColor = [UIColor clearColor];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    
-    // Service mit dem Standardwagen des Profils initialisieren
-    Car *car = [[Profile getProfile] car];
-    self.serviceGuideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
@@ -143,7 +121,7 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    [self.serviceGuideStockService reduceServiceGuidesWithSearchText: searchText];
+    [self.serviceGuideStockService reduceGuidesWithSearchText: searchText];
     [self.serviceGuideTableView reloadData];
 }
 

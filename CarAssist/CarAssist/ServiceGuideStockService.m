@@ -19,6 +19,8 @@
 @end
 
 @implementation ServiceGuideStockService
+// Property guides stammt aus Protocol und muss deshalb synthetisiert werden!
+@synthesize guides = _guides;
 
 //
 //  Service leer initialisieren
@@ -212,7 +214,7 @@
  * Aktualisiert das Dictionary, so dass nur Anleitungen enthalten sind, in denen der searchText enthalten ist. Mit Leerzeichen getrennte Worte werden als 2 verschiedene Suchbegriffe aufgefasst.
  *
  */
-- (void) reduceServiceGuidesWithSearchText: (NSString*) searchText
+- (void) reduceGuidesWithSearchText: (NSString*) searchText
 {
     NSArray* searchItems = [searchText componentsSeparatedByString:@" "];
     

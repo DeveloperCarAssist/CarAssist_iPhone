@@ -222,6 +222,7 @@
 		8FF793BC167B6573008ADB97 /* background_profil_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_profil_hell.png; sourceTree = "<group>"; };
 		8FF793BD167B6573008ADB97 /* background_service_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_service_hell.png; sourceTree = "<group>"; };
 		8FF793BE167B6573008ADB97 /* background_stoerung_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stoerung_hell.png; sourceTree = "<group>"; };
+		8FF793C8167B70F3008ADB97 /* GuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideStockService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +454,7 @@
 				40C32750166B89BB00BC049B /* ServiceGuideStockService.m */,
 				37BB8940167391210098EFA3 /* AccessoryService.h */,
 				37BB8941167391210098EFA3 /* AccessoryService.m */,
+				8FF793C8167B70F3008ADB97 /* GuideStockService.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
