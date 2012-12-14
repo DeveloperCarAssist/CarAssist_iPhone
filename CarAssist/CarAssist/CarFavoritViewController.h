@@ -13,5 +13,5 @@
 
 @property (nonatomic) IBOutlet UITableView* carFavoriteTableView;
 
--(id) initWithProfil: (Profile*) profil;
+-(id) initWithProfil: (Profile*) profil andFirstStart: (BOOL)firstStart;
 @end

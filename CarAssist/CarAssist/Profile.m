@@ -24,8 +24,8 @@ static Profile* instance;
     self = [super init];
     if (self)
     {   
-        self.car=[[Car alloc]initWithExampleDataBmwZ4];
-        self.carList=[[NSMutableArray alloc] initWithObjects: self.car , nil];
+        //self.car=[[Car alloc]initWithExampleDataBmwZ4];
+        self.carList=[[NSMutableArray alloc] init];
         self.vorname=@"Klaus";
         self.nachname=@"Kastikus";
         self.emailAdresse=@"KlauKastikus@googlemail.com";
@@ -41,6 +41,18 @@ static Profile* instance;
     }
     
     return instance;
+}
++(void) setProfilWithCar: (Car*) car
+{
+    if (!instance.car) {
+        // Dieses InitWithExampleData muss noch überarbeitet werden
+        instance.car = car;
+        instance.carList=[[NSMutableArray alloc] initWithObjects: car , nil];
+    }
+    else
+    {
+        [NSException exceptionWithName:NSInternalInconsistencyException reason:@"The Class Profile is a singleton. You are not allowed to SetProfilWithCar more than once!" userInfo:nil ];
+    }
 }
 
 -(void)setCar:(Car *)car

@@ -20,6 +20,7 @@
         self.model = @"Z4";
         self.manufacturer = @"BMW";
         self.equipmentPackage.radio = @"Radio Professional";
+        
         self.equipmentPackage.navigationDevice = @"TomTom";
         self.owner=@"Klaus' Auto";
         self.vehicalIdentNumber=@"1";
@@ -32,14 +33,25 @@
     self = [super init];
     if (self)
     {
+<<<<<<< HEAD
         [self standardInit];
         self.unid = 2;
         self.model = @"Golf IV 1.6";
         self.manufacturer = @"VW";
         self.equipmentPackage.radio=@"Beta";
-        self.vehicalIdentNumber = @"2";
+
         self.equipmentPackage.navigationDevice = @"kein";
         self.owner = @"Gerds Auto";
+=======
+        self.unid=2;
+        self.model=@"Golf IV 1.6";
+        self.manufacturer=@"VW";
+        self.radio=@"Beta";
+        self.seatHeater=@"Standard";
+        self.navigation=@"kein";
+        self.owner=@"Gerds Auto";
+        self.vehicalIdentNumber=@"2";
+>>>>>>> 61fd86b764664184c2734c5da9fb3122f967a350
     }
     return self;
 }

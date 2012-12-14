@@ -15,6 +15,7 @@
 
 @interface CarFavoritViewController () <CarListSelectorDelegate>
 @property (strong) Profile *profil;
+@property BOOL firstStart;
 @end
 
 @implementation CarFavoritViewController
@@ -28,11 +29,12 @@
     return self;
 }
 
--(id) initWithProfil: (Profile*) profil
+-(id) initWithProfil: (Profile*) profil andFirstStart: (BOOL)firstStart
 {
     self = [super init];
     if (self) {
         self.profil = profil;
+        self.firstStart = firstStart;
     }
     return self;
     
@@ -47,6 +49,12 @@
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    if(self.firstStart)
+    {
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+        
+        [sheet showFromToolbar: self.navigationController.toolbar];
+    }
 }
 
 -(void)addCarButtonClicked
@@ -208,6 +216,7 @@
 - (void) carHasBeenSelected:(Car *)selectedCar
 {
         [self.profil.carList addObject:selectedCar];
+        self.profil.car = selectedCar;
         [self.carFavoriteTableView reloadData];
 }
 
