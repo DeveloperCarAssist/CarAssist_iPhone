@@ -40,7 +40,6 @@
                                 self.warningNavigationController, self.settingsNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
-    
 
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

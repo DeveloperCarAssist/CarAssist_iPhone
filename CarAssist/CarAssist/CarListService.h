@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Car.h"
 
 @interface CarListService : NSObject
 
 @property (nonatomic) NSMutableDictionary* cars;
 
 - (void) reduceCarsWithSearchText: (NSString*) searchText;
+-(Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber;
 
 @end
