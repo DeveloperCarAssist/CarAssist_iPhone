@@ -18,7 +18,7 @@
         self.unid=1;
         self.model=@"Z4";
         self.manufacturer=@"BMW";
-        self.radio=@"Standard";
+        self.radio=@"Radio Professional";
         self.seatHeater=@"Standard";
         self.navigation=@"TomTom";
         self.owner=@"Klaus' Auto";

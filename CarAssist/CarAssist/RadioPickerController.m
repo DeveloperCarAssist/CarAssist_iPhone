@@ -42,6 +42,7 @@
             [self.imageView setImage: [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Autoradio" ofType:@"jpeg"]]];
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action: @selector(doneButtonPressed)];
     [self.navigationItem setRightBarButtonItem: addButton];
+    self.radio = [self.accessoryService.radios objectAtIndex:0]; // Der 0te Eintrag der Accessory-Service Liste wird als Standard angenommen!
 }
 
 -(void)doneButtonPressed
@@ -68,7 +69,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-self.radio = [self.accessoryService.radios objectAtIndex: row];
+    self.radio = [self.accessoryService.radios objectAtIndex: row];
     
 }
 
