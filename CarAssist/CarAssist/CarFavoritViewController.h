@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
-#import "CarProfilViewController.h"
 
 @interface CarFavoritViewController : UITableViewController <UIActionSheetDelegate>
 
