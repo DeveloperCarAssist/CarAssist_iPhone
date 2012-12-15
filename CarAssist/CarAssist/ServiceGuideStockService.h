@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GuideStockService.h"
+#import "GuideService.h"
 
-@interface ServiceGuideStockService : NSObject <GuideStockService>
+@interface ServiceGuideStockService : NSObject <GuideService>
 @end
