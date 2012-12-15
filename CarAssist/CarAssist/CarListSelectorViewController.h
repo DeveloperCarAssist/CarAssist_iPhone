@@ -21,7 +21,7 @@
 @property (nonatomic, weak) NSObject<CarListSelectorDelegate>* delegate;
 @property (nonatomic) UITapGestureRecognizer* tapRecognizer;
 
-- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate;
+- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate andFirstStart: (BOOL) firstStart;
 
 @end
 
