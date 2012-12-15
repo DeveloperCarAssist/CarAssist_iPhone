@@ -8,8 +8,9 @@
 
 #import "ManualCategoryViewController.h"
 #import "ManualGuideStockService.h"
-#import "Utils.h"
 #import "Profile.h"
+#import "Utils.h"
+
 
 
 @interface ManualCategoryViewController ()
@@ -18,18 +19,25 @@
 
 @implementation ManualCategoryViewController
 
+-(id) init
+{
+    self = [super initWithNibName:@"CategoryViewController" bundle:nil];
+    return self;
+}
+ 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.title = @"Bedienung";
     // Hintergrundgrafik einbinden
-    self.serviceGuideTableView.backgroundColor = [UIColor clearColor];
+    self.categoryTableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_bedienung"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
-    self.guideStockService = [[ManualGuideStockService alloc] initWithCar:car];
+    self.categoryService = [[ManualGuideStockService alloc] initWithCar:car];
     
 	// Do any additional setup after loading the view.
 }
@@ -38,9 +46,9 @@
 -(void)defaultCarChanged:(NSNotification *)notification
 {
     Car *car = [notification.userInfo objectForKey:@"car"];
-    self.guideStockService = [[ManualGuideStockService alloc] initWithCar: car];
+    self.categoryService = [[ManualGuideStockService alloc] initWithCar: car];
     [self.navigationController popToRootViewControllerAnimated:false];
-    [self.serviceGuideTableView reloadData];
+    [self.categoryTableView reloadData];
 }
 
 @end

@@ -17,18 +17,24 @@
 
 @implementation ServiceCategoryViewController
 
+-(id) init
+{
+    self = [super initWithNibName:@"CategoryViewController" bundle:nil];
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.title = @"Service";
     // Hintergrundgrafik einbinden
-    self.serviceGuideTableView.backgroundColor = [UIColor clearColor];
+    self.categoryTableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
-    self.guideStockService = [[ServiceGuideStockService alloc] initWithCar:car];
+    self.categoryService = [[ServiceGuideStockService alloc] initWithCar:car];
     
 	// Do any additional setup after loading the view.
 }
@@ -39,9 +45,9 @@
 -(void)defaultCarChanged:(NSNotification *)notification
 {
  Car *car = [notification.userInfo objectForKey:@"car"];
- self.guideStockService = [[ServiceGuideStockService alloc] initWithCar: car];
+ self.categoryService = [[ServiceGuideStockService alloc] initWithCar: car];
  [self.navigationController popToRootViewControllerAnimated:false];
- [self.serviceGuideTableView reloadData];
+ [self.categoryTableView reloadData];
 }
 
 

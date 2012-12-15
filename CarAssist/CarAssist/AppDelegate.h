@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ManualCategoryViewController.h"
 #import "ServiceCategoryViewController.h"
 #import "WarningCategoryViewController.h"
 #import "SettingsViewController.h"
+
 
 @class ViewController;
 
@@ -19,6 +21,10 @@
 
 // Main ViewContainer
 @property (nonatomic) UITabBarController* tabBarController;
+
+// Manual Controllers
+@property (nonatomic) ManualCategoryViewController* manualViewController;
+@property (nonatomic) UINavigationController* manualNavigationController;
 
 // Warning Controllers
 @property (nonatomic) WarningCategoryViewController* warningViewController;
