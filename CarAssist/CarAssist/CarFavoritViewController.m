@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "CarFavoritViewController.h"
 #import "CarListSelectorViewController.h"
 #import "CarDataViewController.h"
@@ -13,7 +14,7 @@
 #import "Utils.h"
 #import "CarListService.h"
 
-@interface CarFavoritViewController () <CarListSelectorDelegate>
+@interface CarFavoritViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong) Profile *profil;
 @property BOOL firstStart;
 @end
@@ -51,8 +52,16 @@
     self.carFavoriteTableView.separatorColor = [UIColor blackColor];
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    // Das Zuschneiden des Bildes wird hier notwendig,
+    // weil der BackgroundView desTableViews eine andere Größe
+    // als der Screen selbst hat (in allen anderen Views gilt
+    // Screengröße == Bildgröße)
+    CGSize size = self.tableView.bounds.size;
+    CGImageRef imageRef = CGImageCreateWithImageInRect([Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size].CGImage, CGRectMake(0, 0,size.width, size.height));
+    UIImage *img = [UIImage imageWithCGImage:imageRef];
+    
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
+    self.tableView.separatorColor = [UIColor blackColor];
 
 }
 
@@ -68,7 +77,7 @@
 {
     if(self.firstStart)
     {
-        #warning Wenn Fahrgestellnummerscannen funktioniert wieder einkommentieren und das danach löschen
+        // !TODO: warning Wenn Fahrgestellnummerscannen funktioniert wieder einkommentieren und das danach löschen
        // UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
         UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
@@ -191,6 +200,7 @@
     if(buttonIndex==2)
     {
         //Hier Fahrgestellnummer Scannen View Controller Pushen
+        [self useCamera:self];
     }
 }
 
@@ -246,6 +256,60 @@
         [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: YES];
         [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: YES];
         self.firstStart = NO;
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        // In dieser Variable wird das fotographierte Bild gespeichert, allerdings wird es momentan nicht weiter verwendet!
+        UIImage* image = info[UIImagePickerControllerOriginalImage];
+    }
+    
+    NSArray* carList = self.profil.carList;
+    
+    if (!(carList && carList.count)) {
+        [self addCarButtonClicked];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void) useCamera:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType =
+        UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        [self presentViewController:imagePicker
+                           animated:YES completion:nil];
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Keine Kamera vorhanden"
+                                                        message:@"Die App benötigt Ihre Zustimmung zum Fotographieren der Fahrgestellnummer."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 

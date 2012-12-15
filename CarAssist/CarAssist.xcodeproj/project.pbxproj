@@ -78,6 +78,7 @@
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
+		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; };
 		8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
 		8F1FB4781674CBB8000D1D04 /* kein_favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1FB4771674CBB8000D1D04 /* kein_favorit.png */; };
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
@@ -220,6 +221,7 @@
 		661E1A5A166BA98C00493F54 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepView.h; sourceTree = "<group>"; };
 		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
+		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8F1FB4771674CBB8000D1D04 /* kein_favorit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kein_favorit.png; sourceTree = "<group>"; };
 		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */,
 				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */,
 				400DF84B1668F0F100D6217B /* Foundation.framework in Frameworks */,
@@ -373,6 +376,7 @@
 		400DF8471668F0F100D6217B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83728A42167CCB7300DC1456 /* MobileCoreServices.framework */,
 				400DF8AF166912C400D6217B /* QuartzCore.framework */,
 				400DF8481668F0F100D6217B /* UIKit.framework */,
 				400DF84A1668F0F100D6217B /* Foundation.framework */,

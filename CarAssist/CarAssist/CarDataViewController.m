@@ -9,6 +9,7 @@
 #import "CarDataViewController.h"
 #import "RadioPickerController.h"
 #import "AccessoryService.h"
+#import "Utils.h"
 
 @interface CarDataViewController ()
 @property Car* car;
@@ -40,6 +41,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Hintergrund
+
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    //self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
+    //self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -78,6 +86,7 @@
     NSString* setting = [sectionArray objectAtIndex:indexPath.row];
     cell.textLabel.text = setting;
     cell.detailTextLabel.text = [self.carSettingsHelper.settingsData objectForKey:setting];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
