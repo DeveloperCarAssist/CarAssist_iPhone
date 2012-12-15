@@ -51,13 +51,9 @@
     self.carFavoriteTableView.separatorColor = [UIColor blackColor];
     
     // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    if(self.firstStart)
-    {
-        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
-        
-        [sheet showFromToolbar: self.navigationController.toolbar];
-    }
+
 }
 
 -(void)addCarButtonClicked
@@ -68,9 +64,22 @@
 
     
 }
+-(void) showCarSelectIfFirstStart
+{
+    if(self.firstStart)
+    {
+        #warning Wenn Fahrgestellnummerscannen funktioniert wieder einkommentieren und das danach löschen
+       // UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", nil ];
+        [sheet showFromToolbar: self.navigationController.toolbar];
+    }
+
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
+    [self showCarSelectIfFirstStart];
+
 }
 - (void)didReceiveMemoryWarning
 {
@@ -146,7 +155,7 @@
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hinweis"
                                                             message:@"Sie können den als Favorit markierten Wagen nicht löschen."
-                                                           delegate:nil
+                                                           delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
@@ -161,9 +170,10 @@
 #pragma mark - Table view delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+
     if (buttonIndex == 0)
     {
-        CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self];
+        CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self andFirstStart: self.firstStart];
         [self.navigationController pushViewController:controller animated:YES];
     }
     
@@ -195,7 +205,7 @@
       {
           if ([[Profile getProfile].carList containsObject:car])
           {
-              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
               [alert show];
           }
           else
@@ -207,20 +217,36 @@
       {
           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung"
                                                           message:@"Nummer Leider nicht gefunden"
-                                                         delegate:nil
+                                                         delegate:self
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
-          [alert show];
+                    [alert show];
       }
   }
-}
 
+}
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if([alertView.title isEqual: @"Achtung"]|[alertView.title isEqual: @"Auto schon vorhanden!"])
+    {
+        [self showCarSelectIfFirstStart];
+    }
+}
 
 - (void) carHasBeenSelected:(Car *)selectedCar
 {
         [self.profil.carList addObject:selectedCar];
         self.profil.car = selectedCar;
-        [self.carFavoriteTableView reloadData];
+    [self.carFavoriteTableView reloadData];
+    //Diese Zeilen sorgen dafür, dass man die Tabitems wieder auswählen kann
+    if(self.firstStart)
+    {
+        [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: YES];
+        self.firstStart = NO;
+    }
 }
 
 @end

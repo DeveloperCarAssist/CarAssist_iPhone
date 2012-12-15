@@ -1,14 +1,15 @@
 //
-//  ServiceGuideStockService.m
+//  ManualGuideStockService.m
 //  CarAssist
 //
-//  Created by Dennis on 15.12.12.
+//  Created by Dennis on 14.12.12.
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "ServiceGuideStockService.h"
+#import "ManualGuideService.h"
 
-@implementation ServiceGuideStockService
+@implementation ManualGuideService
+
 //
 //  Service für ein spezifisches Fahrzeug initialisieren
 //  TODO: Testdaten nicht mehr hart codieren sondern aus einer
@@ -125,11 +126,12 @@
     step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den Golf." AndImage:nil ];
     [steps addObject:step];
     
-    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
+    Guide* guide = [[Guide alloc] initWithName: @"Anleitung" CategoryName: @"Cockpit" AndSteps: steps];
     [allGuides addObject:guide];
     
     self.allGuides = allGuides;
     self.reducedGuides = allGuides;
 }
+
 
 @end

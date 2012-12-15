@@ -13,15 +13,16 @@
 @interface CarListSelectorViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic) Car* selectedCar;
-
+@property BOOL firstStart;
 @end
 
 @implementation CarListSelectorViewController
 
-- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate
+- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate andFirstStart: (BOOL) firstStart
 {
     self = [super init];
     if (self) {
+        self.firstStart = firstStart;
         self.carListService = [[CarListService alloc] init];
         self.delegate = delegate;
     }
@@ -31,6 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(self.firstStart)
+    {
+     //    self.navigationItem.hidesBackButton = YES;
+    }
     self.title = @"Auto hinzufügen";
     
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];

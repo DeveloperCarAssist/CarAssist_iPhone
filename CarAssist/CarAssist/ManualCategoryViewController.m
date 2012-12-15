@@ -7,7 +7,7 @@
 //
 
 #import "ManualCategoryViewController.h"
-#import "ManualGuideStockService.h"
+#import "ManualGuideService.h"
 #import "Profile.h"
 #import "Utils.h"
 
@@ -37,7 +37,7 @@
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
-    self.categoryService = [[ManualGuideStockService alloc] initWithCar:car];
+    self.categoryService = [[ManualGuideService alloc] initWithCar:car];
     
 	// Do any additional setup after loading the view.
 }
@@ -46,7 +46,7 @@
 -(void)defaultCarChanged:(NSNotification *)notification
 {
     Car *car = [notification.userInfo objectForKey:@"car"];
-    self.categoryService = [[ManualGuideStockService alloc] initWithCar: car];
+    self.categoryService = [[ManualGuideService alloc] initWithCar: car];
     [self.navigationController popToRootViewControllerAnimated:false];
     [self.categoryTableView reloadData];
 }

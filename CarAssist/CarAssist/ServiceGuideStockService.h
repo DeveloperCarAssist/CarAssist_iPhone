@@ -2,12 +2,11 @@
 //  ServiceGuideStockService.h
 //  CarAssist
 //
-//  Created by 0witt on 02.12.12.
+//  Created by Dennis on 15.12.12.
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "GuideStockService.h"
+#import "SearchableGuideService.h"
 
-@interface ServiceGuideStockService : NSObject <GuideStockService>
+@interface ServiceGuideStockService : SearchableGuideService
 @end
