@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "CarFavoritViewController.h"
 #import "CarListSelectorViewController.h"
 #import "CarDataViewController.h"
@@ -13,7 +14,7 @@
 #import "Utils.h"
 #import "CarListService.h"
 
-@interface CarFavoritViewController () <CarListSelectorDelegate>
+@interface CarFavoritViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong) Profile *profil;
 @property BOOL firstStart;
 @end
@@ -178,6 +179,7 @@
     if(buttonIndex==2)
     {
         //Hier Fahrgestellnummer Scannen View Controller Pushen
+        [self useCamera:self];
     }
 }
 
@@ -218,6 +220,60 @@
         [self.profil.carList addObject:selectedCar];
         self.profil.car = selectedCar;
         [self.carFavoriteTableView reloadData];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        // In dieser Variable wird das fotographierte Bild gespeichert, allerdings wird es momentan nicht weiter verwendet!
+        UIImage* image = info[UIImagePickerControllerOriginalImage];
+    }
+    
+    NSArray* carList = self.profil.carList;
+    
+    if (!(carList && carList.count)) {
+        [self addCarButtonClicked];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void) useCamera:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType =
+        UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        [self presentViewController:imagePicker
+                           animated:YES completion:nil];
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Keine Kamera vorhanden"
+                                                        message:@"Die App benötigt Ihre Zustimmung zum Fotographieren der Fahrgestellnummer."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 @end
