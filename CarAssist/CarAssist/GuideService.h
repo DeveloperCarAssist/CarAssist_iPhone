@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Car.h"
 
-@protocol GuideStockService <NSObject>
+@protocol GuideService <NSObject>
 @required
 /**
  * Maped vom Kategorie-Namen auf die Liste von Anleitungen dieser Kategorie.
  */
 @property (nonatomic) NSMutableDictionary* guides;
 - (void) reduceGuidesWithSearchText: (NSString*) searchText;
--(id<GuideStockService>) initWithCar:(Car *) car;
+-(id<GuideService>) initWithCar:(Car *) car;
 @end

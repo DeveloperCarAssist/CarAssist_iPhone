@@ -30,7 +30,7 @@
     self.title = @"Service";
     // Hintergrundgrafik einbinden
     self.categoryTableView.backgroundColor = [UIColor clearColor];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];

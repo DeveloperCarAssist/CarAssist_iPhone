@@ -22,7 +22,7 @@
         self.equipmentPackage.radio = @"Radio Professional";
         self.equipmentPackage.navigationDevice = @"TomTom";
         self.owner=@"Klaus' Auto";
-        self.vehicalIdentNumber=@"1";
+        self.vehicalIdentNumber=@"WBADU514";
     }
     return self;
 }
@@ -37,7 +37,7 @@
         self.model = @"Golf IV 1.6";
         self.manufacturer = @"VW";
         self.equipmentPackage.radio=@"Beta";
-        self.vehicalIdentNumber = @"2";
+        self.vehicalIdentNumber = @"WVWZZZ1J";
         self.equipmentPackage.navigationDevice = @"kein";
         self.owner = @"Gerds Auto";
     }

@@ -29,6 +29,12 @@
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+    
+    //Saerchbar
+    self.categorySearchBar.tintColor = [UIColor lightGrayColor];
+    
+    //Tableview
+    self.categoryTableView.separatorColor = [UIColor blackColor];
 
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
     
@@ -75,7 +81,7 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
-        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     NSArray *keys = [self.categoryService.guides allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
@@ -85,25 +91,33 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
+    
     return cell;
 }
 
-/* Indexliste am Rand. Wird zunächst nicht benötigt.
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.categoryService.guides allKeys];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    // return sth
-}
-*/
-
-- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
     NSArray *keys = [self.categoryService.guides allKeys];
     NSString *key = [keys objectAtIndex:section];
-    return key;
     
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
+    //!todo hier noch schöneren Hintergrund einbauen
+    sectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
+    label.textColor = [UIColor blackColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = key;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:18];
+    
+    
+    [sectionView addSubview:label];
+    return sectionView;
 }
+
+
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
 [self tableView:tableView didSelectRowAtIndexPath:indexPath];

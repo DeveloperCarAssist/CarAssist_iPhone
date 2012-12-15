@@ -29,7 +29,7 @@
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(contentViewCenter.x - 38, contentViewCenter.y - 38 , 76, 76)];
         
         UIView* view = [[UIView alloc] init];
-        [view setBackgroundColor:[UIColor darkGrayColor]];
+        [view setBackgroundColor:[UIColor blackColor]];
       
         [self setBackgroundView:view];
         [self.contentView addSubview:self.imageView];

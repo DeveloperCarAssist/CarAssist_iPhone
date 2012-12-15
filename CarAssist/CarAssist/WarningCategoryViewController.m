@@ -24,7 +24,10 @@
     self.title = @"Störungen";
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    //TableView
+    self.warningCatergoryTableView.separatorColor = [UIColor blackColor];
     
     // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
@@ -52,7 +55,7 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
-        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];
@@ -78,6 +81,7 @@
             break;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 

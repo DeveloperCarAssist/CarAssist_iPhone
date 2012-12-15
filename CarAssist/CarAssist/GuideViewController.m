@@ -8,6 +8,7 @@
 
 #import "GuideViewController.h"
 #import "StepView.h"
+#import "Utils.h"
 
 @interface GuideViewController ()
 
@@ -32,11 +33,19 @@
     CGFloat pageWidth = sender.frame.size.width;
     int page = floor((sender.contentOffset.x - pageWidth /2)/pageWidth) +1;
     self.pageControl.currentPage = page;
+    
+    
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // Hintergrundgrafik einbinden
+    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_service_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [UIColor blackColor];
     
     NSArray *steps = self.guide.steps; // Array von Step
     for (int i = 0; i<steps.count; i++) {

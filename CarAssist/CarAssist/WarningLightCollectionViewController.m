@@ -12,6 +12,7 @@
 #import "WarningLightCollectionViewCell.h"
 #import "Profile.h"
 #import "Car.h"
+#import "Utils.h"
 
 @interface WarningLightCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -32,11 +33,17 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    
+    
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
     self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
+    
     
     // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
@@ -65,6 +72,7 @@
     WarningLightCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WarningLightCollectionViewCell" forIndexPath:indexPath];
     
     [cell setWarningLightImage: currentWarningLight.image];
+    
     
     return cell;
 }

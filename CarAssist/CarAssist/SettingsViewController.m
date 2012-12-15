@@ -37,7 +37,17 @@
     [self.navigationItem setTitle: @"Profil"];
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    // Das Zuschneiden des Bildes wird hier notwendig,
+    // weil der BackgroundView desTableViews eine andere Größe
+    // als der Screen selbst hat (in allen anderen Views gilt
+    // Screengröße == Bildgröße)
+    CGSize size = self.tableView.bounds.size;
+    CGImageRef imageRef = CGImageCreateWithImageInRect([Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size].CGImage, CGRectMake(0, 0,size.width, size.height));
+    UIImage *img = [UIImage imageWithCGImage:imageRef];
+    
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
+    self.tableView.separatorColor = [UIColor blackColor];
+    
     if(self.firstStart)
     {
         CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: self.firstStart];
@@ -77,7 +87,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     
     int pos = indexPath.row;
@@ -92,6 +102,8 @@
        cell.textLabel.text=@"Werkstätten";
     }
 
+    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

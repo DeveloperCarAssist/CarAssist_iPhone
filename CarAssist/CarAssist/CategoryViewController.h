@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GuideStockService.h"
+#import "GuideService.h"
 
 @interface CategoryViewController : UIViewController
-@property (nonatomic) id<GuideStockService> categoryService;
+@property (nonatomic) id<GuideService> categoryService;
 @property (nonatomic) IBOutlet UITableView* categoryTableView;
 @property (nonatomic) IBOutlet UISearchBar* categorySearchBar;
 

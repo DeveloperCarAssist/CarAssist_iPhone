@@ -14,8 +14,6 @@
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
-		37A6322C167B6C09007E0E85 /* FirstStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6322A167B6C09007E0E85 /* FirstStartViewController.m */; };
-		37A6322D167B6C09007E0E85 /* FirstStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */; };
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
 		37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB892A167372F60098EFA3 /* CarDataViewController.xib */; };
 		37BB893C16737F2F0098EFA3 /* RadioPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB893A16737F2F0098EFA3 /* RadioPickerController.m */; };
@@ -63,7 +61,7 @@
 		40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40756140167B6DFB00242741 /* CarEquipmentPackage.m */; };
 		40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40959AE716724F04001A1E86 /* CarListSelectorViewController.m */; };
 		40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */; };
-		40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* ServiceGuideStockService.m */; };
+		40C32751166B89BB00BC049B /* SearchableGuideService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32750166B89BB00BC049B /* SearchableGuideService.m */; };
 		40C32759166B942F00BC049B /* ServiceGuideStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */; };
 		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
 		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
@@ -82,7 +80,7 @@
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
 		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
 		8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D16167B82390011C02F /* ManualCategoryViewController.m */; };
-		8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideStockService.m */; };
+		8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideService.m */; };
 		8F796D25167B8A3F0011C02F /* tabbar_bedienung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */; };
 		8F796D26167B8A3F0011C02F /* tabbar_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */; };
 		8F7D5192167878C600E41D4D /* background_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518E167878C600E41D4D /* background_bedienung.png */; };
@@ -91,6 +89,7 @@
 		8F7D5195167878C600E41D4D /* background_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D5191167878C600E41D4D /* background_stoerung.png */; };
 		8F7D519B1678825200E41D4D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7D519A1678825200E41D4D /* Utils.m */; };
 		8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7D519D1678A9DB00E41D4D /* CarFavoriteViewCell.m */; };
+		8F8BD0E3167CB83F00AFC5D5 /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */; };
 		8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35B1672204500B7F5DE /* tabbar_profil.png */; };
 		8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35C1672204500B7F5DE /* tabbar_service.png */; };
 		8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */; };
@@ -121,9 +120,6 @@
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		37A63229167B6C09007E0E85 /* FirstStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStartViewController.h; sourceTree = "<group>"; };
-		37A6322A167B6C09007E0E85 /* FirstStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStartViewController.m; sourceTree = "<group>"; };
-		37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstStartViewController.xib; sourceTree = "<group>"; };
 		37BB8928167372F60098EFA3 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDataViewController.h; sourceTree = "<group>"; };
 		37BB8929167372F60098EFA3 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataViewController.m; sourceTree = "<group>"; };
 		37BB892A167372F60098EFA3 /* CarDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDataViewController.xib; sourceTree = "<group>"; };
@@ -192,8 +188,8 @@
 		40959AE616724F04001A1E86 /* CarListSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListSelectorViewController.h; sourceTree = "<group>"; };
 		40959AE716724F04001A1E86 /* CarListSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListSelectorViewController.m; sourceTree = "<group>"; };
 		40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListSelectorViewController.xib; sourceTree = "<group>"; };
-		40C3274F166B89BB00BC049B /* ServiceGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockService.h; sourceTree = "<group>"; };
-		40C32750166B89BB00BC049B /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
+		40C3274F166B89BB00BC049B /* SearchableGuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableGuideService.h; sourceTree = "<group>"; };
+		40C32750166B89BB00BC049B /* SearchableGuideService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchableGuideService.m; sourceTree = "<group>"; };
 		40C32757166B942F00BC049B /* ServiceGuideStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockServiceTest.h; sourceTree = "<group>"; };
 		40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockServiceTest.m; sourceTree = "<group>"; };
 		40C3275E166B9A5400BC049B /* StepTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTests.h; sourceTree = "<group>"; };
@@ -222,8 +218,8 @@
 		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 		8F796D15167B82390011C02F /* ManualCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualCategoryViewController.h; sourceTree = "<group>"; };
 		8F796D16167B82390011C02F /* ManualCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualCategoryViewController.m; sourceTree = "<group>"; };
-		8F796D1C167B84F00011C02F /* ManualGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideStockService.h; sourceTree = "<group>"; };
-		8F796D1D167B84F00011C02F /* ManualGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualGuideStockService.m; sourceTree = "<group>"; };
+		8F796D1C167B84F00011C02F /* ManualGuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideService.h; sourceTree = "<group>"; };
+		8F796D1D167B84F00011C02F /* ManualGuideService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualGuideService.m; sourceTree = "<group>"; };
 		8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bedienung_small.png; sourceTree = "<group>"; };
 		8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bedienung.png; sourceTree = "<group>"; };
 		8F7D518E167878C600E41D4D /* background_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_bedienung.png; sourceTree = "<group>"; };
@@ -234,6 +230,8 @@
 		8F7D519A1678825200E41D4D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		8F7D519C1678A9DB00E41D4D /* CarFavoriteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoriteViewCell.h; sourceTree = "<group>"; };
 		8F7D519D1678A9DB00E41D4D /* CarFavoriteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoriteViewCell.m; sourceTree = "<group>"; };
+		8F8BD0E1167CB83F00AFC5D5 /* ServiceGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockService.h; sourceTree = "<group>"; };
+		8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
 		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
@@ -245,7 +243,7 @@
 		8FF793BC167B6573008ADB97 /* background_profil_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_profil_hell.png; sourceTree = "<group>"; };
 		8FF793BD167B6573008ADB97 /* background_service_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_service_hell.png; sourceTree = "<group>"; };
 		8FF793BE167B6573008ADB97 /* background_stoerung_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stoerung_hell.png; sourceTree = "<group>"; };
-		8FF793C8167B70F3008ADB97 /* GuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideStockService.h; sourceTree = "<group>"; };
+		8FF793C8167B70F3008ADB97 /* GuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,13 +376,13 @@
 		400DF84E1668F0F100D6217B /* CarAssist */ = {
 			isa = PBXGroup;
 			children = (
+				400DF84F1668F0F100D6217B /* Supporting Files */,
 				405FB27E167373FA00024934 /* Util */,
 				400DF8961669081800D6217B /* Services */,
 				400DF892166907E700D6217B /* Model */,
 				400DF8881669051700D6217B /* Controller */,
 				400DF8571668F0F100D6217B /* AppDelegate.h */,
 				400DF8581668F0F100D6217B /* AppDelegate.m */,
-				400DF84F1668F0F100D6217B /* Supporting Files */,
 			);
 			path = CarAssist;
 			sourceTree = "<group>";
@@ -451,9 +449,6 @@
 				2E725FF2166E666A00942382 /* Service */,
 				2E725FF1166E666100942382 /* Settings */,
 				2E725FEF166E665100942382 /* Warning */,
-				37A63229167B6C09007E0E85 /* FirstStartViewController.h */,
-				37A6322A167B6C09007E0E85 /* FirstStartViewController.m */,
-				37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -480,17 +475,17 @@
 		400DF8961669081800D6217B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8F8BD0DF167CB68000AFC5D5 /* Shared */,
 				400DF8971669082600D6217B /* WarningLightStockService.h */,
 				400DF8981669082600D6217B /* WarningLightStockService.m */,
 				37E717AA16690FCF00F6B11F /* CarListService.h */,
 				37E717AB16690FCF00F6B11F /* CarListService.m */,
-				40C3274F166B89BB00BC049B /* ServiceGuideStockService.h */,
-				40C32750166B89BB00BC049B /* ServiceGuideStockService.m */,
 				37BB8940167391210098EFA3 /* AccessoryService.h */,
 				37BB8941167391210098EFA3 /* AccessoryService.m */,
-				8FF793C8167B70F3008ADB97 /* GuideStockService.h */,
-				8F796D1C167B84F00011C02F /* ManualGuideStockService.h */,
-				8F796D1D167B84F00011C02F /* ManualGuideStockService.m */,
+				8F796D1C167B84F00011C02F /* ManualGuideService.h */,
+				8F796D1D167B84F00011C02F /* ManualGuideService.m */,
+				8F8BD0E1167CB83F00AFC5D5 /* ServiceGuideStockService.h */,
+				8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -545,6 +540,16 @@
 				8F7D5191167878C600E41D4D /* background_stoerung.png */,
 			);
 			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		8F8BD0DF167CB68000AFC5D5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				40C3274F166B89BB00BC049B /* SearchableGuideService.h */,
+				40C32750166B89BB00BC049B /* SearchableGuideService.m */,
+				8FF793C8167B70F3008ADB97 /* GuideService.h */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		8FF1F3591672201900B7F5DE /* Icons */ = {
@@ -699,7 +704,6 @@
 				8F7D5193167878C600E41D4D /* background_profil.png in Resources */,
 				8F7D5194167878C600E41D4D /* background_service.png in Resources */,
 				8F7D5195167878C600E41D4D /* background_stoerung.png in Resources */,
-				37A6322D167B6C09007E0E85 /* FirstStartViewController.xib in Resources */,
 				8FF793BF167B6573008ADB97 /* background_bedienung_hell.png in Resources */,
 				8FF793C0167B6573008ADB97 /* background_profil_hell.png in Resources */,
 				8FF793C1167B6573008ADB97 /* background_service_hell.png in Resources */,
@@ -752,7 +756,7 @@
 				37E717AC16690FCF00F6B11F /* CarListService.m in Sources */,
 				400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */,
 				661E1A42166B759D00493F54 /* CategoryViewController.m in Sources */,
-				40C32751166B89BB00BC049B /* ServiceGuideStockService.m in Sources */,
+				40C32751166B89BB00BC049B /* SearchableGuideService.m in Sources */,
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
 				375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */,
@@ -768,10 +772,10 @@
 				8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */,
 				4075613E167B6B7700242741 /* CarSettingsHelper.m in Sources */,
 				40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */,
-				37A6322C167B6C09007E0E85 /* FirstStartViewController.m in Sources */,
 				8FF793BA167B64E6008ADB97 /* ServiceCategoryViewController.m in Sources */,
 				8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */,
-				8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */,
+				8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */,
+				8F8BD0E3167CB83F00AFC5D5 /* ServiceGuideStockService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

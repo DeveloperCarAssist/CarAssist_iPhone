@@ -8,19 +8,21 @@
 
 #import "CarListSelectorViewController.h"
 #import "Profile.h"
+#import "Utils.h"
 
 @interface CarListSelectorViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic) Car* selectedCar;
-
+@property BOOL firstStart;
 @end
 
 @implementation CarListSelectorViewController
 
-- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate
+- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate andFirstStart: (BOOL) firstStart
 {
     self = [super init];
     if (self) {
+        self.firstStart = firstStart;
         self.carListService = [[CarListService alloc] init];
         self.delegate = delegate;
     }
@@ -30,10 +32,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(self.firstStart)
+    {
+     //    self.navigationItem.hidesBackButton = YES;
+    }
     self.title = @"Auto hinzufügen";
     
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: saveButton];
+    
+    
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    //Searchbar
+    self.carSearchBar.tintColor = [UIColor lightGrayColor];
+    
+    //TableView
+    self.carSelectionTableView.separatorColor = [UIColor blackColor];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
@@ -81,16 +97,34 @@
     NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
     Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
     
+    
     cell.textLabel.text = currentModel.model;
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
         
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
     
-    NSString* currentProducer = [[self.carListService.cars allKeys] objectAtIndex:section];
-    return currentProducer;
+    NSString *key = [[self.carListService.cars allKeys] objectAtIndex:section];
     
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
+    //!todo hier noch schöner Hintergrund einbinden
+    sectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
+    label.textColor = [UIColor blackColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = key;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:18];
+    
+    
+    [sectionView addSubview:label];
+    return sectionView;
 }
 
 

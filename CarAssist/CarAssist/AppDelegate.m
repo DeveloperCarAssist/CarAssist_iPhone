@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstStartViewController.h"
 
 
 @implementation AppDelegate
@@ -33,23 +32,39 @@
 
     UITabBarItem* tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Bedienung" image:[UIImage imageNamed:@"tabbar_bedienung_small"]  tag:0];
     [self.manualNavigationController setTabBarItem:tabBarItem0];
+    self.manualNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:[UIImage imageNamed:@"tabbar_service_small"]  tag:1];
     [self.serviceNavigationController setTabBarItem:tabBarItem1];
+    self.serviceNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image: [UIImage imageNamed:@"tabbar_stoerung_small"]  tag:2];
     [self.warningNavigationController setTabBarItem:tabBarItem2];
+    self.warningNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil_small"] tag:3];
     [self.settingsNavigationController setTabBarItem:tabBarItem3];
+    self.settingsNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     
     NSArray *viewControllers = [NSArray arrayWithObjects:self.manualNavigationController, self.serviceNavigationController,
                                 self.warningNavigationController, self.settingsNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
+    //Die Nächste Zeile sorgt dafür, dass man im Profil startet
     self.tabBarController.selectedViewController=self.settingsNavigationController;
-     
+    /**
+     *Die Folgenden Zeilen sorgen dafür, dass man am Anfang nicht in andere Kategorien wechseln kann
+     * Aktiviert werden die Kategorien im CarFavoritController.m in der Methode 
+     * - (void) carHasBeenSelected:(Car *)selectedCar
+     */
+    if(!self.secondStart)
+    {
+         [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: FALSE];
+    }
         self.window.rootViewController = self.tabBarController;
         [self.window makeKeyAndVisible];
 
