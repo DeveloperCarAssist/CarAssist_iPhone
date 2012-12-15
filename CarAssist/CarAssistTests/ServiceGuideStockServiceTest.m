@@ -14,7 +14,7 @@
 {
     [super setUp];
     
-    self.serviceGuideStockService = [[ServiceGuideStockService alloc] init];
+    self.serviceGuideStockService = [[SearchableGuideService alloc] init];
 }
 
 - (void) testContructor

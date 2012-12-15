@@ -6,9 +6,7 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "GuideService.h"
+#import "SearchableGuideService.h"
 
-@interface ManualGuideService : NSObject <GuideService>
-
+@interface ManualGuideService : SearchableGuideService
 @end
