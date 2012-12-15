@@ -37,8 +37,15 @@
     [self.navigationItem setTitle: @"Profil"];
     
     // Hintergrundgrafik einbinden
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    self.tableView.backgroundView = imageView;
+    // Das Zuschneiden des Bildes wird hier notwendig,
+    // weil der BackgroundView desTableViews eine andere Größe
+    // als der Screen selbst hat (in allen anderen Views gilt
+    // Screengröße == Bildgröße)
+    CGSize size = self.tableView.bounds.size;
+    CGImageRef imageRef = CGImageCreateWithImageInRect([Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size].CGImage, CGRectMake(0, 0,size.width, size.height));
+    UIImage *img = [UIImage imageWithCGImage:imageRef];
+    
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
     self.tableView.separatorColor = [UIColor blackColor];
     
     if(self.firstStart)
