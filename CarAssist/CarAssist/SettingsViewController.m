@@ -95,6 +95,8 @@
        cell.textLabel.text=@"Werkstätten";
     }
 
+    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
