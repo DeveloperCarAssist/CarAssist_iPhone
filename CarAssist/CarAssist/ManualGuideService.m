@@ -47,60 +47,28 @@
     NSMutableArray* allGuides = [NSMutableArray array];
     NSMutableArray* steps = [NSMutableArray array];
     
-    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_10" ofType:@"jpeg"]];
-    Step* step = [[Step alloc] initWithName: @"Radmuttern lösen" Description:@"Verwenden Sie das Radkreuz zum Lösen der Radmuttern. Wechseln Sie nur einen Reifen zur Zeit. Um mehr Kraft aufzuwenden, verwenden Sie Ihren Fuß als Hebel. Lösen Sie die Radmuttern nur leicht an." AndImage:image];
-    [steps addObject:step];
-    /* alter Text
-     "Als ersten sollten sie den Reservereifen holen.\n Dazu begeben Sie sich bitte zu Ihrem Kofferaum und öffnen diesen.\n Räumen Sie den Kofferaum leer.\n Unter der Abdeckung finden Sie Ihren Reservereifen und einen Schlüssel zum lösen der Radmuttern. Gegebenenfalls ist auch ein Felgenschloss dabei.\n Nehmen Sie den Reservereifen aus der Vertiefung."
-     */
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_20" ofType:@"jpeg"]];
-    step = [[Step alloc] initWithName: @"Wagenheber ansetzen" Description:@"Setzen Sie den Wagenheber an der Karosserie markierten Stelle an. Heben Sie den Wagen nur leicht an, bis das Rad knapp über dem Boden schwebt." AndImage:image];
+    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
+    Step* step = [[Step alloc] initWithName: @"Sitz in Längsrichtung einstellen(1)" Description:@"Hebel hochziehen und Sitz verschieben. Dann Hebel loslassen und Sitz weiter verschieben, bis die Verriegelung einrastet." AndImage:image];
     [steps addObject:step];
     
-    step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den BMW." AndImage:nil ];
+    step = [[Step alloc] initWithName: @"Lehne entriegeln(2)" Description:@"(nur 2-türige Fahrzeuge) Hebel nach oben ziehen und Lehne vorklappen." AndImage:image];
     [steps addObject:step];
     
-    /* alter Text
-     Als erstes müssen Sie die das Auto aufbocken. Dann lösen Sie die Radmuttern des alten Reifens und nehmen den Reifen ab (Legen Sie den Reifen am besten in de Kofferaum, damit Sie ihn nicht vergessen). Jetzt nur noch den Reservereifen wieder anschrauben! Fahren Sie nicht zu schnell. Der Reservereifen ist nur für Geschwindigkeiten bis 90 Kilometer pro String ausgelegt!
-     */
+    step = [[Step alloc] initWithName: @"\"Easy-Entry\"(2)" Description:@"(nur 2-türige Fahrzeuge) Diese Funktion erleichtert Ihnen das Einsteigen nach hinten. Ziehen Sie diesen Hebel nach oben und klappen Sie die Lehne nach vorn. Gleichzeitig hebt sich die Sitzfläche etwas und bewegt sich ebenfalls nach vorne." AndImage:image ];
+    [steps addObject:step];
     
+    step = [[Step alloc] initWithName: @"Lendenwirbelstütze* einstellen(3)" Description:@"Durh Drehen des Handrades läßt sich die Polsterpartie im Lendenwirbelbereich mehr oder weniger auswölben. Dadurch wird de natürliche Krümmung der Wirbelsäule besonders wirksam unterstützt, so daß die Sitzhaltung vor allem auf langen Strecken ermüdungsfreier wird." AndImage:image ];
+    [steps addObject:step];
     
-    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
+    step = [[Step alloc] initWithName: @"Lehneneignung einstellen(4)" Description:@"Lehne entlasten und Handrad drehen." AndImage:image ];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Sitzhöhe* einstellen(5)" Description:@"Durch \"Pumpbewegungen\" des Hebels an der Sitzaußenseite läßt sch der Sitz parallel anheben und absenken." AndImage:image ];
+    [steps addObject:step];
+    
+    Guide* guide = [[Guide alloc] initWithName: @"Autositz einstellen" CategoryName: @"Sitze" AndSteps: steps];
     [allGuides addObject:guide];
     
-    //---------------------------------------------------------------------------------------------------------------------------------------
-    
-    steps = [NSMutableArray array];
-    
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kuehlwasser" ofType:@"jpg"]];
-    
-    step = [[Step alloc] initWithName: @"Schritt 1: Kühlwassser kaufen" Description:@"Als ersten sollten sie den Reservereifen holen.\n Dazu begeben Sie sich bitte zu Ihrem Kofferaum und öffnen diesen.\n Räumen Sie den Kofferaum leer.\n Unter der Abdeckung finden Sie Ihren Reservereifen und einen Schlüssel zum lösen der Radmuttern. Gegebenenfalls ist auch ein Felgenschloss dabei.\n Nehmen Sie den Reservereifen aus der Vertiefung." AndImage:image];
-    [steps addObject:step];
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nachfuellen" ofType:@"jpg"]];
-    step = [[Step alloc] initWithName: @"Schritt 2: Kühlwasser nachfüllen" Description:@"Als erstes müssen Sie die das Auto aufbocken. Dann lösen Sie die Radmuttern des alten Reifens und nehmen den Reifen ab (Legen Sie den Reifen am besten in de Kofferaum, damit Sie ihn nicht vergessen). Jetzt nur noch den Reservereifen wieder anschrauben! Fahren Sie nicht zu schnell. Der Reservereifen ist nur für Geschwindigkeiten bis 90 Kilometer pro String ausgelegt!" AndImage:image];
-    [steps addObject:step];
-    
-    guide = [[Guide alloc] initWithName: @"Kühlwasser nachfüllen" CategoryName: @"Motor" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    
-    
-    //---------------------------------------------------------------------------------------------------------------------------------------
-    
-    steps = [NSMutableArray array];
-    
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kuehlwasser" ofType:@"jpg"]];
-    
-    step = [[Step alloc] initWithName: @"Schritt 1: Kühlwassser kaufen" Description:@"Als ersten sollten sie den Reservereifen holen.\n Dazu begeben Sie sich bitte zu Ihrem Kofferaum und öffnen diesen.\n Räumen Sie den Kofferaum leer.\n Unter der Abdeckung finden Sie Ihren Reservereifen und einen Schlüssel zum lösen der Radmuttern. Gegebenenfalls ist auch ein Felgenschloss dabei.\n Nehmen Sie den Reservereifen aus der Vertiefung." AndImage:image];
-    [steps addObject:step];
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nachfuellen" ofType:@"jpg"]];
-    step = [[Step alloc] initWithName: @"Schritt 2: Kühlwasser nachfüllen" Description:@"Als erstes müssen Sie die das Auto aufbocken. Dann lösen Sie die Radmuttern des alten Reifens und nehmen den Reifen ab (Legen Sie den Reifen am besten in de Kofferaum, damit Sie ihn nicht vergessen). Jetzt nur noch den Reservereifen wieder anschrauben! Fahren Sie nicht zu schnell. Der Reservereifen ist nur für Geschwindigkeiten bis 90 Kilometer pro String ausgelegt!" AndImage:image];
-    [steps addObject:step];
-    
-    guide = [[Guide alloc] initWithName: @"Ölstand kontrollieren" CategoryName: @"Motor" AndSteps: steps];
-    [allGuides addObject:guide];
     
     self.allGuides = allGuides;
     self.reducedGuides = allGuides;
@@ -115,19 +83,62 @@
     NSMutableArray* allGuides = [NSMutableArray array];
     NSMutableArray* steps = [NSMutableArray array];
     
-    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_10" ofType:@"jpeg"]];
-    Step* step = [[Step alloc] initWithName: @"Radmuttern lösen" Description:@"Verwenden Sie das Radkreuz zum Lösen der Radmuttern. Wechseln Sie nur einen Reifen zur Zeit. Um mehr Kraft aufzuwenden, verwenden Sie Ihren Fuß als Hebel. Lösen Sie die Radmuttern nur leicht an." AndImage:image];
+    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
+    Step* step = [[Step alloc] initWithName: @"Sitz in Längsrichtung einstellen(1)" Description:@"Hebel hochziehen und Sitz verschieben. Dann Hebel loslassen und Sitz weiter verschieben, bis die Verriegelung einrastet." AndImage:image];
     [steps addObject:step];
     
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_20" ofType:@"jpeg"]];
-    step = [[Step alloc] initWithName: @"Wagenheber ansetzen" Description:@"Setzen Sie den Wagenheber an der Karosserie markierten Stelle an. Heben Sie den Wagen nur leicht an, bis das Rad knapp über dem Boden schwebt." AndImage:image];
+    step = [[Step alloc] initWithName: @"Lehne entriegeln(2)" Description:@"(nur 2-türige Fahrzeuge) Hebel nach oben ziehen und Lehne vorklappen." AndImage:image];
     [steps addObject:step];
     
-    step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den Golf." AndImage:nil ];
+    step = [[Step alloc] initWithName: @"\"Easy-Entry\"(2)" Description:@"(nur 2-türige Fahrzeuge) Diese Funktion erleichtert Ihnen das Einsteigen nach hinten. Ziehen Sie diesen Hebel nach oben und klappen Sie die Lehne nach vorn. Gleichzeitig hebt sich die Sitzfläche etwas und bewegt sich ebenfalls nach vorne." AndImage:image ];
     [steps addObject:step];
     
-    Guide* guide = [[Guide alloc] initWithName: @"Anleitung" CategoryName: @"Cockpit" AndSteps: steps];
+    step = [[Step alloc] initWithName: @"Lendenwirbelstütze* einstellen(3)" Description:@"Durh Drehen des Handrades läßt sich die Polsterpartie im Lendenwirbelbereich mehr oder weniger auswölben. Dadurch wird de natürliche Krümmung der Wirbelsäule besonders wirksam unterstützt, so daß die Sitzhaltung vor allem auf langen Strecken ermüdungsfreier wird." AndImage:image ];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Lehneneignung einstellen(4)" Description:@"Lehne entlasten und Handrad drehen." AndImage:image ];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Sitzhöhe* einstellen(5)" Description:@"Durch \"Pumpbewegungen\" des Hebels an der Sitzaußenseite läßt sch der Sitz parallel anheben und absenken." AndImage:image ];
+    [steps addObject:step];
+    
+    Guide* guide = [[Guide alloc] initWithName: @"Autositz einstellen" CategoryName: @"Sitze" AndSteps: steps];
     [allGuides addObject:guide];
+    
+
+    
+    //---------------------------------------------------------------------------------------------------------------------------------------
+    
+     steps = [NSMutableArray array];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
+    step = [[Step alloc] initWithName: @"Höhe einstellen" Description:@"Lorem Ipsum" AndImage:image];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Aus und einbauen" Description:@"Dolor sit." AndImage:image];
+    [steps addObject:step];
+    
+    
+    guide = [[Guide alloc] initWithName: @"Kopfstützen" CategoryName: @"Sitze" AndSteps: steps];
+    [allGuides addObject:guide];
+    //---------------------------------------------------------------------------------------------------------------------------------------
+    
+    steps = [NSMutableArray array];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
+    step = [[Step alloc] initWithName: @"Drehregler A - Temperaturqual" Description:@"Lorem Ipsum" AndImage:nil];
+    [steps addObject:step];
+    
+    step = [[Step alloc] initWithName: @"Drehschalter B - Gebläse" Description:@"Dolor sit." AndImage:nil];
+    [steps addObject:step];    
+
+    step = [[Step alloc] initWithName: @"Drehregler C- Luftverteilung" Description:@"Dolor sit." AndImage:nil];
+    [steps addObject:step];
+    
+    guide = [[Guide alloc] initWithName: @"Heizung und Lüftung" CategoryName: @"Klima" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    
     
     self.allGuides = allGuides;
     self.reducedGuides = allGuides;

@@ -66,7 +66,7 @@
             [cell.imageView setImage:warningLightCategoryImage];
             break;
         case 1:
-            cell.textLabel.text = @"Pannenhilfe";
+            cell.textLabel.text = @"Pannenhilfe anrufen";
             [cell.imageView setImage:breakdownServiceCategoryImage];
             break;
         case 2:
@@ -88,6 +88,11 @@
     if (indexPath.row == 0) {
         WarningLightCollectionViewController* viewController = [[WarningLightCollectionViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
+    }
+    if(indexPath.row == 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC Anrufen" message:@"Wollen sie den ADAC Anrufen und Ihre Daten und Ihren Standord an den ADAC senden" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"JA, ich Will",nil];
+        [alert show];
     }
 }
 

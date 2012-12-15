@@ -1,32 +1,26 @@
 //
-//  SettingsViewController.m
+//  RoadsideAssitanceViewController.m
 //  CarAssist
 //
-//  Created by 0fiedler on 07.12.12.
+//  Created by 0fiedler on 15.12.12.
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "SettingsViewController.h"
-#import "CarFavoritViewController.h"
-#import "Profile.h"
-#import "Utils.h"
 #import "RoadsideAssitanceViewController.h"
+#import "Profile.h"
 
-@interface SettingsViewController ()
-@property Profile* profil;
-@property BOOL firstStart;
+@interface RoadsideAssitanceViewController ()
+@property (nonatomic) Profile* profile;
 @end
 
-@implementation SettingsViewController
+@implementation RoadsideAssitanceViewController
 
-
-
--(SettingsViewController*) initWithFirstStart: (BOOL) firstStart
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super init];
+    self = [super initWithStyle:style];
     if (self) {
-            self.profil = [Profile getProfile];
-        self.firstStart = firstStart;
+        // Custom initialization
+        self.profile= [Profile getProfile];
     }
     return self;
 }
@@ -35,16 +29,6 @@
 {
     [super viewDidLoad];
 
-    [self.navigationItem setTitle: @"Profil"];
-    
-    // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    if(self.firstStart)
-    {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: self.firstStart];
-        [self.navigationController pushViewController:carcontroller animated:YES];
-
-    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -62,14 +46,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 3;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,22 +59,38 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.textLabel.textColor = [UIColor blackColor];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-    
-    int pos = indexPath.row;
-    if (pos == 0) {
-        cell.textLabel.text=@"Autos";
+    if (indexPath.row == 0)
+    {
+        cell.textLabel.text=@"ADAC-Nummer";
+        cell.detailTextLabel.text=self.profile.ADAClicence;
     }
-    
-    if (pos == 1) {
-         cell.textLabel.text=@"Pannenservice";
+    if(indexPath.row == 1)
+    {
+        cell.textLabel.text=@"Vorname";
+        cell.detailTextLabel.text=self.profile.vorname;
     }
-    if (pos == 2) {
-       cell.textLabel.text=@"Werkstätten";
+    if(indexPath.row == 2)
+    {
+        cell.textLabel.text=@"Nachname";
+        cell.detailTextLabel.text=self.profile.nachname;
     }
-
+    if(indexPath.row == 3)
+    {
+        cell.textLabel.text=@"Email-Adresse";
+        cell.detailTextLabel.text=self.profile.emailAdresse;
+    }
+    if(indexPath.row == 4)
+    {
+        cell.textLabel.text=@"HandyNummer";
+        cell.detailTextLabel.text= [NSString stringWithFormat:@"%d", self.profile.mobilenumber];
+    }
+    if(indexPath.row == 5)
+    {
+        cell.textLabel.text=@"Heimat Stadt";
+        cell.detailTextLabel.text= self.profile.homeTown;
+    }
     return cell;
 }
 
@@ -139,18 +137,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int pos = indexPath.row;
-    if (pos == 0) {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: NO];
-            [self.navigationController pushViewController:carcontroller animated:YES];
-    }
-    if (pos == 1) {
-        RoadsideAssitanceViewController *adaccontroller = [[RoadsideAssitanceViewController alloc] init];
-        [self.navigationController pushViewController:adaccontroller animated:YES];
-    }
-    if(pos == 2) {
-        //Hier die Werkstättten Viewcontroller Pushen
-    }
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 @end
