@@ -68,8 +68,9 @@
 {
     if(self.firstStart)
     {
-        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
-        
+        #warning Wenn Fahrgestellnummerscannen funktioniert wieder einkommentieren und das danach löschen
+       // UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
     }
 
@@ -237,6 +238,7 @@
         [self.profil.carList addObject:selectedCar];
         self.profil.car = selectedCar;
     [self.carFavoriteTableView reloadData];
+    //Diese Zeilen sorgen dafür, dass man die Tabitems wieder auswählen kann
     if(self.firstStart)
     {
         [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];

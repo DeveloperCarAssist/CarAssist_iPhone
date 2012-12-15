@@ -95,14 +95,17 @@
  */
 -(Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber
 {
-    for (int i = 0 ; i < self.allCars.count; i++)
+    if (vehicalIdentNumber.length >=8)
     {
+        for (int i = 0 ; i < self.allCars.count; i++)
+        {
         Car* automobil = [self.allCars objectAtIndex: i];
-        if ( [automobil.vehicalIdentNumber isEqual: vehicalIdentNumber])
+        if ( [[automobil.vehicalIdentNumber substringToIndex:8] isEqual: [vehicalIdentNumber substringToIndex:8]])
         {
             return automobil;
         }
     }
+}
     return nil;
 }
 
