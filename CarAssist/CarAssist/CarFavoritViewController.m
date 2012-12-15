@@ -51,8 +51,9 @@
     self.carFavoriteTableView.separatorColor = [UIColor blackColor];
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.tableView.backgroundView = imageView;
+    self.tableView.separatorColor = [UIColor blackColor];
 
 }
 
