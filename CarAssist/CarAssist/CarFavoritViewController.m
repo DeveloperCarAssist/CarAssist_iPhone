@@ -266,7 +266,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
         // In dieser Variable wird das fotographierte Bild gespeichert, allerdings wird es momentan nicht weiter verwendet!
-        UIImage* image = info[UIImagePickerControllerOriginalImage];
+//        UIImage* image = info[UIImagePickerControllerOriginalImage];
     }
     
     NSArray* carList = self.profil.carList;
