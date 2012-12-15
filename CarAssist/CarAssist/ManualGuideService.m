@@ -122,22 +122,7 @@
     guide = [[Guide alloc] initWithName: @"Kopfstützen" CategoryName: @"Sitze" AndSteps: steps];
     [allGuides addObject:guide];
     //---------------------------------------------------------------------------------------------------------------------------------------
-    
-    self.allGuides = allGuides;
-    self.reducedGuides = allGuides;
-}
-
-/**
- * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 2. Testfahrzeug
- *
- */
-- (void) initServiceGuidesWithExampleDataVWGolfIV
-{
-    NSMutableArray* allGuides = [NSMutableArray array];
-    NSMutableArray* steps = [NSMutableArray array];
-
-    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"reifenwechsel_schritt_10" ofType:@"jpeg"]];
-    Step* step = [[Step alloc] initWithName: @"Radmuttern lösen" Description:@"Verwenden Sie das Radkreuz zum Lösen der Radmuttern. Wechseln Sie nur einen Reifen zur Zeit. Um mehr Kraft aufzuwenden, verwenden Sie Ihren Fuß als Hebel. Lösen Sie die Radmuttern nur leicht an." AndImage:image];
+    step = [[Step alloc] initWithName: @"Drehregler A - Temperatur" Description:@"Dolor sit." AndImage:nil];
     [steps addObject:step];
     
     step = [[Step alloc] initWithName: @"Drehschalter B - Gebläse" Description:@"Dolor sit." AndImage:nil];
