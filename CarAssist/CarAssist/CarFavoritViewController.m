@@ -47,10 +47,21 @@
     [self.navigationItem setRightBarButtonItem: addButton];
     [self.navigationItem setTitle: @"Profil"];
     
+    //Tableview
+    self.carFavoriteTableView.separatorColor = [UIColor blackColor];
+    
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
   //  [self showCarSelectIfFirstStart];
    }
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    if(self.firstStart)
+    {
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+        
+        [sheet showFromToolbar: self.navigationController.toolbar];
+    }
+}
 
 -(void)addCarButtonClicked
 {
@@ -128,7 +139,7 @@
     
     cell.favorite = (car == self.profil.car);
     cell.textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
     
     return cell;
