@@ -14,8 +14,6 @@
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
-		37A6322C167B6C09007E0E85 /* FirstStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6322A167B6C09007E0E85 /* FirstStartViewController.m */; };
-		37A6322D167B6C09007E0E85 /* FirstStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */; };
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
 		37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB892A167372F60098EFA3 /* CarDataViewController.xib */; };
 		37BB893C16737F2F0098EFA3 /* RadioPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB893A16737F2F0098EFA3 /* RadioPickerController.m */; };
@@ -120,9 +118,6 @@
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		37A63229167B6C09007E0E85 /* FirstStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStartViewController.h; sourceTree = "<group>"; };
-		37A6322A167B6C09007E0E85 /* FirstStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStartViewController.m; sourceTree = "<group>"; };
-		37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstStartViewController.xib; sourceTree = "<group>"; };
 		37BB8928167372F60098EFA3 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDataViewController.h; sourceTree = "<group>"; };
 		37BB8929167372F60098EFA3 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataViewController.m; sourceTree = "<group>"; };
 		37BB892A167372F60098EFA3 /* CarDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDataViewController.xib; sourceTree = "<group>"; };
@@ -374,13 +369,13 @@
 		400DF84E1668F0F100D6217B /* CarAssist */ = {
 			isa = PBXGroup;
 			children = (
+				400DF84F1668F0F100D6217B /* Supporting Files */,
 				405FB27E167373FA00024934 /* Util */,
 				400DF8961669081800D6217B /* Services */,
 				400DF892166907E700D6217B /* Model */,
 				400DF8881669051700D6217B /* Controller */,
 				400DF8571668F0F100D6217B /* AppDelegate.h */,
 				400DF8581668F0F100D6217B /* AppDelegate.m */,
-				400DF84F1668F0F100D6217B /* Supporting Files */,
 			);
 			path = CarAssist;
 			sourceTree = "<group>";
@@ -447,9 +442,6 @@
 				2E725FF2166E666A00942382 /* Service */,
 				2E725FF1166E666100942382 /* Settings */,
 				2E725FEF166E665100942382 /* Warning */,
-				37A63229167B6C09007E0E85 /* FirstStartViewController.h */,
-				37A6322A167B6C09007E0E85 /* FirstStartViewController.m */,
-				37A6322B167B6C09007E0E85 /* FirstStartViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -695,7 +687,6 @@
 				8F7D5193167878C600E41D4D /* background_profil.png in Resources */,
 				8F7D5194167878C600E41D4D /* background_service.png in Resources */,
 				8F7D5195167878C600E41D4D /* background_stoerung.png in Resources */,
-				37A6322D167B6C09007E0E85 /* FirstStartViewController.xib in Resources */,
 				8FF793BF167B6573008ADB97 /* background_bedienung_hell.png in Resources */,
 				8FF793C0167B6573008ADB97 /* background_profil_hell.png in Resources */,
 				8FF793C1167B6573008ADB97 /* background_service_hell.png in Resources */,
@@ -764,7 +755,6 @@
 				8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */,
 				4075613E167B6B7700242741 /* CarSettingsHelper.m in Sources */,
 				40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */,
-				37A6322C167B6C09007E0E85 /* FirstStartViewController.m in Sources */,
 				8FF793BA167B64E6008ADB97 /* ServiceCategoryViewController.m in Sources */,
 				8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */,
 				8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */,

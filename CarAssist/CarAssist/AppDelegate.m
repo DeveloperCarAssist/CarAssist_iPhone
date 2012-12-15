@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstStartViewController.h"
 
 
 @implementation AppDelegate
@@ -52,8 +51,20 @@
                                 self.warningNavigationController, self.settingsNavigationController, nil];
     
     self.tabBarController.viewControllers = viewControllers;
+    //Die Nächste Zeile sorgt dafür, dass man im Profil startet
     self.tabBarController.selectedViewController=self.settingsNavigationController;
-     
+    /**
+     *Die Folgenden Zeilen sorgen dafür, dass man am Anfang nicht in andere Kategorien wechseln kann
+     * Aktiviert werden die Kategorien im CarFavoritController.m in der Methode 
+     * - (void) carHasBeenSelected:(Car *)selectedCar
+     */
+    if(!self.secondStart)
+    {
+         [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: FALSE];
+         [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: FALSE];
+    }
         self.window.rootViewController = self.tabBarController;
         [self.window makeKeyAndVisible];
 
