@@ -8,6 +8,7 @@
 
 #import "CarListSelectorViewController.h"
 #import "Profile.h"
+#import "Utils.h"
 
 @interface CarListSelectorViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -34,6 +35,16 @@
     
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: saveButton];
+    
+    
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    //Searchbar
+    self.carSearchBar.tintColor = [UIColor lightGrayColor];
+    
+    //TableView
+    self.carSelectionTableView.separatorColor = [UIColor blackColor];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
@@ -81,7 +92,10 @@
     NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
     Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
     
+    
     cell.textLabel.text = currentModel.model;
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
         
     return cell;
 }

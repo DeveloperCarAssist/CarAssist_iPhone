@@ -29,6 +29,12 @@
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
+    
+    //Saerchbar
+    self.categorySearchBar.tintColor = [UIColor lightGrayColor];
+    
+    //Tableview
+    self.categoryTableView.separatorColor = [UIColor blackColor];
 
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
     
@@ -75,7 +81,7 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
-        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     NSArray *keys = [self.categoryService.guides allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
@@ -84,6 +90,7 @@
     cell.textLabel.text = guide.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
     
     return cell;
 }

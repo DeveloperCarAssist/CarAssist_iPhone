@@ -10,4 +10,6 @@
 
 @interface WarningCategoryViewController : UIViewController
 
+@property (nonatomic) IBOutlet UITableView* warningCatergoryTableView;
+
 @end

@@ -33,7 +33,7 @@
     self.title = @"Bedienung";
     // Hintergrundgrafik einbinden
     self.categoryTableView.backgroundColor = [UIColor clearColor];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_bedienung"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_bedienung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];

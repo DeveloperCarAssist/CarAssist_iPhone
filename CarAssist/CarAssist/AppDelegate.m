@@ -33,15 +33,19 @@
 
     UITabBarItem* tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Bedienung" image:[UIImage imageNamed:@"tabbar_bedienung_small"]  tag:0];
     [self.manualNavigationController setTabBarItem:tabBarItem0];
+    self.manualNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Service" image:[UIImage imageNamed:@"tabbar_service_small"]  tag:1];
     [self.serviceNavigationController setTabBarItem:tabBarItem1];
+    self.serviceNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"Störungen" image: [UIImage imageNamed:@"tabbar_stoerung_small"]  tag:2];
     [self.warningNavigationController setTabBarItem:tabBarItem2];
+    self.warningNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil_small"] tag:3];
     [self.settingsNavigationController setTabBarItem:tabBarItem3];
+    self.settingsNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     
     NSArray *viewControllers = [NSArray arrayWithObjects:self.manualNavigationController, self.serviceNavigationController,

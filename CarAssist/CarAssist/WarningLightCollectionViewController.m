@@ -38,6 +38,7 @@
     Car *car = [[Profile getProfile] car];
     self.warningLightStockService = [[WarningLightStockService alloc] initWithCar: car];
     
+    
     // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
     
