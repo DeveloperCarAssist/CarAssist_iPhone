@@ -81,7 +81,7 @@
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
 		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
 		8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D16167B82390011C02F /* ManualCategoryViewController.m */; };
-		8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideStockService.m */; };
+		8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideService.m */; };
 		8F796D25167B8A3F0011C02F /* tabbar_bedienung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */; };
 		8F796D26167B8A3F0011C02F /* tabbar_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */; };
 		8F7D5192167878C600E41D4D /* background_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7D518E167878C600E41D4D /* background_bedienung.png */; };
@@ -220,8 +220,8 @@
 		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
 		8F796D15167B82390011C02F /* ManualCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualCategoryViewController.h; sourceTree = "<group>"; };
 		8F796D16167B82390011C02F /* ManualCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualCategoryViewController.m; sourceTree = "<group>"; };
-		8F796D1C167B84F00011C02F /* ManualGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideStockService.h; sourceTree = "<group>"; };
-		8F796D1D167B84F00011C02F /* ManualGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualGuideStockService.m; sourceTree = "<group>"; };
+		8F796D1C167B84F00011C02F /* ManualGuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideService.h; sourceTree = "<group>"; };
+		8F796D1D167B84F00011C02F /* ManualGuideService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualGuideService.m; sourceTree = "<group>"; };
 		8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bedienung_small.png; sourceTree = "<group>"; };
 		8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bedienung.png; sourceTree = "<group>"; };
 		8F7D518E167878C600E41D4D /* background_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_bedienung.png; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		8FF793BC167B6573008ADB97 /* background_profil_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_profil_hell.png; sourceTree = "<group>"; };
 		8FF793BD167B6573008ADB97 /* background_service_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_service_hell.png; sourceTree = "<group>"; };
 		8FF793BE167B6573008ADB97 /* background_stoerung_hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_stoerung_hell.png; sourceTree = "<group>"; };
-		8FF793C8167B70F3008ADB97 /* GuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideStockService.h; sourceTree = "<group>"; };
+		8FF793C8167B70F3008ADB97 /* GuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,9 +484,9 @@
 				40C32750166B89BB00BC049B /* ServiceGuideStockService.m */,
 				37BB8940167391210098EFA3 /* AccessoryService.h */,
 				37BB8941167391210098EFA3 /* AccessoryService.m */,
-				8FF793C8167B70F3008ADB97 /* GuideStockService.h */,
-				8F796D1C167B84F00011C02F /* ManualGuideStockService.h */,
-				8F796D1D167B84F00011C02F /* ManualGuideStockService.m */,
+				8FF793C8167B70F3008ADB97 /* GuideService.h */,
+				8F796D1C167B84F00011C02F /* ManualGuideService.h */,
+				8F796D1D167B84F00011C02F /* ManualGuideService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -767,7 +767,7 @@
 				37A6322C167B6C09007E0E85 /* FirstStartViewController.m in Sources */,
 				8FF793BA167B64E6008ADB97 /* ServiceCategoryViewController.m in Sources */,
 				8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */,
-				8F796D1E167B84F00011C02F /* ManualGuideStockService.m in Sources */,
+				8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "ManualGuideStockService.h"
+#import "ManualGuideService.h"
 
-@implementation ManualGuideStockService
+@implementation ManualGuideService
 // Property guides stammt aus Protocol und muss deshalb synthetisiert werden!
 @synthesize guides = _guides;
 
@@ -18,7 +18,7 @@
 
 }
 
--(ManualGuideStockService*) initWithCar:(Car *) car
+-(ManualGuideService*) initWithCar:(Car *) car
 {
     self = [super init];
     if(self)
