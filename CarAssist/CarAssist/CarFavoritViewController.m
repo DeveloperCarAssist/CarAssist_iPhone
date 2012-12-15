@@ -237,7 +237,14 @@
         [self.profil.carList addObject:selectedCar];
         self.profil.car = selectedCar;
     [self.carFavoriteTableView reloadData];
-    self.firstStart = NO;
+    if(self.firstStart)
+    {
+        [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: YES];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: YES];
+        self.firstStart = NO;
+    }
 }
 
 @end
