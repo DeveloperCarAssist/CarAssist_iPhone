@@ -38,6 +38,8 @@
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.tableView.separatorColor = [UIColor blackColor];
+    
     if(self.firstStart)
     {
         CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: self.firstStart];
@@ -92,6 +94,8 @@
        cell.textLabel.text=@"Werkstätten";
     }
 
+    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

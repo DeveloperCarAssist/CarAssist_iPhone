@@ -20,6 +20,8 @@
         [self addSubview: self.mainView];
     }
     
+    
+    
     return self;
 }
 

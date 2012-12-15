@@ -100,11 +100,26 @@
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
     
-    NSString* currentProducer = [[self.carListService.cars allKeys] objectAtIndex:section];
-    return currentProducer;
+    NSString *key = [[self.carListService.cars allKeys] objectAtIndex:section];
     
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
+    //!todo hier noch schöner Hintergrund einbinden
+    sectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
+    label.textColor = [UIColor blackColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = key;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:18];
+    
+    
+    [sectionView addSubview:label];
+    return sectionView;
 }
 
 
