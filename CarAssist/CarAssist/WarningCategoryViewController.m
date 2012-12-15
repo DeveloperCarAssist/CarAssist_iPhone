@@ -28,6 +28,7 @@
     
     //TableView
     self.warningCatergoryTableView.separatorColor = [UIColor blackColor];
+    
     // Anmeldung als Beobachter, wenn der Standard-Wagen geändert wurde
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultCarChanged:) name:@"defaultCarChanged" object:nil];
 }
@@ -80,6 +81,7 @@
             break;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
