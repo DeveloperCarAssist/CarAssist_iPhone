@@ -19,10 +19,11 @@ typedef void (^SaveBlock) (NSObject*, NSString*);
 
 @implementation EditViewController
 
-- (EditViewController*) initWithValues: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex
 {
     self = [super init];
     if (self) {
+        self.delegate = delegate;
         self.values = values;
         self.valueRepresentations = valueRepresentation;
         self.selectedValueIndex = selectedValueIndex;
@@ -40,6 +41,11 @@ typedef void (^SaveBlock) (NSObject*, NSString*);
 - (void) setSaveBlock: (SaveBlock) block
 {
     saveBlock = block;
+}
+
+- (void) display
+{
+    [NSException raise:@"Abstract Class" format:@"This method must be overridden in subclass"];
 }
 
 @end

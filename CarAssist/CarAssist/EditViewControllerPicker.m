@@ -14,9 +14,9 @@
 
 @implementation EditViewControllerPicker
 
-- (EditViewControllerPicker*) initWithValues: (NSArray*) values ValueRepresentation: (NSArray *) valueRepresentation SelectedValueIndex: (int) selectedValueIndex AndImage: (UIImage*) image
+- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray *) valueRepresentation SelectedValueIndex: (int) selectedValueIndex AndImage: (UIImage*) image
 {
-    self = [super initWithValues:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:  selectedValueIndex];
+    self = [super initWithDelegate: delegate Values:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:  selectedValueIndex];
     if (self) {
         self.image = image;
     }
@@ -58,6 +58,11 @@
 {
     [self saveSetting];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) display
+{
+    [self.delegate.navigationController pushViewController:self animated:YES];
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "SettingCell.h"
 #import "EditViewControllerPicker.h"
 #import "SettingsValueService.h"
+#import "EditViewControllerTextInput.h"
 
 @interface CarDataViewController ()
 @property Car* car;
@@ -27,9 +28,10 @@
         self.settingsValueService = [[SettingsValueService alloc] init];
         self.title = @"Autoprofil";
         self.settingsList = [NSMutableDictionary dictionary];
+        self.sectionList = [NSMutableArray array];
+        [self initCarDataSettings];
         [self initEquipmentPackageSettings];
         [self initServiceProviderSettings];
-        [self initCarDataSettings];
     }
     return self;
 }
@@ -49,19 +51,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.settingsList allKeys].count;
+    return self.sectionList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSString* sectionName = [[self.settingsList allKeys] objectAtIndex:section];
+    NSString* sectionName = [self.sectionList objectAtIndex:section];
     NSArray* settingsListForSection = [self.settingsList objectForKey:sectionName];
     return settingsListForSection.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* sectionName = [[self.settingsList allKeys] objectAtIndex:indexPath.section];
+    NSString* sectionName = [self.sectionList objectAtIndex:indexPath.section];
     NSArray* settingsListForSection = [self.settingsList objectForKey:sectionName];
     SettingCell* settingCell = [settingsListForSection objectAtIndex:indexPath.row];
     
@@ -86,18 +88,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* sectionName = [[self.settingsList allKeys] objectAtIndex:indexPath.section];
+    NSString* sectionName = [self.sectionList objectAtIndex:indexPath.section];
     NSArray* settingsListForSection = [self.settingsList objectForKey:sectionName];
     SettingCell* settingCell = [settingsListForSection objectAtIndex:indexPath.row];
     if (settingCell.isEditable) {
-        [self.navigationController pushViewController:settingCell.editViewController animated:YES];
+        [settingCell.editViewController display];
     }
 }
 
 
 
 -(NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-    return [[self.settingsList allKeys] objectAtIndex:section];
+    return [self.sectionList objectAtIndex:section];
 }
 
 - (void) initCarDataSettings
@@ -108,14 +110,23 @@
     
     SettingCell* modelCell = [[SettingCell alloc] initWithTitle:@"Modell" Value:self.car.model AndValueRepresentation:self.car.model];
     
-    // TODO: Die Bezeichnung des Wagens sollte einstellbar sein!
-    SettingCell* descriptionSetting = [[SettingCell alloc] initWithTitle:@"Bezeichnung" Value:self.car.owner AndValueRepresentation:self.car.owner];
+    EditViewControllerTextInput* editViewController = [[EditViewControllerTextInput alloc] initWithDelegate:self Values:[NSArray array] ValueRepresentation:[NSArray array] AndSelectedValueIndex:0];
+    editViewController.title = @"Bezeichnung";
+    editViewController.message = @"Bitte geben eine Bezeichnug ein";
     
+    SettingCell* descriptionSetting = [[SettingCell alloc] initEditableWithTitle:@"Bezeichnung" Value:self.car.owner ValueRepresentation:self.car.owner AndEditViewController:editViewController];
+    
+    [descriptionSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.owner = (NSString*) value;
+        descriptionSetting.value = value;
+        descriptionSetting.valueRepresentation = self.car.owner;
+    }];
     
     [carData addObject:manufacturerCell];
     [carData addObject:modelCell];
     [carData addObject:descriptionSetting];
     [self.settingsList setObject:carData forKey:@"Fahrzeug Daten"];
+    [self.sectionList addObject:@"Fahrzeug Daten"];
 }
 
 - (void) initEquipmentPackageSettings
@@ -190,6 +201,7 @@
     [equipment addObject:steeringWheelSetting];
     [equipment addObject:seatsSetting];
     [self.settingsList setObject:equipment forKey:@"Ausstattung"];
+    [self.sectionList addObject:@"Ausstattung"];
 }
 
 - (void) initServiceProviderSettings
@@ -215,6 +227,7 @@
     [provider addObject:insuranceSetting];
     [provider addObject:garageSetting];
     [self.settingsList setObject:provider forKey:@"Dienstleister"];
+    [self.sectionList addObject:@"Dienstleister"];
 }
 
 - (SettingCell*) generatePickerCellWithTitle: (NSString*) title Value: (NSObject*) value AndValueRepresenation: (NSString*) valueRepresentation
@@ -222,9 +235,10 @@
     NSArray* values = [self.settingsValueService.settingValues objectForKey:title];
     NSArray* valuesRepresentations = [self.settingsValueService.settingValuesRepresentations objectForKey:title];
     
-    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithValues:values ValueRepresentation:valuesRepresentations SelectedValueIndex:0 AndImage:nil];
+    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithDelegate: self Values:values ValueRepresentation:valuesRepresentations SelectedValueIndex:0 AndImage:nil];
     SettingCell* result = [[SettingCell alloc] initEditableWithTitle:title Value:value ValueRepresentation:valueRepresentation AndEditViewController:pickerController];
     return result;
+    
 }
 
 

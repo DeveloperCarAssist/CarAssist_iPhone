@@ -17,6 +17,7 @@
 
 // Maps from section name to list (NSArray) of SettingCells
 @property (nonatomic) NSMutableDictionary* settingsList;
+@property (nonatomic) NSMutableArray* sectionList;
 
 -(CarDataViewController*)initWithCar: (Car*)car;
 

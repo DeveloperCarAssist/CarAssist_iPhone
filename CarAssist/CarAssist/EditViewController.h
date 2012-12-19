@@ -11,11 +11,15 @@
 
 @interface EditViewController : UIViewController
 
+@property (nonatomic) UIViewController* delegate;
+
 @property (nonatomic) int selectedValueIndex;
 @property (nonatomic) NSArray* values;
 @property (nonatomic) NSArray* valueRepresentations;
 
-- (EditViewController*) initWithValues: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex;
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex;
+
+- (void) display;
 - (void) setSaveBlock: (void (^) (NSObject*, NSString*)) block;
 - (void) saveSetting;
 

@@ -12,6 +12,7 @@
 		2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500C7167DBBC700196C53 /* EditViewControllerPicker.m */; };
 		2E4500CA167DBBC800196C53 /* EditViewControllerPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */; };
 		2E4500CE167DF62A00196C53 /* SettingsValueService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500CD167DF62A00196C53 /* SettingsValueService.m */; };
+		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
 		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
 		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
@@ -125,6 +126,8 @@
 		2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewControllerPicker.xib; sourceTree = "<group>"; };
 		2E4500CC167DF62A00196C53 /* SettingsValueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsValueService.h; sourceTree = "<group>"; };
 		2E4500CD167DF62A00196C53 /* SettingsValueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsValueService.m; sourceTree = "<group>"; };
+		2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerTextInput.h; sourceTree = "<group>"; };
+		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
 		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
 		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
 		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				2E4500C6167DBBC700196C53 /* EditViewControllerPicker.h */,
 				2E4500C7167DBBC700196C53 /* EditViewControllerPicker.m */,
 				2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */,
+				2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */,
+				2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */,
 			);
 			name = EditViewController;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				2E4500C5167DBB6400196C53 /* EditViewController.m in Sources */,
 				2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */,
 				2E4500CE167DF62A00196C53 /* SettingsValueService.m in Sources */,
+				2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
