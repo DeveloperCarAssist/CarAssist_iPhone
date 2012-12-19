@@ -26,7 +26,10 @@
         self.car = car;
         self.settingsValueService = [[SettingsValueService alloc] init];
         self.title = @"Autoprofil";
-        [self initSettingsList];
+        self.settingsList = [NSMutableDictionary dictionary];
+        [self initEquipmentPackageSettings];
+        [self initServiceProviderSettings];
+        [self initCarDataSettings];
     }
     return self;
 }
@@ -86,7 +89,9 @@
     NSString* sectionName = [[self.settingsList allKeys] objectAtIndex:indexPath.section];
     NSArray* settingsListForSection = [self.settingsList objectForKey:sectionName];
     SettingCell* settingCell = [settingsListForSection objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:settingCell.editViewController animated:YES];
+    if (settingCell.isEditable) {
+        [self.navigationController pushViewController:settingCell.editViewController animated:YES];
+    }
 }
 
 
@@ -95,79 +100,131 @@
     return [[self.settingsList allKeys] objectAtIndex:section];
 }
 
-- (void) initSettingsList
+- (void) initCarDataSettings
 {
-    self.settingsList = [NSMutableDictionary dictionary];
+     NSMutableArray* carData = [NSMutableArray array];
     
-    NSMutableArray* serviceProvider = [NSMutableArray array];
+    SettingCell* manufacturerCell = [[SettingCell alloc] initWithTitle:@"Hersteller" Value:self.car.manufacturer AndValueRepresentation:self.car.manufacturer];
     
-    SettingCell* insuranceSetting = [[SettingCell alloc] initWithTitle:@"Versicherung" Value:self.car.insurance AndValueRepresentation:self.car.insurance];
-    insuranceSetting.isEditable = YES;
-    insuranceSetting.cellSelectionStyle = UITableViewCellSelectionStyleGray;
-    insuranceSetting.cellIdentifier = @"Cell2";
-    NSMutableArray* insuranceValues = [NSMutableArray array];
-    [insuranceValues addObject:@"Alianz"];
-    [insuranceValues addObject:@"Provinzial"];
-    [insuranceValues addObject:@"Huk Coburg"];
-    insuranceSetting.editViewController = [[EditViewControllerPicker alloc] initWithValues:insuranceValues ValueRepresentation:insuranceValues SelectedValueIndex:0 AndImage:nil];
+    SettingCell* modelCell = [[SettingCell alloc] initWithTitle:@"Modell" Value:self.car.model AndValueRepresentation:self.car.model];
     
-    void (^insuranceSaveBlock)(NSObject*, NSString*) = ^(NSObject* value, NSString* valueRepresentation) {
-        self.car.insurance = (NSString*) value;
-        insuranceSetting.value = value;
-        insuranceSetting.valueRepresentation = valueRepresentation;
-    };
-    
-    [insuranceSetting.editViewController setSaveBlock:insuranceSaveBlock];
-    
-    [serviceProvider addObject:insuranceSetting];
-    [self.settingsList setObject:serviceProvider forKey:@"Dienstleister"];
+    // TODO: Die Bezeichnung des Wagens sollte einstellbar sein!
+    SettingCell* descriptionSetting = [[SettingCell alloc] initWithTitle:@"Bezeichnung" Value:self.car.owner AndValueRepresentation:self.car.owner];
     
     
-    
-    
+    [carData addObject:manufacturerCell];
+    [carData addObject:modelCell];
+    [carData addObject:descriptionSetting];
+    [self.settingsList setObject:carData forKey:@"Fahrzeug Daten"];
+}
+
+- (void) initEquipmentPackageSettings
+{
     NSMutableArray* equipment = [NSMutableArray array];
     
-    SettingCell* equipmentPackageSetting = [[SettingCell alloc] initWithTitle:@"Ausstattungspaket" Value:self.car.equipmentPackage AndValueRepresentation:self.car.equipmentPackage.packageName];
-    equipmentPackageSetting.isEditable = YES;
-    equipmentPackageSetting.cellSelectionStyle = UITableViewCellSelectionStyleGray;
-    equipmentPackageSetting.cellIdentifier = @"Cell2";
-    NSArray* values = [self.settingsValueService.settingValues objectForKey:equipmentPackageSetting.title];
-    NSArray* valuesRepresentations = [self.settingsValueService.settingValuesRepresentations objectForKey:equipmentPackageSetting.title];
-    equipmentPackageSetting.editViewController = [[EditViewControllerPicker alloc] initWithValues:values ValueRepresentation:valuesRepresentations SelectedValueIndex:0 AndImage:nil];
+        
+    SettingCell* navigationDeviceSetting = [self generatePickerCellWithTitle: @"Navigationsgerät" Value: self.car.equipmentPackage.navigationDevice   AndValueRepresenation: self.car.equipmentPackage.navigationDevice];
     
-    void (^equipmentSaveBlock)(NSObject*, NSString*) = ^(NSObject* value, NSString* valueRepresentation) {
+    [navigationDeviceSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.equipmentPackage.navigationDevice = (NSString*) value;
+        navigationDeviceSetting.value = value;
+        navigationDeviceSetting.valueRepresentation = self.car.equipmentPackage.navigationDevice;
+    }];
+    
+    SettingCell* radioSetting = [self generatePickerCellWithTitle: @"Radio" Value: self.car.equipmentPackage.radio   AndValueRepresenation: self.car.equipmentPackage.radio];
+    
+    [radioSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.equipmentPackage.radio = (NSString*) value;
+        radioSetting.value = value;
+        radioSetting.valueRepresentation = self.car.equipmentPackage.radio;
+    }];
+    
+    SettingCell* steeringWheelSetting = [self generatePickerCellWithTitle: @"Lenkrad" Value: self.car.equipmentPackage.steeringWheel   AndValueRepresenation: self.car.equipmentPackage.steeringWheel];
+    
+    [steeringWheelSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.equipmentPackage.steeringWheel = (NSString*) value;
+        steeringWheelSetting.value = value;
+        steeringWheelSetting.valueRepresentation = self.car.equipmentPackage.steeringWheel;
+    }];
+    
+    SettingCell* seatsSetting = [self generatePickerCellWithTitle: @"Sitze" Value: self.car.equipmentPackage.seats   AndValueRepresenation: self.car.equipmentPackage.seats];
+    
+    [seatsSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.equipmentPackage.seats = (NSString*) value;
+        seatsSetting.value = value;
+        seatsSetting.valueRepresentation = self.car.equipmentPackage.seats;
+    }];
+    
+    SettingCell* wheelDeviceSetting = [self generatePickerCellWithTitle: @"Lenkrad" Value: self.car.equipmentPackage.steeringWheel   AndValueRepresenation: self.car.equipmentPackage.steeringWheel];
+    
+    [wheelDeviceSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.equipmentPackage.steeringWheel = (NSString*) value;
+        wheelDeviceSetting.value = value;
+        wheelDeviceSetting.valueRepresentation = self.car.equipmentPackage.steeringWheel;
+    }];
+    
+    SettingCell* equipmentPackageSetting = [self generatePickerCellWithTitle: @"Ausstattungspaket" Value: self.car.equipmentPackage  AndValueRepresenation: self.car.equipmentPackage.packageName];
+    
+    [equipmentPackageSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
         self.car.equipmentPackage = (CarEquipmentPackage*) value;
         equipmentPackageSetting.value = value;
         equipmentPackageSetting.valueRepresentation = self.car.equipmentPackage.packageName;
-    };
+        
+        navigationDeviceSetting.value = self.car.equipmentPackage.navigationDevice;
+        navigationDeviceSetting.valueRepresentation = self.car.equipmentPackage.navigationDevice;
+        
+        radioSetting.value = self.car.equipmentPackage.radio;
+        radioSetting.valueRepresentation = self.car.equipmentPackage.radio;
+        
+        steeringWheelSetting.value = self.car.equipmentPackage.steeringWheel;
+        steeringWheelSetting.valueRepresentation = self.car.equipmentPackage.steeringWheel;
+        
+        seatsSetting.value = self.car.equipmentPackage.seats;
+        seatsSetting.valueRepresentation = self.car.equipmentPackage.seats;
+    }];
     
-    [equipmentPackageSetting.editViewController setSaveBlock:equipmentSaveBlock];
-    
+
     [equipment addObject:equipmentPackageSetting];
-    [self.settingsList setObject:serviceProvider forKey:@"Ausstattung"];
+    [equipment addObject:navigationDeviceSetting];
+    [equipment addObject:radioSetting];
+    [equipment addObject:steeringWheelSetting];
+    [equipment addObject:seatsSetting];
+    [self.settingsList setObject:equipment forKey:@"Ausstattung"];
+}
+
+- (void) initServiceProviderSettings
+{
+    NSMutableArray* provider = [NSMutableArray array];
     
+    SettingCell* insuranceSetting = [self generatePickerCellWithTitle: @"Versicherung" Value: self.car.insurance  AndValueRepresenation: self.car.insurance];
     
+    [insuranceSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.insurance = (NSString*) value;
+        insuranceSetting.value = value;
+        insuranceSetting.valueRepresentation = self.car.insurance;
+    }];
     
+    SettingCell* garageSetting = [self generatePickerCellWithTitle: @"Werkstatt" Value: self.car.garage  AndValueRepresenation: self.car.garage];
     
+    [garageSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
+        self.car.garage = (NSString*) value;
+        garageSetting.value = value;
+        garageSetting.valueRepresentation = self.car.garage;
+    }];
     
+    [provider addObject:insuranceSetting];
+    [provider addObject:garageSetting];
+    [self.settingsList setObject:provider forKey:@"Dienstleister"];
+}
+
+- (SettingCell*) generatePickerCellWithTitle: (NSString*) title Value: (NSObject*) value AndValueRepresenation: (NSString*) valueRepresentation
+{
+    NSArray* values = [self.settingsValueService.settingValues objectForKey:title];
+    NSArray* valuesRepresentations = [self.settingsValueService.settingValuesRepresentations objectForKey:title];
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithValues:values ValueRepresentation:valuesRepresentations SelectedValueIndex:0 AndImage:nil];
+    SettingCell* result = [[SettingCell alloc] initEditableWithTitle:title Value:value ValueRepresentation:valueRepresentation AndEditViewController:pickerController];
+    return result;
 }
 
 

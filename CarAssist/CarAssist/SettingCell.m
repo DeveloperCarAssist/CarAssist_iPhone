@@ -17,6 +17,20 @@
         self.title = title;
         self.value = value;
         self.valueRepresentation = valueRepresentation;
+        self.isEditable = NO;
+        self.cellSelectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
+
+- (SettingCell*) initEditableWithTitle: (NSString*) title Value: (NSObject*) value ValueRepresentation: (NSString*) valueRepresentation AndEditViewController: (EditViewController*) editViewController
+{
+    self = [self initWithTitle:title Value:value AndValueRepresentation:valueRepresentation];
+    if (self) {
+        self.isEditable = YES;
+        self.cellSelectionStyle = UITableViewCellSelectionStyleGray;
+        self.cellIdentifier = @"Cell2";
+        self.editViewController = editViewController;
     }
     return self;
 }

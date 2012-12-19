@@ -23,4 +23,6 @@
 
 - (SettingCell*) initWithTitle: (NSString*) title Value: (NSObject*) value AndValueRepresentation: (NSString*) valueRepresentation;
 
+- (SettingCell*) initEditableWithTitle: (NSString*) title Value: (NSObject*) value ValueRepresentation: (NSString*) valueRepresentation AndEditViewController: (EditViewController*) editViewController;
+
 @end

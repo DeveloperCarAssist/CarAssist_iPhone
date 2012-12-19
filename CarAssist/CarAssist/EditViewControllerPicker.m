@@ -20,6 +20,8 @@
     if (self) {
         self.image = image;
     }
+    
+    
     return self;
 }
 

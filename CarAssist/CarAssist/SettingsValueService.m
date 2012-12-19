@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.settingValues = [NSMutableDictionary dictionary];
+        self.settingValuesRepresentations = [NSMutableDictionary dictionary];
         [self initSettingsValues];
     }
     return self;
@@ -23,13 +24,21 @@
 
 - (void) initSettingsValues
 {
-    NSString* settingName = @"Bezeichnung";
+    NSString* settingName = @"Versicherung";
     NSMutableArray* values = [NSMutableArray array];
     NSMutableArray* valueRepresentations = [NSMutableArray array];
-    [values addObject:@"Radio Bla"];
-    [values addObject:@"Radio Blabla"];
-    [values addObject:@"Extended Radio"];
-    [values addObject:@"Extended Radio mit Bonus Taste"];
+    [values addObject:@"Alianz"];
+    [values addObject:@"Huc Coburg"];
+    [values addObject:@"Mannheimer"];
+    [self.settingValues setObject:values forKey:settingName];
+    [self.settingValuesRepresentations setObject:values forKey:settingName];
+    
+    settingName = @"Werkstatt";
+    values = [NSMutableArray array];
+    valueRepresentations = [NSMutableArray array];
+    [values addObject:@"May und Olde"];
+    [values addObject:@"BMW München"];
+    [values addObject:@"Autoliv"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
     
@@ -55,9 +64,10 @@
     
     settingName = @"Radio";
     values = [NSMutableArray array];
-    [values addObject:@"Std. Navi"];
-    [values addObject:@"Extended Navi"];
-    [values addObject:@"Extended Navi mit Bonus-Maps"];
+    [values addObject:@"Radio Bla"];
+    [values addObject:@"Radio Blabla"];
+    [values addObject:@"Extended Radio"];
+    [values addObject:@"Extended Radio mit Bonus Taste"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
     
