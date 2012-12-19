@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Car.h"
-#import "CarSettingsHelper.h"
+#import "SettingsValueService.h"
 
 @interface CarDataViewController : UITableViewController
 
 @property (nonatomic) IBOutlet UITableView *tableview;
+@property (nonatomic) SettingsValueService* settingsValueService;
 
-@property (nonatomic) CarSettingsHelper* carSettingsHelper;
+// Maps from section name to list (NSArray) of SettingCells
+@property (nonatomic) NSMutableDictionary* settingsList;
 
 -(CarDataViewController*)initWithCar: (Car*)car;
 

@@ -13,4 +13,6 @@
 @property (nonatomic) NSString* packageName;
 @property (nonatomic) NSString *navigationDevice, *radio, *steeringWheel, *seats;
 
+- (CarEquipmentPackage*) initWithPackageName: (NSString*) packageName NavigationDevice: (NSString*) navigationDevice Radio: (NSString*) radio SteeringWheel: (NSString*) steeringWheel AndSeats: (NSString*) seats;
+
 @end
