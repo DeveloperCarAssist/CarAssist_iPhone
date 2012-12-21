@@ -93,7 +93,7 @@
     }
     if(indexPath.row == 1)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC Anrufen" message:@"Wollen sie den ADAC Anrufen und Ihre Daten und Ihren Standord an den ADAC senden" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"JA, ich Will",nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will",nil];
         [alert show];
     }
 }
