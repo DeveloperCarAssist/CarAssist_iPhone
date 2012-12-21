@@ -13,16 +13,16 @@
 @interface CarListSelectorViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic) Car* selectedCar;
-@property BOOL firstStart;
+
 @end
 
 @implementation CarListSelectorViewController
 
-- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate andFirstStart: (BOOL) firstStart
+- (id)initWithDelegate:(NSObject<CarListSelectorDelegate>*) delegate 
 {
     self = [super init];
     if (self) {
-        self.firstStart = firstStart;
+
         self.carListService = [[CarListService alloc] init];
         self.delegate = delegate;
     }
@@ -32,10 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(self.firstStart)
-    {
-     //    self.navigationItem.hidesBackButton = YES;
-    }
     self.title = @"Auto hinzufügen";
     
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];
@@ -60,6 +56,15 @@
     
     [nc addObserver:self selector:@selector(keyboardWillHide:) name:
      UIKeyboardWillHideNotification object:nil];
+    
+    
+    
+    if (![Profile getProfile].car) {
+        [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: NO];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: NO];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: NO];
+        [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: NO];
+    }
 }
 
 -(void) keyboardWillShow:(NSNotification*) note
@@ -181,6 +186,15 @@
  */
 -(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
     [self.carSearchBar resignFirstResponder];
+}
+
+- (void)viewDidUnload
+{
+    [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];
+    [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: YES];
+    [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: YES];
+    [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: YES];
+
 }
 
 

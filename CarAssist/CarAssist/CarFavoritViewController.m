@@ -16,7 +16,6 @@
 
 @interface CarFavoritViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong) Profile *profil;
-@property BOOL firstStart;
 @end
 
 @implementation CarFavoritViewController
@@ -30,12 +29,11 @@
     return self;
 }
 
--(id) initWithProfil: (Profile*) profil andFirstStart: (BOOL)firstStart
+-(id) initWithProfil: (Profile*) profil 
 {
     self = [super init];
     if (self) {
         self.profil = profil;
-        self.firstStart = firstStart;
     }
     return self;
     
@@ -75,7 +73,7 @@
 }
 -(void) showCarSelectIfFirstStart
 {
-    if(self.firstStart)
+    if(!self.profil.car)
     {
         UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
@@ -180,7 +178,7 @@
 
     if (buttonIndex == 0)
     {
-        CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self andFirstStart: self.firstStart];
+        CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self];
         [self.navigationController pushViewController:controller animated:YES];
     }
     
@@ -232,7 +230,7 @@
       }
   }
 }
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView addDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if([alertView.title isEqual: @"Achtung"]|[alertView.title isEqual: @"Auto schon vorhanden!"])
     {
@@ -248,15 +246,6 @@
         [self.profil.carList addObject:selectedCar];
         self.profil.car = selectedCar;
     [self.carFavoriteTableView reloadData];
-    //Diese Zeilen sorgen dafür, dass man die Tabitems wieder auswählen kann
-    if(self.firstStart)
-    {
-        [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];
-        [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: YES];
-        [[[self.tabBarController.tabBar items] objectAtIndex: 2] setEnabled: YES];
-        [[[self.tabBarController.tabBar items] objectAtIndex: 3] setEnabled: YES];
-        self.firstStart = NO;
-    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker

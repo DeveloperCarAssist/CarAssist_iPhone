@@ -17,5 +17,4 @@
 
 // gibt das singleton Profil zurück.
 + (Profile*) getProfile;
-+(void) setProfilWithCar: (Car*) car;
 @end

@@ -14,19 +14,17 @@
 
 @interface SettingsViewController ()
 @property Profile* profil;
-@property BOOL firstStart;
 @end
 
 @implementation SettingsViewController
 
 
 
--(SettingsViewController*) initWithFirstStart: (BOOL) firstStart
+-(SettingsViewController*) init
 {
     self = [super init];
     if (self) {
             self.profil = [Profile getProfile];
-        self.firstStart = firstStart;
     }
     return self;
 }
@@ -49,12 +47,10 @@
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
     self.tableView.separatorColor = [UIColor blackColor];
     
-    if(self.firstStart)
-    {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: self.firstStart];
-        [self.navigationController pushViewController:carcontroller animated:YES];
 
-    }
+    CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
+    [self.navigationController pushViewController:carcontroller animated:YES];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -153,7 +149,7 @@
 {
     int pos = indexPath.row;
     if (pos == 0) {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil andFirstStart: NO];
+        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
             [self.navigationController pushViewController:carcontroller animated:YES];
     }
     if (pos == 1) {
