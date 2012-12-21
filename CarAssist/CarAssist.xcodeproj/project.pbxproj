@@ -61,6 +61,8 @@
 		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
+		405707D81684B2D900E98587 /* EditViewControllerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 405707D61684B2D900E98587 /* EditViewControllerList.m */; };
+		405707D91684B2D900E98587 /* EditViewControllerList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405707D71684B2D900E98587 /* EditViewControllerList.xib */; };
 		405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FB2811673754D00024934 /* NSString+CarAssistString.m */; };
 		405FB28C167394C000024934 /* favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB28B167394C000024934 /* favorit.png */; };
 		405FB2931673982F00024934 /* default_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB2921673982F00024934 /* default_car.png */; };
@@ -196,6 +198,9 @@
 		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
+		405707D51684B2D900E98587 /* EditViewControllerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerList.h; sourceTree = "<group>"; };
+		405707D61684B2D900E98587 /* EditViewControllerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerList.m; sourceTree = "<group>"; };
+		405707D71684B2D900E98587 /* EditViewControllerList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewControllerList.xib; sourceTree = "<group>"; };
 		405FB2801673754D00024934 /* NSString+CarAssistString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CarAssistString.h"; sourceTree = "<group>"; };
 		405FB2811673754D00024934 /* NSString+CarAssistString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CarAssistString.m"; sourceTree = "<group>"; };
 		405FB28B167394C000024934 /* favorit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorit.png; sourceTree = "<group>"; };
@@ -301,6 +306,9 @@
 				2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */,
 				2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */,
 				2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */,
+				405707D51684B2D900E98587 /* EditViewControllerList.h */,
+				405707D61684B2D900E98587 /* EditViewControllerList.m */,
+				405707D71684B2D900E98587 /* EditViewControllerList.xib */,
 			);
 			name = EditViewController;
 			sourceTree = "<group>";
@@ -766,6 +774,7 @@
 				37A4A3BA167CC29700FAA3B5 /* AutoSitz.jpg in Resources */,
 				37A4A3C5167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib in Resources */,
 				2E4500CA167DBBC800196C53 /* EditViewControllerPicker.xib in Resources */,
+				405707D91684B2D900E98587 /* EditViewControllerList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +845,7 @@
 				2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */,
 				2E4500CE167DF62A00196C53 /* SettingsValueService.m in Sources */,
 				2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */,
+				405707D81684B2D900E98587 /* EditViewControllerList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
