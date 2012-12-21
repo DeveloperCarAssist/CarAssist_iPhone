@@ -25,7 +25,7 @@ static Profile* instance;
     if (self)
     {   
         _car = nil;
-        self.carList = [NSMutableArray array] ;
+        self.carList = [NSMutableArray array];
         self.vorname = @"Klaus";
         self.nachname = @"Kastikus";
         self.emailAdresse = @"KlauKastikus@googlemail.com";
