@@ -192,7 +192,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  if([alertView.title isEqual: @"Bitte Fahrgestellnummer Eingeben:"])
+  if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
   {
       UITextField *vin = [alertView textFieldAtIndex:0];
      Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
