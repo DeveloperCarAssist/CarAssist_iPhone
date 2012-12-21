@@ -13,6 +13,7 @@
 #import "EditViewControllerPicker.h"
 #import "SettingsValueService.h"
 #import "EditViewControllerTextInput.h"
+#import "EditViewControllerList.h"
 
 @interface CarDataViewController ()
 @property Car* car;
@@ -216,7 +217,11 @@
         insuranceSetting.valueRepresentation = self.car.insurance;
     }];
     
-    SettingCell* garageSetting = [self generatePickerCellWithTitle: @"Werkstatt" Value: self.car.garage  AndValueRepresenation: self.car.garage];
+    
+    NSMutableArray* values = [NSMutableArray arrayWithObjects:@"May und Olde", @"Peters Werkstatt", @"Dem Guido seine Werkstatt", nil];
+    
+    SettingCell* garageSetting = [[SettingCell alloc] initEditableWithTitle:@"Werkstatt" Value:self.car.garage ValueRepresentation:self.car.garage AndEditViewController:[[EditViewControllerList alloc] initWithDelegate:self Values:values ValueRepresentation:values AndSelectedValueIndex:0]];
+    
     
     [garageSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
         self.car.garage = (NSString*) value;
