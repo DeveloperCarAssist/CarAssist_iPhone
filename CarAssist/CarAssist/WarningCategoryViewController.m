@@ -100,9 +100,10 @@
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe!" withBody: @"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
     if([alertView.title isEqual: @"ADAC anrufen"] && buttonIndex == 1)
     {
-      //  [self sendEmailTo:@"klausKastikuas@gmx.de" withSubject:@"Pannenhilfe!" withBody: @"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
+       
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
         {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
