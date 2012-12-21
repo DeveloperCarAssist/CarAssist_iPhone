@@ -27,8 +27,8 @@
     NSString* settingName = @"Versicherung";
     NSMutableArray* values = [NSMutableArray array];
     NSMutableArray* valueRepresentations = [NSMutableArray array];
-    [values addObject:@"Alianz"];
-    [values addObject:@"Huc Coburg"];
+    [values addObject:@"Allianz"];
+    [values addObject:@"HUK Coburg"];
     [values addObject:@"Mannheimer"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
@@ -45,10 +45,10 @@
     settingName = @"Ausstattungspaket";
     values = [NSMutableArray array];
     valueRepresentations = [NSMutableArray array];
-    CarEquipmentPackage* equipmentPackage = [[CarEquipmentPackage alloc] initWithPackageName:@"Std. Paket" NavigationDevice:@"Std. Navi" Radio:@"Std. Radio" SteeringWheel:@"ohne Lenkrad" AndSeats:@"Std. stoff Sitze"];
+    CarEquipmentPackage* equipmentPackage = [[CarEquipmentPackage alloc] initWithPackageName:@"Std. Paket" NavigationDevice:@"Std. Navi" Radio:@"Std. Radio" SteeringWheel:@"ohne Lenkrad" AndSeats:@"Std. Stoffsitze"];
     [values addObject: equipmentPackage];
     [valueRepresentations addObject:equipmentPackage.packageName];
-    equipmentPackage = [[CarEquipmentPackage alloc] initWithPackageName:@"Extended Paket" NavigationDevice:@"Extended Navi" Radio:@"Extended Radio" SteeringWheel:@"Extended Lenkrad" AndSeats:@"Alkantara leeder Sitze"];
+    equipmentPackage = [[CarEquipmentPackage alloc] initWithPackageName:@"Extended Paket" NavigationDevice:@"Extended Navi" Radio:@"Extended Radio" SteeringWheel:@"Extended Lenkrad" AndSeats:@"Alkantara Ledersitze"];
     [values addObject: equipmentPackage];
     [valueRepresentations addObject:equipmentPackage.packageName];
     [self.settingValues setObject:values forKey:settingName];
@@ -64,8 +64,8 @@
     
     settingName = @"Radio";
     values = [NSMutableArray array];
-    [values addObject:@"Radio Bla"];
-    [values addObject:@"Radio Blabla"];
+    [values addObject:@"Beta"];
+    [values addObject:@"Radio Soundwave X"];
     [values addObject:@"Extended Radio"];
     [values addObject:@"Extended Radio mit Bonus Taste"];
     [self.settingValues setObject:values forKey:settingName];
@@ -75,15 +75,15 @@
     values = [NSMutableArray array];
     [values addObject:@"ohne Lenkrad"];
     [values addObject:@"Extended Lenkrad"];
-    [values addObject:@"Extended Lenkrad mit Ärbeck"];
+    [values addObject:@"Extended Lenkrad mit Airbag"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
     
     settingName = @"Sitze";
     values = [NSMutableArray array];
-    [values addObject:@"Std. stoff Sitze"];
+    [values addObject:@"Std. Stoffsitze"];
     [values addObject:@"Sportsitze"];
-    [values addObject:@"Alkantara leeder Sitze"];
+    [values addObject:@"Alkantara Ledersitze"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
 }
