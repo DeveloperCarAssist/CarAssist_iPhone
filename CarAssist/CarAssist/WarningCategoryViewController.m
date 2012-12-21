@@ -118,7 +118,7 @@
        }
         if(buttonIndex == 2)
         {
-         [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe" withBody:@"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
+         [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe" withBody:@"MeinAutohateinePannebittekommensiezurBlaBla-Straße."];
         }
     }
 }
