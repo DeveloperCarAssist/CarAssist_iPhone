@@ -8,10 +8,10 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-#import "SearchableGuideService.h"
+#import "SearchableService.h"
 
 @interface ServiceGuideStockServiceTest : SenTestCase
 
-@property (nonatomic) SearchableGuideService* serviceGuideStockService;
+@property (nonatomic) SearchableService* serviceGuideStockService;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ServiceGuideStockService.h"
+#import "Step.h"
 
 @implementation ServiceGuideStockService
 //
@@ -14,7 +15,7 @@
 //  TODO: Testdaten nicht mehr hart codieren sondern aus einer
 //  Datenquelle laden
 //
--(SearchableGuideService*) initWithCar:(Car *) car
+-(SearchableService*) initWithCar:(Car *) car
 {
     self = [super initWithCar:car];
     if(self)
@@ -23,11 +24,11 @@
         {
             case 1:
                 [self initServiceGuidesWithExampleDataBmwZ4];
-                [self initGuideDictionary];
+                [self initDictionary];
                 break;
             case 2:
                 [self initServiceGuidesWithExampleDataVWGolfIV];
-                [self initGuideDictionary];
+                [self initDictionary];
                 break;
             default:
                 @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"no service data for selected car" userInfo:nil];
@@ -105,8 +106,8 @@
     guide = [[Guide alloc] initWithName: @"Ölstand kontrollieren" CategoryName: @"Motor" AndSteps: steps];
     [allGuides addObject:guide];
     
-    self.allGuides = allGuides;
-    self.reducedGuides = allGuides;
+    self.allItems = allGuides;
+    self.reducedItems = allGuides;
 }
 
 /**
@@ -132,8 +133,8 @@
     Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
     [allGuides addObject:guide];
     
-    self.allGuides = allGuides;
-    self.reducedGuides = allGuides;
+    self.allItems = allGuides;
+    self.reducedItems = allGuides;
 }
 
 @end

@@ -6,35 +6,35 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "SearchableGuideService.h"
+#import "SearchableService.h"
 #import "NSString+CarAssistString.h"
 #import "Guide.h"
-#import "Step.h"
 
-@implementation SearchableGuideService
+
+@implementation SearchableService
 // Property guides stammt aus Protocol und muss deshalb synthetisiert werden!
-@synthesize guides = _guides;
+@synthesize items = _guides;
 
 //
 //  Service leer initialisieren
 //
-- (SearchableGuideService*) init
+- (SearchableService*) init
 {
     self = [super init];
     
     if (self)
     {
         NSMutableArray* allGuides = [NSMutableArray array];
-        self.allGuides = allGuides;
-        self.reducedGuides = allGuides;
+        self.allItems = allGuides;
+        self.reducedItems = allGuides;
         
-        [self initGuideDictionary];
+        [self initDictionary];
     }
     
     return self;
 }
 
--(SearchableGuideService*) initWithCar:(Car *) car
+-(SearchableService*) initWithCar:(Car *) car
 {
     self = [super init];
     return self;
@@ -45,25 +45,25 @@
  * Initialisiert das Dictionary mit den Anleitungen.
  *
  */
-- (void) initGuideDictionary
+- (void) initDictionary
 {
-    self.guides = [NSMutableDictionary dictionary];
+    self.items = [NSMutableDictionary dictionary];
     NSMutableSet* serviceCategories = [NSMutableArray array];
     
     // Alle keys holen (Kategorien)
-    for (Guide* guide in self.reducedGuides) {
+    for (Guide* guide in self.reducedItems) {
         [serviceCategories addObject: guide.categoryName];
     }
     
     // Keys (Kategorien) mappen auf leere Liste.
     for (NSString* categoryName in serviceCategories) {
         NSMutableArray* guidesOfCategory = [NSMutableArray array];
-        [self.guides setObject:guidesOfCategory forKey:categoryName];
+        [self.items setObject:guidesOfCategory forKey:categoryName];
     }
     
     // Liste der Kategorien mit entsprechenden Anleitungen füllen.
-    for (Guide* guide in self.reducedGuides) {
-        NSMutableArray* guidesOfCategory = [self.guides objectForKey:guide.categoryName];
+    for (Guide* guide in self.reducedItems) {
+        NSMutableArray* guidesOfCategory = [self.items objectForKey:guide.categoryName];
         [guidesOfCategory addObject:guide];
     }
 }
@@ -75,13 +75,13 @@
     
     if (![searchText isEqualToString:@""])
     {
-        for (Guide* guide in self.reducedGuides) {
+        for (Guide* guide in self.reducedItems) {
             if ([guide.name containsSubstring:searchText] || [guide.categoryName containsSubstring:searchText]) {
                 [guides addObject:guide];
             }
         }
         
-        self.reducedGuides = guides;
+        self.reducedItems = guides;
     }
 }
 
@@ -95,13 +95,13 @@
 {
     NSArray* searchItems = [searchText componentsSeparatedByString:@" "];
     
-    self.reducedGuides = self.allGuides;
+    self.reducedItems = self.allItems;
     
     for (NSString* searchItem in searchItems) {
         [self reduceReducedGuidesWithSearchText: searchItem];
     }
     
-    [self initGuideDictionary];
+    [self initDictionary];
 }
 
 

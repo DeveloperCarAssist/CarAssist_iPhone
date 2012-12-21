@@ -14,7 +14,7 @@
 {
     [super setUp];
     
-    self.serviceGuideStockService = [[SearchableGuideService alloc] init];
+    self.serviceGuideStockService = [[SearchableService alloc] init];
 }
 
 - (void) testContructor
@@ -24,7 +24,7 @@
 
 - (void) testCategories
 {
-    NSArray* keys = [self.serviceGuideStockService.guides allKeys];
+    NSArray* keys = [self.serviceGuideStockService.items allKeys];
     STAssertTrue(keys.count == 1, @"Wrong Number of Categories. Expected: 1, but was: %@", keys.count);
     STAssertEqualObjects([keys objectAtIndex:0], @"Reifen", @"Expected: Reifen, but was: %@", [keys objectAtIndex:0]);
 }

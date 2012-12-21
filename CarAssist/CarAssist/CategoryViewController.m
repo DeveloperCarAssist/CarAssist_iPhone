@@ -59,15 +59,15 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSArray *keys = [self.categoryService.guides allKeys];
+    NSArray *keys = [self.categoryService.items allKeys];
     return [keys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *keys = [self.categoryService.guides allKeys];
+    NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:section];
-    NSArray *guidesOfCategory = [self.categoryService.guides objectForKey: key];
+    NSArray *guidesOfCategory = [self.categoryService.items objectForKey: key];
     
     return guidesOfCategory.count;
 }
@@ -83,9 +83,9 @@
                                       reuseIdentifier:@"standard"];
         cell.textLabel.textColor = [UIColor blackColor];
     }
-    NSArray *keys = [self.categoryService.guides allKeys];
+    NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
-    NSArray *guidesOfCategory = [self.categoryService.guides objectForKey: key];
+    NSArray *guidesOfCategory = [self.categoryService.items objectForKey: key];
     Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = guide.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -98,7 +98,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    NSArray *keys = [self.categoryService.guides allKeys];
+    NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:section];
     
     UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
@@ -125,9 +125,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *keys = [self.categoryService.guides allKeys];
+    NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
-    NSArray *guides = [self.categoryService.guides objectForKey:key];
+    NSArray *guides = [self.categoryService.items objectForKey:key];
     
     GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[guides objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:viewController animated:YES];

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GuideService.h"
+#import "SearchableServiceProtocol.h"
 
 @interface CategoryViewController : UIViewController
-@property (nonatomic) id<GuideService> categoryService;
+@property (nonatomic) id<SearchableServiceProtocol> categoryService;
 @property (nonatomic) IBOutlet UITableView* categoryTableView;
 @property (nonatomic) IBOutlet UISearchBar* categorySearchBar;
 

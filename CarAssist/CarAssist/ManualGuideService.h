@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
-#import "SearchableGuideService.h"
+#import "SearchableService.h"
 
-@interface ManualGuideService : SearchableGuideService
+@interface ManualGuideService : SearchableService
 @end
