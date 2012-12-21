@@ -198,15 +198,7 @@
      Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
       if(car)
       {
-          if ([[Profile getProfile].carList containsObject:car])
-          {
-              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-              [alert show];
-          }
-          else
-          {
           [self carHasBeenSelected: car];
-          }
       }
       else
       {
@@ -233,8 +225,16 @@
 
 - (void) carHasBeenSelected:(Car *) selectedCar
 {
-    [self.profil.carList addObject:selectedCar];
-    self.profil.car = selectedCar;
+    if ([self.profil.carList containsObject:selectedCar]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Auto schon vorhanden!" message:@"Das gewählte Auto ist bereits vorhanden, wählen Sie ein anderes." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        [self.profil.carList addObject:selectedCar];
+        self.profil.car = selectedCar;
+        [self.carFavoriteTableView reloadData];
+    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker
