@@ -25,14 +25,14 @@ static Profile* instance;
     if (self)
     {   
         _car = nil;
-        self.carList=[NSMutableArray array] ;
-        self.vorname=@"Klaus";
-        self.nachname=@"Kastikus";
-        self.emailAdresse=@"KlauKastikus@googlemail.com";
-        self.lieblingsKEKSEEE=@"Oreo Keks";
-        self.ADAClicence=@"007";
-        self.mobilenumber=017666666;
-        self.homeTown=@"RIP-TOWN";
+        self.carList = [NSMutableArray array] ;
+        self.vorname = @"Klaus";
+        self.nachname = @"Kastikus";
+        self.emailAdresse = @"KlauKastikus@googlemail.com";
+        self.lieblingsKEKSEEE = @"Oreo Keks";
+        self.ADAClicence = @"007";
+        self.mobilenumber = 017666666;
+        self.homeTown = @"RIP-TOWN";
     }
     return self;
 }

@@ -230,7 +230,7 @@
       }
   }
 }
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if([alertView.title isEqual: @"Achtung"]|[alertView.title isEqual: @"Auto schon vorhanden!"])
     {
@@ -244,8 +244,8 @@
 
 - (void) carHasBeenSelected:(Car *)selectedCar
 {
-        [self.profil.carList addObject:selectedCar];
-        self.profil.car = selectedCar;
+    [self.profil.carList addObject:selectedCar];
+    self.profil.car = selectedCar;
     [self.carFavoriteTableView reloadData];
 }
 
