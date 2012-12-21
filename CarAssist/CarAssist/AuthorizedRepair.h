@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "SearchableItem.h"
 
-@interface AuthorizedRepair : NSObject
+@interface AuthorizedRepair : NSObject<SearchableItem>
+@property (nonatomic) NSString *name; // Name des Autohaues
 @property (nonatomic) NSString *categoryName; // Bundesland
-
-@property (nonatomic) NSString *name;
 @property (nonatomic) NSString *street;
 @property (nonatomic) NSString *postalcode;
 @property (nonatomic) NSString *city;
 @property (nonatomic) NSString *phone;
 
 @property (nonatomic) CLLocationCoordinate2D location;
+
+-(AuthorizedRepair *)initWithName:(NSString *) name Category:(NSString *)category andLocation:(CLLocationCoordinate2D) location;
 @end

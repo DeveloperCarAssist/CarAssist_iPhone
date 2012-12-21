@@ -7,6 +7,7 @@
 //
 
 #import "ManualGuideService.h"
+#import "Guide.h"
 #import "Step.h"
 
 @implementation ManualGuideService

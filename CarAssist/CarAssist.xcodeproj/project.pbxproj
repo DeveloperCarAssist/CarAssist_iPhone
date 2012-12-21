@@ -86,6 +86,8 @@
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
 		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; };
+		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
+		8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */; };
 		8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
 		8F1FB4781674CBB8000D1D04 /* kein_favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1FB4771674CBB8000D1D04 /* kein_favorit.png */; };
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
@@ -240,6 +242,11 @@
 		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
 		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
+		8F1F10FE168509DD007DDFAD /* AuthorizedRepairService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepairService.h; sourceTree = "<group>"; };
+		8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepairService.m; sourceTree = "<group>"; };
+		8F1F110116851C26007DDFAD /* AuthorizedRepairCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepairCategoryViewController.h; sourceTree = "<group>"; };
+		8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepairCategoryViewController.m; sourceTree = "<group>"; };
 		8F1FB4771674CBB8000D1D04 /* kein_favorit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kein_favorit.png; sourceTree = "<group>"; };
 		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
@@ -280,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A61F65B1684B34B00CC7421 /* MessageUI.framework in Frameworks */,
-				406213C41684A8FE006AAC31 /* CoreLocation.framework in Frameworks */,
 				83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */,
 				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */,
@@ -501,6 +507,7 @@
 		400DF892166907E700D6217B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F1F10FD168503FA007DDFAD /* Shared */,
 				400DF8931669080600D6217B /* WarningLight.h */,
 				400DF8941669080600D6217B /* WarningLight.m */,
 				37E7179B16690C5E00F6B11F /* Car.h */,
@@ -533,6 +540,8 @@
 				8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */,
 				2E4500CC167DF62A00196C53 /* SettingsValueService.h */,
 				2E4500CD167DF62A00196C53 /* SettingsValueService.m */,
+				8F1F10FE168509DD007DDFAD /* AuthorizedRepairService.h */,
+				8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -568,6 +577,8 @@
 		406213C2168481DD006AAC31 /* AuthorizedRepair */ = {
 			isa = PBXGroup;
 			children = (
+				8F1F110116851C26007DDFAD /* AuthorizedRepairCategoryViewController.h */,
+				8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */,
 			);
 			name = AuthorizedRepair;
 			sourceTree = "<group>";
@@ -594,6 +605,14 @@
 				40C32758166B942F00BC049B /* ServiceGuideStockServiceTest.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		8F1F10FD168503FA007DDFAD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8F1F10F9168503F4007DDFAD /* SearchableItem.h */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
@@ -856,6 +875,8 @@
 				2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */,
 				405707D81684B2D900E98587 /* EditViewControllerList.m in Sources */,
 				406213C91684AB70006AAC31 /* AuthorizedRepair.m in Sources */,
+				8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */,
+				8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

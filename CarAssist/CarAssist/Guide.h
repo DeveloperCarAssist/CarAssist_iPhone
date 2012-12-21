@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SearchableItem.h"
 
-@interface Guide : NSObject
+@interface Guide : NSObject<SearchableItem>
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *categoryName;
 @property (nonatomic) NSArray *steps;

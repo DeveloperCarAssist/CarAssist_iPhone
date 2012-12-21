@@ -135,7 +135,7 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    [self.categoryService reduceGuidesWithSearchText: searchText];
+    [self.categoryService reduceItemsWithSearchText: searchText];
     [self.categoryTableView reloadData];
 }
 

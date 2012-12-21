@@ -1,5 +1,5 @@
 //
-//  GuideStockService.h
+//  SearchableServiceProtocol.h
 //  CarAssist
 //
 //  Created by Dennis on 14.12.12.
@@ -12,9 +12,9 @@
 @protocol SearchableServiceProtocol <NSObject>
 @required
 /**
- * Maped vom Kategorie-Namen auf die Liste von Anleitungen dieser Kategorie.
+ * Mapped vom Kategorie-Namen auf die Liste von Items dieser Kategorie.
  */
 @property (nonatomic) NSMutableDictionary* items;
-- (void) reduceGuidesWithSearchText: (NSString*) searchText;
+- (void) reduceItemsWithSearchText: (NSString*) searchText;
 -(id<SearchableServiceProtocol>) initWithCar:(Car *) car;
 @end

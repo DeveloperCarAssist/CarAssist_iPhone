@@ -7,6 +7,7 @@
 //
 
 #import "ServiceGuideStockService.h"
+#import "Guide.h"
 #import "Step.h"
 
 @implementation ServiceGuideStockService

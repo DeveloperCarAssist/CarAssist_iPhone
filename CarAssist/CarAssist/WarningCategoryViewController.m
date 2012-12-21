@@ -8,6 +8,8 @@
 
 #import "WarningCategoryViewController.h"
 #import "WarningLightCollectionViewController.h"
+#import "AuthorizedRepairCategoryViewController.h"
+
 #import <MessageUI/MFMailComposeViewController.h>
 #import "Utils.h"
 #import "Profile.h"
@@ -99,6 +101,12 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email!",nil];
         [alert show];
     }
+    if(indexPath.row == 2)
+    {
+        AuthorizedRepairCategoryViewController* viewController = [[AuthorizedRepairCategoryViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

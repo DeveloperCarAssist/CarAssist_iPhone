@@ -1,5 +1,5 @@
 //
-//  ServiceGuideStockService.h
+//  SearchableService.h
 //  CarAssist
 //
 //  Created by 0witt on 02.12.12.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SearchableServiceProtocol.h"
-#import "Guide.h"
 
 @interface SearchableService : NSObject <SearchableServiceProtocol>
 - (void) initDictionary;

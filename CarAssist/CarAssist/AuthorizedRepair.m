@@ -9,5 +9,15 @@
 #import "AuthorizedRepair.h"
 
 @implementation AuthorizedRepair
-
+-(AuthorizedRepair *)initWithName:(NSString *) name Category:(NSString *)category andLocation:(CLLocationCoordinate2D) location
+{
+    self = [super init];
+    if(self)
+    {
+        self.name = name;
+        self.categoryName = category;
+        self.location = location;
+    }
+    return self;
+}
 @end
