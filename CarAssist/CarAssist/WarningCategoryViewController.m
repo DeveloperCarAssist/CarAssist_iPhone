@@ -93,7 +93,7 @@
     }
     if(indexPath.row == 1)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, Telefon",@"Ja,Mail",nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich Will!",nil];
         [alert show];
     }
 }
@@ -107,18 +107,15 @@
        {
            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
            {
+               [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe!" withBody:@"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
            }
            else
            {
-               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon und EmailApp. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                [alert show];
            }
        }
-        if(buttonIndex == 2)
-        {
-           [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe!" withBody: @"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
-        }
     }
 }
 
@@ -126,7 +123,7 @@
 	NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
 							[to stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
 							[subject stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
-							[body  stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+							[body stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
 	if([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:mailString]])
         {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailString]];
