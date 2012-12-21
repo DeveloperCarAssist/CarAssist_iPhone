@@ -23,7 +23,16 @@
 @end
 @implementation CarListService
 
+// singleton-instance
+static CarListService* instance;
+
 - (CarListService*) init
+{
+    [[NSException exceptionWithName:NSInternalInconsistencyException reason:@"The Class CarListService is a singleton. You are not allowed to initialize it. Use getCarListService instead!" userInfo:nil] raise];
+    return nil;
+}
+
+- (CarListService*) initInternal
 {
     self = [super init];
     if (self) {
@@ -31,6 +40,16 @@
         [self initCarDictionary];
     }
     return self;
+}
+
++ (CarListService*) getCarListService
+{
+    if (!instance) {
+        instance = [[CarListService alloc] initInternal];
+    }
+    
+    return instance;
+    
 }
 
 - (void) initCars

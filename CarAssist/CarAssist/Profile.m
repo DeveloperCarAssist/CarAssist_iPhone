@@ -15,7 +15,7 @@ static Profile* instance;
 
 - (id) init
 {
-    [NSException exceptionWithName:NSInternalInconsistencyException reason:@"The Class Profile is a singleton. You are not allowed to initialize it. Use getProfile instead!" userInfo:nil];
+    [[NSException exceptionWithName:NSInternalInconsistencyException reason:@"The Class Profile is a singleton. You are not allowed to initialize it. Use getProfile instead!" userInfo:nil] raise];
     return nil;
 }
 
