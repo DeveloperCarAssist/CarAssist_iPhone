@@ -11,7 +11,7 @@
 
 @interface EditViewController : UIViewController
 
-@property (nonatomic) UIViewController* delegate;
+@property (nonatomic, weak) UIViewController* delegate;
 
 @property (nonatomic) int selectedValueIndex;
 @property (nonatomic) NSArray* values;

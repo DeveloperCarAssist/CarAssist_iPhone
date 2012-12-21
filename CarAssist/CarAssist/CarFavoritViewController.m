@@ -77,9 +77,7 @@
 {
     if(self.firstStart)
     {
-        // !TODO: warning Wenn Fahrgestellnummerscannen funktioniert wieder einkommentieren und das danach löschen
-       // UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
-        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", nil ];
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
     }
 
@@ -233,12 +231,14 @@
                     [alert show];
       }
   }
-
 }
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if([alertView.title isEqual: @"Achtung"]|[alertView.title isEqual: @"Auto schon vorhanden!"])
     {
+        [self showCarSelectIfFirstStart];
+    }
+    if ([alertView.title isEqualToString:@"Keine Kamera vorhanden"]) {
         [self showCarSelectIfFirstStart];
     }
 }
@@ -306,7 +306,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Keine Kamera vorhanden"
                                                         message:@"Die App benötigt Ihre Zustimmung zum Fotographieren der Fahrgestellnummer."
-                                                       delegate:nil
+                                                       delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
