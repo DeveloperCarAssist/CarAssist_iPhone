@@ -64,7 +64,8 @@
 		405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FB2811673754D00024934 /* NSString+CarAssistString.m */; };
 		405FB28C167394C000024934 /* favorit.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB28B167394C000024934 /* favorit.png */; };
 		405FB2931673982F00024934 /* default_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 405FB2921673982F00024934 /* default_car.png */; };
-		406213C41684A8FE006AAC31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406213C31684A8FE006AAC31 /* CoreLocation.framework */; };
+		406213C61684AA61006AAC31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406213C51684AA61006AAC31 /* CoreLocation.framework */; };
+		406213C91684AB70006AAC31 /* AuthorizedRepair.m in Sources */ = {isa = PBXBuildFile; fileRef = 406213C81684AB70006AAC31 /* AuthorizedRepair.m */; };
 		40756141167B6DFB00242741 /* CarEquipmentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40756140167B6DFB00242741 /* CarEquipmentPackage.m */; };
 		40959AE916724F04001A1E86 /* CarListSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40959AE716724F04001A1E86 /* CarListSelectorViewController.m */; };
 		40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */; };
@@ -200,7 +201,9 @@
 		405FB2811673754D00024934 /* NSString+CarAssistString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CarAssistString.m"; sourceTree = "<group>"; };
 		405FB28B167394C000024934 /* favorit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorit.png; sourceTree = "<group>"; };
 		405FB2921673982F00024934 /* default_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_car.png; sourceTree = "<group>"; };
-		406213C31684A8FE006AAC31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		406213C51684AA61006AAC31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		406213C71684AB70006AAC31 /* AuthorizedRepair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepair.h; sourceTree = "<group>"; };
+		406213C81684AB70006AAC31 /* AuthorizedRepair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepair.m; sourceTree = "<group>"; };
 		4075613F167B6DFB00242741 /* CarEquipmentPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarEquipmentPackage.h; sourceTree = "<group>"; };
 		40756140167B6DFB00242741 /* CarEquipmentPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarEquipmentPackage.m; sourceTree = "<group>"; };
 		40959AE616724F04001A1E86 /* CarListSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListSelectorViewController.h; sourceTree = "<group>"; };
@@ -269,12 +272,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				406213C41684A8FE006AAC31 /* CoreLocation.framework in Frameworks */,
 				83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */,
 				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */,
 				400DF84B1668F0F100D6217B /* Foundation.framework in Frameworks */,
 				400DF84D1668F0F100D6217B /* CoreGraphics.framework in Frameworks */,
+				406213C61684AA61006AAC31 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +374,6 @@
 		400DF8391668F0F100D6217B = {
 			isa = PBXGroup;
 			children = (
-				406213C31684A8FE006AAC31 /* CoreLocation.framework */,
 				400DF8871668F1E600D6217B /* Resources */,
 				400DF84E1668F0F100D6217B /* CarAssist */,
 				400DF8721668F0F200D6217B /* CarAssistTests */,
@@ -392,6 +394,7 @@
 		400DF8471668F0F100D6217B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				406213C51684AA61006AAC31 /* CoreLocation.framework */,
 				83728A42167CCB7300DC1456 /* MobileCoreServices.framework */,
 				400DF8AF166912C400D6217B /* QuartzCore.framework */,
 				400DF8481668F0F100D6217B /* UIKit.framework */,
@@ -498,6 +501,8 @@
 				661E1A48166B8A4300493F54 /* Step.m */,
 				4075613F167B6DFB00242741 /* CarEquipmentPackage.h */,
 				40756140167B6DFB00242741 /* CarEquipmentPackage.m */,
+				406213C71684AB70006AAC31 /* AuthorizedRepair.h */,
+				406213C81684AB70006AAC31 /* AuthorizedRepair.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */,
 				2E4500CE167DF62A00196C53 /* SettingsValueService.m in Sources */,
 				2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */,
+				406213C91684AB70006AAC31 /* AuthorizedRepair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
