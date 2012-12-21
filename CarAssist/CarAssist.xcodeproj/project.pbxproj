@@ -75,6 +75,7 @@
 		40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C32767166BAEAD00BC049B /* pannenhilfe.png */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
+		5A61F65B1684B34B00CC7421 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A61F65A1684B34B00CC7421 /* MessageUI.framework */; };
 		661E1A42166B759D00493F54 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A40166B759D00493F54 /* CategoryViewController.m */; };
 		661E1A43166B759D00493F54 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A41166B759D00493F54 /* CategoryViewController.xib */; };
 		661E1A46166B896000493F54 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A45166B896000493F54 /* Guide.m */; };
@@ -219,6 +220,7 @@
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
 		40F8501F166B84A900366DDE /* WarningLightTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightTest.m; sourceTree = "<group>"; };
+		5A61F65A1684B34B00CC7421 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		661E1A3F166B759D00493F54 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		661E1A40166B759D00493F54 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		661E1A41166B759D00493F54 /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A61F65B1684B34B00CC7421 /* MessageUI.framework in Frameworks */,
 				406213C41684A8FE006AAC31 /* CoreLocation.framework in Frameworks */,
 				83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */,
 				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
@@ -392,6 +395,7 @@
 		400DF8471668F0F100D6217B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A61F65A1684B34B00CC7421 /* MessageUI.framework */,
 				83728A42167CCB7300DC1456 /* MobileCoreServices.framework */,
 				400DF8AF166912C400D6217B /* QuartzCore.framework */,
 				400DF8481668F0F100D6217B /* UIKit.framework */,

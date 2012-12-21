@@ -8,9 +8,12 @@
 
 #import "WarningCategoryViewController.h"
 #import "WarningLightCollectionViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
 #import "Utils.h"
+#import "Profile.h"
 
-@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
+
+@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate >
 
 @end
 
@@ -112,13 +115,36 @@
            }
            else
            {
-               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon und der EmailApp. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                [alert show];
            }
        }
         if(buttonIndex == 2)
         {
-         [self sendEmailTo:@"fiedlfa@hotmail.de" withSubject:@"Pannenhilfe" withBody:@"MeinAutohateinePannebittekommensiezurBlaBla-Straße."];
+            if ([MFMailComposeViewController canSendMail]) {
+                
+                MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+                mailViewController.mailComposeDelegate = self;
+                NSArray *array =  [[NSArray alloc] initWithObjects:@"CarAssistReport@ADAC.de", nil];
+                [mailViewController setToRecipients:array];
+                Profile *profil = [Profile getProfile];
+                [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
+                 [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer] isHTML:NO];
+                
+          [self presentViewController:mailViewController animated:YES completion: Nil];
+                  
+                  }
+                  
+                  else {
+                      
+                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                      message:@"Your device doesn't support the composer sheet"
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles: nil];
+                      [alert show];
+                      
+                  }
         }
     }
 }
@@ -139,6 +165,10 @@
             [alert show];
         }
 }
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
 
+        [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
