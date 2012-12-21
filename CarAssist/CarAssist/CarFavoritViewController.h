@@ -13,6 +13,6 @@
 
 @property (nonatomic) IBOutlet UITableView* carFavoriteTableView;
 
--(id) initWithProfil: (Profile*) profil;
 - (IBAction)useCamera:(id)sender;
+
 @end

@@ -48,7 +48,7 @@
     self.tableView.separatorColor = [UIColor blackColor];
     
 
-    CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
+    CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] init];
     [self.navigationController pushViewController:carcontroller animated:YES];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -149,7 +149,7 @@
 {
     int pos = indexPath.row;
     if (pos == 0) {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] initWithProfil: self.profil];
+        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] init];
             [self.navigationController pushViewController:carcontroller animated:YES];
     }
     if (pos == 1) {

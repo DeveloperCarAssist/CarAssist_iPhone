@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "WarningLightViewController.h"
 #import "Utils.h"
 
@@ -33,9 +34,14 @@
     
     self.title = self.warningLight.name;
     self.warningLightTextView.text = self.warningLight.info;
+    self.warningLightTextView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.warningLightTextView.layer.borderWidth = 1.0f;
+
+    UIImageView *imgView = self.warningLightImageView;
+    imgView.image = self.warningLight.image;
+    imgView.layer.cornerRadius = 15.0;
+    imgView.layer.masksToBounds = YES;
     
-    
-    [self.warningLightImageView setImage: self.warningLight.image];
 }
 
 @end
