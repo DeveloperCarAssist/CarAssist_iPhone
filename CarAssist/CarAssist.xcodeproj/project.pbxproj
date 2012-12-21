@@ -305,17 +305,10 @@
 		2E725FEF166E665100942382 /* Warning */ = {
 			isa = PBXGroup;
 			children = (
-				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
-				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
-				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
-				400DF89F16690A9900D6217B /* WarningLightCollectionViewCell.h */,
-				400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */,
+				406213C016848121006AAC31 /* WarningLight */,
 				400DF8891669056900D6217B /* WarningCategoryViewController.h */,
 				400DF88A1669056900D6217B /* WarningCategoryViewController.m */,
 				400DF88B1669056900D6217B /* WarningCategoryViewController.xib */,
-				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
-				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
-				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
 			);
 			name = Warning;
 			sourceTree = "<group>";
@@ -533,6 +526,21 @@
 				8F7D519D1678A9DB00E41D4D /* CarFavoriteViewCell.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		406213C016848121006AAC31 /* WarningLight */ = {
+			isa = PBXGroup;
+			children = (
+				400DF8A216690C7600D6217B /* WarningLightViewController.h */,
+				400DF89A1669085E00D6217B /* WarningLightCollectionViewController.h */,
+				400DF89B1669085E00D6217B /* WarningLightCollectionViewController.m */,
+				400DF89C1669085E00D6217B /* WarningLightCollectionViewController.xib */,
+				400DF8A316690C7600D6217B /* WarningLightViewController.m */,
+				400DF8A416690C7600D6217B /* WarningLightViewController.xib */,
+				400DF89F16690A9900D6217B /* WarningLightCollectionViewCell.h */,
+				400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */,
+			);
+			name = WarningLight;
 			sourceTree = "<group>";
 		};
 		40F85023166B84B300366DDE /* Model */ = {
