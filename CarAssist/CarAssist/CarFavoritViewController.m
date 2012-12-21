@@ -20,20 +20,11 @@
 
 @implementation CarFavoritViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
--(id) initWithProfil: (Profile*) profil 
+-(id) init
 {
     self = [super init];
     if (self) {
-        self.profil = profil;
+        self.profil = [Profile getProfile];
     }
     return self;
     
@@ -85,11 +76,6 @@
     [self.tableView reloadData];
     [self showCarSelectIfFirstStart];
 
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -202,7 +188,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  if([alertView.title isEqual: @"Bitte Fahrgestellnummer Eingeben:"])
+  if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
   {
       UITextField *vin = [alertView textFieldAtIndex:0];
       CarListService *carListService = [[CarListService alloc] init];
@@ -242,31 +228,21 @@
     }
 }
 
-- (void) carHasBeenSelected:(Car *)selectedCar
+- (void) carHasBeenSelected:(Car *) selectedCar
 {
     [self.profil.carList addObject:selectedCar];
     self.profil.car = selectedCar;
-    [self.carFavoriteTableView reloadData];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    Car* selectedCar = [[Car alloc] initWithExampleDataBmwZ4];
     
-    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
-        // In dieser Variable wird das fotographierte Bild gespeichert, allerdings wird es momentan nicht weiter verwendet!
-//        UIImage* image = info[UIImagePickerControllerOriginalImage];
-    }
+    NSLog(@"selectedCar: %@", selectedCar);
     
-    NSArray* carList = self.profil.carList;
-    
-    if (!(carList && carList.count)) {
-        [self addCarButtonClicked];
-    }
-    
+    [self carHasBeenSelected: selectedCar];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
 
 
