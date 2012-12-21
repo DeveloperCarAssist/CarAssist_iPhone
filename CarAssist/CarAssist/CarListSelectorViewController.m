@@ -23,7 +23,7 @@
     self = [super init];
     if (self) {
 
-        self.carListService = [[CarListService alloc] init];
+        self.carListService = [CarListService getCarListService];
         self.delegate = delegate;
     }
     return self;

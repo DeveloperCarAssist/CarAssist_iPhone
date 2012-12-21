@@ -14,6 +14,8 @@
 @property (nonatomic) NSMutableDictionary* cars;
 
 - (void) reduceCarsWithSearchText: (NSString*) searchText;
--(Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber;
+- (Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber;
+
++ (CarListService*) getCarListService;
 
 @end

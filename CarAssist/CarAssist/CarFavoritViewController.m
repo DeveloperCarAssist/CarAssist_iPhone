@@ -15,7 +15,10 @@
 #import "CarListService.h"
 
 @interface CarFavoritViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (strong) Profile *profil;
+
+@property (nonatomic) Profile *profil;
+@property (nonatomic) CarListService* carListService;
+
 @end
 
 @implementation CarFavoritViewController
@@ -25,6 +28,7 @@
     self = [super init];
     if (self) {
         self.profil = [Profile getProfile];
+        self.carListService = [CarListService getCarListService];
     }
     return self;
     
@@ -191,8 +195,7 @@
   if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
   {
       UITextField *vin = [alertView textFieldAtIndex:0];
-      CarListService *carListService = [[CarListService alloc] init];
-     Car* car = [carListService returnCarByVehicalIdentNumber: vin.text];
+     Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
       if(car)
       {
           if ([[Profile getProfile].carList containsObject:car])
@@ -237,9 +240,7 @@
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    Car* selectedCar = [[Car alloc] initWithExampleDataBmwZ4];
-    
-    NSLog(@"selectedCar: %@", selectedCar);
+    Car* selectedCar = [self.carListService returnCarByVehicalIdentNumber:@"WBADU514"];
     
     [self carHasBeenSelected: selectedCar];
     [self dismissViewControllerAnimated:YES completion:nil];
