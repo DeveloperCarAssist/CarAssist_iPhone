@@ -188,7 +188,7 @@
     [self.carSearchBar resignFirstResponder];
 }
 
-- (void)viewDidUnload
+- (void)viewWillDisappear:(BOOL)animated
 {
     [[[self.tabBarController.tabBar items] objectAtIndex: 0] setEnabled: YES];
     [[[self.tabBarController.tabBar items] objectAtIndex: 1] setEnabled: YES];
