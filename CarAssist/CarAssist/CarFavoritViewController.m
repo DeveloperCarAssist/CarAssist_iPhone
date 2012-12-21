@@ -230,13 +230,14 @@
       }
   }
 }
-- (void)alertView:(UIAlertView *)alertView addDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if([alertView.title isEqual: @"Achtung"]|[alertView.title isEqual: @"Auto schon vorhanden!"])
     {
         [self showCarSelectIfFirstStart];
     }
     if ([alertView.title isEqualToString:@"Keine Kamera vorhanden"]) {
+        
         [self showCarSelectIfFirstStart];
     }
 }
