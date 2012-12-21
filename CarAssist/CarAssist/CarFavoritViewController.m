@@ -65,7 +65,7 @@
 
 -(void)addCarButtonClicked
 {
-    UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto Hinzufügen" delegate: self cancelButtonTitle: @"Abbruch" destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+    UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto hinzufügen" delegate: self cancelButtonTitle: @"Abbruch" destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer scannen", nil ];
     
     [sheet showFromToolbar: self.navigationController.toolbar];
 
@@ -75,7 +75,7 @@
 {
     if(!self.profil.car)
     {
-        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer Scannen", nil ];
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer scannen", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
     }
 
@@ -185,7 +185,7 @@
     if(buttonIndex == 1)
     {
         //Hier Fahrgestellnummer eigeben View Controller Pushen
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bitte Fahrgestellnummer Eingeben:"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bitte Fahrgestellnummer eingeben:"
                                                         message:nil
                                                        delegate:self
                                               cancelButtonTitle:@"Done"
@@ -222,7 +222,7 @@
       else
       {
           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung"
-                                                          message:@"Nummer Leider nicht gefunden"
+                                                          message:@"Nummer leider nicht gefunden"
                                                          delegate:self
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
@@ -295,7 +295,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Keine Kamera vorhanden"
-                                                        message:@"Die App benötigt Ihre Zustimmung zum Fotographieren der Fahrgestellnummer."
+                                                        message:@"Die App benötigt Ihre Zustimmung zum Fotografieren der Fahrgestellnummer."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];

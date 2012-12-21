@@ -112,7 +112,7 @@
     
     EditViewControllerTextInput* editViewController = [[EditViewControllerTextInput alloc] initWithDelegate:self Values:[NSArray array] ValueRepresentation:[NSArray array] AndSelectedValueIndex:0];
     editViewController.title = @"Bezeichnung";
-    editViewController.message = @"Bitte geben eine Bezeichnug ein";
+    editViewController.message = @"Bitte geben eine Bezeichnung ein";
     
     SettingCell* descriptionSetting = [[SettingCell alloc] initEditableWithTitle:@"Bezeichnung" Value:self.car.owner ValueRepresentation:self.car.owner AndEditViewController:editViewController];
     
