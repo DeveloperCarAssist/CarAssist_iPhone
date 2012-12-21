@@ -10,7 +10,7 @@
 #import "WarningLightCollectionViewController.h"
 #import "Utils.h"
 
-@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 
 @end
 
@@ -97,5 +97,32 @@
         [alert show];
     }
 }
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if([alertView.title isEqual: @"ADAC Anrufen"] && buttonIndex == 1)
+    {
+      //  [self sendEmailTo:@"klausKastikuas@gmx.de" withSubject:@"Pannenhilfe!" withBody: @"Mein Auto hat eine Panne, bitte kommen sie zur BlaBla-Straße."];
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
+        {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+}
+
+- (void) sendEmailTo:(NSString *)to withSubject:(NSString *) subject withBody:(NSString *)body {
+	NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
+							[to stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
+							[subject stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
+							[body  stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+	
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailString]];
+}
+
 
 @end
