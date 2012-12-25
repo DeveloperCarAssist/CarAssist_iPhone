@@ -10,6 +10,7 @@
 #import "Utils.h"
 #import "Profile.h"
 #import "AuthorizedRepairService.h"
+#import "AuthorizedRepairDetailViewController.h"
 
 @interface AuthorizedRepairCategoryViewController ()
 
@@ -42,6 +43,11 @@
     NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
     NSArray *items = [self.categoryService.items objectForKey:key];
+    AuthorizedRepair *shop = [items objectAtIndex:indexPath.row];
+    
+    AuthorizedRepairDetailViewController *controller = [[AuthorizedRepairDetailViewController alloc] initWithAuthorizedRepair:shop];
+    [self.navigationController pushViewController:controller animated:YES];
+    
 /*
     GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[items objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:viewController animated:YES];
