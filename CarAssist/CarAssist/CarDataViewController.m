@@ -227,7 +227,7 @@
         self.car.garage = (NSString*) value;
         garageSetting.value = value;
         garageSetting.valueRepresentation = self.car.garage;
-    }];
+    }];    
     
     [provider addObject:insuranceSetting];
     [provider addObject:garageSetting];
