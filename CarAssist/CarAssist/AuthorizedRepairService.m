@@ -54,14 +54,23 @@
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
-    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"BMW Hauptniederlassung" Category:@"Hamburg" andLocation:
-                        CLLocationCoordinate2DMake(53.6001f, 9.9718f)];
+    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Hauptniederlassung" Category:@"Hamburg" andLocation:
+                        CLLocationCoordinate2DMake(53.60009f, 9.97196f)];
+    garage.street = @"Offakamp 10-20";
+    garage.postalcode = @"22529";
+    garage.city = @"Hamburg";
+    garage.phone = @"040 / 55301-10";
+    
     [allItems addObject:garage];
 
-    garage = [[AuthorizedRepair alloc] initWithName:@"BMW Filiale Bergedorf" Category:@"Hamburg" andLocation:
-                                CLLocationCoordinate2DMake(53.49120f, 10.2018f)];
-    [allItems addObject:garage];
+    garage = [[AuthorizedRepair alloc] initWithName:@"Niederlassung Wansdsbek" Category:@"Hamburg" andLocation:
+                                CLLocationCoordinate2DMake(53.58695f, 10.09423f)];
+    garage.street = @"Friedrich-Ebert-Damm 120";
+    garage.postalcode = @"22047";
+    garage.city = @"Hamburg";
+    garage.phone = @"040 / 55301-30";
     
+    [allItems addObject:garage];
     
     self.allItems = allItems;
     self.reducedItems = allItems;

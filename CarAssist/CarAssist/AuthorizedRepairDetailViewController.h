@@ -13,5 +13,5 @@
 
 @interface AuthorizedRepairDetailViewController : UIViewController
 - (id)initWithAuthorizedRepair:(AuthorizedRepair *) shop;
-@property(nonatomic) MKCoordinateRegion region;
+@property  (nonatomic) IBOutlet MKMapView *mapView;
 @end
