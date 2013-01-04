@@ -127,7 +127,7 @@
 - (void) saveCarButtonClicked
 {
     [self saveSetting];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /**
