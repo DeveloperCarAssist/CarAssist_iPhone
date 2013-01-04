@@ -39,13 +39,47 @@
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
-    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"VW Hauptniederlassung" Category:@"Hamburg" andLocation: CLLocationCoordinate2DMake(53.6001f, 9.9718f)];
+    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Eimsbüttel" Category:@"Hamburg" andLocation: CLLocationCoordinate2DMake(53.5694437, 9.9590983)];
+    
+    garage.street = @"Fruchtallee 29";
+    garage.postalcode = @"20259";
+    garage.city = @"Hamburg";
+    garage.phone = @"040 / 43 172 - 0";
+    
     [allItems addObject:garage];
     
-    garage = [[AuthorizedRepair alloc] initWithName:@"VW Filiale Bergedorf" Category:@"Hamburg" andLocation:
-              CLLocationCoordinate2DMake(53.49120f, 10.2018f)];
+    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Winterhude" Category:@"Hamburg" andLocation:
+              CLLocationCoordinate2DMake(53.58939, 10.02297)];
+
+    garage.street = @"Wiesendamm 120";
+    garage.postalcode = @"22303";
+    garage.city = @"Hamburg";
+    garage.phone = @"040 / 270 798 - 0";
     
     [allItems addObject:garage];
+
+
+    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Ahrensburg" Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.58939, 10.02297)];
+    
+    garage.street = @"Hamburger Straße 40";
+    garage.postalcode = @"22926";
+    garage.city = @"Ahrensburg";
+    garage.phone = @"041 02 / 51 54 - 0";
+    
+    [allItems addObject:garage];
+
+    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Harburg" Category:@"Hamburg" andLocation:
+              CLLocationCoordinate2DMake(53.46243, 10.01227)];
+    
+    garage.street = @"Großmoorbogen 1a";
+    garage.postalcode = @"21079";
+    garage.city = @"Harburg";
+    garage.phone = @"040 / 766 07 - 0";
+    
+    [allItems addObject:garage];
+    
+    
     self.allItems = allItems;
     self.reducedItems = allItems;
 }

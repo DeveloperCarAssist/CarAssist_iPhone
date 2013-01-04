@@ -13,5 +13,5 @@
 
 @interface AuthorizedRepairDetailViewController : UIViewController
 - (id)initWithAuthorizedRepair:(AuthorizedRepair *) shop;
-@property  (nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) IBOutlet UITableView* tableView;
 @end
