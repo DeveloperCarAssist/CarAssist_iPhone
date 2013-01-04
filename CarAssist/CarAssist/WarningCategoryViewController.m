@@ -65,6 +65,7 @@
     
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];
     UIImage* breakdownServiceCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pannenhilfe" ofType:@"png"]];
+    UIImage* authorizedRepairCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"service" ofType:@"png"]];
     
     switch (indexPath.row) {
         case 0:
@@ -77,6 +78,7 @@
             break;
         case 2:
             cell.textLabel.text = @"Vertragswerkstätten";
+            [cell.imageView setImage:authorizedRepairCategoryImage];
             break;
         case 3:
             cell.textLabel.text = @"Störung beheben";
