@@ -9,9 +9,10 @@
 #import "AuthorizedRepairDetailViewController.h"
 #import "Utils.h"
 
-@interface AuthorizedRepairDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface AuthorizedRepairDetailViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 - (void) setupMapView:(MKMapView *)mapView withShop:(AuthorizedRepair *) shop;
 @property (nonatomic) AuthorizedRepair *shop;
+@property (nonatomic) CLLocationManager *locationManager;
 @end
 
 @implementation AuthorizedRepairDetailViewController
@@ -21,6 +22,13 @@
     self = [super init];
     if (self) {
         self.shop = shop;
+        if(self.locationManager == Nil)
+        {
+            self.locationManager = [[CLLocationManager alloc] init];
+            self.locationManager.delegate = self;
+            self.locationManager.distanceFilter = kCLDistanceFilterNone;
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        }
     }
     return self;
 }
@@ -32,6 +40,7 @@
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
 }
+
 - (void) setupMapView:(MKMapView *)mapView withShop:(AuthorizedRepair *) shop
 {
     // Kartenposition und sichtbaren Bereich setzen
@@ -61,6 +70,29 @@
     mapView.scrollEnabled = NO;
     mapView.zoomEnabled = NO;
     
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    [manager stopUpdatingLocation];
+    CLLocation *loc = [locations lastObject];
+
+    NSString *mapsUrl = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",
+                         loc.coordinate.latitude,
+                         loc.coordinate.longitude,
+                         self.shop.location.latitude,
+                         self.shop.location.longitude];
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsUrl]];
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *) error
+{
+    [manager stopUpdatingLocation];    
+    if(error.code == kCLErrorDenied)
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte erlauben Sie den Zugriff auf den Ortungsdienst in den Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -126,11 +158,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1 && indexPath.row == 0) // Telefon-Zelle :)
+    if(indexPath.section == 1)
     {
-        NSMutableString *phoneUrl = [[NSMutableString alloc] initWithString:@"tel:"];
-        [phoneUrl appendString:self.shop.phone];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
+        if(indexPath.row == 0)
+        {
+            // Telefon-Zelle getoucht :)
+            NSMutableString *phoneUrl = [[NSMutableString alloc] initWithString:@"tel:"];
+            [phoneUrl appendString:self.shop.phone];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
+        } else if(indexPath.row == 1)
+        {
+            // Route berechnen getoucht
+            if(![CLLocationManager locationServicesEnabled])
+            {
+                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte aktivieren Sie den Ortungsdienst Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [message show];
+            } else {
+                [self.locationManager startUpdatingLocation];            
+            }
+        }
     }
 }
 

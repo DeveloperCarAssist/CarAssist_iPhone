@@ -276,6 +276,7 @@
 		8F8BD0E1167CB83F00AFC5D5 /* ServiceGuideStockService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGuideStockService.h; sourceTree = "<group>"; };
 		8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
 		8FBC0D9A16976FC600155BE1 /* service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service.png; sourceTree = "<group>"; };
+		8FD1BAA51698C50900579F2B /* LocationStellingen.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationStellingen.gpx; sourceTree = "<group>"; };
 		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
@@ -501,6 +502,7 @@
 				400DF8AA166910BF00D6217B /* warnleuchte.png */,
 				400DF8851668F1D700D6217B /* AppIcon_iPhone_gross.png */,
 				400DF8831668F1A000D6217B /* AppIcon_iPhone_klein.png */,
+				8FD1BAA51698C50900579F2B /* LocationStellingen.gpx */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
