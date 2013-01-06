@@ -12,6 +12,18 @@
 		2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500C7167DBBC700196C53 /* EditViewControllerPicker.m */; };
 		2E4500CA167DBBC800196C53 /* EditViewControllerPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */; };
 		2E4500CE167DF62A00196C53 /* SettingsValueService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500CD167DF62A00196C53 /* SettingsValueService.m */; };
+		2EA3C01A1699845A00D3F313 /* used.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C0191699845A00D3F313 /* used.jpg */; };
+		2EA3C01D1699855200D3F313 /* abdeckung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C01C1699855200D3F313 /* abdeckung.jpg */; };
+		2EA3C01F169985C600D3F313 /* felgenschloss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C01E169985C600D3F313 /* felgenschloss.jpg */; };
+		2EA3C021169986A700D3F313 /* loesen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C020169986A700D3F313 /* loesen.jpg */; };
+		2EA3C0231699873600D3F313 /* kappe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C0221699873600D3F313 /* kappe.jpg */; };
+		2EA3C025169987C800D3F313 /* heben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C024169987C800D3F313 /* heben.jpg */; };
+		2EA3C027169988B600D3F313 /* radab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C026169988B600D3F313 /* radab.jpg */; };
+		2EA3C0291699891A00D3F313 /* radan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C0281699891A00D3F313 /* radan.jpg */; };
+		2EA3C02B1699899400D3F313 /* andrehen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C02A1699899400D3F313 /* andrehen.jpg */; };
+		2EA3C02D16998A0400D3F313 /* senken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C02C16998A0400D3F313 /* senken.jpg */; };
+		2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C02E16998A7E00D3F313 /* fest.jpg */; };
+		2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C03016998BA000D3F313 /* halleluja.jpg */; };
 		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
 		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
 		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
@@ -137,6 +149,18 @@
 		2E4500C8167DBBC800196C53 /* EditViewControllerPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewControllerPicker.xib; sourceTree = "<group>"; };
 		2E4500CC167DF62A00196C53 /* SettingsValueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsValueService.h; sourceTree = "<group>"; };
 		2E4500CD167DF62A00196C53 /* SettingsValueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsValueService.m; sourceTree = "<group>"; };
+		2EA3C0191699845A00D3F313 /* used.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = used.jpg; sourceTree = "<group>"; };
+		2EA3C01C1699855200D3F313 /* abdeckung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abdeckung.jpg; sourceTree = "<group>"; };
+		2EA3C01E169985C600D3F313 /* felgenschloss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = felgenschloss.jpg; sourceTree = "<group>"; };
+		2EA3C020169986A700D3F313 /* loesen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loesen.jpg; sourceTree = "<group>"; };
+		2EA3C0221699873600D3F313 /* kappe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kappe.jpg; sourceTree = "<group>"; };
+		2EA3C024169987C800D3F313 /* heben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = heben.jpg; sourceTree = "<group>"; };
+		2EA3C026169988B600D3F313 /* radab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = radab.jpg; sourceTree = "<group>"; };
+		2EA3C0281699891A00D3F313 /* radan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = radan.jpg; sourceTree = "<group>"; };
+		2EA3C02A1699899400D3F313 /* andrehen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = andrehen.jpg; sourceTree = "<group>"; };
+		2EA3C02C16998A0400D3F313 /* senken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = senken.jpg; sourceTree = "<group>"; };
+		2EA3C02E16998A7E00D3F313 /* fest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fest.jpg; sourceTree = "<group>"; };
+		2EA3C03016998BA000D3F313 /* halleluja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halleluja.jpg; sourceTree = "<group>"; };
 		2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerTextInput.h; sourceTree = "<group>"; };
 		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
 		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
@@ -681,6 +705,18 @@
 			children = (
 				8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */,
 				8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */,
+				2EA3C0191699845A00D3F313 /* used.jpg */,
+				2EA3C01C1699855200D3F313 /* abdeckung.jpg */,
+				2EA3C01E169985C600D3F313 /* felgenschloss.jpg */,
+				2EA3C020169986A700D3F313 /* loesen.jpg */,
+				2EA3C0221699873600D3F313 /* kappe.jpg */,
+				2EA3C024169987C800D3F313 /* heben.jpg */,
+				2EA3C026169988B600D3F313 /* radab.jpg */,
+				2EA3C0281699891A00D3F313 /* radan.jpg */,
+				2EA3C02A1699899400D3F313 /* andrehen.jpg */,
+				2EA3C02C16998A0400D3F313 /* senken.jpg */,
+				2EA3C02E16998A7E00D3F313 /* fest.jpg */,
+				2EA3C03016998BA000D3F313 /* halleluja.jpg */,
 			);
 			name = ServiceImages;
 			sourceTree = "<group>";
@@ -823,6 +859,18 @@
 				405707D91684B2D900E98587 /* EditViewControllerList.xib in Resources */,
 				8F797AC81689E7F8003CD417 /* AuthorizedRepairDetailViewController.xib in Resources */,
 				8FBC0D9B16976FC600155BE1 /* service.png in Resources */,
+				2EA3C01A1699845A00D3F313 /* used.jpg in Resources */,
+				2EA3C01D1699855200D3F313 /* abdeckung.jpg in Resources */,
+				2EA3C01F169985C600D3F313 /* felgenschloss.jpg in Resources */,
+				2EA3C021169986A700D3F313 /* loesen.jpg in Resources */,
+				2EA3C0231699873600D3F313 /* kappe.jpg in Resources */,
+				2EA3C025169987C800D3F313 /* heben.jpg in Resources */,
+				2EA3C027169988B600D3F313 /* radab.jpg in Resources */,
+				2EA3C0291699891A00D3F313 /* radan.jpg in Resources */,
+				2EA3C02B1699899400D3F313 /* andrehen.jpg in Resources */,
+				2EA3C02D16998A0400D3F313 /* senken.jpg in Resources */,
+				2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */,
+				2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
