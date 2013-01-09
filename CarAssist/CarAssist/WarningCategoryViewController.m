@@ -143,10 +143,10 @@
                     [message show];
                     
                     CallViewController* viewController = [[CallViewController alloc] initForMail];
-                        [self.navigationController pushViewController:viewController animated:YES];
+                        [self.navigationController pushViewController:viewController animated:NO];
                 } else {
                     CallViewController* viewController = [[CallViewController alloc] initForMail];
-                    [self.navigationController pushViewController:viewController animated:YES];
+                    [self.navigationController pushViewController:viewController animated:NO];
                 }
             }           
                   else {

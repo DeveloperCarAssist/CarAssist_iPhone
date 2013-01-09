@@ -90,7 +90,7 @@
     [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
     [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzer Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
     
-    [self presentViewController:mailViewController animated:YES completion: Nil];
+    [self presentViewController:mailViewController animated:NO completion: Nil];
 }
 
 /**
