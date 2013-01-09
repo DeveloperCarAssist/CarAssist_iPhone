@@ -9,16 +9,18 @@
 #import "WarningCategoryViewController.h"
 #import "WarningLightCollectionViewController.h"
 #import "AuthorizedRepairCategoryViewController.h"
-
+#import <MapKit/MapKit.h>
 #import <MessageUI/MFMailComposeViewController.h>
+
+
 #import "Utils.h"
 #import "Profile.h"
+#import "CallViewController.h"
 
-#import <MapKit/MapKit.h>
 
 
-@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate, CLLocationManagerDelegate >
-@property (nonatomic) CLLocationManager *locationManager;
+
+@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 
 @end
 
@@ -27,13 +29,7 @@
 
 - (void)viewDidLoad
 {
-    if(self.locationManager == Nil)
-    {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-    }
+ 
     [super viewDidLoad];
     self.title = @"Störungen";
     
@@ -145,14 +141,14 @@
                 {
                     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Um ein Ortungssignal anzugeben muss das GPS aktiviert sein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [message show];
-                    [self locationManager: nil didUpdateLocations: nil];
+                    
+                    CallViewController* viewController = [[CallViewController alloc] initForMail];
+                        [self.navigationController pushViewController:viewController animated:YES];
                 } else {
-                    [self.locationManager startUpdatingLocation];
+                    CallViewController* viewController = [[CallViewController alloc] initForMail];
+                    [self.navigationController pushViewController:viewController animated:YES];
                 }
-      
-                  
-                  }
-            
+            }           
                   else {
                       
                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
@@ -166,61 +162,10 @@
         }
     }
 }
-/**
- * Diese Methode Vormatiert einen String damit er Von der Mailapp gut dargestellt werden kann.
- */
-- (void) sendEmailTo:(NSString *)to withSubject:(NSString *) subject withBody:(NSString *)body {
-	NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
-							[to stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
-							[subject stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
-							[body stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    NSLog(@"%@",body);
-	if([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:mailString]])
-        {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailString]];
-        }
-        else
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zur EmailApp. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            [alert show];
-        }
-}
 
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
 
-        [self dismissViewControllerAnimated:YES completion:nil];
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
-    {
-        
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
-    }
 
-}
 
-/**
- * Diese Methode wird aufgerufen wenn eine Mail geschickt wurde nachdem der Ort bestimmt wurde / Oder mit nil und nill wenn gps aus ist.
- */
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations {
-    
-    [manager stopUpdatingLocation];
-   CLLocation* loc = [locations lastObject];
-    MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-    mailViewController.mailComposeDelegate = self;
-    NSArray *array =  [[NSArray alloc] initWithObjects:@"CarAssistReport@ADAC.de", nil];
-    [mailViewController setToRecipients:array];
-    Profile *profil = [Profile getProfile];
-    [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzer Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
-    
-    [self presentViewController:mailViewController animated:YES completion: Nil];
-}
 
 
 
