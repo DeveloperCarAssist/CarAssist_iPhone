@@ -141,11 +141,11 @@
         if(buttonIndex == 2)
         {
             if ([MFMailComposeViewController canSendMail]) {
-                // Route berechnen getoucht
                 if(![CLLocationManager locationServicesEnabled])
                 {
-                    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte aktivieren Sie den Ortungsdienst Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Um ein Ortungssignal anzugeben muss das GPS aktiviert sein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [message show];
+                    [self locationManager: nil didUpdateLocations: nil];
                 } else {
                     [self.locationManager startUpdatingLocation];
                 }
@@ -183,13 +183,19 @@
             [alert show];
         }
 }
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
 
         [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+/**
+ * Diese Methode wird aufgerufen wenn eine Mail geschickt wurde nachdem der Ort bestimmt wurde / Oder mit nil und nill wenn gps aus ist.
+ */
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
+    
     [manager stopUpdatingLocation];
    CLLocation* loc = [locations lastObject];
     MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
