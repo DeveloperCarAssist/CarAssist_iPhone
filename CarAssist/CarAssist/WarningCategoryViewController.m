@@ -109,7 +109,7 @@
     }
     if(indexPath.row == 1)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email!",nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email und Anrufen!",nil];
         [alert show];
     }
     if(indexPath.row == 2)
@@ -166,7 +166,9 @@
         }
     }
 }
-
+/**
+ * Diese Methode Vormatiert einen String damit er Von der Mailapp gut dargestellt werden kann.
+ */
 - (void) sendEmailTo:(NSString *)to withSubject:(NSString *) subject withBody:(NSString *)body {
 	NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
 							[to stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding],
@@ -188,6 +190,17 @@
 {
 
         [self dismissViewControllerAnimated:YES completion:nil];
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
+    {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+
 }
 
 /**
@@ -208,6 +221,7 @@
     
     [self presentViewController:mailViewController animated:YES completion: Nil];
 }
+
 
 
 @end
