@@ -14,8 +14,11 @@
 #import "Utils.h"
 #import "Profile.h"
 
+#import <MapKit/MapKit.h>
 
-@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate >
+
+@interface WarningCategoryViewController () <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate,MFMailComposeViewControllerDelegate, CLLocationManagerDelegate >
+@property (nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -24,7 +27,13 @@
 
 - (void)viewDidLoad
 {
-    
+    if(self.locationManager == Nil)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    }
     [super viewDidLoad];
     self.title = @"Störungen";
     
@@ -132,19 +141,18 @@
         if(buttonIndex == 2)
         {
             if ([MFMailComposeViewController canSendMail]) {
-                
-                MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-                mailViewController.mailComposeDelegate = self;
-                NSArray *array =  [[NSArray alloc] initWithObjects:@"CarAssistReport@ADAC.de", nil];
-                [mailViewController setToRecipients:array];
-                Profile *profil = [Profile getProfile];
-                [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-                 [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer] isHTML:NO];
-                
-          [self presentViewController:mailViewController animated:YES completion: Nil];
+                // Route berechnen getoucht
+                if(![CLLocationManager locationServicesEnabled])
+                {
+                    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte aktivieren Sie den Ortungsdienst Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [message show];
+                } else {
+                    [self.locationManager startUpdatingLocation];
+                }
+      
                   
                   }
-                  
+            
                   else {
                       
                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
@@ -180,5 +188,20 @@
 
         [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    [manager stopUpdatingLocation];
+   CLLocation* loc = [locations lastObject];
+    MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+    mailViewController.mailComposeDelegate = self;
+    NSArray *array =  [[NSArray alloc] initWithObjects:@"CarAssistReport@ADAC.de", nil];
+    [mailViewController setToRecipients:array];
+    Profile *profil = [Profile getProfile];
+    [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzer Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
+    
+    [self presentViewController:mailViewController animated:YES completion: Nil];
+}
+
 
 @end
