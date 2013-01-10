@@ -77,7 +77,7 @@
     [manager stopUpdatingLocation];
     CLLocation *loc = [locations lastObject];
 
-    NSString *mapsUrl = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",
+    NSString *mapsUrl = [NSString stringWithFormat: @"http://maps.apple.com/maps?saddr=%f,%f&daddr=%f,%f",
                          loc.coordinate.latitude,
                          loc.coordinate.longitude,
                          self.shop.location.latitude,
