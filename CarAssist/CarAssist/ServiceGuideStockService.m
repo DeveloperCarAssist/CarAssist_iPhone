@@ -191,7 +191,7 @@
     step = [[Step alloc] initWithName: @"Gute Fahrt" Description:@"Fahren Sie mit dem Reservereifen nicht über 80 kmh und suchen Sie schnellstmöglich eine Werkstatt auf. Ihr CarAssist Team wünscht eine gute Fahrt!" AndImage:image ];
     [steps addObject:step];
     
-    Guide* guide = [[Guide alloc] initWithName: @"Reververeifen wechseln" CategoryName: @"Reifen" AndSteps: steps];
+    Guide* guide = [[Guide alloc] initWithName: @"Reservereifen wechseln" CategoryName: @"Reifen" AndSteps: steps];
     [allGuides addObject:guide];
     
     
@@ -226,9 +226,6 @@
     [allGuides addObject:guide];
 
     guide = [[Guide alloc] initWithName: @"Lampe wechseln" CategoryName: @"Beleuchtung" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Reververeifen wechseln" CategoryName: @"Reifen" AndSteps: steps];
     [allGuides addObject:guide];
     
     guide = [[Guide alloc] initWithName: @"Winterreifen wechseln" CategoryName: @"Reifen" AndSteps: steps];
