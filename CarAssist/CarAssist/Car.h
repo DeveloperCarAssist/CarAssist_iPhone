@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "CarEquipmentPackage.h"
+#import "AuthorizedRepair.h"
 
 @interface Car : NSObject
-@property (nonatomic) NSString *model, *manufacturer, *owner, *gearbox, *insurance, *garage, *vehicalIdentNumber;
+@property (nonatomic) NSString *model, *manufacturer, *owner, *gearbox, *insurance, *vehicalIdentNumber;
+@property (nonatomic) AuthorizedRepair* garage;
 @property (nonatomic) CarEquipmentPackage* equipmentPackage;
 @property (nonatomic) NSInteger unid;
 // Initiallisiert Autos mit Beispieldaten

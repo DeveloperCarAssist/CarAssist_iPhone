@@ -14,6 +14,7 @@
 #import "SettingsValueService.h"
 #import "EditViewControllerTextInput.h"
 #import "EditViewControllerList.h"
+#import "AuthorizedRepairService.h"
 
 @interface CarDataViewController ()
 @property Car* car;
@@ -111,7 +112,7 @@
     
     SettingCell* modelCell = [[SettingCell alloc] initWithTitle:@"Modell" Value:self.car.model AndValueRepresentation:self.car.model];
     
-    EditViewControllerTextInput* editViewController = [[EditViewControllerTextInput alloc] initWithDelegate:self Values:[NSArray array] ValueRepresentation:[NSArray array] AndSelectedValueIndex:0];
+    EditViewControllerTextInput* editViewController = [[EditViewControllerTextInput alloc] initWithDelegate:self];
     editViewController.title = @"Bezeichnung";
     editViewController.message = @"Bitte geben eine Bezeichnung ein";
     
@@ -217,16 +218,15 @@
         insuranceSetting.valueRepresentation = self.car.insurance;
     }];
     
+    AuthorizedRepairService* garageService = [[AuthorizedRepairService alloc] initWithCar:self.car];
     
-    NSMutableArray* values = [NSMutableArray arrayWithObjects:@"May und Olde", @"Peters Werkstatt", @"Dem Guido seine Werkstatt", nil];
-    
-    SettingCell* garageSetting = [[SettingCell alloc] initEditableWithTitle:@"Werkstatt" Value:self.car.garage ValueRepresentation:self.car.garage AndEditViewController:[[EditViewControllerList alloc] initWithDelegate:self Values:values ValueRepresentation:values AndSelectedValueIndex:0]];
+    SettingCell* garageSetting = [[SettingCell alloc] initEditableWithTitle:@"Werkstatt" Value:self.car.garage ValueRepresentation:self.car.garage.name AndEditViewController:[[EditViewControllerList alloc] initWithDelegate:self AndSearchableValueService: garageService]];
     
     
     [garageSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
-        self.car.garage = (NSString*) value;
+        self.car.garage = (AuthorizedRepair*) value;
         garageSetting.value = value;
-        garageSetting.valueRepresentation = self.car.garage;
+        garageSetting.valueRepresentation = self.car.garage.name;
     }];    
     
     [provider addObject:insuranceSetting];
@@ -240,7 +240,7 @@
     NSArray* values = [self.settingsValueService.settingValues objectForKey:title];
     NSArray* valuesRepresentations = [self.settingsValueService.settingValuesRepresentations objectForKey:title];
     
-    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithDelegate: self Values:values ValueRepresentation:valuesRepresentations SelectedValueIndex:0 AndImage:nil];
+    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithDelegate: self Values:values ValueRepresentations:valuesRepresentations AndImage:nil];
     SettingCell* result = [[SettingCell alloc] initEditableWithTitle:title Value:value ValueRepresentation:valueRepresentation AndEditViewController:pickerController];
     return result;
     

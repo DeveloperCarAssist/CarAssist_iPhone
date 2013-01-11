@@ -14,13 +14,14 @@
 
 @implementation EditViewControllerPicker
 
-- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray *) valueRepresentation SelectedValueIndex: (int) selectedValueIndex AndImage: (UIImage*) image
+- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImage: (UIImage*) image
 {
-    self = [super initWithDelegate: delegate Values:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:  selectedValueIndex];
+    self = [super initWithDelegate: delegate];
     if (self) {
+        self.values = values;
+        self.valueRepresentations = valueRepresentations;
         self.image = image;
     }
-    
     
     return self;
 }
@@ -51,7 +52,7 @@
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.selectedValueIndex = row;
+    self.value = [self.values objectAtIndex:row];
 }
 
 - (void) saveButtonPressed

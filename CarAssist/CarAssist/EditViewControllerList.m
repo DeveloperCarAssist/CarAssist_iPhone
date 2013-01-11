@@ -17,9 +17,12 @@
 
 @implementation EditViewControllerList
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate AndSearchableValueService: (SearchableService*) searchableValueService;
 {
-    self = [super initWithDelegate:delegate Values:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:selectedValueIndex];
+    self = [super initWithDelegate:delegate];
+    if (self) {
+        self.searchableService = searchableValueService;
+    }
     return self;
 }
 
@@ -37,10 +40,10 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     //Searchbar
-    self.garageSearchBar.tintColor = [UIColor lightGrayColor];
+    self.valueSearchBar.tintColor = [UIColor lightGrayColor];
     
     //TableView
-    self.garageSelectionTableView.separatorColor = [UIColor blackColor];
+    self.valueSelectionTableView.separatorColor = [UIColor blackColor];
     
     // TapRecognizer, der bei jedem Tab auf unsere View (ausserhalb des Keyboards) das Keyboard schließt.
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
@@ -70,7 +73,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.valueRepresentations.count;
+    return self.searchableService.reducedItems.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,7 +85,7 @@
                                       reuseIdentifier:@"standard"];
     }
 
-    cell.textLabel.text = [self.valueRepresentations objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[self.searchableService.reducedItems objectAtIndex:indexPath.row] name];
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
     
@@ -112,13 +115,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedValueIndex = indexPath.row;
+    self.value = [self.searchableService.reducedItems objectAtIndex:indexPath.row];
+    self.valueRepresentation = [[self.searchableService.reducedItems objectAtIndex:indexPath.row] name];
+
 }
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-//    [self.carListService reduceCarsWithSearchText: searchText];
-//    [self.carSelectionTableView reloadData];
+   [self.searchableService reduceItemsWithSearchText: searchText];
+   [self.valueSelectionTableView reloadData];
 }
 
 /**
@@ -135,14 +140,14 @@
  */
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    [self.garageSearchBar resignFirstResponder];
+    [self.valueSearchBar resignFirstResponder];
 }
 
 /**
  * Schließt das Keyboard.
  */
 -(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
-    [self.garageSearchBar resignFirstResponder];
+    [self.valueSearchBar resignFirstResponder];
 }
 
 

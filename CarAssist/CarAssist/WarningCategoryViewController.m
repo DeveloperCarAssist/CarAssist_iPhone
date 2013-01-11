@@ -11,7 +11,7 @@
 #import "AuthorizedRepairCategoryViewController.h"
 #import <MapKit/MapKit.h>
 #import <MessageUI/MFMailComposeViewController.h>
-
+#import "RoadsideAssitanceViewController.h"
 
 #import "Utils.h"
 #import "Profile.h"
@@ -86,7 +86,7 @@
             [cell.imageView setImage:authorizedRepairCategoryImage];
             break;
         case 3:
-            cell.textLabel.text = @"Störung beheben";
+            cell.textLabel.text = @"Persönliche Informationen";
             break;
         default:
             cell.textLabel.text = @"Einer zu viel :P";
@@ -113,7 +113,11 @@
         AuthorizedRepairCategoryViewController* viewController = [[AuthorizedRepairCategoryViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
-    
+    if(indexPath.row == 3)
+    {
+        RoadsideAssitanceViewController* viewController = [[RoadsideAssitanceViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
