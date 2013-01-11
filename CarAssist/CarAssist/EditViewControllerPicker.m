@@ -7,7 +7,6 @@
 //
 
 #import "EditViewControllerPicker.h"
-#import "Utils.h"
 
 @interface EditViewControllerPicker () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -15,17 +14,14 @@
 
 @implementation EditViewControllerPicker
 
-- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray *) valueRepresentation SelectedValueIndex: (int) selectedValueIndex AndImage: (UIImage*) image
+- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImage: (UIImage*) image
 {
-    self = [super initWithDelegate: delegate Values:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:  selectedValueIndex];
+    self = [super initWithDelegate: delegate];
     if (self) {
-        if(image == nil) {
-            self.imageView.backgroundColor = [UIColor clearColor];
-        } else {
-            self.image = image;
-        }
+        self.values = values;
+        self.valueRepresentations = valueRepresentations;
+        self.image = image;
     }
-    
     
     return self;
 }
@@ -33,8 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];    
     
     [self.imageView setImage:self.image];
     
@@ -58,7 +52,7 @@
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.selectedValueIndex = row;
+    self.value = [self.values objectAtIndex:row];
 }
 
 - (void) saveButtonPressed

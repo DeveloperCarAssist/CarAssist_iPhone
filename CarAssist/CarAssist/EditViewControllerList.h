@@ -7,12 +7,14 @@
 //
 
 #import "EditViewController.h"
+#import "SearchableService.h"
 
 @interface EditViewControllerList : EditViewController
 
-@property (nonatomic) IBOutlet UISearchBar* garageSearchBar;
-@property (nonatomic) IBOutlet UITableView* garageSelectionTableView;
+@property (nonatomic) IBOutlet UISearchBar* valueSearchBar;
+@property (nonatomic) IBOutlet UITableView* valueSelectionTableView;
+@property (nonatomic) SearchableService* searchableService;
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex;
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate AndSearchableValueService: (SearchableService*) searchableValueService;
 
 @end

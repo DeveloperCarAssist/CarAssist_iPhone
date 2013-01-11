@@ -14,9 +14,9 @@
 
 @implementation EditViewControllerTextInput
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate;
 {
-    self = [super initWithDelegate:delegate Values:values ValueRepresentation:valueRepresentation AndSelectedValueIndex:selectedValueIndex];
+    self = [super initWithDelegate:delegate];
     return self;
 }
 
@@ -40,9 +40,8 @@
 {
     if (buttonIndex == 1) {
         NSString* text = [alertView textFieldAtIndex:0].text;
-        self.values = [NSArray arrayWithObject:text];
-        self.valueRepresentations = [NSArray arrayWithObject:text];
-        self.selectedValueIndex = 0;
+        self.value = text;
+        self.valueRepresentation = text;
         [self saveSetting];
     }
     

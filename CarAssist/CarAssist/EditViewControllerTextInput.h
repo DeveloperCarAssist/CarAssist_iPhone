@@ -13,6 +13,5 @@
 @property (nonatomic) NSString* title;
 @property (nonatomic) NSString* message;
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex;
-
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate;
 @end
