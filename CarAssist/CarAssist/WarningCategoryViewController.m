@@ -78,7 +78,7 @@
             [cell.imageView setImage:warningLightCategoryImage];
             break;
         case 1:
-            cell.textLabel.text = @"Pannenhilfe anrufen";
+            cell.textLabel.text = @"Pannenhilfe kontaktieren";
             [cell.imageView setImage:breakdownServiceCategoryImage];
             break;
         case 2:
@@ -105,7 +105,7 @@
     }
     if(indexPath.row == 1)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC anrufen" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email und Anrufen!",nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email und Anrufen!",nil];
         [alert show];
     }
     if(indexPath.row == 2)
@@ -123,7 +123,7 @@
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     
-    if([alertView.title isEqual: @"ADAC anrufen"])
+    if([alertView.title isEqual: @"ADAC kontaktieren"])
     {
        if(buttonIndex == 1)
        {
@@ -134,24 +134,21 @@
            }
            else
            {
-               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefonieren. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                [alert show];
            }
        }
         if(buttonIndex == 2)
         {
             if ([MFMailComposeViewController canSendMail]) {
+                
                 if(![CLLocationManager locationServicesEnabled])
                 {
                     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Um ein Ortungssignal anzugeben muss das GPS aktiviert sein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [message show];
-                    
+                }                
                     CallViewController* viewController = [[CallViewController alloc] initForMail];
                         [self.navigationController pushViewController:viewController animated:NO];
-                } else {
-                    CallViewController* viewController = [[CallViewController alloc] initForMail];
-                    [self.navigationController pushViewController:viewController animated:NO];
-                }
             }           
                   else {
                       
