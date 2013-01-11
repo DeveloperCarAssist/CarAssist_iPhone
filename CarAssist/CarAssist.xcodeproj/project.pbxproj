@@ -37,7 +37,6 @@
 		37A4A3C5167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */; };
 		37A4A3C8167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4A3C7167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m */; };
 		37B54FF9169DEFAD00043CBC /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B54FF7169DEFAD00043CBC /* CallViewController.m */; };
-		37B54FFA169DEFAD00043CBC /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B54FF8169DEFAD00043CBC /* CallViewController.xib */; };
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
 		37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB892A167372F60098EFA3 /* CarDataViewController.xib */; };
 		37BB893F16738BD40098EFA3 /* Autoradio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 37BB893E16738BD40098EFA3 /* Autoradio.jpeg */; };
@@ -189,7 +188,6 @@
 		37BB8928167372F60098EFA3 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDataViewController.h; sourceTree = "<group>"; };
 		37BB8929167372F60098EFA3 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataViewController.m; sourceTree = "<group>"; };
 		37BB892A167372F60098EFA3 /* CarDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDataViewController.xib; sourceTree = "<group>"; };
-		37B54FF8169DEFAD00043CBC /* CallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
 		37BB893E16738BD40098EFA3 /* Autoradio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Autoradio.jpeg; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
@@ -896,7 +894,6 @@
 				2EA3C02D16998A0400D3F313 /* senken.jpg in Resources */,
 				2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */,
 				2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */,
-				37B54FFA169DEFAD00043CBC /* CallViewController.xib in Resources */,
 				8FE61EBA16A05814001BE2B0 /* CarDataViewController.xib in Resources */,
 				8FE61EBD16A05E15001BE2B0 /* footstep_29x29.png in Resources */,
 				8FE61EBE16A05E15001BE2B0 /* footstep_58x58.png in Resources */,
