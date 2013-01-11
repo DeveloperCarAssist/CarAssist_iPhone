@@ -15,6 +15,7 @@
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property NSInteger useCase;
+@property NSString* warning;
 @end
 
 @implementation CallViewController
@@ -27,14 +28,22 @@
     }
     return self;
 }
--(id) initForMail
+-(id) initForMailWithWarning:(NSString*) warning;
 {
     self = [super init];
     if (self) {
-          self.useCase = 0;
+        self.useCase = 0;
+        if(warning != nil)
+        {
+            self.warning = [NSString stringWithFormat: @" \n Es leuchtete folgende Warnleuchte auf: %@", warning];
+        }
+        else{
+            self.warning = @"";
+        }
     }
     return self;
 }
+
 -(id) initForCall
 {
     self = [super init];
@@ -117,7 +126,7 @@
     [mailViewController setToRecipients:array];
     Profile *profil = [Profile getProfile];
     [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe: \n ADAC Nummer: %@ \n Vorname: %@ \n Nachname: %@  \n Fahrzeug: %@ \n Hersteller: %@ \n Letzter Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe: %@ \n ADAC Nummer: %@ \n Vorname: %@ \n Nachname: %@  \n Fahrzeug: %@ \n Hersteller: %@ \n Letzter Bekannter Ort in GPS-Coordinaten: %e %e", self.warning, profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
     
     [self presentViewController:mailViewController animated:NO completion: Nil];
 }

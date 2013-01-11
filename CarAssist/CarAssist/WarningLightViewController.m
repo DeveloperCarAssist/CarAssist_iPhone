@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WarningLightViewController.h"
 #import "Utils.h"
+#import "CallAlertView.h"
 
 @interface WarningLightViewController ()
 
@@ -41,7 +42,15 @@
     imgView.image = self.warningLight.image;
     imgView.layer.cornerRadius = 15.0;
     imgView.layer.masksToBounds = YES;
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"ADAC" style:UIBarButtonItemStyleBordered target:self action:@selector(callAdac)];
+    [self.navigationItem setRightBarButtonItem: addButton];
     
+}
+
+-(void)callAdac
+{
+    CallAlertView *alert = [[CallAlertView alloc] initCall: self.navigationController andMessage: self.warningLight.name];
+    [alert show];
 }
 
 @end

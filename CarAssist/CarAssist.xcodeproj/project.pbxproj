@@ -40,6 +40,7 @@
 		37BB892B167372F60098EFA3 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BB8929167372F60098EFA3 /* CarDataViewController.m */; };
 		37BB892C167372F60098EFA3 /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BB892A167372F60098EFA3 /* CarDataViewController.xib */; };
 		37BB893F16738BD40098EFA3 /* Autoradio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 37BB893E16738BD40098EFA3 /* Autoradio.jpeg */; };
+		37C4EA9016A074BB00081CCD /* CallAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C4EA8F16A074BB00081CCD /* CallAlertView.m */; };
 		37E7179D16690C5E00F6B11F /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7179C16690C5E00F6B11F /* Car.m */; };
 		37E717A116690CAB00F6B11F /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717A016690CAB00F6B11F /* Profile.m */; };
 		37E717AC16690FCF00F6B11F /* CarListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E717AB16690FCF00F6B11F /* CarListService.m */; };
@@ -187,6 +188,8 @@
 		37BB8929167372F60098EFA3 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataViewController.m; sourceTree = "<group>"; };
 		37BB892A167372F60098EFA3 /* CarDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDataViewController.xib; sourceTree = "<group>"; };
 		37BB893E16738BD40098EFA3 /* Autoradio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Autoradio.jpeg; sourceTree = "<group>"; };
+		37C4EA8E16A074BB00081CCD /* CallAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallAlertView.h; sourceTree = "<group>"; };
+		37C4EA8F16A074BB00081CCD /* CallAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallAlertView.m; sourceTree = "<group>"; };
 		37E7179B16690C5E00F6B11F /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		37E7179C16690C5E00F6B11F /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		37E7179F16690CAB00F6B11F /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 			children = (
 				37B54FF6169DEFAD00043CBC /* CallViewController.h */,
 				37B54FF7169DEFAD00043CBC /* CallViewController.m */,
+				37C4EA8E16A074BB00081CCD /* CallAlertView.h */,
+				37C4EA8F16A074BB00081CCD /* CallAlertView.m */,
 			);
 			name = Call;
 			sourceTree = "<group>";
@@ -970,6 +975,7 @@
 				8F797AC71689E7F8003CD417 /* AuthorizedRepairDetailViewController.m in Sources */,
 				37B54FF9169DEFAD00043CBC /* CallViewController.m in Sources */,
 				4028F5AC16A06A3E002D1F98 /* RoadsideAssistanceViewController.m in Sources */,
+				37C4EA9016A074BB00081CCD /* CallAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
