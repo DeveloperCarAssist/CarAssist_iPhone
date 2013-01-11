@@ -46,7 +46,7 @@
     imgView.layer.cornerRadius = 15.0;
     imgView.layer.masksToBounds = YES;
     
-    UIBarButtonItem* callButton = [[UIBarButtonItem alloc] initWithTitle: @"Hilfe!" style:UIBarButtonItemStyleBordered target:self action: @selector(callAdac)];
+    UIBarButtonItem* callButton = [[UIBarButtonItem alloc] initWithTitle: @"ADAC" style:UIBarButtonItemStyleBordered target:self action: @selector(callAdac)];
     [self.navigationItem setRightBarButtonItem: callButton];
     
 }
@@ -84,7 +84,7 @@
                     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Um ein Ortungssignal anzugeben muss das GPS aktiviert sein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [message show];
                 }
-                CallViewController* viewController = [[CallViewController alloc] initForMail];
+                CallViewController* viewController = [[CallViewController alloc] initForMailWithWarning: self.warningLight.name];
                 [self.navigationController pushViewController:viewController animated:NO];
             }
             else {

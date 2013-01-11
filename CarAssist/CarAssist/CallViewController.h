@@ -11,4 +11,5 @@
 @interface CallViewController : UIViewController
 //Hiermit erstellt man sich einen Mailclienten
 -(id) initForMail;
+-(id) initForMailWithWarning:(NSString*) warning;
 @end
