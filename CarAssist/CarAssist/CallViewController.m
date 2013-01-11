@@ -46,6 +46,8 @@
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     }
+    self.view.opaque = NO;
+    self.view.backgroundColor = [UIColor clearColor];
                 [self.locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
 }
@@ -58,8 +60,8 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if(result != MFMailComposeResultCancelled)
+    {  
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
     {
         
@@ -70,9 +72,17 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
-[self.navigationController popViewControllerAnimated:NO];
+    }
+      [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
 
 }
+
+
 
 /**
  * Diese Methode wird aufgerufen wenn eine Mail geschickt wurde nachdem der Ort bestimmt wurde / Oder mit nil und nill wenn gps aus ist.
@@ -88,7 +98,7 @@
     [mailViewController setToRecipients:array];
     Profile *profil = [Profile getProfile];
     [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzer Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzter Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
     
     [self presentViewController:mailViewController animated:NO completion: Nil];
 }
@@ -101,7 +111,8 @@
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte erlauben Sie den Zugriff auf den Ortungsdienst in den Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [message show];
     }
-}
+[self locationManager:nil didUpdateLocations:nil];
+        }
 
 /**
  * Diese Methode Vormatiert einen String damit er Von der Mailapp gut dargestellt werden kann.
