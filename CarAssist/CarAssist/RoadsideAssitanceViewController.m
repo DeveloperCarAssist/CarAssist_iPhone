@@ -10,7 +10,7 @@
 #import "Profile.h"
 #import "Utils.h"
 
-@interface RoadsideAssitanceViewController ()
+@interface RoadsideAssitanceViewController ()<UIAlertViewDelegate>
 @property (nonatomic) Profile* profile;
 @end
 
@@ -95,7 +95,7 @@
     if(indexPath.row == 4)
     {
         cell.textLabel.text=@"HandyNummer";
-        cell.detailTextLabel.text= [NSString stringWithFormat:@"%d", self.profile.mobilenumber];
+        cell.detailTextLabel.text= [NSString stringWithFormat:@"%lld", self.profile.mobilenumber];
     }
     if(indexPath.row == 5)
     {
@@ -107,56 +107,82 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSString* title;
+   
+    if (indexPath.row == 0)
+    {
+        title=@"ADAC-Nummer";
+    }
+    if(indexPath.row == 1)
+    {
+        title=@"Vorname";
+    }
+    if(indexPath.row == 2)
+    {
+       title=@"Nachname";
+    }
+    if(indexPath.row == 3)
+    {
+        title=@"Email-Adresse";
+    }
+    if(indexPath.row == 4)
+    {
+        title=@"HandyNummer";
+    }
+    if(indexPath.row == 5)
+    {
+        title=@"Heimat Stadt";
+    }
+    NSString* message = [NSString stringWithFormat: @"Bitte geben sie ihre(n) %@ ein", title];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ok", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    [alertView show];
 }
+
+- (void) alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString* text = [alertView textFieldAtIndex:0].text;
+        NSString* title = alertView.title;
+        
+        if ([title isEqualToString: @"ADAC-Nummer" ]) {
+            self.profile.ADAClicence = text;
+        }
+        if ([title isEqualToString: @"Vorname"]) {
+            self.profile.vorname=text;
+        }
+        if ([title isEqualToString: @"Nachname"]) {
+            self.profile.nachname=text;
+        }
+        if ([title isEqualToString: @"Email-Adresse" ]) {
+            self.profile.emailAdresse=text;
+        }
+        if ([title isEqualToString: @"HandyNummer" ]) {
+            long long number = [text longLongValue];
+            if( pow(10,(text.length-1)) > number )
+            {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Handynummer Eingeben" message:@"Bitte geben sie eine Gültige Handynummer ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alertView show];
+            }
+            else{
+            self.profile.mobilenumber=number;
+        }
+        }
+        if ([title isEqualToString: @"Heimat Stadt" ]) {
+            self.profile.homeTown=text;
+        }
+    }
+     [self.tableView reloadData];
+}
+    -(void)viewWillAppear:(BOOL)animated
+    {
+        [self.tableView reloadData];        
+    }
 
 @end
