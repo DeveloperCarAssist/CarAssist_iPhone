@@ -19,23 +19,20 @@ typedef void (^SaveBlock) (NSObject*, NSString*);
 
 @implementation EditViewController
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate;
 {
     self = [super init];
     if (self) {
         self.delegate = delegate;
-        self.values = values;
-        self.valueRepresentations = valueRepresentation;
-        self.selectedValueIndex = selectedValueIndex;
+        self.value = nil;
+        self.valueRepresentation = nil;
     }
     return self;
 }
 
 - (void) saveSetting
 {
-    NSObject* selectedValue = [self.values objectAtIndex:self.selectedValueIndex];
-    NSString* selectedValueRepresentation = [self.valueRepresentations objectAtIndex:self.selectedValueIndex];
-    saveBlock(selectedValue, selectedValueRepresentation);
+    saveBlock(self.value, self.valueRepresentation);
 }
 
 - (void) setSaveBlock: (SaveBlock) block

@@ -13,11 +13,10 @@
 
 @property (nonatomic, weak) UIViewController* delegate;
 
-@property (nonatomic) int selectedValueIndex;
-@property (nonatomic) NSArray* values;
-@property (nonatomic) NSArray* valueRepresentations;
+@property (nonatomic) NSObject* value;
+@property (nonatomic) NSString* valueRepresentation;
 
-- (EditViewController*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray*) valueRepresentation AndSelectedValueIndex: (int) selectedValueIndex;
+- (EditViewController*) initWithDelegate: (UIViewController*) delegate;
 
 - (void) display;
 - (void) setSaveBlock: (void (^) (NSObject*, NSString*)) block;

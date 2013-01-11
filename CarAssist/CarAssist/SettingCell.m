@@ -31,6 +31,8 @@
         self.cellSelectionStyle = UITableViewCellSelectionStyleGray;
         self.cellIdentifier = @"Cell2";
         self.editViewController = editViewController;
+        self.editViewController.value = self.value;
+        self.editViewController.valueRepresentation = self.valueRepresentation;
     }
     return self;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "Car.h"
+#import "AuthorizedRepair.h"
 
 @implementation Car
 
@@ -112,7 +113,7 @@
     self.owner = @"Standard";
     self.gearbox = @"Standard";
     self.insurance = @"Standard";
-    self.garage = @"Standard";
+    self.garage = [[AuthorizedRepair alloc] initWithName:@"Keine Werkstatt" Category:@"non" andLocation:CLLocationCoordinate2DMake(53.58939, 10.02297)];
     self.equipmentPackage = [[CarEquipmentPackage alloc] init];
 }
 

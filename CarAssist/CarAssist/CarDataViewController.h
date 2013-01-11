@@ -2,15 +2,16 @@
 //  CarDataViewController.h
 //  CarAssist
 //
-//  Created by Dennis on 11.01.13.
-//  Copyright (c) 2013 Gruppe Fear. All rights reserved.
+//  Created by 0fiedler on 08.12.12.
+//  Copyright (c) 2012 Gruppe Fear. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "Car.h"
 #import "SettingsValueService.h"
 
-@interface CarDataViewController : UIViewController
+@interface CarDataViewController : UITableViewController
+
 @property (nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic) SettingsValueService* settingsValueService;
 
@@ -19,4 +20,6 @@
 @property (nonatomic) NSMutableArray* sectionList;
 
 -(CarDataViewController*)initWithCar: (Car*)car;
+
+
 @end

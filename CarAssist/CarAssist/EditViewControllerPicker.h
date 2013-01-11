@@ -11,9 +11,11 @@
 @interface EditViewControllerPicker : EditViewController
 
 @property (nonatomic) UIImage* image;
+@property (nonatomic) NSArray* values;
+@property (nonatomic) NSArray* valueRepresentations;
 
 @property (nonatomic) IBOutlet UIImageView* imageView;
 
-- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentation: (NSArray *) valueRepresentation SelectedValueIndex: (int) selectedValueIndex AndImage: (UIImage*) image;
+- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImage: (UIImage*) image;
 
 @end
