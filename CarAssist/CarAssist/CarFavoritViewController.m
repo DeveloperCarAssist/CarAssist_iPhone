@@ -39,7 +39,7 @@
     [super viewDidLoad];
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: addButton];
-    [self.navigationItem setTitle: @"Profil"];
+    [self.navigationItem setTitle: @"Meine Fahrzeuge"];
     
     //Tableview
     self.carFavoriteTableView.separatorColor = [UIColor blackColor];

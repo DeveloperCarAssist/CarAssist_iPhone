@@ -74,6 +74,8 @@
 		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
+		4028F5AC16A06A3E002D1F98 /* RoadsideAssistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */; };
+		4028F5AD16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */; };
 		405707D81684B2D900E98587 /* EditViewControllerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 405707D61684B2D900E98587 /* EditViewControllerList.m */; };
 		405707D91684B2D900E98587 /* EditViewControllerList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405707D71684B2D900E98587 /* EditViewControllerList.xib */; };
 		405FB2821673754D00024934 /* NSString+CarAssistString.m in Sources */ = {isa = PBXBuildFile; fileRef = 405FB2811673754D00024934 /* NSString+CarAssistString.m */; };
@@ -233,6 +235,9 @@
 		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
+		4028F5A916A06A3D002D1F98 /* RoadsideAssistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssistanceViewController.h; sourceTree = "<group>"; };
+		4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssistanceViewController.m; sourceTree = "<group>"; };
+		4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoadsideAssistanceViewController.xib; sourceTree = "<group>"; };
 		405707D51684B2D900E98587 /* EditViewControllerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerList.h; sourceTree = "<group>"; };
 		405707D61684B2D900E98587 /* EditViewControllerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerList.m; sourceTree = "<group>"; };
 		405707D71684B2D900E98587 /* EditViewControllerList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewControllerList.xib; sourceTree = "<group>"; };
@@ -393,6 +398,9 @@
 				37A4A3C1167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.h */,
 				37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */,
 				37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */,
+				4028F5A916A06A3D002D1F98 /* RoadsideAssistanceViewController.h */,
+				4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */,
+				4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -884,6 +892,7 @@
 				2EA3C02D16998A0400D3F313 /* senken.jpg in Resources */,
 				2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */,
 				2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */,
+				4028F5AD16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,6 +969,7 @@
 				8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */,
 				8F797AC71689E7F8003CD417 /* AuthorizedRepairDetailViewController.m in Sources */,
 				37B54FF9169DEFAD00043CBC /* CallViewController.m in Sources */,
+				4028F5AC16A06A3E002D1F98 /* RoadsideAssistanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

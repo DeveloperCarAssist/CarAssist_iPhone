@@ -1,26 +1,27 @@
 //
-//  RoadsideAssitanceViewController.m
+//  RoadsideAssistanceViewController.m
 //  CarAssist
 //
-//  Created by 0fiedler on 15.12.12.
-//  Copyright (c) 2012 Gruppe Fear. All rights reserved.
+//  Created by 0witt on 11.01.13.
+//  Copyright (c) 2013 Gruppe Fear. All rights reserved.
 //
 
-#import "RoadsideAssitanceViewController.h"
+#import "RoadsideAssistanceViewController.h"
 #import "Profile.h"
 #import "Utils.h"
 
-@interface RoadsideAssitanceViewController ()<UIAlertViewDelegate>
+@interface RoadsideAssistanceViewController () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+
 @property (nonatomic) Profile* profile;
+
 @end
 
-@implementation RoadsideAssitanceViewController
+@implementation RoadsideAssistanceViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)init
 {
-    self = [super initWithStyle:style];
+    self = [super init];
     if (self) {
-        // Custom initialization
         self.profile= [Profile getProfile];
     }
     return self;
@@ -29,22 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Hintergrundgrafik einbinden
-    // Das Zuschneiden des Bildes wird hier notwendig,
-    // weil der BackgroundView desTableViews eine andere Größe
-    // als der Screen selbst hat (in allen anderen Views gilt
-    // Screengröße == Bildgröße)
-    CGSize size = self.tableView.bounds.size;
-    CGImageRef imageRef = CGImageCreateWithImageInRect([Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size].CGImage, CGRectMake(0, 0,size.width, size.height));
-    UIImage *img = [UIImage imageWithCGImage:imageRef];
     
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
-    self.tableView.separatorColor = [UIColor blackColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Hintergrundgrafik einbinden
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    
+    //TableView
+    self.roadsideAssistanceTableView.separatorColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +94,7 @@
         cell.detailTextLabel.text= self.profile.homeTown;
     }
     
-      cell.detailTextLabel.textColor = [UIColor blackColor];
+    cell.detailTextLabel.textColor = [UIColor blackColor];
     return cell;
 }
 
@@ -111,7 +102,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* title;
-   
+    
     if (indexPath.row == 0)
     {
         title=@"ADAC-Nummer";
@@ -122,7 +113,7 @@
     }
     if(indexPath.row == 2)
     {
-       title=@"Nachname";
+        title=@"Nachname";
     }
     if(indexPath.row == 3)
     {
@@ -171,18 +162,19 @@
                 [alertView show];
             }
             else{
-            self.profile.mobilenumber=number;
-        }
+                self.profile.mobilenumber=number;
+            }
         }
         if ([title isEqualToString: @"Heimat Stadt" ]) {
             self.profile.homeTown=text;
         }
     }
-     [self.tableView reloadData];
+    [self.roadsideAssistanceTableView reloadData];
 }
-    -(void)viewWillAppear:(BOOL)animated
-    {
-        [self.tableView reloadData];        
-    }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.roadsideAssistanceTableView reloadData];
+}
+
 
 @end

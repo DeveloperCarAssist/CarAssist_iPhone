@@ -11,7 +11,7 @@
 #import "AuthorizedRepairCategoryViewController.h"
 #import <MapKit/MapKit.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import "RoadsideAssitanceViewController.h"
+#import "RoadsideAssistanceViewController.h"
 
 #import "Utils.h"
 #import "Profile.h"
@@ -115,7 +115,7 @@
     }
     if(indexPath.row == 3)
     {
-        RoadsideAssitanceViewController* viewController = [[RoadsideAssitanceViewController alloc] init];
+        RoadsideAssistanceViewController* viewController = [[RoadsideAssistanceViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

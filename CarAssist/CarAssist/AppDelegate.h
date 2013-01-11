@@ -10,7 +10,7 @@
 #import "ManualCategoryViewController.h"
 #import "ServiceCategoryViewController.h"
 #import "WarningCategoryViewController.h"
-#import "SettingsViewController.h"
+#import "CarFavoritViewController.h"
 
 
 @class ViewController;
@@ -36,7 +36,7 @@
 
 
 // Profil Controllers
-@property (nonatomic) SettingsViewController* settingsViewController;
+@property (nonatomic) CarFavoritViewController* carFavoritViewController;
 @property (nonatomic) UINavigationController* settingsNavigationController;
 
 @end

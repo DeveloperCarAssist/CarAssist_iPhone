@@ -24,8 +24,8 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
-    self.settingsViewController=  [[SettingsViewController alloc] init];
-    self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
+    self.carFavoritViewController=  [[CarFavoritViewController alloc] init];
+    self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.carFavoritViewController];
     
     
     self.tabBarController = [[UITabBarController alloc] init];
@@ -42,7 +42,7 @@
     [self.warningNavigationController setTabBarItem:tabBarItem2];
     self.warningNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
-    UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Profil" image:[UIImage imageNamed:@"tabbar_profil_small"] tag:3];
+    UITabBarItem* tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"Fahrzeuge" image:[UIImage imageNamed:@"tabbar_profil_small"] tag:3];
     [self.settingsNavigationController setTabBarItem:tabBarItem3];
     self.settingsNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     
