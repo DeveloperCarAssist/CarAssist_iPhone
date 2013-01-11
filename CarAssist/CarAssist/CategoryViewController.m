@@ -77,6 +77,7 @@
     
      
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
+    UIImage* icon = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"footstep_58x58" ofType:@"png"]];
     
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
@@ -89,7 +90,9 @@
     Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = guide.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    [cell.imageView setImage:icon];
+
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     
     return cell;
