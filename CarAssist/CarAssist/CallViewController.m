@@ -93,6 +93,16 @@
     [self presentViewController:mailViewController animated:NO completion: Nil];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *) error
+{
+    [manager stopUpdatingLocation];
+    if(error.code == kCLErrorDenied)
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte erlauben Sie den Zugriff auf den Ortungsdienst in den Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+    }
+}
+
 /**
  * Diese Methode Vormatiert einen String damit er Von der Mailapp gut dargestellt werden kann.
  */
@@ -112,4 +122,6 @@
         [alert show];
     }
 }
+
+
 @end
