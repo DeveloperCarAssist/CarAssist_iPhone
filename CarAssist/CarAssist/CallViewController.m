@@ -14,7 +14,7 @@
 @interface CallViewController () <MFMailComposeViewControllerDelegate, CLLocationManagerDelegate >
 
 @property (nonatomic) CLLocationManager *locationManager;
-
+@property NSInteger useCase;
 @end
 
 @implementation CallViewController
@@ -23,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      
     }
     return self;
 }
@@ -31,7 +31,15 @@
 {
     self = [super init];
     if (self) {
-        // Custom initialization
+          self.useCase = 0;
+    }
+    return self;
+}
+-(id) initForCall
+{
+    self = [super init];
+    if (self) {
+         self.useCase = 1;
     }
     return self;
 }
@@ -39,6 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (self.useCase == 0 ) {
     if(self.locationManager == Nil)
     {
         self.locationManager = [[CLLocationManager alloc] init];
@@ -46,10 +55,15 @@
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     }
+ 
+                [self.locationManager startUpdatingLocation];
+    }
+    if(self.useCase == 1)
+    {
+        [self callADAC];
+    }
     self.view.opaque = NO;
     self.view.backgroundColor = [UIColor clearColor];
-                [self.locationManager startUpdatingLocation];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +76,15 @@
 {
     if(result != MFMailComposeResultCancelled)
     {  
+        [self callADAC];
+    }
+      [self dismissViewControllerAnimated:YES completion:nil];    
+    [self.navigationController popViewControllerAnimated:NO];
+
+}
+
+-(void) callADAC
+{
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
     {
         
@@ -72,11 +95,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Diese Funktion benötigt Zugriff zum Telefon. Bitte erlauben sie dies." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
-    }
-      [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:NO];
 }
-
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 
@@ -98,7 +117,7 @@
     [mailViewController setToRecipients:array];
     Profile *profil = [Profile getProfile];
     [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. Anbei sind noch einige Daten für die Pannenhilfe: %@ , %@ %@ %@ %@ Letzter Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe: \n ADAC Nummer: %@ \n Vorname: %@ \n Nachname: %@  \n Fahrzeug: %@ \n Hersteller: %@ \n Letzter Bekannter Ort in GPS-Coordinaten: %e %e", profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
     
     [self presentViewController:mailViewController animated:NO completion: Nil];
 }
