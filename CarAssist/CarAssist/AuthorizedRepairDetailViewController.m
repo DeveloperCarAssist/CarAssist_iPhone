@@ -163,9 +163,29 @@
         if(indexPath.row == 0)
         {
             // Telefon-Zelle getoucht :)
-            NSMutableString *phoneUrl = [[NSMutableString alloc] initWithString:@"tel:"];
-            [phoneUrl appendString:self.shop.phone];
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
+            
+            // Sonderzeichen in der Telefonnummer filtern
+            NSError *err;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\D+" options:0 error:&err];
+            NSString *phonenumber = [regex stringByReplacingMatchesInString:self.shop.phone options:0 range:NSMakeRange(0, [self.shop.phone length]) withTemplate:@""];
+            
+            NSMutableString *phone = [[NSMutableString alloc] initWithString:@"tel:"];
+            [phone appendString:phonenumber];
+            
+            NSURL *phoneUrl = [NSURL URLWithString:phone];
+            
+            if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
+            {
+                
+                [[UIApplication sharedApplication] openURL:phoneUrl];
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Telefon" message:@"Bitte erlauben Sie den Zugriff auf ihr Telefon." delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+            }
+            
+
         } else if(indexPath.row == 1)
         {
             // Route berechnen getoucht
