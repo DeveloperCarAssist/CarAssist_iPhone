@@ -46,11 +46,11 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsanlage" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Bremsanlage Warnleuchte" Info:@"Eine noch andere Information" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Bremsanlage" Info:@"Eine noch andere Information" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parkbremse" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Parkbremse Warnleuchte" Info:@"Eine noch andere Information" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Parkbremse" Info:@"Eine noch andere Information" AndImage:image];
     [warningLights addObject:warningLight];
     
     self.warningLights = warningLights;

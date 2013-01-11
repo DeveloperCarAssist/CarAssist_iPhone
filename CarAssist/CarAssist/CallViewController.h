@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CallViewController : UIViewController
+//Hiermit erstellt man sich einen Mailclienten
 -(id) initForMail;
 @end
