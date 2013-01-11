@@ -2,8 +2,8 @@
 //  CarDataViewController.m
 //  CarAssist
 //
-//  Created by 0fiedler on 08.12.12.
-//  Copyright (c) 2012 Gruppe Fear. All rights reserved.
+//  Created by Dennis on 11.01.13.
+//  Copyright (c) 2013 Gruppe Fear. All rights reserved.
 //
 
 #import "CarDataViewController.h"
@@ -40,8 +40,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.tableview.backgroundColor = [UIColor clearColor];
+    self.tableview.backgroundView = nil;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -105,7 +107,7 @@
 
 - (void) initCarDataSettings
 {
-     NSMutableArray* carData = [NSMutableArray array];
+    NSMutableArray* carData = [NSMutableArray array];
     
     SettingCell* manufacturerCell = [[SettingCell alloc] initWithTitle:@"Hersteller" Value:self.car.manufacturer AndValueRepresentation:self.car.manufacturer];
     
@@ -134,7 +136,7 @@
 {
     NSMutableArray* equipment = [NSMutableArray array];
     
-        
+    
     SettingCell* navigationDeviceSetting = [self generatePickerCellWithTitle: @"Navigationsgerät" Value: self.car.equipmentPackage.navigationDevice   AndValueRepresenation: self.car.equipmentPackage.navigationDevice];
     
     [navigationDeviceSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
@@ -195,7 +197,7 @@
         seatsSetting.valueRepresentation = self.car.equipmentPackage.seats;
     }];
     
-
+    
     [equipment addObject:equipmentPackageSetting];
     [equipment addObject:navigationDeviceSetting];
     [equipment addObject:radioSetting];
@@ -227,7 +229,7 @@
         self.car.garage = (NSString*) value;
         garageSetting.value = value;
         garageSetting.valueRepresentation = self.car.garage;
-    }];    
+    }];
     
     [provider addObject:insuranceSetting];
     [provider addObject:garageSetting];
