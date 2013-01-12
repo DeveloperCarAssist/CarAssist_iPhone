@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchableServiceProtocol.h"
+#import "SearchableItem.h"
 
-@interface CategoryViewController : UIViewController
+@interface CategoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) id<SearchableServiceProtocol> categoryService;
 @property (nonatomic) IBOutlet UITableView* categoryTableView;
 @property (nonatomic) IBOutlet UISearchBar* categorySearchBar;
-
 @property (nonatomic) UITapGestureRecognizer* tapRecognizer;
 
+-(void)decorateCell:(UITableViewCell *)cell withItem:(id<SearchableItem>)item;
 @end

@@ -12,8 +12,8 @@
 #import "AuthorizedRepairService.h"
 #import "AuthorizedRepairDetailViewController.h"
 
-@interface AuthorizedRepairCategoryViewController ()
-
+@interface AuthorizedRepairCategoryViewController () <CLLocationManagerDelegate>
+@property (nonatomic) CLLocationManager *locationManager;
 @end
 
 @implementation AuthorizedRepairCategoryViewController
@@ -21,6 +21,16 @@
 -(id) init
 {
     self = [super initWithNibName:@"CategoryViewController" bundle:nil];
+    if(self && self.locationManager == Nil)
+    {
+        CLLocationManager *manager = [[CLLocationManager alloc] init];
+        
+        manager.delegate = self;
+        manager.distanceFilter = kCLDistanceFilterNone;
+        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        
+        self.locationManager = manager;
+    }
     return self;
 }
 
@@ -28,7 +38,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Vertragswerkstätten";
+    self.title = @"Werkstätten";
     // Hintergrundgrafik einbinden
     self.categoryTableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
@@ -36,8 +46,20 @@
     // Service mit dem Standardwagen des Profils initialisieren
     Car *car = [[Profile getProfile] car];
     self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"GPS" style:UIBarButtonItemStyleBordered target:self action:@selector(gpsButtonTouched)];
 }
 
+-(void) gpsButtonTouched
+{
+    if(![CLLocationManager locationServicesEnabled])
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte aktivieren Sie den Ortungsdienst Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+    } else {
+        [self.locationManager startUpdatingLocation];
+    }
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *keys = [self.categoryService.items allKeys];
@@ -47,11 +69,45 @@
     
     AuthorizedRepairDetailViewController *controller = [[AuthorizedRepairDetailViewController alloc] initWithAuthorizedRepair:shop];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    return cell;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations
+{
+    [manager stopUpdatingLocation];
     
-/*
-    GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[items objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:viewController animated:YES];
-*/
+    // Service mit aktuellen Koordinaten initialisieren
+    Car *car = [[Profile getProfile] car];
+    self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car andUserLocation:[locations lastObject]];
+
+    [self.categoryTableView reloadData];
+
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *) error
+{
+    [manager stopUpdatingLocation];
+    if(error.code == kCLErrorDenied)
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Bitte erlauben Sie den Zugriff auf den Ortungsdienst in den Telefoneinstellungen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+    }
+}
+
+-(void)decorateCell:(UITableViewCell *)cell withItem:(id<SearchableItem>)item
+{
+    AuthorizedRepair *shop = (AuthorizedRepair *) item;
+    CLLocationDistance disancekm = [shop distance] / 1000.0;
+    if(disancekm > 0)
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Entfernung: %.1lfkm", disancekm];
+        cell.detailTextLabel.textColor = [UIColor blackColor];
+    }
 }
 
 // Nachricht defaultCarChanged behandeln

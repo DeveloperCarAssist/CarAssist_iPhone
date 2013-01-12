@@ -8,11 +8,11 @@
 
 #import "CategoryViewController.h"
 #import "GuideViewController.h"
-#import "Guide.h"
+#import "SearchableItem.h"
 #import "Car.h"
 #import "SNPopupView.h"
 
-@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate,SNPopupViewModalDelegate>
+@interface CategoryViewController () <UISearchBarDelegate,SNPopupViewModalDelegate>
 @property (nonatomic) SNPopupView *popup;
 @end
 
@@ -23,6 +23,8 @@
     // Abmeldung am notification center, wenn das Objekt selbst gelöscht wird
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+-(void)decorateCell:(UITableViewCell *)cell withItem:(id<SearchableItem>)item {}; // Schablonenmethode
 
 - (void)viewDidLoad
 {
@@ -93,13 +95,15 @@
     NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
     NSArray *guidesOfCategory = [self.categoryService.items objectForKey: key];
-    Guide *guide = [guidesOfCategory objectAtIndex:indexPath.row];
-    cell.textLabel.text = guide.name;
+    
+    id<SearchableItem> item = [guidesOfCategory objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = item.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell.imageView setImage:icon];
-
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    [self decorateCell:cell withItem:item];
     
     return cell;
 }
