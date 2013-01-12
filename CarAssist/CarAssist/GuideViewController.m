@@ -9,9 +9,13 @@
 #import "GuideViewController.h"
 #import "StepView.h"
 #import "Utils.h"
+#import <OpenEars/LanguageModelGenerator.h>
+#import <OpenEars/PocketsphinxController.h>
+#import <OpenEars/OpenEarsEventsObserver.h>
 
-@interface GuideViewController ()
-
+@interface GuideViewController () <OpenEarsEventsObserverDelegate>
+@property (nonatomic) PocketsphinxController  *pocketsphinxController;
+@property (strong, nonatomic) OpenEarsEventsObserver *openEarsEventsObserver;
 @end
 
 @implementation GuideViewController
@@ -69,8 +73,9 @@
     self.pageControl.numberOfPages = steps.count;
     
     self.title = self.guide.name;
+    [self makeWordRec];
+    
 }
-
 -(IBAction)changePage:(id)sender
 {
     UIPageControl *pageControl = sender;
@@ -78,5 +83,98 @@
     CGPoint offset = CGPointMake(currentPage * self.scrollView.frame.size.width, 0);
     [self.scrollView setContentOffset:offset animated:YES];
 }
+
+-(void)makeWordRec
+{
+    self.openEarsEventsObserver = [[OpenEarsEventsObserver alloc] init];
+    self.pocketsphinxController = [[PocketsphinxController alloc] init];
+    LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
+    NSArray *words = [NSArray arrayWithObjects:@"NEXT", @"BACK", nil];
+    NSString *name = @"NameIWantForMyLanguageModelFiles";
+    NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name];
+    
+    
+    NSDictionary *languageGeneratorResults = nil;
+    
+    NSString *lmPath = nil;
+    NSString *dicPath = nil;
+	
+    if([err code] == noErr) {
+        
+        languageGeneratorResults = [err userInfo];
+		
+        lmPath = [languageGeneratorResults objectForKey:@"LMPath"];
+        dicPath = [languageGeneratorResults objectForKey:@"DictionaryPath"];
+		
+    } else {
+        NSLog(@"Error: %@",[err localizedDescription]);
+    }
+    [self.openEarsEventsObserver setDelegate:self];
+    [self.pocketsphinxController startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath languageModelIsJSGF:NO];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    // Abmeldung am notification center, wenn das Objekt selbst gelöscht wird
+    [self.openEarsEventsObserver setDelegate:nil];
+    [self.pocketsphinxController stopListening];
+
+    
+}
+
+
+- (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
+	//NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+    if([hypothesis isEqualToString: @"NEXT"])
+    {
+        if(self.pageControl.currentPage != [ self.pageControl numberOfPages]-1)
+           {
+    self.pageControl.currentPage = self.pageControl.currentPage+1;
+           }
+    }
+    if([hypothesis isEqualToString: @"BACK"])
+    {
+        if(self.pageControl.currentPage != 0)
+        {
+        self.pageControl.currentPage = self.pageControl.currentPage-1;
+        }
+    }
+    CGPoint offset = CGPointMake(self.pageControl.currentPage * self.scrollView.frame.size.width, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+
+- (void) pocketsphinxDidStartCalibration {
+}
+
+- (void) pocketsphinxDidCompleteCalibration {
+}
+
+- (void) pocketsphinxDidStartListening {
+}
+
+- (void) pocketsphinxDidDetectSpeech {
+}
+
+- (void) pocketsphinxDidDetectFinishedSpeech {
+}
+
+- (void) pocketsphinxDidStopListening {
+} 
+
+- (void) pocketsphinxDidSuspendRecognition {
+}
+
+- (void) pocketsphinxDidResumeRecognition {
+}
+
+- (void) pocketsphinxDidChangeLanguageModelToFile:(NSString *)newLanguageModelPathAsString andDictionary:(NSString *)newDictionaryPathAsString {
+	NSLog(@"Pocketsphinx is now using the following language model: \n%@ and the following dictionary: %@",newLanguageModelPathAsString,newDictionaryPathAsString);
+}
+
+- (void) pocketSphinxContinuousSetupDidFail { // This can let you know that something went wrong with the recognition loop startup. Turn on OPENEARSLOGGING to learn why.
+	NSLog(@"Setting up the continuous recognition loop has failed for some reason, please turn on OpenEarsLogging to learn more.");
+}
+
+
 
 @end
