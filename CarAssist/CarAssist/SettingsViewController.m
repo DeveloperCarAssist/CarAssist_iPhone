@@ -7,10 +7,10 @@
 //
 
 #import "SettingsViewController.h"
-#import "CarFavoritViewController.h"
+#import "CarFavoriteViewController.h"
 #import "Profile.h"
 #import "Utils.h"
-#import "RoadsideAssitanceViewController.h"
+#import "RoadsideAssistanceViewController.h"
 
 @interface SettingsViewController ()
 @property Profile* profil;
@@ -48,7 +48,7 @@
     self.tableView.separatorColor = [UIColor blackColor];
     
 
-    CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] init];
+    CarFavoriteViewController *carcontroller = [[CarFavoriteViewController alloc] init];
     [self.navigationController pushViewController:carcontroller animated:YES];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -149,11 +149,11 @@
 {
     int pos = indexPath.row;
     if (pos == 0) {
-        CarFavoritViewController *carcontroller = [[CarFavoritViewController alloc] init];
+        CarFavoriteViewController *carcontroller = [[CarFavoriteViewController alloc] init];
             [self.navigationController pushViewController:carcontroller animated:YES];
     }
     if (pos == 1) {
-        RoadsideAssitanceViewController *adaccontroller = [[RoadsideAssitanceViewController alloc] init];
+        RoadsideAssistanceViewController *adaccontroller = [[RoadsideAssistanceViewController alloc] init];
         [self.navigationController pushViewController:adaccontroller animated:YES];
     }
     if(pos == 2) {
