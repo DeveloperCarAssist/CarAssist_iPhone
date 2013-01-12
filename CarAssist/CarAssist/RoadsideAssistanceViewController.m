@@ -102,32 +102,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* title;
-    
+    NSString* message;
     if (indexPath.row == 0)
     {
         title=@"ADAC-Nummer";
+           message = [NSString stringWithFormat: @"Bitte geben sie ihre %@ ein", title];
     }
     if(indexPath.row == 1)
     {
         title=@"Vorname";
+        message = [NSString stringWithFormat: @"Bitte geben sie ihren %@n ein", title];
     }
     if(indexPath.row == 2)
     {
         title=@"Nachname";
+         message = [NSString stringWithFormat: @"Bitte geben sie ihren %@n ein", title];
     }
     if(indexPath.row == 3)
     {
         title=@"Email-Adresse";
+         message = [NSString stringWithFormat: @"Bitte geben sie ihre %@ ein", title];
     }
     if(indexPath.row == 4)
     {
         title=@"HandyNummer";
+         message = [NSString stringWithFormat: @"Bitte geben sie ihre %@ ein", title];
     }
     if(indexPath.row == 5)
     {
         title=@"Heimat Stadt";
+         message = [NSString stringWithFormat: @"Bitte geben sie ihre %@ ein", title];
     }
-    NSString* message = [NSString stringWithFormat: @"Bitte geben sie ihre(n) %@ ein", title];
+ 
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ok", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
