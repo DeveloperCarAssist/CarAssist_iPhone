@@ -7,6 +7,7 @@
 //
 
 #import "EditViewControllerPicker.h"
+#import "Utils.h"
 
 @interface EditViewControllerPicker () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -17,7 +18,8 @@
 - (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImage: (UIImage*) image
 {
     self = [super initWithDelegate: delegate];
-    if (self) {
+    if (self)
+    {
         self.values = values;
         self.valueRepresentations = valueRepresentations;
         self.image = image;
@@ -29,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     [self.imageView setImage:self.image];
     
