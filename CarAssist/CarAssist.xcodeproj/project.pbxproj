@@ -32,6 +32,8 @@
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
+		379F258016A19EA000F46860 /* SNPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257D16A19EA000F46860 /* SNPopupView.m */; };
+		379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */; };
 		37A4A3BA167CC29700FAA3B5 /* AutoSitz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */; };
 		37A4A3C4167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */; };
 		37A4A3C5167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */; };
@@ -176,6 +178,10 @@
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		379F257C16A19EA000F46860 /* SNPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopupView.h; sourceTree = "<group>"; };
+		379F257D16A19EA000F46860 /* SNPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopupView.m; sourceTree = "<group>"; };
+		379F257E16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNPopupView+UsingPrivateMethod.h"; sourceTree = "<group>"; };
+		379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SNPopupView+UsingPrivateMethod.m"; sourceTree = "<group>"; };
 		37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AutoSitz.jpg; sourceTree = "<group>"; };
 		37A4A3C1167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssitanceViewController.h; sourceTree = "<group>"; };
 		37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssitanceViewController.m; sourceTree = "<group>"; };
@@ -331,11 +337,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				8F797ACD1689F07B003CD417 /* CoreLocation.framework in Frameworks */,
 				8F797ACB1689EF51003CD417 /* MapKit.framework in Frameworks */,
 				5A61F65B1684B34B00CC7421 /* MessageUI.framework in Frameworks */,
 				83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */,
-				400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */,
 				400DF8491668F0F100D6217B /* UIKit.framework in Frameworks */,
 				400DF84B1668F0F100D6217B /* Foundation.framework in Frameworks */,
 				400DF84D1668F0F100D6217B /* CoreGraphics.framework in Frameworks */,
@@ -426,6 +432,17 @@
 			name = Manual;
 			sourceTree = "<group>";
 		};
+		379F257A16A19E8A00F46860 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				379F257C16A19EA000F46860 /* SNPopupView.h */,
+				379F257D16A19EA000F46860 /* SNPopupView.m */,
+				379F257E16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.h */,
+				379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
 		37B54FF5169DEFA000043CBC /* Call */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +520,7 @@
 		400DF84F1668F0F100D6217B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				379F257A16A19E8A00F46860 /* Popover */,
 				400DF8501668F0F100D6217B /* CarAssist-Info.plist */,
 				400DF8511668F0F100D6217B /* InfoPlist.strings */,
 				400DF8541668F0F100D6217B /* main.m */,
@@ -976,6 +994,8 @@
 				4028F5AC16A06A3E002D1F98 /* RoadsideAssistanceViewController.m in Sources */,
 				37C4EA9016A074BB00081CCD /* CallAlertView.m in Sources */,
 				8F24E65616A1864900F8991C /* CarDataViewController.m in Sources */,
+				379F258016A19EA000F46860 /* SNPopupView.m in Sources */,
+				379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
