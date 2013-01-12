@@ -7,7 +7,8 @@
 //
 
 #import "SearchableService.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface AuthorizedRepairService : SearchableService
-
+-(SearchableService*) initWithCar:(Car *) car andUserLocation:(CLLocation *) loc;
 @end

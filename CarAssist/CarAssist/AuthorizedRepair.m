@@ -16,8 +16,28 @@
     {
         self.name = name;
         self.categoryName = category;
-        self.location = location;
+        self.location = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
     }
     return self;
 }
+
+- (NSComparisonResult)compare:(AuthorizedRepair *)otherObject {
+    CLLocationDistance d1,d2;
+    d1 = self.distance;
+    d2 = otherObject.distance;
+    
+    if(d1 < d2)
+    {
+        return  NSOrderedAscending;
+    } else if(d1 > d2) {
+        return NSOrderedDescending;
+    }
+    return NSOrderedSame;
+}
+
+-(CLLocationDistance)distance
+{
+    return [self.location distanceFromLocation: self.userLocation];
+}
+
 @end
