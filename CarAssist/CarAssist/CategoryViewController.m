@@ -10,9 +10,10 @@
 #import "GuideViewController.h"
 #import "Guide.h"
 #import "Car.h"
+#import "SNPopupView.h"
 
-@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
-
+@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate,SNPopupViewModalDelegate>
+@property (nonatomic) SNPopupView *popup;
 @end
 
 @implementation CategoryViewController
@@ -46,6 +47,11 @@
     
     [nc addObserver:self selector:@selector(keyboardWillHide:) name:
      UIKeyboardWillHideNotification object:nil];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+                                               initWithTarget:self
+                                               action:@selector(handleLongPress:)];
+    longPress.minimumPressDuration = 1.0;
+    [self.view addGestureRecognizer:longPress];
 }
 
 -(void) keyboardWillShow:(NSNotification*) note
@@ -128,12 +134,49 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     NSArray *keys = [self.categoryService.items allKeys];
     NSString *key = [keys objectAtIndex:indexPath.section];
     NSArray *guides = [self.categoryService.items objectForKey:key];
     
     GuideViewController *viewController = [[GuideViewController alloc] initWithGuide:[guides objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.navigationController pushViewController:viewController animated:YES]; 
+    
+}
+/**
+ *Kümmert sich drum das beim Langklick der Popupview gezeigt wird und am ende wieder dismissed wird.
+ */
+-(void)handleLongPress:(UILongPressGestureRecognizer*)recognizer{
+    if (recognizer.state == UIGestureRecognizerStateBegan){
+    CGPoint location = [recognizer locationInView:self.view];
+    
+    if (CGRectContainsPoint([self.view convertRect:self.categoryTableView.frame fromView:self.categoryTableView.superview], location))
+    {
+        CGPoint locationInTableview = [self.categoryTableView convertPoint:location fromView:self.view];
+        NSIndexPath *indexPath = [self.categoryTableView indexPathForRowAtPoint:locationInTableview];
+        if (indexPath)
+        {
+    NSArray *keys = [self.categoryService.items allKeys];
+    NSString *key = [keys objectAtIndex:indexPath.section];
+    NSArray *guides = [self.categoryService.items objectForKey:key];
+            Guide* guide =[guides objectAtIndex:indexPath.row];
+    self.popup = [[SNPopupView alloc] initWithString: guide.name  withFontOfSize:15];
+    [self.popup showAtPoint:location inView:self.view animated:YES];
+    [self.popup addTarget:self action:@selector(didTouchPopupView:)];
+    [self.popup setDelegate:self];
+        }
+    }
+        
+    }
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        [self.popup dismiss];
+    }
+}
+- (void)didDismissModal:(SNPopupView*)popupview
+{
+    if (popupview == self.popup) {
+		self.popup = nil;
+	}
 }
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
