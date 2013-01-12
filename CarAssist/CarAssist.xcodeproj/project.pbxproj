@@ -100,7 +100,8 @@
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
-		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; };
+		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8379326016A1A93E000D6F9C /* ios-camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8379325F16A1A93E000D6F9C /* ios-camera-icon.png */; };
 		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
 		8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */; };
 		8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
@@ -283,6 +284,9 @@
 		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
 		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8379325B16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8379325C16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8379325F16A1A93E000D6F9C /* ios-camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-camera-icon.png"; sourceTree = "<group>"; };
 		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
 		8F1F10FE168509DD007DDFAD /* AuthorizedRepairService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepairService.h; sourceTree = "<group>"; };
 		8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepairService.m; sourceTree = "<group>"; };
@@ -578,6 +582,7 @@
 		400DF8881669051700D6217B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8379325016A19A42000D6F9C /* Camera */,
 				8FF793B6167B648E008ADB97 /* Shared */,
 				2E725FF3166E667A00942382 /* Manual */,
 				2E725FF2166E666A00942382 /* Service */,
@@ -693,6 +698,13 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		8379325016A19A42000D6F9C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
 		8F1F10FD168503FA007DDFAD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +741,7 @@
 		8FF1F3591672201900B7F5DE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8379325F16A1A93E000D6F9C /* ios-camera-icon.png */,
 				405FB2921673982F00024934 /* default_car.png */,
 				405FB28B167394C000024934 /* favorit.png */,
 				8F1FB4771674CBB8000D1D04 /* kein_favorit.png */,
@@ -837,6 +850,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 400DF8391668F0F100D6217B;
 			productRefGroup = 400DF8451668F0F100D6217B /* Products */;
@@ -916,6 +930,7 @@
 				2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */,
 				4028F5AD16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib in Resources */,
 				8F24E65716A1864900F8991C /* CarDataViewController.xib in Resources */,
+				8379326016A1A93E000D6F9C /* ios-camera-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1042,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				400DF8521668F0F100D6217B /* en */,
+				8379325B16A19F4D000D6F9C /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1035,6 +1051,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				400DF8761668F0F200D6217B /* en */,
+				8379325C16A19F4D000D6F9C /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
