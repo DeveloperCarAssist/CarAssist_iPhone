@@ -1,27 +1,27 @@
 //
-//  CarFavoritViewController.m
+//  CarFavoriteViewController.m
 //  CarAssist
 //
-//  Created by 0fiedler on 02.12.12.
-//  Copyright (c) 2012 Gruppe Fear. All rights reserved.
+//  Created by 0witt on 12.01.13.
+//  Copyright (c) 2013 Gruppe Fear. All rights reserved.
 //
 
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "CarFavoritViewController.h"
+#import "CarFavoriteViewController.h"
 #import "CarListSelectorViewController.h"
 #import "CarDataViewController.h"
 #import "CarFavoriteViewCell.h"
 #import "Utils.h"
 #import "CarListService.h"
 
-@interface CarFavoritViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CarFavoriteViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) Profile *profil;
 @property (nonatomic) CarListService* carListService;
 
 @end
 
-@implementation CarFavoritViewController
+@implementation CarFavoriteViewController
 
 -(id) init
 {
@@ -41,21 +41,12 @@
     [self.navigationItem setRightBarButtonItem: addButton];
     [self.navigationItem setTitle: @"Meine Fahrzeuge"];
     
-    //Tableview
-    self.carFavoriteTableView.separatorColor = [UIColor blackColor];
     
     // Hintergrundgrafik einbinden
-    // Das Zuschneiden des Bildes wird hier notwendig,
-    // weil der BackgroundView desTableViews eine andere Größe
-    // als der Screen selbst hat (in allen anderen Views gilt
-    // Screengröße == Bildgröße)
-    CGSize size = self.tableView.bounds.size;
-    CGImageRef imageRef = CGImageCreateWithImageInRect([Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size].CGImage, CGRectMake(0, 0,size.width, size.height));
-    UIImage *img = [UIImage imageWithCGImage:imageRef];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:img];
-    self.tableView.separatorColor = [UIColor blackColor];
-
+    //TableView
+    self.carFavoriteTableView.separatorColor = [UIColor blackColor];
 }
 
 -(void)addCarButtonClicked
@@ -63,7 +54,7 @@
     UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto hinzufügen" delegate: self cancelButtonTitle: @"Abbruch" destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer scannen", nil ];
     
     [sheet showFromToolbar: self.navigationController.toolbar];
-
+    
     
 }
 -(void) showCarSelectIfFirstStart
@@ -73,13 +64,13 @@
         UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"Auto auswählen" delegate: self cancelButtonTitle: nil destructiveButtonTitle: nil otherButtonTitles: @"Aus Liste wählen", @"Fahrgestellnummer eingeben", @"Fahrgestellnummer scannen", nil ];
         [sheet showFromToolbar: self.navigationController.toolbar];
     }
-
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
     [self showCarSelectIfFirstStart];
-
+    
 }
 
 #pragma mark - Table view data source
@@ -92,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    
     // Return the number of rows in the section.
     return self.profil.carList.count;
 }
@@ -123,7 +114,7 @@
         cell = [[CarFavoriteViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         [cell.favoriteCarButton addTarget:self action:@selector(changeDefaultCar:event:) forControlEvents:UIControlEventTouchDown];
     }
-  
+    
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     
     cell.favorite = (car == self.profil.car);
@@ -138,7 +129,7 @@
 {
     Car *car = [self.profil.carList objectAtIndex:indexPath.row];
     CarDataViewController *carprofilcontroller = [[CarDataViewController alloc] initWithCar: car];
-     [self.navigationController pushViewController:carprofilcontroller animated:YES];
+    [self.navigationController pushViewController:carprofilcontroller animated:YES];
     
 }
 
@@ -165,7 +156,7 @@
 #pragma mark - Table view delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-
+    
     if (buttonIndex == 0)
     {
         CarListSelectorViewController* controller = [[CarListSelectorViewController alloc] initWithDelegate:self];
@@ -192,24 +183,24 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
-  {
-      UITextField *vin = [alertView textFieldAtIndex:0];
-     Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
-      if(car)
-      {
-          [self carHasBeenSelected: car];
-      }
-      else
-      {
-          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung"
-                                                          message:@"Nummer leider nicht gefunden"
-                                                         delegate:self
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-                    [alert show];
-      }
-  }
+    if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
+    {
+        UITextField *vin = [alertView textFieldAtIndex:0];
+        Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
+        if(car)
+        {
+            [self carHasBeenSelected: car];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung"
+                                                            message:@"Nummer leider nicht gefunden"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
@@ -265,7 +256,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         UIImagePickerControllerSourceTypeCamera;
         imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
         imagePicker.allowsEditing = NO;
-
+        
         [self presentViewController:imagePicker
                            animated:YES completion:nil];
     }

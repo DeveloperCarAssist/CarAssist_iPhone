@@ -24,8 +24,8 @@
     self.serviceViewController = [[ServiceCategoryViewController alloc] init];
     self.serviceNavigationController = [[UINavigationController alloc] initWithRootViewController:self.serviceViewController];
     
-    self.carFavoritViewController=  [[CarFavoritViewController alloc] init];
-    self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.carFavoritViewController];
+    self.carFavoriteViewController=  [[CarFavoriteViewController alloc] init];
+    self.settingsNavigationController= [[UINavigationController alloc] initWithRootViewController:self.carFavoriteViewController];
     
     
     self.tabBarController = [[UITabBarController alloc] init];

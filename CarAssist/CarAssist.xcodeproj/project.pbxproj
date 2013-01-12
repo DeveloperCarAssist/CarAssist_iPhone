@@ -25,8 +25,6 @@
 		2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C02E16998A7E00D3F313 /* fest.jpg */; };
 		2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C03016998BA000D3F313 /* halleluja.jpg */; };
 		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
-		375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C7150166B8DF500B48C11 /* CarFavoritViewController.m */; };
-		375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
 		375F8E7716722A2700FAD821 /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
@@ -35,8 +33,6 @@
 		379F258016A19EA000F46860 /* SNPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257D16A19EA000F46860 /* SNPopupView.m */; };
 		379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */; };
 		37A4A3BA167CC29700FAA3B5 /* AutoSitz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */; };
-		37A4A3C4167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */; };
-		37A4A3C5167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */; };
 		37A4A3C8167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4A3C7167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m */; };
 		37B54FF9169DEFAD00043CBC /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B54FF7169DEFAD00043CBC /* CallViewController.m */; };
 		37BB893F16738BD40098EFA3 /* Autoradio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 37BB893E16738BD40098EFA3 /* Autoradio.jpeg */; };
@@ -75,6 +71,8 @@
 		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
+		4018C9FC16A1B35100C6915B /* CarFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018C9FA16A1B35100C6915B /* CarFavoriteViewController.m */; };
+		4018C9FD16A1B35100C6915B /* CarFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4018C9FB16A1B35100C6915B /* CarFavoriteViewController.xib */; };
 		4028F5AC16A06A3E002D1F98 /* RoadsideAssistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */; };
 		4028F5AD16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */; };
 		405707D81684B2D900E98587 /* EditViewControllerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 405707D61684B2D900E98587 /* EditViewControllerList.m */; };
@@ -101,7 +99,6 @@
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
 		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		8379326016A1A93E000D6F9C /* ios-camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8379325F16A1A93E000D6F9C /* ios-camera-icon.png */; };
 		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
 		8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */; };
 		8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
@@ -170,9 +167,6 @@
 		2EA3C03016998BA000D3F313 /* halleluja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halleluja.jpg; sourceTree = "<group>"; };
 		2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerTextInput.h; sourceTree = "<group>"; };
 		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
-		375C714F166B8DF500B48C11 /* CarFavoritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoritViewController.h; sourceTree = "<group>"; };
-		375C7150166B8DF500B48C11 /* CarFavoritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoritViewController.m; sourceTree = "<group>"; };
-		375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoritViewController.xib; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
 		375F8E7616722A2700FAD821 /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
@@ -184,9 +178,6 @@
 		379F257E16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNPopupView+UsingPrivateMethod.h"; sourceTree = "<group>"; };
 		379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SNPopupView+UsingPrivateMethod.m"; sourceTree = "<group>"; };
 		37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AutoSitz.jpg; sourceTree = "<group>"; };
-		37A4A3C1167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssitanceViewController.h; sourceTree = "<group>"; };
-		37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssitanceViewController.m; sourceTree = "<group>"; };
-		37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoadsideAssitanceViewController.xib; sourceTree = "<group>"; };
 		37A4A3C6167CD3E600FAA3B5 /* RoadsideAssitanceCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssitanceCaller.h; sourceTree = "<group>"; };
 		37A4A3C7167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssitanceCaller.m; sourceTree = "<group>"; };
 		37B54FF6169DEFAD00043CBC /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
@@ -242,6 +233,9 @@
 		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
+		4018C9F916A1B35100C6915B /* CarFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoriteViewController.h; sourceTree = "<group>"; };
+		4018C9FA16A1B35100C6915B /* CarFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFavoriteViewController.m; sourceTree = "<group>"; };
+		4018C9FB16A1B35100C6915B /* CarFavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarFavoriteViewController.xib; sourceTree = "<group>"; };
 		4028F5A916A06A3D002D1F98 /* RoadsideAssistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssistanceViewController.h; sourceTree = "<group>"; };
 		4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssistanceViewController.m; sourceTree = "<group>"; };
 		4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoadsideAssistanceViewController.xib; sourceTree = "<group>"; };
@@ -286,7 +280,6 @@
 		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8379325B16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8379325C16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8379325F16A1A93E000D6F9C /* ios-camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-camera-icon.png"; sourceTree = "<group>"; };
 		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
 		8F1F10FE168509DD007DDFAD /* AuthorizedRepairService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepairService.h; sourceTree = "<group>"; };
 		8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepairService.m; sourceTree = "<group>"; };
@@ -399,18 +392,15 @@
 			isa = PBXGroup;
 			children = (
 				37BB893116737E260098EFA3 /* CarDataView */,
-				375C714F166B8DF500B48C11 /* CarFavoritViewController.h */,
-				375C7150166B8DF500B48C11 /* CarFavoritViewController.m */,
-				375C7151166B8DF500B48C11 /* CarFavoritViewController.xib */,
+				4018C9F916A1B35100C6915B /* CarFavoriteViewController.h */,
+				4018C9FA16A1B35100C6915B /* CarFavoriteViewController.m */,
+				4018C9FB16A1B35100C6915B /* CarFavoriteViewController.xib */,
 				375F8E7E16723C7D00FAD821 /* SettingsViewController.h */,
 				375F8E7F16723C7D00FAD821 /* SettingsViewController.m */,
 				375F8E8016723C7D00FAD821 /* SettingsViewController.xib */,
 				40959AE616724F04001A1E86 /* CarListSelectorViewController.h */,
 				40959AE716724F04001A1E86 /* CarListSelectorViewController.m */,
 				40959AE816724F04001A1E86 /* CarListSelectorViewController.xib */,
-				37A4A3C1167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.h */,
-				37A4A3C2167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m */,
-				37A4A3C3167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib */,
 				4028F5A916A06A3D002D1F98 /* RoadsideAssistanceViewController.h */,
 				4028F5AA16A06A3E002D1F98 /* RoadsideAssistanceViewController.m */,
 				4028F5AB16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib */,
@@ -582,7 +572,6 @@
 		400DF8881669051700D6217B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8379325016A19A42000D6F9C /* Camera */,
 				8FF793B6167B648E008ADB97 /* Shared */,
 				2E725FF3166E667A00942382 /* Manual */,
 				2E725FF2166E666A00942382 /* Service */,
@@ -698,13 +687,6 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		8379325016A19A42000D6F9C /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Camera;
-			sourceTree = "<group>";
-		};
 		8F1F10FD168503FA007DDFAD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,7 +723,6 @@
 		8FF1F3591672201900B7F5DE /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				8379325F16A1A93E000D6F9C /* ios-camera-icon.png */,
 				405FB2921673982F00024934 /* default_car.png */,
 				405FB28B167394C000024934 /* favorit.png */,
 				8F1FB4771674CBB8000D1D04 /* kein_favorit.png */,
@@ -883,7 +864,6 @@
 				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
 				661E1A43166B759D00493F54 /* CategoryViewController.xib in Resources */,
-				375C7153166B8DF600B48C11 /* CarFavoritViewController.xib in Resources */,
 				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
 				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
 				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
@@ -911,7 +891,6 @@
 				8F796D25167B8A3F0011C02F /* tabbar_bedienung_small.png in Resources */,
 				8F796D26167B8A3F0011C02F /* tabbar_bedienung.png in Resources */,
 				37A4A3BA167CC29700FAA3B5 /* AutoSitz.jpg in Resources */,
-				37A4A3C5167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.xib in Resources */,
 				2E4500CA167DBBC800196C53 /* EditViewControllerPicker.xib in Resources */,
 				405707D91684B2D900E98587 /* EditViewControllerList.xib in Resources */,
 				8F797AC81689E7F8003CD417 /* AuthorizedRepairDetailViewController.xib in Resources */,
@@ -930,7 +909,7 @@
 				2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */,
 				4028F5AD16A06A3E002D1F98 /* RoadsideAssistanceViewController.xib in Resources */,
 				8F24E65716A1864900F8991C /* CarDataViewController.xib in Resources */,
-				8379326016A1A93E000D6F9C /* ios-camera-icon.png in Resources */,
+				4018C9FD16A1B35100C6915B /* CarFavoriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,7 +959,6 @@
 				40C32751166B89BB00BC049B /* SearchableService.m in Sources */,
 				661E1A46166B896000493F54 /* Guide.m in Sources */,
 				661E1A49166B8A4300493F54 /* Step.m in Sources */,
-				375C7152166B8DF600B48C11 /* CarFavoritViewController.m in Sources */,
 				8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */,
 				661E1A5D166BA98C00493F54 /* StepView.m in Sources */,
 				375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */,
@@ -993,7 +971,6 @@
 				8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */,
 				8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */,
 				8F8BD0E3167CB83F00AFC5D5 /* ServiceGuideStockService.m in Sources */,
-				37A4A3C4167CCE3F00FAA3B5 /* RoadsideAssitanceViewController.m in Sources */,
 				37A4A3C8167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m in Sources */,
 				2E4500C2167DBB4400196C53 /* SettingCell.m in Sources */,
 				2E4500C5167DBB6400196C53 /* EditViewController.m in Sources */,
@@ -1011,6 +988,7 @@
 				8F24E65616A1864900F8991C /* CarDataViewController.m in Sources */,
 				379F258016A19EA000F46860 /* SNPopupView.m in Sources */,
 				379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */,
+				4018C9FC16A1B35100C6915B /* CarFavoriteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
