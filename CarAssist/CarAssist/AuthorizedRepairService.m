@@ -9,20 +9,49 @@
 #import "AuthorizedRepairService.h"
 #import "AuthorizedRepair.h"
 
+@interface AuthorizedRepairService()
+    @property (nonatomic) CLLocation *userLocation;
+@end
+
 @implementation AuthorizedRepairService
 -(SearchableService*) initWithCar:(Car *) car
 {
     self = [super initWithCar:car];
+    
     if(self)
     {
+        [self initServiceData:car];
+    }
+    
+    return self;
+}
+
+-(SearchableService*) initWithCar:(Car *) car andUserLocation:(CLLocation *) loc
+{
+    self = [super initWithCar:car];
+
+    if(self)
+    {
+        self.userLocation = loc;
+        [self initServiceData:car];
+    }
+    
+    return self;
+}
+
+-(void) initServiceData:(Car *)car
+{
+    if(car)
+    {
+        // TODO: Abfrage nur noch vom Hersteller abhängig machen
         switch (car.unid)
         {
             case 1:
-                [self initServiceWithExampleDataBmwZ4];
+                [self initServiceWithExampleDataBmw];
                 [self initDictionary];
                 break;
             case 2:
-                [self initServiceWithExampleDataVWGolfIV];
+                [self initServiceWithExampleDataVW];
                 [self initDictionary];
                 break;
             default:
@@ -30,12 +59,10 @@
                 break;
         }
     }
-    return self;
 }
 
 
-
-- (void) initServiceWithExampleDataVWGolfIV
+- (void) initServiceWithExampleDataVW
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
@@ -79,12 +106,17 @@
     
     [allItems addObject:garage];
     
+    NSEnumerator *e = [allItems objectEnumerator];
+    id object;
+    while (object = [e nextObject]) {
+        ((AuthorizedRepair *)object).userLocation = self.userLocation;
+    }
     
     self.allItems = allItems;
     self.reducedItems = allItems;
 }
 
-- (void) initServiceWithExampleDataBmwZ4
+- (void) initServiceWithExampleDataBmw
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
@@ -105,6 +137,12 @@
     garage.phone = @"040 / 55301-30";
     
     [allItems addObject:garage];
+    
+    NSEnumerator *e = [allItems objectEnumerator];
+    id object;
+    while (object = [e nextObject]) {
+        ((AuthorizedRepair *)object).userLocation = self.userLocation;
+    }
     
     self.allItems = allItems;
     self.reducedItems = allItems;

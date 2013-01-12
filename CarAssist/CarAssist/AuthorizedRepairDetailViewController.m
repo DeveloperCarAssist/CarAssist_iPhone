@@ -24,10 +24,13 @@
         self.shop = shop;
         if(self.locationManager == Nil)
         {
-            self.locationManager = [[CLLocationManager alloc] init];
-            self.locationManager.delegate = self;
-            self.locationManager.distanceFilter = kCLDistanceFilterNone;
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+            CLLocationManager *manager = [[CLLocationManager alloc] init];
+
+            manager.delegate = self;
+            manager.distanceFilter = kCLDistanceFilterNone;
+            manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+            
+            self.locationManager = manager;
         }
     }
     return self;
@@ -48,7 +51,7 @@
     span.latitudeDelta = 0.005;
     span.longitudeDelta = 0.005;
     
-    MKCoordinateRegion region = MKCoordinateRegionMake(shop.location, span);
+    MKCoordinateRegion region = MKCoordinateRegionMake(shop.location.coordinate, span);
     mapView.region = region;
     
     // Marker auf der Karte
@@ -62,7 +65,7 @@
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.title = shop.name;
     point.subtitle = address;
-    point.coordinate = shop.location;
+    point.coordinate = shop.location.coordinate;
     
     [mapView addAnnotation:point];
     [mapView selectAnnotation:point animated:NO];
@@ -80,8 +83,8 @@
     NSString *mapsUrl = [NSString stringWithFormat: @"http://maps.apple.com/maps?saddr=%f,%f&daddr=%f,%f",
                          loc.coordinate.latitude,
                          loc.coordinate.longitude,
-                         self.shop.location.latitude,
-                         self.shop.location.longitude];
+                         self.shop.location.coordinate.latitude,
+                         self.shop.location.coordinate.longitude];
 
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsUrl]];
 }

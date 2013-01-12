@@ -18,7 +18,9 @@
 @property (nonatomic) NSString *city;
 @property (nonatomic) NSString *phone;
 
-@property (nonatomic) CLLocationCoordinate2D location;
+@property (nonatomic) CLLocation *location;
+@property (nonatomic) CLLocation *userLocation;
 
 -(AuthorizedRepair *)initWithName:(NSString *) name Category:(NSString *)category andLocation:(CLLocationCoordinate2D) location;
+-(CLLocationDistance)distance;
 @end
