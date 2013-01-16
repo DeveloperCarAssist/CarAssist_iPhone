@@ -69,9 +69,9 @@
         cell.textLabel.textColor = [UIColor blackColor];
     }
     
-    UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchtenKategorie" ofType:@"png"]];
-    UIImage* breakdownServiceCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pannenhilfe" ofType:@"png"]];
-    UIImage* authorizedRepairCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"service" ofType:@"png"]];
+    UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchte_58x58" ofType:@"png"]];
+    UIImage* breakdownServiceCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pannenhilfe_58x58" ofType:@"png"]];
+    UIImage* authorizedRepairCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"werkstatt_58x58" ofType:@"png"]];
     
     switch (indexPath.row) {
         case 0:
