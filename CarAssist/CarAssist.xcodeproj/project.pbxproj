@@ -26,7 +26,6 @@
 		2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C03016998BA000D3F313 /* halleluja.jpg */; };
 		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
-		375F8E7716722A2700FAD821 /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7616722A2700FAD821 /* tabbar_profil_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
@@ -117,8 +116,8 @@
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
 		66A9513716A6DDF200F8A71E /* pannenhilfe_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9512F16A6DDF200F8A71E /* pannenhilfe_29x29.png */; };
 		66A9513816A6DDF200F8A71E /* pannenhilfe_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513016A6DDF200F8A71E /* pannenhilfe_58x58.png */; };
-		66A9513916A6DDF200F8A71E /* tabbar_profil_30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513116A6DDF200F8A71E /* tabbar_profil_30x30.png */; };
-		66A9513A16A6DDF200F8A71E /* tabbar_profil_60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513216A6DDF200F8A71E /* tabbar_profil_60x60.png */; };
+		66A9513916A6DDF200F8A71E /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513116A6DDF200F8A71E /* tabbar_profil_small.png */; };
+		66A9513A16A6DDF200F8A71E /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513216A6DDF200F8A71E /* tabbar_profil.png */; };
 		66A9513B16A6DDF200F8A71E /* warnleuchte_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513316A6DDF200F8A71E /* warnleuchte_29x29.png */; };
 		66A9513C16A6DDF200F8A71E /* warnleuchte_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513416A6DDF200F8A71E /* warnleuchte_58x58.png */; };
 		66A9513D16A6DDF200F8A71E /* werkstatt_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A9513516A6DDF200F8A71E /* werkstatt_29x29.png */; };
@@ -148,7 +147,6 @@
 		8F7D519E1678A9DB00E41D4D /* CarFavoriteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7D519D1678A9DB00E41D4D /* CarFavoriteViewCell.m */; };
 		8F8BD0E3167CB83F00AFC5D5 /* ServiceGuideStockService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */; };
 		8FBC0D9B16976FC600155BE1 /* service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBC0D9A16976FC600155BE1 /* service.png */; };
-		8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35B1672204500B7F5DE /* tabbar_profil.png */; };
 		8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35C1672204500B7F5DE /* tabbar_service.png */; };
 		8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */; };
 		8FF793BA167B64E6008ADB97 /* ServiceCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF793B9167B64E6008ADB97 /* ServiceCategoryViewController.m */; };
@@ -193,7 +191,6 @@
 		2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerTextInput.h; sourceTree = "<group>"; };
 		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
-		375F8E7616722A2700FAD821 /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -321,8 +318,8 @@
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
 		66A9512F16A6DDF200F8A71E /* pannenhilfe_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pannenhilfe_29x29.png; path = ../../../../Volumes/Untitled/pannenhilfe_29x29.png; sourceTree = "<group>"; };
 		66A9513016A6DDF200F8A71E /* pannenhilfe_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pannenhilfe_58x58.png; path = ../../../../Volumes/Untitled/pannenhilfe_58x58.png; sourceTree = "<group>"; };
-		66A9513116A6DDF200F8A71E /* tabbar_profil_30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil_30x30.png; path = ../../../../Volumes/Untitled/tabbar_profil_30x30.png; sourceTree = "<group>"; };
-		66A9513216A6DDF200F8A71E /* tabbar_profil_60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil_60x60.png; path = ../../../../Volumes/Untitled/tabbar_profil_60x60.png; sourceTree = "<group>"; };
+		66A9513116A6DDF200F8A71E /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil_small.png; path = ../../../../Volumes/Untitled/tabbar_profil_small.png; sourceTree = "<group>"; };
+		66A9513216A6DDF200F8A71E /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil.png; path = ../../../../Volumes/Untitled/tabbar_profil.png; sourceTree = "<group>"; };
 		66A9513316A6DDF200F8A71E /* warnleuchte_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warnleuchte_29x29.png; path = ../../../../Volumes/Untitled/warnleuchte_29x29.png; sourceTree = "<group>"; };
 		66A9513416A6DDF200F8A71E /* warnleuchte_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warnleuchte_58x58.png; path = ../../../../Volumes/Untitled/warnleuchte_58x58.png; sourceTree = "<group>"; };
 		66A9513516A6DDF200F8A71E /* werkstatt_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = werkstatt_29x29.png; path = ../../../../Volumes/Untitled/werkstatt_29x29.png; sourceTree = "<group>"; };
@@ -365,7 +362,6 @@
 		8F8BD0E2167CB83F00AFC5D5 /* ServiceGuideStockService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGuideStockService.m; sourceTree = "<group>"; };
 		8FBC0D9A16976FC600155BE1 /* service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service.png; sourceTree = "<group>"; };
 		8FD1BAA51698C50900579F2B /* LocationStellingen.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationStellingen.gpx; sourceTree = "<group>"; };
-		8FF1F35B1672204500B7F5DE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
 		8FF1F35C1672204500B7F5DE /* tabbar_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service.png; sourceTree = "<group>"; };
 		8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung.png; sourceTree = "<group>"; };
 		8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reifenwechsel_schritt_10.jpeg; sourceTree = "<group>"; };
@@ -812,8 +808,8 @@
 			children = (
 				66A9512F16A6DDF200F8A71E /* pannenhilfe_29x29.png */,
 				66A9513016A6DDF200F8A71E /* pannenhilfe_58x58.png */,
-				66A9513116A6DDF200F8A71E /* tabbar_profil_30x30.png */,
-				66A9513216A6DDF200F8A71E /* tabbar_profil_60x60.png */,
+				66A9513116A6DDF200F8A71E /* tabbar_profil_small.png */,
+				66A9513216A6DDF200F8A71E /* tabbar_profil.png */,
 				66A9513316A6DDF200F8A71E /* warnleuchte_29x29.png */,
 				66A9513416A6DDF200F8A71E /* warnleuchte_58x58.png */,
 				66A9513516A6DDF200F8A71E /* werkstatt_29x29.png */,
@@ -824,9 +820,7 @@
 				8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */,
 				8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */,
 				375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */,
-				375F8E7616722A2700FAD821 /* tabbar_profil_small.png */,
 				375F8E73167226CC00FAD821 /* tabbar_service_small.png */,
-				8FF1F35B1672204500B7F5DE /* tabbar_profil.png */,
 				8FF1F35C1672204500B7F5DE /* tabbar_service.png */,
 				8FF1F35D1672204500B7F5DE /* tabbar_stoerung.png */,
 			);
@@ -962,12 +956,10 @@
 				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
 				8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */,
 				661E1A5E166BA98C00493F54 /* StepView.xib in Resources */,
-				8FF1F35E1672204500B7F5DE /* tabbar_profil.png in Resources */,
 				8FF1F35F1672204500B7F5DE /* tabbar_service.png in Resources */,
 				8FF1F3601672204500B7F5DE /* tabbar_stoerung.png in Resources */,
 				375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */,
 				8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */,
-				375F8E7716722A2700FAD821 /* tabbar_profil_small.png in Resources */,
 				375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */,
 				375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */,
 				40959AEA16724F04001A1E86 /* CarListSelectorViewController.xib in Resources */,
@@ -1020,8 +1012,8 @@
 				4018C9FD16A1B35100C6915B /* CarFavoriteViewController.xib in Resources */,
 				66A9513716A6DDF200F8A71E /* pannenhilfe_29x29.png in Resources */,
 				66A9513816A6DDF200F8A71E /* pannenhilfe_58x58.png in Resources */,
-				66A9513916A6DDF200F8A71E /* tabbar_profil_30x30.png in Resources */,
-				66A9513A16A6DDF200F8A71E /* tabbar_profil_60x60.png in Resources */,
+				66A9513916A6DDF200F8A71E /* tabbar_profil_small.png in Resources */,
+				66A9513A16A6DDF200F8A71E /* tabbar_profil.png in Resources */,
 				66A9513B16A6DDF200F8A71E /* warnleuchte_29x29.png in Resources */,
 				66A9513C16A6DDF200F8A71E /* warnleuchte_58x58.png in Resources */,
 				66A9513D16A6DDF200F8A71E /* werkstatt_29x29.png in Resources */,
