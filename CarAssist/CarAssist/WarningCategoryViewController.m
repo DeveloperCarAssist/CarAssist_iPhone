@@ -67,6 +67,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"standard"];
         cell.textLabel.textColor = [UIColor blackColor];
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchte_58x58" ofType:@"png"]];
