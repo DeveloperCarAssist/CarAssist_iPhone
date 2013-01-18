@@ -73,6 +73,7 @@
     garage.postalcode = @"20259";
     garage.city = @"Hamburg";
     garage.phone = @"040 / 43 172 - 0";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];
     
     [allItems addObject:garage];
     
@@ -83,6 +84,7 @@
     garage.postalcode = @"22303";
     garage.city = @"Hamburg";
     garage.phone = @"040 / 270 798 - 0";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];
     
     [allItems addObject:garage];
 
@@ -94,6 +96,7 @@
     garage.postalcode = @"22926";
     garage.city = @"Ahrensburg";
     garage.phone = @"041 02 / 51 54 - 0";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];    
     
     [allItems addObject:garage];
 
@@ -104,6 +107,7 @@
     garage.postalcode = @"21079";
     garage.city = @"Harburg";
     garage.phone = @"040 / 766 07 - 0";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];    
     
     [allItems addObject:garage];
     
@@ -127,6 +131,7 @@
     garage.postalcode = @"22529";
     garage.city = @"Hamburg";
     garage.phone = @"040 / 55301-10";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"11.00 - 17.00 Uhr", nil];
     
     [allItems addObject:garage];
 
@@ -136,6 +141,7 @@
     garage.postalcode = @"22047";
     garage.city = @"Hamburg";
     garage.phone = @"040 / 55301-30";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"11.00 - 17.00 Uhr", nil];
     
     [allItems addObject:garage];
     
