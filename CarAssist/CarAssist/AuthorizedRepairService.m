@@ -21,6 +21,7 @@
     if(self)
     {
         [self initServiceData:car];
+        [self initDictionary];
     }
     
     return self;
@@ -50,11 +51,9 @@
         {
             case 1:
                 [self initServiceWithExampleDataBmw];
-                [self initDictionary];
                 break;
             case 2:
                 [self initServiceWithExampleDataVW];
-                [self initDictionary];
                 break;
             default:
                 @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"no service data for selected car" userInfo:nil];
@@ -153,7 +152,7 @@
 - (void) sortByLocation
 {
     for (AuthorizedRepair* repair in self.allItems) {
-        repair.categoryName = @"Nach Enfernung";
+        repair.categoryName = @"Nach Entfernung";
     }
 
     NSArray* sortedArray = [self.allItems sortedArrayUsingSelector:@selector(compare:)];
