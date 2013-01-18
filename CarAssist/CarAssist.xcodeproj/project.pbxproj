@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E261A2D16A7EA3400D92878 /* pannenhilfe_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A2C16A7EA3400D92878 /* pannenhilfe_58x58.png */; };
 		2E261A3016A7EA3C00D92878 /* pannenhilfe_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A2F16A7EA3C00D92878 /* pannenhilfe_29x29.png */; };
-		2E261A3216A7EA7400D92878 /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3116A7EA7400D92878 /* tabbar_profil_small.png */; };
-		2E261A3416A7EA7F00D92878 /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3316A7EA7F00D92878 /* tabbar_profil.png */; };
-		2E261A3616A7EAAB00D92878 /* werkstatt_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3516A7EAAB00D92878 /* werkstatt_29x29.png */; };
-		2E261A3816A7EAB400D92878 /* werkstatt_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3716A7EAB400D92878 /* werkstatt_58x58.png */; };
-		2E261A3A16A7EB3C00D92878 /* warnleuchte_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3916A7EB3C00D92878 /* warnleuchte_29x29.png */; };
-		2E261A3C16A7EB4600D92878 /* warnleuchte_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E261A3B16A7EB4600D92878 /* warnleuchte_58x58.png */; };
 		2E4500C2167DBB4400196C53 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500C1167DBB4400196C53 /* SettingCell.m */; };
 		2E4500C5167DBB6400196C53 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500C4167DBB6400196C53 /* EditViewController.m */; };
 		2E4500C9167DBBC800196C53 /* EditViewControllerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4500C7167DBBC700196C53 /* EditViewControllerPicker.m */; };
@@ -113,6 +107,12 @@
 		40C32760166B9A5400BC049B /* StepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3275F166B9A5400BC049B /* StepTests.m */; };
 		40C32764166B9A6100BC049B /* GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C32763166B9A6100BC049B /* GuideTests.m */; };
 		40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C32767166BAEAD00BC049B /* pannenhilfe.png */; };
+		40C4622016A9730000401DDE /* tabbar_profil_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4621F16A9730000401DDE /* tabbar_profil_small.png */; };
+		40C4622216A9731900401DDE /* tabbar_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4622116A9731900401DDE /* tabbar_profil.png */; };
+		40C4622416A9736900401DDE /* werkstatt_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4622316A9736900401DDE /* werkstatt_58x58.png */; };
+		40C4622616A9737300401DDE /* werkstatt_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4622516A9737300401DDE /* werkstatt_29x29.png */; };
+		40C4622816A9739100401DDE /* warnleuchte_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4622716A9739100401DDE /* warnleuchte_29x29.png */; };
+		40C4622A16A9739600401DDE /* warnleuchte_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C4622916A9739600401DDE /* warnleuchte_58x58.png */; };
 		40F85020166B84A900366DDE /* WarningLightStockServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */; };
 		40F85021166B84A900366DDE /* WarningLightTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8501F166B84A900366DDE /* WarningLightTest.m */; };
 		5A61F65B1684B34B00CC7421 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A61F65A1684B34B00CC7421 /* MessageUI.framework */; };
@@ -169,12 +169,6 @@
 /* Begin PBXFileReference section */
 		2E261A2C16A7EA3400D92878 /* pannenhilfe_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pannenhilfe_58x58.png; sourceTree = "<group>"; };
 		2E261A2F16A7EA3C00D92878 /* pannenhilfe_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pannenhilfe_29x29.png; sourceTree = "<group>"; };
-		2E261A3116A7EA7400D92878 /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil_small.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/tabbar_profil_small.png"; sourceTree = "<group>"; };
-		2E261A3316A7EA7F00D92878 /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_profil.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/tabbar_profil.png"; sourceTree = "<group>"; };
-		2E261A3516A7EAAB00D92878 /* werkstatt_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = werkstatt_29x29.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/werkstatt_29x29.png"; sourceTree = "<group>"; };
-		2E261A3716A7EAB400D92878 /* werkstatt_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = werkstatt_58x58.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/werkstatt_58x58.png"; sourceTree = "<group>"; };
-		2E261A3916A7EB3C00D92878 /* warnleuchte_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warnleuchte_29x29.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/warnleuchte_29x29.png"; sourceTree = "<group>"; };
-		2E261A3B16A7EB4600D92878 /* warnleuchte_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warnleuchte_58x58.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/warnleuchte_58x58.png"; sourceTree = "<group>"; };
 		2E4500C0167DBB4400196C53 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		2E4500C1167DBB4400196C53 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
 		2E4500C3167DBB6400196C53 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
@@ -309,6 +303,12 @@
 		40C32762166B9A6100BC049B /* GuideTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideTests.h; sourceTree = "<group>"; };
 		40C32763166B9A6100BC049B /* GuideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTests.m; sourceTree = "<group>"; };
 		40C32767166BAEAD00BC049B /* pannenhilfe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pannenhilfe.png; sourceTree = "<group>"; };
+		40C4621F16A9730000401DDE /* tabbar_profil_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil_small.png; sourceTree = "<group>"; };
+		40C4622116A9731900401DDE /* tabbar_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_profil.png; sourceTree = "<group>"; };
+		40C4622316A9736900401DDE /* werkstatt_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = werkstatt_58x58.png; sourceTree = "<group>"; };
+		40C4622516A9737300401DDE /* werkstatt_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = werkstatt_29x29.png; sourceTree = "<group>"; };
+		40C4622716A9739100401DDE /* warnleuchte_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte_29x29.png; sourceTree = "<group>"; };
+		40C4622916A9739600401DDE /* warnleuchte_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte_58x58.png; sourceTree = "<group>"; };
 		40F8501C166B84A900366DDE /* WarningLightStockServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightStockServiceTest.h; sourceTree = "<group>"; };
 		40F8501D166B84A900366DDE /* WarningLightStockServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightStockServiceTest.m; sourceTree = "<group>"; };
 		40F8501E166B84A900366DDE /* WarningLightTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightTest.h; sourceTree = "<group>"; };
@@ -808,17 +808,17 @@
 			children = (
 				2E261A2F16A7EA3C00D92878 /* pannenhilfe_29x29.png */,
 				2E261A2C16A7EA3400D92878 /* pannenhilfe_58x58.png */,
-				2E261A3116A7EA7400D92878 /* tabbar_profil_small.png */,
-				2E261A3916A7EB3C00D92878 /* warnleuchte_29x29.png */,
-				2E261A3B16A7EB4600D92878 /* warnleuchte_58x58.png */,
-				2E261A3316A7EA7F00D92878 /* tabbar_profil.png */,
-				2E261A3516A7EAAB00D92878 /* werkstatt_29x29.png */,
-				2E261A3716A7EAB400D92878 /* werkstatt_58x58.png */,
 				405FB2921673982F00024934 /* default_car.png */,
+				40C4622316A9736900401DDE /* werkstatt_58x58.png */,
+				40C4622516A9737300401DDE /* werkstatt_29x29.png */,
+				40C4622716A9739100401DDE /* warnleuchte_29x29.png */,
+				40C4622916A9739600401DDE /* warnleuchte_58x58.png */,
 				405FB28B167394C000024934 /* favorit.png */,
 				8F1FB4771674CBB8000D1D04 /* kein_favorit.png */,
+				40C4622116A9731900401DDE /* tabbar_profil.png */,
 				8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */,
 				8F796D24167B8A3E0011C02F /* tabbar_bedienung.png */,
+				40C4621F16A9730000401DDE /* tabbar_profil_small.png */,
 				375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */,
 				375F8E73167226CC00FAD821 /* tabbar_service_small.png */,
 				8FF1F35C1672204500B7F5DE /* tabbar_service.png */,
@@ -1012,12 +1012,12 @@
 				4018C9FD16A1B35100C6915B /* CarFavoriteViewController.xib in Resources */,
 				2E261A2D16A7EA3400D92878 /* pannenhilfe_58x58.png in Resources */,
 				2E261A3016A7EA3C00D92878 /* pannenhilfe_29x29.png in Resources */,
-				2E261A3216A7EA7400D92878 /* tabbar_profil_small.png in Resources */,
-				2E261A3416A7EA7F00D92878 /* tabbar_profil.png in Resources */,
-				2E261A3616A7EAAB00D92878 /* werkstatt_29x29.png in Resources */,
-				2E261A3816A7EAB400D92878 /* werkstatt_58x58.png in Resources */,
-				2E261A3A16A7EB3C00D92878 /* warnleuchte_29x29.png in Resources */,
-				2E261A3C16A7EB4600D92878 /* warnleuchte_58x58.png in Resources */,
+				40C4622016A9730000401DDE /* tabbar_profil_small.png in Resources */,
+				40C4622216A9731900401DDE /* tabbar_profil.png in Resources */,
+				40C4622416A9736900401DDE /* werkstatt_58x58.png in Resources */,
+				40C4622616A9737300401DDE /* werkstatt_29x29.png in Resources */,
+				40C4622816A9739100401DDE /* warnleuchte_29x29.png in Resources */,
+				40C4622A16A9739600401DDE /* warnleuchte_58x58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
