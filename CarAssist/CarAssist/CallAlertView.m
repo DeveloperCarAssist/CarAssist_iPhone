@@ -16,17 +16,12 @@
 
 -(id)initCall:(UINavigationController*) controller
 {
-    self = [super initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email und Anrufen!",nil];
-    if (self) {
-        self.controller = controller;
-        self.text= Nil;
-    }
-    return self;
+    return  [self initCall:controller andMessage: Nil];
 }
 
 -(id) initCall:(UINavigationController *)controller andMessage: (NSString*) message
 {
-    self = [super initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und damit Ihre Daten und Ihren Standord an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ja, ich will: Telefon!", @"Ja, ich will: Email und Anrufen!",nil];
+    self = [super initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und Ihre Daten sowie Ihren Standord per E-Mail an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anrufen", @"Mail verschicken und Anrufen",nil];
     if (self) {
         self.controller = controller;
         self.text = message;
@@ -77,14 +72,5 @@
         }
     }
 }
-
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
 @end

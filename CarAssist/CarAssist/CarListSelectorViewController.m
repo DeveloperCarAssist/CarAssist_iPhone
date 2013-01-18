@@ -34,9 +34,7 @@
     [super viewDidLoad];
     self.title = @"Fahrzeuge";
     
-    UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];
-    [self.navigationItem setRightBarButtonItem: saveButton];
-    
+     
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
@@ -140,20 +138,6 @@
     NSArray* modelsFromProducer = [self.carListService.cars objectForKey:producer];
     Car* currentModel = [modelsFromProducer objectAtIndex:indexPath.row];
     self.selectedCar = currentModel;
-    
-}
-
-- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
-    [self.carListService reduceCarsWithSearchText: searchText];
-    [self.carSelectionTableView reloadData];
-}
-
-/**
- * Diese Methode sorgt für das Speichern des ausgewählten Autos
- */
-- (void) saveCarButtonClicked
-{
     if (self.selectedCar) {
         if ([[Profile getProfile].carList containsObject:self.selectedCar])
         {
@@ -171,6 +155,13 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Kein Auto gewählt!" message:@"Bitte wählen Sie ein Auto aus." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+
+}
+
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [self.carListService reduceCarsWithSearchText: searchText];
+    [self.carSelectionTableView reloadData];
 }
 
 /**

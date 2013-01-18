@@ -584,7 +584,6 @@
 			isa = PBXGroup;
 			children = (
 				400DF84F1668F0F100D6217B /* Supporting Files */,
-				405FB27E167373FA00024934 /* Util */,
 				400DF8961669081800D6217B /* Services */,
 				400DF892166907E700D6217B /* Model */,
 				400DF8881669051700D6217B /* Controller */,
@@ -689,6 +688,7 @@
 		400DF8961669081800D6217B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				405FB27E167373FA00024934 /* Util */,
 				8F8BD0DF167CB68000AFC5D5 /* Shared */,
 				400DF8971669082600D6217B /* WarningLightStockService.h */,
 				400DF8981669082600D6217B /* WarningLightStockService.m */,

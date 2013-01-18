@@ -14,7 +14,7 @@
 #import "Utils.h"
 #import "CarListService.h"
 
-@interface CarFavoriteViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CarFavoriteViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) Profile *profil;
 @property (nonatomic) CarListService* carListService;
@@ -68,7 +68,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.tableView reloadData];
+    [self.carFavoriteTableView reloadData];
     [self showCarSelectIfFirstStart];
     
 }
@@ -108,10 +108,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    CarFavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    static NSString *CellIdentifier = @"Cell";
+//    CarFavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [[CarFavoriteViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//        [cell.favoriteCarButton addTarget:self action:@selector(changeDefaultCar:event:) forControlEvents:UIControlEventTouchDown];
+//    }
+    
+    CarFavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
     if (cell == nil) {
-        cell = [[CarFavoriteViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CarFavoriteViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"standard"];
         [cell.favoriteCarButton addTarget:self action:@selector(changeDefaultCar:event:) forControlEvents:UIControlEventTouchDown];
     }
     
@@ -121,6 +127,8 @@
     cell.textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
