@@ -15,9 +15,13 @@
 #import "EditViewControllerTextInput.h"
 #import "EditViewControllerList.h"
 #import "AuthorizedRepairService.h"
+#import "Profile.h"
 
 @interface CarDataViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
-@property Car* car;
+
+@property (nonatomic) Car* car;
+@property (nonatomic) Profile* profile;
+
 @end
 
 @implementation CarDataViewController
@@ -27,6 +31,7 @@
     self = [super init];
     if (self) {
         self.car = car;
+        self.profile = [Profile getProfile];
         self.settingsValueService = [[SettingsValueService alloc] init];
         self.title = @"Autoprofil";
         self.settingsList = [NSMutableDictionary dictionary];
@@ -45,6 +50,17 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     self.tableview.backgroundView = nil;
     self.tableview.backgroundColor = [UIColor clearColor];
+    
+    
+    // Aktiv Button
+    UIBarButtonItem* activeButton = [[UIBarButtonItem alloc] initWithTitle:@"Aktivieren" style:UIBarButtonItemStylePlain target:self action:@selector(activeButtonClicked)];
+
+    if ([self.car isEqual:self.profile.car]) {
+        activeButton.tintColor = [UIColor blueColor];
+        activeButton.title = @"Aktiv";
+    }
+    
+    self.navigationItem.rightBarButtonItem = activeButton;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -246,6 +262,17 @@
     SettingCell* result = [[SettingCell alloc] initEditableWithTitle:title Value:value ValueRepresentation:valueRepresentation AndEditViewController:pickerController];
     return result;
     
+}
+
+- (void) activeButtonClicked
+{
+    if (![self.car isEqual:self.profile.car]) 
+    {
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor blueColor];
+        self.navigationItem.rightBarButtonItem.title = @"Aktiv";
+        
+        self.profile.car = self.car;
+    }
 }
 
 
