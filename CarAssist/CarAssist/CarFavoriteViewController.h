@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Profile.h"
 
-@interface CarFavoriteViewController : UITableViewController <UIActionSheetDelegate,UIAlertViewDelegate>
+@interface CarFavoriteViewController : UIViewController
 
 @property (nonatomic) IBOutlet UITableView* carFavoriteTableView;
 
