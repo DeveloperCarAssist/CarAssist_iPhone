@@ -88,7 +88,9 @@
 {
     self.openEarsEventsObserver = [[OpenEarsEventsObserver alloc] init];
     self.pocketsphinxController = [[PocketsphinxController alloc] init];
+    
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
+    
     NSArray *words = [NSArray arrayWithObjects:@"NEXT", @"BACK", nil];
     NSString *name = @"NameIWantForMyLanguageModelFiles";
     NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name];
@@ -111,6 +113,7 @@
     }
     [self.openEarsEventsObserver setDelegate:self];
     [self.pocketsphinxController startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath languageModelIsJSGF:NO];
+    [self.pocketsphinxController returnNullHypotheses];
 
 }
 
@@ -124,7 +127,7 @@
 
 
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
-	//NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+	NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
     if([hypothesis isEqualToString: @"NEXT"])
     {
         if(self.pageControl.currentPage != [ self.pageControl numberOfPages]-1)
@@ -150,6 +153,7 @@
 }
 
 - (void) pocketsphinxDidStartListening {
+    NSLog(@"Start Listening");
 }
 
 - (void) pocketsphinxDidDetectSpeech {
