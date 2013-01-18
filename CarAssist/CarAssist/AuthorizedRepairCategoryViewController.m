@@ -120,10 +120,14 @@
 {
     AuthorizedRepair *shop = (AuthorizedRepair *) item;
     CLLocationDistance disancekm = [shop distance] / 1000.0;
-    if(disancekm > 0)
+    if(disancekm > 0 && self.isGPS)
     {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Entfernung: %.1lfkm", disancekm];
         cell.detailTextLabel.textColor = [UIColor blackColor];
+    }
+    else
+    {
+        cell.detailTextLabel.text = @"";
     }
 }
 
