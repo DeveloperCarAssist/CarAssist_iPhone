@@ -292,7 +292,7 @@
     step = [[Step alloc] initWithName: @"Navi ausschalaten" Description:@"Schalten Sie das Navi aus indem Sie den 'Asuschalten'-Knopf betätigen." AndImage:image];
     [steps addObject:step];
     
-    guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Extras" AndSteps: steps];
+    guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Extra" AndSteps: steps];
     [allGuides addObject:guide];
     
     //NAVI ende
@@ -362,7 +362,10 @@
     
     steps = [NSMutableArray array];
     
-    guide = [[Guide alloc] initWithName: @"Auto starten" CategoryName: @"System" AndSteps: steps];
+    guide = [[Guide alloc] initWithName: @"Sprachstart" CategoryName: @"System" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"SchlüsselStart" CategoryName: @"System" AndSteps: steps];
     [allGuides addObject:guide];
     
     guide = [[Guide alloc] initWithName: @"Scheibenwischer" CategoryName: @"Ausstattung" AndSteps: steps];
@@ -383,11 +386,51 @@
     guide = [[Guide alloc] initWithName: @"Airbag" CategoryName: @"Ausstattung" AndSteps: steps];
     [allGuides addObject:guide];
     
-    guide = [[Guide alloc] initWithName: @"Lagerraum" CategoryName: @"System" AndSteps: steps];
+    guide = [[Guide alloc] initWithName: @"Gepäckraum" CategoryName: @"System" AndSteps: steps];
     [allGuides addObject:guide];
     
     guide = [[Guide alloc] initWithName: @"Tanken" CategoryName: @"System" AndSteps: steps];
     [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Warndreieck" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Reservereifen" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Seitenspiegel anpassen" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Radio" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Motorraumklappenentriegelung" CategoryName: @"System" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Lenkradeinstellung" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Memoryfunktion" CategoryName: @"System" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Türgriffe" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Zentralverriegelungsschalter" CategoryName: @"System" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Lichtschalter" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Geschwindigkeitsregelanlage" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Zigarettenanzünder" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    guide = [[Guide alloc] initWithName: @"Anfahrassistent" CategoryName: @"Ausstattung" AndSteps: steps];
+    [allGuides addObject:guide];
+    
     
     //NAVI
     
@@ -411,10 +454,36 @@
     step = [[Step alloc] initWithName: @"Navi ausschalaten" Description:@"Schalten Sie das Navi aus indem Sie den 'Asuschalten'-Knopf betätigen." AndImage:image];
     [steps addObject:step];
     
-    guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Extras" AndSteps: steps];
+    guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Ausstatung" AndSteps: steps];
     [allGuides addObject:guide];
     
     //NAVI ende
+    
+    //Eine Anleitung für noch etwas
+    //TODO, BILDER
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+    step = [[Step alloc] initWithName: @"Motorstop.1" Description:@"Fahrzeug bis zum Stillstand abbremsen und in den Leerlauf schalten.. " AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+    step = [[Step alloc] initWithName: @"Motorstop.2" Description:@"Kupplung loslassen, Motor wird automatisch abgestellt..." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+    step = [[Step alloc] initWithName: @"Motorstop.3" Description:@"die Kontrollleuchte 'A' leuchtet." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+    step = [[Step alloc] initWithName: @"Motorstart.1" Description:@"Vor Weiterfahrt Kupplung treten, Motor startet selbstständig..." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+    step = [[Step alloc] initWithName: @"Motorstart.2" Description:@"die Kontrollleuchte erlischt. Ersten Gang einlegen und weiterfahren." AndImage:image];
+    [steps addObject:step];
+    
+    guide = [[Guide alloc] initWithName: @"Start-Stop-System" CategoryName: @"System" AndSteps: steps];
+    [allGuides addObject:guide];
+    //Anleitung für noch etwas ende
     
     self.allItems = allGuides;
     self.reducedItems = allGuides;
