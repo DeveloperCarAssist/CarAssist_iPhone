@@ -31,6 +31,11 @@
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
+		3773D15D16A99EAD006195A5 /* navi5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15816A99EAD006195A5 /* navi5.gif */; };
+		3773D15E16A99EAD006195A5 /* navi4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15916A99EAD006195A5 /* navi4.gif */; };
+		3773D15F16A99EAD006195A5 /* navi3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15A16A99EAD006195A5 /* navi3.gif */; };
+		3773D16016A99EAD006195A5 /* navi2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15B16A99EAD006195A5 /* navi2.gif */; };
+		3773D16116A99EAD006195A5 /* navi1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15C16A99EAD006195A5 /* navi1.gif */; };
 		379F258016A19EA000F46860 /* SNPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257D16A19EA000F46860 /* SNPopupView.m */; };
 		379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */; };
 		379F259B16A1B40500F46860 /* cmu07a.dic in Resources */ = {isa = PBXBuildFile; fileRef = 379F258B16A1B40500F46860 /* cmu07a.dic */; };
@@ -214,6 +219,11 @@
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		3773D15816A99EAD006195A5 /* navi5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi5.gif; sourceTree = "<group>"; };
+		3773D15916A99EAD006195A5 /* navi4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi4.gif; sourceTree = "<group>"; };
+		3773D15A16A99EAD006195A5 /* navi3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi3.gif; sourceTree = "<group>"; };
+		3773D15B16A99EAD006195A5 /* navi2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi2.gif; sourceTree = "<group>"; };
+		3773D15C16A99EAD006195A5 /* navi1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi1.gif; sourceTree = "<group>"; };
 		379F257C16A19EA000F46860 /* SNPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopupView.h; sourceTree = "<group>"; };
 		379F257D16A19EA000F46860 /* SNPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopupView.m; sourceTree = "<group>"; };
 		379F257E16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNPopupView+UsingPrivateMethod.h"; sourceTree = "<group>"; };
@@ -889,6 +899,11 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
+				3773D15816A99EAD006195A5 /* navi5.gif */,
+				3773D15916A99EAD006195A5 /* navi4.gif */,
+				3773D15A16A99EAD006195A5 /* navi3.gif */,
+				3773D15B16A99EAD006195A5 /* navi2.gif */,
+				3773D15C16A99EAD006195A5 /* navi1.gif */,
 				8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */,
 				8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */,
 				2EA3C0191699845A00D3F313 /* used.jpg */,
@@ -1094,6 +1109,11 @@
 				83460FBD16A98E78003C167A /* alternator.png in Resources */,
 				83460FBF16A98E7C003C167A /* airbag.png in Resources */,
 				83460FC116A98E81003C167A /* abs.png in Resources */,
+				3773D15D16A99EAD006195A5 /* navi5.gif in Resources */,
+				3773D15E16A99EAD006195A5 /* navi4.gif in Resources */,
+				3773D15F16A99EAD006195A5 /* navi3.gif in Resources */,
+				3773D16016A99EAD006195A5 /* navi2.gif in Resources */,
+				3773D16116A99EAD006195A5 /* navi1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,27 +92,27 @@ static CarListService* instance;
     
     // VW
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
     car.manufacturer = @"VW";
     car.model = @"Polo E36";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
     car.manufacturer = @"VW";
     car.model = @"Golf 1 1,6";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
     car.manufacturer = @"VW";
     car.model = @"Golf 6 2.0 TDI";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
     car.manufacturer = @"VW";
     car.model = @"Passat W12";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataVWGolfIV];
     car.manufacturer = @"VW";
     car.model = @"Phaeton GP3";
     [allCars addObject:car];
