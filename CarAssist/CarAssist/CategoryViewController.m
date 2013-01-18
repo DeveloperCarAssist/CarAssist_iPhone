@@ -85,7 +85,6 @@
     
      
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"standard"];
-    UIImage* icon = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"footstep_58x58" ofType:@"png"]];
     
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
@@ -100,7 +99,6 @@
     
     cell.textLabel.text = item.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell.imageView setImage:icon];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     [self decorateCell:cell withItem:item];
@@ -129,6 +127,7 @@
     [sectionView addSubview:label];
     return sectionView;
 }
+
 
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
