@@ -34,6 +34,8 @@
     {
         self.userLocation = loc;
         [self initServiceData:car];
+        [self sortByLocation];
+        [self initDictionary];
     }
     
     return self;
@@ -146,6 +148,18 @@
     
     self.allItems = allItems;
     self.reducedItems = allItems;
+}
+
+- (void) sortByLocation
+{
+    for (AuthorizedRepair* repair in self.allItems) {
+        repair.categoryName = @"Nach Enfernung";
+    }
+
+    NSArray* sortedArray = [self.allItems sortedArrayUsingSelector:@selector(compare:)];
+    self.allItems = sortedArray;
+    
+    self.reducedItems = self.allItems;
 }
 
 @end
