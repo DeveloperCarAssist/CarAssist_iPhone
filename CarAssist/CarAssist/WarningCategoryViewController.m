@@ -73,6 +73,8 @@
     UIImage* warningLightCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"warnleuchte_58x58" ofType:@"png"]];
     UIImage* breakdownServiceCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pannenhilfe_58x58" ofType:@"png"]];
     UIImage* authorizedRepairCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"werkstatt_58x58" ofType:@"png"]];
+    UIImage* personalInformationCategoryImage = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"einstellungen_58x58" ofType:@"png"]];
+
     
     switch (indexPath.row) {
         case 0:
@@ -89,6 +91,7 @@
             break;
         case 3:
             cell.textLabel.text = @"Persönliche Informationen";
+            [cell.imageView setImage:personalInformationCategoryImage];
             break;
         default:
             cell.textLabel.text = @"Einer zu viel :P";
