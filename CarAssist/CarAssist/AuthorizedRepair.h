@@ -20,6 +20,7 @@
 
 @property (nonatomic) CLLocation *location;
 @property (nonatomic) CLLocation *userLocation;
+@property (nonatomic) NSArray *hours;
 
 -(AuthorizedRepair *)initWithName:(NSString *) name Category:(NSString *)category andLocation:(CLLocationCoordinate2D) location;
 -(CLLocationDistance)distance;

@@ -27,8 +27,6 @@
         NSMutableArray* allItems = [NSMutableArray array];
         self.allItems = allItems;
         self.reducedItems = allItems;
-        
-        [self initDictionary];
     }
     
     return self;
