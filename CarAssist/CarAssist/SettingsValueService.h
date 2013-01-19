@@ -1,15 +1,16 @@
 //
-//  SettingsValueService.h
+//  SettingsValueServiceCar.h
 //  CarAssist
 //
-//  Created by Erik Witt on 16.12.12.
-//  Copyright (c) 2012 Gruppe Fear. All rights reserved.
+//  Created by 0michiel on 18.01.13.
+//  Copyright (c) 2013 Gruppe Fear. All rights reserved.
 //
 
+#import "SearchableService.h"
 #import <Foundation/Foundation.h>
 #import "Car.h"
 
-@interface SettingsValueService : NSObject
+@interface SettingsValueService : SearchableService
 
 @property (nonatomic) Car* car;
 @property (nonatomic) NSMutableDictionary* settingValues;

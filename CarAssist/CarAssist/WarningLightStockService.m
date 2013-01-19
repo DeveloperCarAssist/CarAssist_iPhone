@@ -70,4 +70,27 @@
     
 }
 
+- (void) initWarningLights
+{
+    NSMutableArray* warningLights = [NSMutableArray array];
+    
+    UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"abs" ofType:@"png"]];
+    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"ABS" Info:@"Die ABS-Funktion ihres Fahrzeuges ist beeinträchtigt. Sollte die ABS-Warnleuchte während der Fahrt aufleuchten, kontaktieren Sie schnellstmöglich eine Werkstatt Ihres Vertrauens." AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"airbag" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Airbag" Info:@"Die Airbag-Funktion ihres Fahrzeuges ist beeinträchtigt. Sollte die Airbag-Warnleuchte während der Fahrt aufleuchten, kontaktieren Sie schnellstmöglich eine Werkstatt Ihres Vertrauens." AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"alternator" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Lichtmaschine" Info:@"Die Lichtmaschine ihres Fahrzeuges ist beeinträchtigt. Es sind Störungen beim Fahrzeug-Start zu erwarten. Sollte die Lichtmaschinen-Warnleuchte während der Fahrt aufleuchten, kontaktieren Sie schnellstmöglich eine Werkstatt Ihres Vertrauens." AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"electronic_immobilizer" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Parkbremse" Info:@"Eine noch andere Information" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    self.warningLights = warningLights;
+}
+
 @end

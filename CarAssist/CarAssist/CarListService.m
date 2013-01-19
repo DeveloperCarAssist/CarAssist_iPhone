@@ -60,98 +60,193 @@ static CarListService* instance;
     
     // Audi
     
-    Car* car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A3 8L";
+    Car* car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"A1 Sportback";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A4 B8";
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"A3 Cabriolet";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A4 B6";
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"A4 allroad quattro";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A4 B7";
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"A4 Avant";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017634";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A5 S5";
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"RS4 Avant";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"Audi";
-    car.model = @"A8 D3";
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"A6 hybrid";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
     [allCars addObject:car];
     
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"S6 Limousine";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"S7 Limousine";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"S8";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"TT RS Roadstar";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"Q7";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataAudi];
+    car.model = @"R8 Coupé";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    [allCars addObject:car];
+
+
     // VW
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"VW";
-    car.model = @"Polo E36";
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Polo";
+    car.vehicalIdentNumber = @"WBADU276";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"VW";
-    car.model = @"Golf 1 1,6";
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Golf Plus";
+    car.vehicalIdentNumber = @"WBADU276";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"VW";
-    car.model = @"Golf 6 2.0 TDI";
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Golf Variant";
+    car.vehicalIdentNumber = @"WBADU276";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"VW";
-    car.model = @"Passat W12";
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Golf GTI";
+    car.vehicalIdentNumber = @"WBADU276";
     [allCars addObject:car];
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.manufacturer = @"VW";
-    car.model = @"Phaeton GP3";
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Scirocco";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Jetta";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Touran";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Tiguan";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Passat";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Touareg";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Phaeton";
+    car.vehicalIdentNumber = @"WBADU276";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Caddy";
+    car.vehicalIdentNumber = @"WBADU276";
     [allCars addObject:car];
     
     // BMW
     
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.model = @"330i E90";
-    [allCars addObject:car];
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.model = @"325i E36";
-    [allCars addObject:car];
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.model = @"520i E39";
-    [allCars addObject:car];
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.model = @"530i E60";
-    [allCars addObject:car];
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    car.model = @"745i E38";
-    [allCars addObject:car];
-    
-    //_____________________________________________________________________________________________________________________
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
-    [allCars addObject:car];
-    car = [[Car alloc] initWithExampleDataVWGolfIV];
-    [allCars addObject:car];
-    
-    car = [[Car alloc] initWithExampleDataBmwZ4];
+    car = [[Car alloc] initWithExampleDataBMW];
     car.model = @"316i E36";
     car.vehicalIdentNumber = @"E32TT47A3166";
     car.owner = @"Eriks Auto";
     [allCars addObject:car];
     
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW 1er Coupé";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW M3 Coupé";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW 3er Cabrio";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW ActiveHybrid 3";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW 6er Coupé";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW M6 Gran Coupé";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW X1";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW Z4 Roadstar";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW X6 M";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW M5 Limousine";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataBMW];
+    car.model = @"BMW M6 Cabrio";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
+    [allCars addObject:car];
+    
+    //_____________________________________________________________________________________________________________________
     
     self.allCars = allCars;
     self.reducedCars = allCars;
@@ -204,14 +299,14 @@ static CarListService* instance;
 /**
  * Diese Methode kriegt eine Fahrgestellnummer und liefer das dazugehörige Auto.
  */
--(Car*) returnCarByVehicalIdentNumber: (NSString*) vehicalIdentNumber
+-(Car*) returnCarByVehicleIdentNumber: (NSString*) vehicleIdentNumber
 {
-    if (vehicalIdentNumber.length >=8)
+    if (vehicleIdentNumber.length >=8)
     {
         for (int i = 0 ; i < self.allCars.count; i++)
         {
         Car* automobil = [self.allCars objectAtIndex: i];
-        if ( [[automobil.vehicalIdentNumber substringToIndex:8] isEqual: [vehicalIdentNumber substringToIndex:8]])
+        if ( [[automobil.vehicalIdentNumber substringToIndex:8] isEqual: [vehicleIdentNumber substringToIndex:8]])
         {
             return automobil;
         }

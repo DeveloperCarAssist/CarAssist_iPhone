@@ -11,36 +11,56 @@
 
 @implementation Car
 
--(Car*) initWithExampleDataBmwZ4
+-(Car*) initWithExampleDataAudi
 {
     self = [super init];
     if (self)
     {
         [self standardInit];
-        self.unid=1;
-        self.model = @"Z4";
-        self.manufacturer = @"BMW";
-        self.equipmentPackage.radio = @"Radio Professional";
-        self.equipmentPackage.navigationDevice = @"TomTom";
-        self.owner=@"Klaus' Auto";
-        self.vehicalIdentNumber=@"WBADU514";
+        self.unid = 1;
+        self.manufacturerID = 1;
+        self.model = @"";
+        self.manufacturer = @"Audi";
+        self.equipmentPackage.radio=@"Standard";
+        self.vehicalIdentNumber = @"";
+        self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
+        self.owner = @"Kein Besitzer";
     }
     return self;
 }
 
--(Car*) initWithExampleDataVWGolfIV
+-(Car*) initWithExampleDataBMW
 {
     self = [super init];
     if (self)
     {
         [self standardInit];
         self.unid = 2;
-        self.model = @"Golf IV 1.6";
+        self.manufacturerID = 2;
+        self.model = @"";
+        self.manufacturer = @"BMW";
+        self.equipmentPackage.radio = @"Standard";
+        self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
+        self.owner=@"Kein Besitzer";
+        self.vehicalIdentNumber=@"";
+    }
+    return self;
+}
+
+-(Car*) initWithExampleDataVW
+{
+    self = [super init];
+    if (self)
+    {
+        [self standardInit];
+        self.unid = 3;
+        self.manufacturerID = 3;
+        self.model = @"";
         self.manufacturer = @"VW";
-        self.equipmentPackage.radio=@"Beta";
-        self.vehicalIdentNumber = @"WVWZZZ1J";
-        self.equipmentPackage.navigationDevice = @"kein";
-        self.owner = @"Gerds Auto";
+        self.equipmentPackage.radio=@"Standard";
+        self.vehicalIdentNumber = @"";
+        self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
+        self.owner = @"Kein Besitzer";
     }
     return self;
 }
@@ -51,11 +71,11 @@
     if (self)
     {
         [self standardInit];
-        self.unid=0;
+        self.unid = 0;
         self.model = @"";
         self.manufacturer = @"";
         self.equipmentPackage.radio = @"Standard";
-        self.equipmentPackage.navigationDevice = @"Standard";
+        self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
     }
     return self;
 }
@@ -107,6 +127,7 @@
 - (void) standardInit
 {
     self.unid = 0;
+    self.manufacturerID = 0;
     
     self.model = @"Standard";
     self.manufacturer = @"Standard";

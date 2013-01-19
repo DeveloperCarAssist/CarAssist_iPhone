@@ -15,9 +15,11 @@
 @property (nonatomic) AuthorizedRepair* garage;
 @property (nonatomic) CarEquipmentPackage* equipmentPackage;
 @property (nonatomic) NSInteger unid;
-// Initiallisiert Autos mit Beispieldaten
--(Car*) initWithExampleDataBmwZ4;
--(Car*) initWithExampleDataVWGolfIV;
+@property (nonatomic) NSInteger manufacturerID;
+// Initiallisiert entweder BMWs, Audis, oder VWs mit Standarddaten
+-(Car*) initWithExampleDataBMW;
+-(Car*) initWithExampleDataVW;
+-(Car*) initWithExampleDataAudi;
 // Initiallisiert ein leeres Auto ohne Zusatz
 -(Car*) initNewCar;
 
