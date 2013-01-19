@@ -49,6 +49,12 @@
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"ADAC" style:UIBarButtonItemStyleBordered target:self action:@selector(callAdac)];
     [self.navigationItem setRightBarButtonItem: addButton];
     
+    // Dynamisch textgröße anpassen
+    int bigSize = MAX(self.warningLight.name.length, 18);
+    CGFloat newSize = (26.0 / bigSize) * 18;
+    self.warningLightNameView.font = [self.warningLightNameView.font fontWithSize: newSize];
+    
+    
 }
 
 -(void)callAdac

@@ -113,6 +113,7 @@
                 [self.popup showAtPoint:location inView:self.view animated:YES];
                 [self.popup addTarget:self action:@selector(didTouchPopupView:)];
                 [self.popup setDelegate:self];
+                [self.popup setBackroundAlpha:1.0];
             }
         }
         

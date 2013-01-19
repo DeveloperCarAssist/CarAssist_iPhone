@@ -116,6 +116,7 @@ typedef enum {
 - (void)dismiss;
 - (void)dismiss:(BOOL)animtaed;
 - (void)dismissModal;
+- (void)setBackroundAlpha:(CGFloat)alpha;
 
 - (void)addTarget:(id)target action:(SEL)action;
 @end
