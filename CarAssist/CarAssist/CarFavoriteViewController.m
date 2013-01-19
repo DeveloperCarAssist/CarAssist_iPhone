@@ -188,7 +188,7 @@
     if([alertView.title isEqual: @"Bitte Fahrgestellnummer eingeben:"])
     {
         UITextField *vin = [alertView textFieldAtIndex:0];
-        Car* car = [self.carListService returnCarByVehicalIdentNumber: vin.text];
+        Car* car = [self.carListService returnCarByVehicleIdentNumber: vin.text];
         if(car)
         {
             [self carHasBeenSelected: car];
@@ -233,7 +233,7 @@
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    Car* selectedCar = [self.carListService returnCarByVehicalIdentNumber:@"WBADU514"];
+    Car* selectedCar = [self.carListService returnCarByVehicleIdentNumber:@"WAUZZZ8X5DB017634"];
     
     [self carHasBeenSelected: selectedCar];
     [self dismissViewControllerAnimated:YES completion:nil];

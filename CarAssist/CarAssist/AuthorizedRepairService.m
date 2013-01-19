@@ -47,12 +47,15 @@
     if(car)
     {
         // TODO: Abfrage nur noch vom Hersteller abhängig machen
-        switch (car.unid)
+        switch (car.manufacturerID)
         {
             case 1:
-                [self initServiceWithExampleDataBmw];
+                [self initServiceWithExampleDataAudi];
                 break;
             case 2:
+                [self initServiceWithExampleDataBMW];
+                break;
+            case 3:
                 [self initServiceWithExampleDataVW];
                 break;
             default:
@@ -62,52 +65,52 @@
     }
 }
 
-
-- (void) initServiceWithExampleDataVW
+- (void) initServiceWithExampleDataAudi
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
-    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Eimsbüttel" Category:@"Hamburg" andLocation: CLLocationCoordinate2DMake(53.5694437, 9.9590983)];
-    
-    garage.street = @"Fruchtallee 29";
-    garage.postalcode = @"20259";
+    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Audi Zentrum Hamburg" Category:@"Hamburg" andLocation:
+                                CLLocationCoordinate2DMake(53.604010f, 9.961430f)];
+    garage.street = @"Kollaustraße 41-63";
+    garage.postalcode = @"22529";
     garage.city = @"Hamburg";
-    garage.phone = @"040 / 43 172 - 0";
-    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];
+    garage.phone = @"040/548000";
     
     [allItems addObject:garage];
     
-    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Winterhude" Category:@"Hamburg" andLocation:
-              CLLocationCoordinate2DMake(53.58939, 10.02297)];
-
-    garage.street = @"Wiesendamm 120";
-    garage.postalcode = @"22303";
+    garage = [[AuthorizedRepair alloc] initWithName:@"Willy Tiedtke (GmbH & Co.) KG" Category:@"Hamburg" andLocation:
+              CLLocationCoordinate2DMake(53.587453f, 10.092854f)];
+    garage.street = @"Friedrich-Ebert-Damm 118";
+    garage.postalcode = @"22047";
     garage.city = @"Hamburg";
-    garage.phone = @"040 / 270 798 - 0";
-    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];
+    garage.phone = @"040/694060";
     
     [allItems addObject:garage];
-
-
-    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Ahrensburg" Category:@"Schleswig-Holstein" andLocation:
-              CLLocationCoordinate2DMake(53.58939, 10.02297)];
     
-    garage.street = @"Hamburger Straße 40";
-    garage.postalcode = @"22926";
-    garage.city = @"Ahrensburg";
-    garage.phone = @"041 02 / 51 54 - 0";
-    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];    
+    garage = [[AuthorizedRepair alloc] initWithName:@"Auto Wichert GmbH" Category:@"Hamburg" andLocation:
+              CLLocationCoordinate2DMake(53.548820f, 10.032542f)];
+    garage.street = @"Wendenstraße 150-160";
+    garage.postalcode = @"20537";
+    garage.city = @"Hamburg";
+    garage.phone = @"040/2515160";
     
     [allItems addObject:garage];
-
-    garage = [[AuthorizedRepair alloc] initWithName:@"Filiale Harburg" Category:@"Hamburg" andLocation:
-              CLLocationCoordinate2DMake(53.46243, 10.01227)];
     
-    garage.street = @"Großmoorbogen 1a";
-    garage.postalcode = @"21079";
-    garage.city = @"Harburg";
-    garage.phone = @"040 / 766 07 - 0";
-    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"10.00 - 16.00 Uhr", nil];    
+    garage = [[AuthorizedRepair alloc] initWithName:@"Autohaus Schwarzenbek GmbH" Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.511909f, 10.489776f)];
+    garage.street = @"Möllner Straße 85";
+    garage.postalcode = @"21493";
+    garage.city = @"Schwarzenbek";
+    garage.phone = @"04151/89250";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"Wolperding Automobile GmbH & Co. KG" Category:@"Niedersachsen" andLocation:
+              CLLocationCoordinate2DMake(53.356757f, 10.202848f)];
+    garage.street = @"Schlossring 48";
+    garage.postalcode = @"21423";
+    garage.city = @"Winsen";
+    garage.phone = @"04171/7970";
     
     [allItems addObject:garage];
     
@@ -121,12 +124,12 @@
     self.reducedItems = allItems;
 }
 
-- (void) initServiceWithExampleDataBmw
+- (void) initServiceWithExampleDataBMW
 {
     NSMutableArray* allItems = [NSMutableArray array];
     
-    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Hauptniederlassung" Category:@"Hamburg" andLocation:
-                        CLLocationCoordinate2DMake(53.60009f, 9.97196f)];
+    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"BMW AG Niederlassung Hamburg" Category:@"Hamburg" andLocation:
+                                CLLocationCoordinate2DMake(53.60009f, 9.97196f)];
     garage.street = @"Offakamp 10-20";
     garage.postalcode = @"22529";
     garage.city = @"Hamburg";
@@ -134,14 +137,104 @@
     garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"11.00 - 17.00 Uhr", nil];
     
     [allItems addObject:garage];
-
-    garage = [[AuthorizedRepair alloc] initWithName:@"Niederlassung Wansdsbek" Category:@"Hamburg" andLocation:
-                                CLLocationCoordinate2DMake(53.58695f, 10.09423f)];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"BMW AG Niederlassung Hamburg Filiale Wandsbek" Category:@"Hamburg" andLocation:
+                                CLLocationCoordinate2DMake(53.586950f, 10.094230f)];
     garage.street = @"Friedrich-Ebert-Damm 120";
     garage.postalcode = @"22047";
     garage.city = @"Hamburg";
-    garage.phone = @"040 / 55301-30";
-    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"11.00 - 17.00 Uhr", nil];
+    garage.phone = @"040/5530130";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"May & Olde GmbH" Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.748649f, 9.687675f)];
+    garage.street = @"Hamburger Straße 134";
+    garage.postalcode = @"25337";
+    garage.city = @"Elmshorn";
+    garage.phone = @"04121/90770";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"STADAC Automobilges. GmbH & Co." Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.667137f, 9.976465f)];
+    garage.street = @"Niendorfer Straße 151";
+    garage.postalcode = @"22848";
+    garage.city = @"Norderstedt";
+    garage.phone = @"040/5488000";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"B & K GmbH & Co. KG" Category:@"Niedersachsen" andLocation:
+              CLLocationCoordinate2DMake(53.352450f, 10.226810f)];
+    garage.street = @"Lüneburger Straße 128-130";
+    garage.postalcode = @"22848";
+    garage.city = @"Winsen/Luhe";
+    garage.phone = @"04171/78440";
+    
+    [allItems addObject:garage];
+    
+    NSEnumerator *e = [allItems objectEnumerator];
+    id object;
+    while (object = [e nextObject]) {
+        ((AuthorizedRepair *)object).userLocation = self.userLocation;
+    }
+    
+    self.allItems = allItems;
+    self.reducedItems = allItems;
+}
+
+- (void) initServiceWithExampleDataVW
+{
+    NSMutableArray* allItems = [NSMutableArray array];
+    
+    AuthorizedRepair *garage = [[AuthorizedRepair alloc] initWithName:@"Volkswagen Zentrum Hamburg Raffay GmbH & Co. KG" Category:@"Hamburg" andLocation: CLLocationCoordinate2DMake(53.5694437f, 9.9590983f)];
+    
+    garage.street = @"Fruchtallee 29";
+    garage.postalcode = @"20259";
+    garage.city = @"Hamburg";
+    garage.phone = @"040/431720";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"Volkswagen Automobile Hamburg GmbH" Category:@"Hamburg" andLocation:
+              CLLocationCoordinate2DMake(53.58939f, 10.02297f)];
+
+    garage.street = @"Wiesendamm 120";
+    garage.postalcode = @"22303";
+    garage.city = @"Hamburg";
+    garage.phone = @"040/2707980";
+    
+    [allItems addObject:garage];
+
+
+    garage = [[AuthorizedRepair alloc] initWithName:@"Volkswagen Automobile Ahrensburg GmbH" Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.58939f, 10.02297f)];
+    
+    garage.street = @"Hamburger Straße 40";
+    garage.postalcode = @"22926";
+    garage.city = @"Ahrensburg";
+    garage.phone = @"04102/51540";
+    
+    [allItems addObject:garage];
+    
+    garage = [[AuthorizedRepair alloc] initWithName:@"Autohaus Elmshorn GmbH & Co. KG" Category:@"Schleswig-Holstein" andLocation:
+              CLLocationCoordinate2DMake(53.748506f, 9.697167f)];
+    
+    garage.street = @"Farmers Ring 2";
+    garage.postalcode = @"25337";
+    garage.city = @"Kölln-Reisiek";
+    garage.phone = @"04121/571400";
+    
+    [allItems addObject:garage];
+
+    garage = [[AuthorizedRepair alloc] initWithName:@"Köhnke Meckelfeld GmbH & Co. KG" Category:@"Niedersachsen" andLocation:
+              CLLocationCoordinate2DMake(53.417480f, 10.019850f)];
+    
+    garage.street = @"Glüsinger Straße 50";
+    garage.postalcode = @"21217";
+    garage.city = @"Seevetal";
+    garage.phone = @"040/7684083";
     
     [allItems addObject:garage];
     

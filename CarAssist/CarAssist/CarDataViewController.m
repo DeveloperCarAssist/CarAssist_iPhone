@@ -32,7 +32,7 @@
     if (self) {
         self.car = car;
         self.profile = [Profile getProfile];
-        self.settingsValueService = [[SettingsValueService alloc] init];
+        self.settingsValueService = [[SettingsValueService alloc] initWithCar:car];
         self.title = @"Autoprofil";
         self.settingsList = [NSMutableDictionary dictionary];
         self.sectionList = [NSMutableArray array];

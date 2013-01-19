@@ -22,22 +22,19 @@
     self = [super initWithCar:car];
     if(self)
     {
-        switch (car.unid)
-        {
+        switch (car.manufacturerID)
+        {//audi, bmw golf
             case 1:
-                [self initServiceGuidesWithExampleDataBmwZ4];
-                [self initDictionary];
-                break;
-            case 2:
-                [self initServiceGuidesWithExampleDataVWGolfIV];
-                [self initDictionary];
-                break;
-            case 3:
                 [self initServiceGuidesWithExampleDataAudi];
                 [self initDictionary];
                 break;
-            case 4:
-                [self initServiceGuidesWithExampleDataBMW];
+            case 2:
+//TODO                [self initServiceGuidesWithExampleDataBmwZ4];
+//                [self initServiceGuidesWithExampleDataBMW];
+                [self initDictionary];
+                break;
+            case 3:
+                [self initServiceGuidesWithExampleDataVWGolfIV];
                 [self initDictionary];
                 break;
             default:
@@ -92,7 +89,7 @@
 {
     NSMutableArray* allGuides = [NSMutableArray array];
     NSMutableArray* steps = [NSMutableArray array];
-    
+/*
     UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
     Step* step = [[Step alloc] initWithName: @"Sitz in Längsrichtung einstellen(1)" Description:@"Hebel hochziehen und Sitz verschieben. Dann Hebel loslassen und Sitz weiter verschieben, bis die Verriegelung einrastet." AndImage:image];
     [steps addObject:step];
@@ -114,7 +111,7 @@
     
     Guide* guide = [[Guide alloc] initWithName: @"Autositz einstellen" CategoryName: @"Sitze" AndSteps: steps];
     [allGuides addObject:guide];
-    
+
 
     
     //---------------------------------------------------------------------------------------------------------------------------------------
@@ -175,6 +172,84 @@
     
     guide = [[Guide alloc] initWithName: @"Tanken" CategoryName: @"System" AndSteps: steps];
     [allGuides addObject:guide];
+*/
+    
+    
+    Guide *g;
+    
+    g = [[Guide alloc]initWithName:@"Drehzahlmesser" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Uhrzeit" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Kühlmitteltemperatur" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Kraftstoffvorat" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Tacho" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Kilometerzähler" CategoryName:@"Cockpit" AndSteps:NULL];
+    [allGuides addObject:g];
+    
+    g = [[Guide alloc]initWithName:@"Schlüssel" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Türen" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Heckklappe" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Zentralverriegelung" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Diebstahl-Warnanlage" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Elektrische Fensterheber" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Schiebedach" CategoryName:@"Auf und zu" AndSteps:NULL];
+    [allGuides addObject:g];
+   
+    g = [[Guide alloc]initWithName:@"Schalter" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Blinker- und Fernlicht" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Innenleuchten" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Scheibenwischer & Waschanlage" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Wischerblätter" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Rückspiegel" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Heckscheibenheizung" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Sonnenblenden" CategoryName:@"Licht und Sicht" AndSteps:NULL];
+    [allGuides addObject:g];
+
+    g = [[Guide alloc]initWithName:@"Vordersitze" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Kopfstützen" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Armlehne" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Sitzheizung" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Lenksäule" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Hintere Sitzbank" CategoryName:@"Sitze" AndSteps:NULL];
+    [allGuides addObject:g];
+
+    g = [[Guide alloc]initWithName:@"Heizung & Belüftung" CategoryName:@"Klima" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Klimaanlage" CategoryName:@"Klima" AndSteps:NULL];
+    [allGuides addObject:g];
+    
+    g = [[Guide alloc]initWithName:@"Schaltgetriebe" CategoryName:@"Fahren" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Handbremse" CategoryName:@"Fahren" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Zündschloss" CategoryName:@"Fahren" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Motor anlassen" CategoryName:@"Fahren" AndSteps:NULL];
+    [allGuides addObject:g];
+    g = [[Guide alloc]initWithName:@"Motor abstellen" CategoryName:@"Fahren" AndSteps:NULL];
+    [allGuides addObject:g];
     
     self.allItems = allGuides;
     self.reducedItems = allGuides;
