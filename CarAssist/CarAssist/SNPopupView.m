@@ -64,7 +64,26 @@
 @implementation SNPopupView
 
 #pragma mark - Prepare
+-(void) setBackroundAlpha:(CGFloat)alpha
+{
+    CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();
+	CGFloat colors[] =
+	{
+		155.0 / 255.0, 155.0 / 255.0, 155.0 / 255.0, alpha,
+		70.0 / 255.0, 70.0 / 255.0, 70.0 / 255.0, alpha,
+	};
+	gradient = CGGradientCreateWithColorComponents(rgb, colors, NULL, sizeof(colors)/(sizeof(colors[0])*4));
+	
+	CGFloat colors2[] =
+	{
+		20.0 / 255.0, 20.0 / 255.0, 20.0 / 255.0, ALPHA,
+		0.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, ALPHA,
+	};
+	gradient2 = CGGradientCreateWithColorComponents(rgb, colors2, NULL, sizeof(colors2)/(sizeof(colors2[0])*4));
+	CGColorSpaceRelease(rgb);
 
+    
+}
 - (void)setupGradientColors {		
 	CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();
 	CGFloat colors[] =
