@@ -125,69 +125,69 @@ static CarListService* instance;
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Polo";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Golf Plus";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Golf Variant";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Golf GTI";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Scirocco";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Jetta";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Touran";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Tiguan";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Passat";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Touareg";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Phaeton";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Caddy";
-    car.vehicalIdentNumber = @"WBADU276";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
     
     // BMW
     
     car = [[Car alloc] initWithExampleDataBMW];
     car.model = @"316i E36";
-    car.vehicalIdentNumber = @"E32TT47A3166";
+    car.vehicalIdentNumber = @"WBAUC11030VM01040";
     car.owner = @"Eriks Auto";
     [allCars addObject:car];
     
@@ -306,7 +306,7 @@ static CarListService* instance;
         for (int i = 0 ; i < self.allCars.count; i++)
         {
         Car* automobil = [self.allCars objectAtIndex: i];
-        if ( [[automobil.vehicalIdentNumber substringToIndex:8] isEqual: [vehicleIdentNumber substringToIndex:8]])
+        if ( [[automobil.vehicalIdentNumber substringToIndex:17] isEqual: [vehicleIdentNumber substringToIndex:17]])
         {
             return automobil;
         }

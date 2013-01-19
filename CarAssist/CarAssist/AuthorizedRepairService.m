@@ -75,6 +75,7 @@
     garage.postalcode = @"22529";
     garage.city = @"Hamburg";
     garage.phone = @"040/548000";
+    garage.hours = [NSArray arrayWithObjects:@"07:00 - 19:00 Uhr", @"07:00 - 19:00 Uhr", @"07:00 - 19:00 Uhr", @"07:00 - 19:00 Uhr", @"07:00 - 19:00 Uhr", @"09:00 - 16:00 Uhr", @"11:00 - 17:00 Uhr", nil];
     
     [allItems addObject:garage];
     
@@ -84,6 +85,7 @@
     garage.postalcode = @"22047";
     garage.city = @"Hamburg";
     garage.phone = @"040/694060";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09.00 - 14.00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -93,6 +95,7 @@
     garage.postalcode = @"20537";
     garage.city = @"Hamburg";
     garage.phone = @"040/2515160";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"09:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -102,6 +105,7 @@
     garage.postalcode = @"21493";
     garage.city = @"Schwarzenbek";
     garage.phone = @"04151/89250";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"09:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -111,6 +115,7 @@
     garage.postalcode = @"21423";
     garage.city = @"Winsen";
     garage.phone = @"04171/7970";
+    garage.hours = [NSArray arrayWithObjects:@"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"08:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -144,6 +149,7 @@
     garage.postalcode = @"22047";
     garage.city = @"Hamburg";
     garage.phone = @"040/5530130";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"09:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -153,6 +159,7 @@
     garage.postalcode = @"25337";
     garage.city = @"Elmshorn";
     garage.phone = @"04121/90770";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"08:00 - 18:00 Uhr", @"09:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -162,6 +169,7 @@
     garage.postalcode = @"22848";
     garage.city = @"Norderstedt";
     garage.phone = @"040/5488000";
+    garage.hours = [NSArray arrayWithObjects:@"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"08:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -171,6 +179,7 @@
     garage.postalcode = @"22848";
     garage.city = @"Winsen/Luhe";
     garage.phone = @"04171/78440";
+    garage.hours = [NSArray arrayWithObjects:@"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"08:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -194,6 +203,7 @@
     garage.postalcode = @"20259";
     garage.city = @"Hamburg";
     garage.phone = @"040/431720";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09.00 - 14.00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -204,6 +214,7 @@
     garage.postalcode = @"22303";
     garage.city = @"Hamburg";
     garage.phone = @"040/2707980";
+    garage.hours = [NSArray arrayWithObjects:@"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"06:30 - 19:00 Uhr", @"08:00 - 13:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
 
@@ -215,6 +226,7 @@
     garage.postalcode = @"22926";
     garage.city = @"Ahrensburg";
     garage.phone = @"04102/51540";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09.00 - 14.00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
@@ -225,6 +237,7 @@
     garage.postalcode = @"25337";
     garage.city = @"Kölln-Reisiek";
     garage.phone = @"04121/571400";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09.00 - 14.00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
 
@@ -235,6 +248,7 @@
     garage.postalcode = @"21217";
     garage.city = @"Seevetal";
     garage.phone = @"040/7684083";
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09.00 - 14.00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
