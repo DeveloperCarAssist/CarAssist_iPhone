@@ -87,8 +87,6 @@
  */
 - (void) initServiceGuidesWithExampleDataVWGolfIV
 {
-    NSMutableArray* allGuides = [NSMutableArray array];
-    NSMutableArray* steps = [NSMutableArray array];
 /*
     UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
     Step* step = [[Step alloc] initWithName: @"Sitz in Längsrichtung einstellen(1)" Description:@"Hebel hochziehen und Sitz verschieben. Dann Hebel loslassen und Sitz weiter verschieben, bis die Verriegelung einrastet." AndImage:image];
@@ -114,72 +112,24 @@
 
 
     
-    //---------------------------------------------------------------------------------------------------------------------------------------
-    
-     steps = [NSMutableArray array];
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AutoSitz" ofType:@"jpg"]];
-    step = [[Step alloc] initWithName: @"Höhe einstellen" Description:@"Lorem Ipsum" AndImage:image];
-    [steps addObject:step];
-    
-    step = [[Step alloc] initWithName: @"Aus und einbauen" Description:@"Dolor sit." AndImage:image];
-    [steps addObject:step];
-    
-    
-    guide = [[Guide alloc] initWithName: @"Kopfstützen" CategoryName: @"Sitze" AndSteps: steps];
-    [allGuides addObject:guide];
-
-    step = [[Step alloc] initWithName: @"Drehregler A - Temperatur" Description:@"Dolor sit." AndImage:nil];
-    [steps addObject:step];
-    
-    step = [[Step alloc] initWithName: @"Drehschalter B - Gebläse" Description:@"Dolor sit." AndImage:nil];
-    [steps addObject:step];    
-
-    step = [[Step alloc] initWithName: @"Drehregler C- Luftverteilung" Description:@"Dolor sit." AndImage:nil];
-    [steps addObject:step];
-    
-    guide = [[Guide alloc] initWithName: @"Heizung und Lüftung" CategoryName: @"Klima" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    //---------------------------------------------------------------------------------------------------------------------------------------
-
-    
-    steps = [NSMutableArray array];    
-    
-    guide = [[Guide alloc] initWithName: @"Auto starten" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Scheibenwischer" CategoryName: @"Ausstattung" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Blinker" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Autofenster" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Handbremse" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Schaltknüppel" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Airbag" CategoryName: @"Ausstattung" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Lagerraum" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
-    
-    guide = [[Guide alloc] initWithName: @"Tanken" CategoryName: @"System" AndSteps: steps];
-    [allGuides addObject:guide];
 */
-    
-    
+    NSMutableArray* allGuides = [NSMutableArray array];
+    Step *s;
     Guide *g;
+    
+    NSMutableArray* steps = [NSMutableArray array];
+    
+    s = [[Step alloc] initWithName: @"Stunden einstellen" Description:@"Zum Einstellen der Uhrzeit ist rechts unterhalb des Drehzahlmessers ein Stellknopf angeordnet. Durch drehen gegen den Uhrzeigersinn bis zum Anschlag werden die Stunden eingestellt" AndImage:[self loadPngImage: @"golf_uhrzeit_1" ]];
+    [steps addObject:s];
+    
+    s = [[Step alloc] initWithName: @"Minuten einstellen" Description:@"Durch drehen im Uhrzeigersinn werden die Minuten eingestell." AndImage:[self loadPngImage: @"golf_uhrzeit_2" ]];
+    [steps addObject:s];
+    
+
     
     g = [[Guide alloc]initWithName:@"Drehzahlmesser" CategoryName:@"Cockpit" AndSteps:NULL];
     [allGuides addObject:g];
-    g = [[Guide alloc]initWithName:@"Uhrzeit" CategoryName:@"Cockpit" AndSteps:NULL];
+    g = [[Guide alloc]initWithName:@"Uhrzeit" CategoryName:@"Cockpit" AndSteps:steps];
     [allGuides addObject:g];
     g = [[Guide alloc]initWithName:@"Kühlmitteltemperatur" CategoryName:@"Cockpit" AndSteps:NULL];
     [allGuides addObject:g];
@@ -564,5 +514,9 @@
     self.reducedItems = allGuides;
 }
 
+-(UIImage *) loadPngImage:(NSString*)name
+{
+    return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"png"]];
+}
 
 @end
