@@ -27,7 +27,7 @@
     NSMutableArray* warningLights = [NSMutableArray array];
     
     UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsanlage" ofType:@"png"]];
-    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"Bremsanalge" Info:@"" AndImage:image];
+    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"Bremsanalge" Info:@"Bremsanlage gestört. Unverzüglich nächsten Fachbetrieb aufsuchen, um den Schaden beheben zu lassen. Auf dem Weg dorthin mit geringer Geschwindigkeit fahren und sich dabei auf viel längere Bremswege und einen erhöhten Pedaldruck einstellen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parkbremse" ofType:@"png"]];
@@ -35,19 +35,19 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sicherheitsgurt" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Sicherheitsgurt" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Sicherheitsgurt" Info:@"Nicht angelegter Sicherheitsgurt des Fahrers bzw. Beifahrers." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"elektromechanische_lenkung" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Elektromechanische Lenkung" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Elektromechanische Lenkung" Info:@"Elektromechanische Lenkung ausgefallen. Lenkung umgehend von einem Fachbetrieb prüfen lassen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"generator" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Generator" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Generator" Info:@"Generator gestört. Fachbetrieb aufsuchen. Elektrische Anlage prüfen lassen. Nicht erforderliche elektrische Verbraucher ausschalten. Fahrzeugbatterie wird während der nächsten Fahrt nicht vom Generator geladen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"motoroeldruck" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Motoröldruck" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Motoröldruck" Info:@"Der Motoröldruck ist zu gering. Motor Abstellen, Motorölstand prüfen- Blinkt die Warnleuchte obwohl der Motorölstand in Ordnung ist, nicht weiterfahren. Fachmännische Hilfe in Anspruch nehmen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"motoroelstand" ofType:@"png"]];
@@ -55,7 +55,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kuehlsystem" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Kühlsystem" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Kühlsystem" Info:@"Das Motorkühlsystem ist gestört. Motor abstellen, Motor abkühlen lassen bis Zeiger wieder im Normalbereich ist. Motorkühlmittelstand prüfen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"lenkungsverriegelung" ofType:@"png"]];
@@ -79,11 +79,11 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"esc" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Elektronische Stabilisierungskontrolle" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Elektronische Stabilisierungskontrolle" Info:@"Blinkt: ESC regelt. Leuchtet: Zündung aus- und einschalten. Gegebenenfalls eine kurze Wegstrecke fahren. Fassl das Symbol danach trotzdem noch leuchtet, bitte Fachbetrieb aufsuchen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"abs" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Anti-Blockier-System (ABS)" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Anti-Blockier-System (ABS)" Info:@"Das ABS ist gestört oder ausgefallen. Fachbetrieb aufsuchen. Das Fahrzeug kann ohne ABS gebremst werden." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sicherheitssysteme" ofType:@"png"]];
@@ -91,7 +91,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsbelag" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Bremsbelag" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Bremsbelag" Info:@"Bremsbeläge verschlissen. Sofort einen Fachbetrieb aufsuchen. Alle Bremsbeläge prüfen und ggf. ersetzen lassen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"elektromechanische_parkbremse" ofType:@"png"]];
