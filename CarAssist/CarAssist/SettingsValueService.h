@@ -15,5 +15,6 @@
 @property (nonatomic) Car* car;
 @property (nonatomic) NSMutableDictionary* settingValues;
 @property (nonatomic) NSMutableDictionary* settingValuesRepresentations;
+@property (nonatomic) NSMutableDictionary* settingImageRepresentations;
 
 @end
