@@ -32,9 +32,6 @@
     
     self.title = @"Werkstattliste";
     
-    UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveCarButtonClicked)];
-    [self.navigationItem setRightBarButtonItem: saveButton];
-    
     
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
@@ -118,21 +115,14 @@
     self.value = [self.searchableService.reducedItems objectAtIndex:indexPath.row];
     self.valueRepresentation = [[self.searchableService.reducedItems objectAtIndex:indexPath.row] name];
 
+    [self saveSetting];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
    [self.searchableService reduceItemsWithSearchText: searchText];
    [self.valueSelectionTableView reloadData];
-}
-
-/**
- * Diese Methode sorgt für das Speichern des ausgewählten Autos
- */
-- (void) saveCarButtonClicked
-{
-    [self saveSetting];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /**
