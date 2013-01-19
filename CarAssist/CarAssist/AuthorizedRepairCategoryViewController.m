@@ -119,9 +119,16 @@
     {
         if (indexPath.section == 0)
         {
+            //  Zelle für den Favoriten
+            
             UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                                               reuseIdentifier:@"standard"];
             cell.textLabel.text = self.profile.car.garage.name;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            [self decorateCell:cell withItem:self.profile.car.garage]; // Anzeige der Entfernung im Favoriten berechnen
+            
             return cell;
         }
         else
@@ -207,9 +214,14 @@
     
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blueColor];
     self.isGPS = YES;
+    
+    CLLocation *loc = [locations lastObject];
+    
+    // Favorit mit Benutzerkoordinaten versehen
+    self.profile.car.garage.userLocation = loc;
     // Service mit aktuellen Koordinaten initialisieren
     Car *car = [[Profile getProfile] car];
-    self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car andUserLocation:[locations lastObject]];
+    self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car andUserLocation:loc];
 
     [self.categoryTableView reloadData];
 
