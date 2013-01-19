@@ -144,7 +144,9 @@
     values = [NSMutableArray array];
     [values addObject:@"Sportlederlenkrad im 3-Speichen-Design"];
     [values addObject:@"Multifunktions-Sportlederlenkrad im 3-Speichen-Design"];
+    [values addObject:@"Lenkrad im 4-Speichen-Design"];
     [values addObject:@"Multifunktions-Sportlederlenkrad im 3-Speichen-Design, unten abgeflacht"];
+    [values addObject:@"Sportlederlenkrad im 3-Speichen-Design"];
     [values addObject:@"Multifunktions-Lederlenkrad im 4-Speichen-Design"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
@@ -155,6 +157,9 @@
     [values addObject:@"Alcantara/Leder-Kombination"];
     [values addObject:@"Leder Milano"];
     [values addObject:@"Leder Feinnappa"];
+    [values addObject:@"Titangraue Cosinus Sitze"];
+    [values addObject:@"Titangraue Atrium Sitze"];
+    [values addObject:@"Titangraue Silhouette Sitze"];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
 }

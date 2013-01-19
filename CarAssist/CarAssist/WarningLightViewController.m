@@ -10,6 +10,7 @@
 #import "WarningLightViewController.h"
 #import "Utils.h"
 #import "CallAlertView.h"
+#import "AuthorizedRepairCategoryViewController.h"
 
 @interface WarningLightViewController ()
 
@@ -46,8 +47,13 @@
     imgView.image = self.warningLight.image;
     imgView.layer.cornerRadius = 15.0;
     imgView.layer.masksToBounds = YES;
-    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"ADAC" style:UIBarButtonItemStyleBordered target:self action:@selector(callAdac)];
-    [self.navigationItem setRightBarButtonItem: addButton];
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"Werkstatt" style:UIBarButtonItemStylePlain target:self action:@selector(goToWerkstatt)];
+    
+    UIBarButtonItem* addButton2 = [[UIBarButtonItem alloc] initWithTitle:@"ADAC" style:UIBarButtonItemStylePlain target:self action:@selector(callAdac)];
+    
+    NSArray* array = [NSArray arrayWithObjects:addButton, addButton2,nil];
+    
+     [self.navigationItem setRightBarButtonItems: array animated:YES];
     
     // Dynamisch textgröße anpassen
     int bigSize = MAX(self.warningLight.name.length, 18);
@@ -62,5 +68,11 @@
     CallAlertView *alert = [[CallAlertView alloc] initCall: self.navigationController andMessage: self.warningLight.name];
     [alert show];
 }
+-(void)goToWerkstatt
+{
+    AuthorizedRepairCategoryViewController* viewController = [[AuthorizedRepairCategoryViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 
 @end
