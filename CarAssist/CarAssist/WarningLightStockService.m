@@ -198,8 +198,44 @@
     warningLight = [[WarningLight alloc] initWithName:@"Getriebe" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AAAAA" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Drehzahlbegrenzung" Info:@"" AndImage:image];
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"blinkeanlag" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Blinkanlage" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"anhaenger_blinkeanlag" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Anhängerblinkanlage" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"geschwindigkeitsregelanlage" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Geschwindigkeitsregelanlage" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_adaptive_cruise_control" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"adaptive cruise control" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"anfahrtsassistent" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Anfahrtsassistent" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_active_lane_assist_gruen" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"active lane assist" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"start_stop_system" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Start-Stop-System" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"start_stop_system_weiß" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Start-Stop-System" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pausenempfehlung" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Pausenempfehlung" Info:@"" AndImage:image];
+    [warningLights addObject:warningLight];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fernlicht" ofType:@"png"]];
+    warningLight = [[WarningLight alloc] initWithName:@"Fernlicht" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     self.warningLights = warningLights;

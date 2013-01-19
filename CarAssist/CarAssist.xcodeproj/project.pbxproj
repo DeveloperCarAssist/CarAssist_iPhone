@@ -71,6 +71,16 @@
 		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
 		2EDE894016AAD8FA007C3635 /* elektromechanische_lenkung_dynamiklenkung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE893F16AAD8FA007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */; };
 		2EDE894316AAD939007C3635 /* getriebe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894216AAD939007C3635 /* getriebe.png */; };
+		2EDE894516AADB42007C3635 /* blinkeanlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894416AADB42007C3635 /* blinkeanlag.png */; };
+		2EDE894716AADB7E007C3635 /* anhaenger_blinkeanlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894616AADB7E007C3635 /* anhaenger_blinkeanlag.png */; };
+		2EDE894916AADBA4007C3635 /* geschwindigkeitsregelanlage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894816AADBA4007C3635 /* geschwindigkeitsregelanlage.png */; };
+		2EDE894B16AADC4F007C3635 /* audi_adaptive_cruise_control.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894A16AADC4F007C3635 /* audi_adaptive_cruise_control.png */; };
+		2EDE894F16AADD48007C3635 /* anfahrtsassistent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE894E16AADD48007C3635 /* anfahrtsassistent.png */; };
+		2EDE895116AADD65007C3635 /* audi_active_lane_assist_gruen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895016AADD65007C3635 /* audi_active_lane_assist_gruen.png */; };
+		2EDE895316AADD94007C3635 /* start_stop_system.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895216AADD94007C3635 /* start_stop_system.png */; };
+		2EDE895516AADDAE007C3635 /* start_stop_system_weiß.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895416AADDAE007C3635 /* start_stop_system_weiß.png */; };
+		2EDE895716AADDD7007C3635 /* pausenempfehlung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895616AADDD7007C3635 /* pausenempfehlung.png */; };
+		2EDE895916AADDF2007C3635 /* fernlicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895816AADDF2007C3635 /* fernlicht.png */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
@@ -283,6 +293,16 @@
 		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
 		2EDE893F16AAD8FA007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = elektromechanische_lenkung_dynamiklenkung.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/elektromechanische_lenkung_dynamiklenkung.png"; sourceTree = "<group>"; };
 		2EDE894216AAD939007C3635 /* getriebe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getriebe.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/getriebe.png"; sourceTree = "<group>"; };
+		2EDE894416AADB42007C3635 /* blinkeanlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blinkeanlag.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/blinkeanlag.png"; sourceTree = "<group>"; };
+		2EDE894616AADB7E007C3635 /* anhaenger_blinkeanlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = anhaenger_blinkeanlag.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/anhaenger_blinkeanlag.png"; sourceTree = "<group>"; };
+		2EDE894816AADBA4007C3635 /* geschwindigkeitsregelanlage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = geschwindigkeitsregelanlage.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/geschwindigkeitsregelanlage.png"; sourceTree = "<group>"; };
+		2EDE894A16AADC4F007C3635 /* audi_adaptive_cruise_control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = audi_adaptive_cruise_control.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/audi_adaptive_cruise_control.png"; sourceTree = "<group>"; };
+		2EDE894E16AADD48007C3635 /* anfahrtsassistent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = anfahrtsassistent.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/anfahrtsassistent.png"; sourceTree = "<group>"; };
+		2EDE895016AADD65007C3635 /* audi_active_lane_assist_gruen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = audi_active_lane_assist_gruen.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/audi_active_lane_assist_gruen.png"; sourceTree = "<group>"; };
+		2EDE895216AADD94007C3635 /* start_stop_system.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_stop_system.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/start_stop_system.png"; sourceTree = "<group>"; };
+		2EDE895416AADDAE007C3635 /* start_stop_system_weiß.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start_stop_system_weiß.png"; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/start_stop_system_weiß.png"; sourceTree = "<group>"; };
+		2EDE895616AADDD7007C3635 /* pausenempfehlung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pausenempfehlung.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/pausenempfehlung.png"; sourceTree = "<group>"; };
+		2EDE895816AADDF2007C3635 /* fernlicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fernlicht.png; path = "../../../../Dropbox/WiSe 12-13/Projekt/OOSE/Icons/Warnleuchten Audi/fernlicht.png"; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -908,6 +928,16 @@
 				2E695EA216AAD8BA00E05D01 /* scheibenwischer.png */,
 				2EDE893F16AAD8FA007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */,
 				2EDE894216AAD939007C3635 /* getriebe.png */,
+				2EDE894416AADB42007C3635 /* blinkeanlag.png */,
+				2EDE894616AADB7E007C3635 /* anhaenger_blinkeanlag.png */,
+				2EDE894816AADBA4007C3635 /* geschwindigkeitsregelanlage.png */,
+				2EDE894A16AADC4F007C3635 /* audi_adaptive_cruise_control.png */,
+				2EDE894E16AADD48007C3635 /* anfahrtsassistent.png */,
+				2EDE895016AADD65007C3635 /* audi_active_lane_assist_gruen.png */,
+				2EDE895216AADD94007C3635 /* start_stop_system.png */,
+				2EDE895416AADDAE007C3635 /* start_stop_system_weiß.png */,
+				2EDE895616AADDD7007C3635 /* pausenempfehlung.png */,
+				2EDE895816AADDF2007C3635 /* fernlicht.png */,
 			);
 			name = "Warning lights";
 			sourceTree = "<group>";
@@ -1214,6 +1244,16 @@
 				2E695EA316AAD8BB00E05D01 /* scheibenwischer.png in Resources */,
 				2EDE894016AAD8FA007C3635 /* elektromechanische_lenkung_dynamiklenkung.png in Resources */,
 				2EDE894316AAD939007C3635 /* getriebe.png in Resources */,
+				2EDE894516AADB42007C3635 /* blinkeanlag.png in Resources */,
+				2EDE894716AADB7E007C3635 /* anhaenger_blinkeanlag.png in Resources */,
+				2EDE894916AADBA4007C3635 /* geschwindigkeitsregelanlage.png in Resources */,
+				2EDE894B16AADC4F007C3635 /* audi_adaptive_cruise_control.png in Resources */,
+				2EDE894F16AADD48007C3635 /* anfahrtsassistent.png in Resources */,
+				2EDE895116AADD65007C3635 /* audi_active_lane_assist_gruen.png in Resources */,
+				2EDE895316AADD94007C3635 /* start_stop_system.png in Resources */,
+				2EDE895516AADDAE007C3635 /* start_stop_system_weiß.png in Resources */,
+				2EDE895716AADDD7007C3635 /* pausenempfehlung.png in Resources */,
+				2EDE895916AADDF2007C3635 /* fernlicht.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
