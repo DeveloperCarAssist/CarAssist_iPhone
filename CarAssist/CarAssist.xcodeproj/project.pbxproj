@@ -183,6 +183,8 @@
 		83460FA216A98E02003C167A /* einstellungen_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 83460FA116A98E02003C167A /* einstellungen_29x29.png */; };
 		83460FC916A99BF5003C167A /* SettingsValueService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83460FC816A99BF5003C167A /* SettingsValueService.m */; };
 		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8F02C5FE16AAF82800C5B680 /* golf_uhrzeit_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */; };
+		8F02C5FF16AAF82800C5B680 /* golf_uhrzeit_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */; };
 		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
 		8F1F110416851C26007DDFAD /* AuthorizedRepairCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F110216851C26007DDFAD /* AuthorizedRepairCategoryViewController.m */; };
 		8F1FB475167498D2000D1D04 /* reifenwechsel_schritt_20.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */; };
@@ -447,6 +449,8 @@
 		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8379325B16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8379325C16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_1.png; sourceTree = "<group>"; };
+		8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_2.png; sourceTree = "<group>"; };
 		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
 		8F1F10FE168509DD007DDFAD /* AuthorizedRepairService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizedRepairService.h; sourceTree = "<group>"; };
 		8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizedRepairService.m; sourceTree = "<group>"; };
@@ -1013,6 +1017,8 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
+				8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */,
+				8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */,
 				3773D15816A99EAD006195A5 /* navi5.gif */,
 				3773D15916A99EAD006195A5 /* navi4.gif */,
 				3773D15A16A99EAD006195A5 /* navi3.gif */,
@@ -1266,6 +1272,8 @@
 				2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */,
 				2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */,
 				2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */,
+				8F02C5FE16AAF82800C5B680 /* golf_uhrzeit_1.png in Resources */,
+				8F02C5FF16AAF82800C5B680 /* golf_uhrzeit_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
