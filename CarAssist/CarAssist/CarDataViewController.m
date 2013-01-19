@@ -257,8 +257,9 @@
 {
     NSArray* values = [self.settingsValueService.settingValues objectForKey:title];
     NSArray* valuesRepresentations = [self.settingsValueService.settingValuesRepresentations objectForKey:title];
+    NSArray* imageRepresentations = [self.settingsValueService.settingImageRepresentations objectForKey:title];
     
-    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithDelegate: self Values:values ValueRepresentations:valuesRepresentations AndImage:nil];
+    EditViewController* pickerController = [[EditViewControllerPicker alloc] initWithDelegate: self Values:values ValueRepresentations:valuesRepresentations AndImageRepresentations:imageRepresentations];
     SettingCell* result = [[SettingCell alloc] initEditableWithTitle:title Value:value ValueRepresentation:valueRepresentation AndEditViewController:pickerController];
     return result;
     

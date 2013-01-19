@@ -18,6 +18,7 @@
     {
         self.settingValues = [NSMutableDictionary dictionary];
         self.settingValuesRepresentations = [NSMutableDictionary dictionary];
+        self.settingImageRepresentations = [NSMutableDictionary dictionary];
         
         switch (car.manufacturerID)
         {
@@ -45,6 +46,7 @@
     NSString* settingName = @"Versicherung";
     NSMutableArray* values = [NSMutableArray array];
     NSMutableArray* valueRepresentations = [NSMutableArray array];
+    NSMutableArray* images = [NSMutableArray array];
     [values addObject:@"Allianz"];
     [values addObject:@"HUK Coburg"];
     [values addObject:@"Mannheimer"];
@@ -64,12 +66,17 @@
     [self.settingValuesRepresentations setObject:valueRepresentations forKey:settingName];
     
     settingName = @"Navigationsgerät";
+    images = [NSMutableArray array];
     values = [NSMutableArray array];
     [values addObject:@"Std. Navi"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"abs" ofType:@"png"]]];
     [values addObject:@"Extended Navi"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parkbremse" ofType:@"png"]]];
     [values addObject:@"Extended Navi mit Bonus-Maps"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"mmi_navigation_plus" ofType:@"png"]]];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
+    [self.settingImageRepresentations setObject:images forKey:settingName];
     
     settingName = @"Radio";
     values = [NSMutableArray array];

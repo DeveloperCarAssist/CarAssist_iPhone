@@ -15,14 +15,14 @@
 
 @implementation EditViewControllerPicker
 
-- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImage: (UIImage*) image
+- (EditViewControllerPicker*) initWithDelegate: (UIViewController*) delegate Values: (NSArray*) values ValueRepresentations: (NSArray *) valueRepresentations AndImageRepresentations: (NSArray*) imageRepresentations
 {
     self = [super initWithDelegate: delegate];
     if (self)
     {
         self.values = values;
         self.valueRepresentations = valueRepresentations;
-        self.image = image;
+        self.imageRepresentations = imageRepresentations;
     }
     
     return self;
@@ -34,7 +34,7 @@
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
-    [self.imageView setImage:self.image];
+    [self.imageView setImage:[self.imageRepresentations objectAtIndex:0]];
     
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action: @selector(saveButtonPressed)];
     [self.navigationItem setRightBarButtonItem: addButton];
@@ -57,6 +57,7 @@
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.value = [self.values objectAtIndex:row];
+    [self.imageView setImage:[self.imageRepresentations objectAtIndex:row]];
 }
 
 - (void) saveButtonPressed

@@ -1,5 +1,5 @@
 //
-//  RoadsideAssitanceCaller.h
+//  RoadsideAssistanceCaller.h
 //  CarAssist
 //
 //  Created by 0fiedler on 15.12.12.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RoadsideAssitanceCaller : NSObject
+@interface RoadsideAssistanceCaller : NSObject
 -(void) callTheADAC;
 @end
