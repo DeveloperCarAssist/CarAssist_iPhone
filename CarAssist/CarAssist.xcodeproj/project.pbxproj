@@ -26,10 +26,72 @@
 		2EA3C02F16998A7E00D3F313 /* fest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C02E16998A7E00D3F313 /* fest.jpg */; };
 		2EA3C03116998BA000D3F313 /* halleluja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EA3C03016998BA000D3F313 /* halleluja.jpg */; };
 		2EADF06E1682640A00076FB3 /* EditViewControllerTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */; };
+		2EDE899816AADFD9007C3635 /* abgass_kontrollsystem.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE895F16AADFD9007C3635 /* abgass_kontrollsystem.png */; };
+		2EDE899916AADFD9007C3635 /* abs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896016AADFD9007C3635 /* abs.png */; };
+		2EDE899A16AADFD9007C3635 /* adaptive_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896116AADFD9007C3635 /* adaptive_light.png */; };
+		2EDE899B16AADFD9007C3635 /* anfahrtsassistent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896216AADFD9007C3635 /* anfahrtsassistent.png */; };
+		2EDE899C16AADFD9007C3635 /* anhaenger_blinkeanlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896316AADFD9007C3635 /* anhaenger_blinkeanlag.png */; };
+		2EDE899D16AADFD9007C3635 /* audi_active_lane_assist_gruen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896416AADFD9007C3635 /* audi_active_lane_assist_gruen.png */; };
+		2EDE899E16AADFD9007C3635 /* audi_active_lane_assist.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896516AADFD9007C3635 /* audi_active_lane_assist.png */; };
+		2EDE899F16AADFD9007C3635 /* audi_adaptive_cruise_control_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896616AADFD9007C3635 /* audi_adaptive_cruise_control_2.png */; };
+		2EDE89A016AADFD9007C3635 /* audi_adaptive_cruise_control.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896716AADFD9007C3635 /* audi_adaptive_cruise_control.png */; };
+		2EDE89A116AADFD9007C3635 /* audi_adativ_curise_control_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896816AADFD9007C3635 /* audi_adativ_curise_control_2.png */; };
+		2EDE89A216AADFD9007C3635 /* baterie_funkschluessel.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896916AADFD9007C3635 /* baterie_funkschluessel.png */; };
+		2EDE89A316AADFD9007C3635 /* baterieladung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896A16AADFD9007C3635 /* baterieladung.png */; };
+		2EDE89A416AADFD9007C3635 /* blinkeanlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896B16AADFD9007C3635 /* blinkeanlag.png */; };
+		2EDE89A516AADFD9007C3635 /* bremsanlage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896C16AADFD9007C3635 /* bremsanlage.png */; };
+		2EDE89A616AADFD9007C3635 /* bremsbelag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896D16AADFD9007C3635 /* bremsbelag.png */; };
+		2EDE89A716AADFD9007C3635 /* daempferregelung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896E16AADFD9007C3635 /* daempferregelung.png */; };
+		2EDE89A816AADFD9007C3635 /* default_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE896F16AADFD9007C3635 /* default_car.png */; };
+		2EDE89A916AADFD9007C3635 /* dieselpartikelfilter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897016AADFD9007C3635 /* dieselpartikelfilter.png */; };
+		2EDE89AA16AADFD9007C3635 /* drehzahlbegrenzung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897116AADFD9007C3635 /* drehzahlbegrenzung.png */; };
+		2EDE89AB16AADFD9007C3635 /* dynamische_leuchtweitenregulierung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897216AADFD9007C3635 /* dynamische_leuchtweitenregulierung.png */; };
+		2EDE89AC16AADFD9007C3635 /* elektromechanische_lenkung_dynamiklenkung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897316AADFD9007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */; };
+		2EDE89AD16AADFD9007C3635 /* elektromechanische_lenkung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897416AADFD9007C3635 /* elektromechanische_lenkung.png */; };
+		2EDE89AE16AADFD9007C3635 /* elektromechanische_parkbremse.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897516AADFD9007C3635 /* elektromechanische_parkbremse.png */; };
+		2EDE89AF16AADFD9007C3635 /* esc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897616AADFD9007C3635 /* esc.png */; };
+		2EDE89B016AADFD9007C3635 /* fernlicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897716AADFD9007C3635 /* fernlicht.png */; };
+		2EDE89B116AADFD9007C3635 /* generator.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897816AADFD9007C3635 /* generator.png */; };
+		2EDE89B216AADFD9007C3635 /* geschwindigkeitsregelanlage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897916AADFD9007C3635 /* geschwindigkeitsregelanlage.png */; };
+		2EDE89B316AADFD9007C3635 /* geschwindigkeitswarnanlage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897A16AADFD9007C3635 /* geschwindigkeitswarnanlage_1.png */; };
+		2EDE89B416AADFD9007C3635 /* geschwindigkeitswarnanlage_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897B16AADFD9007C3635 /* geschwindigkeitswarnanlage_2.png */; };
+		2EDE89B516AADFD9007C3635 /* getriebe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897C16AADFD9007C3635 /* getriebe.png */; };
+		2EDE89B616AADFD9007C3635 /* komfortschlussel.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897D16AADFD9007C3635 /* komfortschlussel.png */; };
+		2EDE89B716AADFD9007C3635 /* kuehlsystem.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897E16AADFD9007C3635 /* kuehlsystem.png */; };
+		2EDE89B816AADFD9007C3635 /* lampenausfallkontrolle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE897F16AADFD9007C3635 /* lampenausfallkontrolle.png */; };
+		2EDE89B916AADFD9007C3635 /* lenkungsverriegelung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898016AADFD9007C3635 /* lenkungsverriegelung.png */; };
+		2EDE89BA16AADFD9007C3635 /* licht-_regensensor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898116AADFD9007C3635 /* licht-_regensensor.png */; };
+		2EDE89BB16AADFD9007C3635 /* motoroeldruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898216AADFD9007C3635 /* motoroeldruck.png */; };
+		2EDE89BC16AADFD9007C3635 /* motoroelsensor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898316AADFD9007C3635 /* motoroelsensor.png */; };
+		2EDE89BD16AADFD9007C3635 /* motoroelstand_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898416AADFD9007C3635 /* motoroelstand_gelb.png */; };
+		2EDE89BE16AADFD9007C3635 /* motoroelstand.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898516AADFD9007C3635 /* motoroelstand.png */; };
+		2EDE89BF16AADFD9007C3635 /* motorsteuerung_benzin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898616AADFD9007C3635 /* motorsteuerung_benzin.png */; };
+		2EDE89C016AADFD9007C3635 /* motorsteuerung_diesel.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898716AADFD9007C3635 /* motorsteuerung_diesel.png */; };
+		2EDE89C116AADFD9007C3635 /* motortemperatur.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898816AADFD9007C3635 /* motortemperatur.png */; };
+		2EDE89C216AADFD9007C3635 /* nebelscheinwerfer.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898916AADFD9007C3635 /* nebelscheinwerfer.png */; };
+		2EDE89C316AADFD9007C3635 /* nebelschlussleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898A16AADFD9007C3635 /* nebelschlussleuchte.png */; };
+		2EDE89C416AADFD9007C3635 /* parkbremse.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898B16AADFD9007C3635 /* parkbremse.png */; };
+		2EDE89C516AADFD9007C3635 /* pausenempfehlung.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898C16AADFD9007C3635 /* pausenempfehlung.png */; };
+		2EDE89C616AADFD9007C3635 /* reifendruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898D16AADFD9007C3635 /* reifendruck.png */; };
+		2EDE89C716AADFD9007C3635 /* scheibenwischer.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898E16AADFD9007C3635 /* scheibenwischer.png */; };
+		2EDE89C816AADFD9007C3635 /* sicherheitsgurt.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE898F16AADFD9007C3635 /* sicherheitsgurt.png */; };
+		2EDE89C916AADFD9007C3635 /* sicherheitssysteme.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899016AADFD9007C3635 /* sicherheitssysteme.png */; };
+		2EDE89CA16AADFD9007C3635 /* sportdiferenzial.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899116AADFD9007C3635 /* sportdiferenzial.png */; };
+		2EDE89CB16AADFD9007C3635 /* start_stop_system_weiß.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899216AADFD9007C3635 /* start_stop_system_weiß.png */; };
+		2EDE89CC16AADFD9007C3635 /* start_stop_system.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899316AADFD9007C3635 /* start_stop_system.png */; };
+		2EDE89CD16AADFD9007C3635 /* tanksystem.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899416AADFD9007C3635 /* tanksystem.png */; };
+		2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899516AADFD9007C3635 /* waschwasserstand.png */; };
+		2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */; };
+		2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899716AADFD9007C3635 /* zuendschloss.png */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
 		375F8E8216723C7D00FAD821 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E8016723C7D00FAD821 /* SettingsViewController.xib */; };
+		3773D15D16A99EAD006195A5 /* navi5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15816A99EAD006195A5 /* navi5.gif */; };
+		3773D15E16A99EAD006195A5 /* navi4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15916A99EAD006195A5 /* navi4.gif */; };
+		3773D15F16A99EAD006195A5 /* navi3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15A16A99EAD006195A5 /* navi3.gif */; };
+		3773D16016A99EAD006195A5 /* navi2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15B16A99EAD006195A5 /* navi2.gif */; };
+		3773D16116A99EAD006195A5 /* navi1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3773D15C16A99EAD006195A5 /* navi1.gif */; };
 		379F258016A19EA000F46860 /* SNPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257D16A19EA000F46860 /* SNPopupView.m */; };
 		379F258116A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F257F16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.m */; };
 		379F259B16A1B40500F46860 /* cmu07a.dic in Resources */ = {isa = PBXBuildFile; fileRef = 379F258B16A1B40500F46860 /* cmu07a.dic */; };
@@ -82,10 +144,6 @@
 		400DF8A116690A9900D6217B /* WarningLightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF8A016690A9900D6217B /* WarningLightCollectionViewCell.m */; };
 		400DF8A516690C7600D6217B /* WarningLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400DF8A316690C7600D6217B /* WarningLightViewController.m */; };
 		400DF8A616690C7600D6217B /* WarningLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A416690C7600D6217B /* WarningLightViewController.xib */; };
-		400DF8AB166910BF00D6217B /* bremsanlage.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A7166910BF00D6217B /* bremsanlage.png */; };
-		400DF8AC166910BF00D6217B /* feststellbremsenleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */; };
-		400DF8AD166910BF00D6217B /* parkbremse.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8A9166910BF00D6217B /* parkbremse.png */; };
-		400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8AA166910BF00D6217B /* warnleuchte.png */; };
 		400DF8B0166912C400D6217B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400DF8AF166912C400D6217B /* QuartzCore.framework */; };
 		400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */ = {isa = PBXBuildFile; fileRef = 400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */; };
 		4018C9FC16A1B35100C6915B /* CarFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018C9FA16A1B35100C6915B /* CarFavoriteViewController.m */; };
@@ -192,11 +250,73 @@
 		2EA3C03016998BA000D3F313 /* halleluja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halleluja.jpg; sourceTree = "<group>"; };
 		2EADF06C1682640A00076FB3 /* EditViewControllerTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerTextInput.h; sourceTree = "<group>"; };
 		2EADF06D1682640A00076FB3 /* EditViewControllerTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerTextInput.m; sourceTree = "<group>"; };
+		2EDE895F16AADFD9007C3635 /* abgass_kontrollsystem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abgass_kontrollsystem.png; sourceTree = "<group>"; };
+		2EDE896016AADFD9007C3635 /* abs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abs.png; sourceTree = "<group>"; };
+		2EDE896116AADFD9007C3635 /* adaptive_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adaptive_light.png; sourceTree = "<group>"; };
+		2EDE896216AADFD9007C3635 /* anfahrtsassistent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anfahrtsassistent.png; sourceTree = "<group>"; };
+		2EDE896316AADFD9007C3635 /* anhaenger_blinkeanlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anhaenger_blinkeanlag.png; sourceTree = "<group>"; };
+		2EDE896416AADFD9007C3635 /* audi_active_lane_assist_gruen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_active_lane_assist_gruen.png; sourceTree = "<group>"; };
+		2EDE896516AADFD9007C3635 /* audi_active_lane_assist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_active_lane_assist.png; sourceTree = "<group>"; };
+		2EDE896616AADFD9007C3635 /* audi_adaptive_cruise_control_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_adaptive_cruise_control_2.png; sourceTree = "<group>"; };
+		2EDE896716AADFD9007C3635 /* audi_adaptive_cruise_control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_adaptive_cruise_control.png; sourceTree = "<group>"; };
+		2EDE896816AADFD9007C3635 /* audi_adativ_curise_control_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_adativ_curise_control_2.png; sourceTree = "<group>"; };
+		2EDE896916AADFD9007C3635 /* baterie_funkschluessel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baterie_funkschluessel.png; sourceTree = "<group>"; };
+		2EDE896A16AADFD9007C3635 /* baterieladung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baterieladung.png; sourceTree = "<group>"; };
+		2EDE896B16AADFD9007C3635 /* blinkeanlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blinkeanlag.png; sourceTree = "<group>"; };
+		2EDE896C16AADFD9007C3635 /* bremsanlage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bremsanlage.png; sourceTree = "<group>"; };
+		2EDE896D16AADFD9007C3635 /* bremsbelag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bremsbelag.png; sourceTree = "<group>"; };
+		2EDE896E16AADFD9007C3635 /* daempferregelung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daempferregelung.png; sourceTree = "<group>"; };
+		2EDE896F16AADFD9007C3635 /* default_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_car.png; sourceTree = "<group>"; };
+		2EDE897016AADFD9007C3635 /* dieselpartikelfilter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dieselpartikelfilter.png; sourceTree = "<group>"; };
+		2EDE897116AADFD9007C3635 /* drehzahlbegrenzung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drehzahlbegrenzung.png; sourceTree = "<group>"; };
+		2EDE897216AADFD9007C3635 /* dynamische_leuchtweitenregulierung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamische_leuchtweitenregulierung.png; sourceTree = "<group>"; };
+		2EDE897316AADFD9007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elektromechanische_lenkung_dynamiklenkung.png; sourceTree = "<group>"; };
+		2EDE897416AADFD9007C3635 /* elektromechanische_lenkung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elektromechanische_lenkung.png; sourceTree = "<group>"; };
+		2EDE897516AADFD9007C3635 /* elektromechanische_parkbremse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elektromechanische_parkbremse.png; sourceTree = "<group>"; };
+		2EDE897616AADFD9007C3635 /* esc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esc.png; sourceTree = "<group>"; };
+		2EDE897716AADFD9007C3635 /* fernlicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fernlicht.png; sourceTree = "<group>"; };
+		2EDE897816AADFD9007C3635 /* generator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = generator.png; sourceTree = "<group>"; };
+		2EDE897916AADFD9007C3635 /* geschwindigkeitsregelanlage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geschwindigkeitsregelanlage.png; sourceTree = "<group>"; };
+		2EDE897A16AADFD9007C3635 /* geschwindigkeitswarnanlage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geschwindigkeitswarnanlage_1.png; sourceTree = "<group>"; };
+		2EDE897B16AADFD9007C3635 /* geschwindigkeitswarnanlage_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geschwindigkeitswarnanlage_2.png; sourceTree = "<group>"; };
+		2EDE897C16AADFD9007C3635 /* getriebe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getriebe.png; sourceTree = "<group>"; };
+		2EDE897D16AADFD9007C3635 /* komfortschlussel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = komfortschlussel.png; sourceTree = "<group>"; };
+		2EDE897E16AADFD9007C3635 /* kuehlsystem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuehlsystem.png; sourceTree = "<group>"; };
+		2EDE897F16AADFD9007C3635 /* lampenausfallkontrolle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lampenausfallkontrolle.png; sourceTree = "<group>"; };
+		2EDE898016AADFD9007C3635 /* lenkungsverriegelung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenkungsverriegelung.png; sourceTree = "<group>"; };
+		2EDE898116AADFD9007C3635 /* licht-_regensensor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "licht-_regensensor.png"; sourceTree = "<group>"; };
+		2EDE898216AADFD9007C3635 /* motoroeldruck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motoroeldruck.png; sourceTree = "<group>"; };
+		2EDE898316AADFD9007C3635 /* motoroelsensor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motoroelsensor.png; sourceTree = "<group>"; };
+		2EDE898416AADFD9007C3635 /* motoroelstand_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motoroelstand_gelb.png; sourceTree = "<group>"; };
+		2EDE898516AADFD9007C3635 /* motoroelstand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motoroelstand.png; sourceTree = "<group>"; };
+		2EDE898616AADFD9007C3635 /* motorsteuerung_benzin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motorsteuerung_benzin.png; sourceTree = "<group>"; };
+		2EDE898716AADFD9007C3635 /* motorsteuerung_diesel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motorsteuerung_diesel.png; sourceTree = "<group>"; };
+		2EDE898816AADFD9007C3635 /* motortemperatur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motortemperatur.png; sourceTree = "<group>"; };
+		2EDE898916AADFD9007C3635 /* nebelscheinwerfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nebelscheinwerfer.png; sourceTree = "<group>"; };
+		2EDE898A16AADFD9007C3635 /* nebelschlussleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nebelschlussleuchte.png; sourceTree = "<group>"; };
+		2EDE898B16AADFD9007C3635 /* parkbremse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkbremse.png; sourceTree = "<group>"; };
+		2EDE898C16AADFD9007C3635 /* pausenempfehlung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausenempfehlung.png; sourceTree = "<group>"; };
+		2EDE898D16AADFD9007C3635 /* reifendruck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reifendruck.png; sourceTree = "<group>"; };
+		2EDE898E16AADFD9007C3635 /* scheibenwischer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scheibenwischer.png; sourceTree = "<group>"; };
+		2EDE898F16AADFD9007C3635 /* sicherheitsgurt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sicherheitsgurt.png; sourceTree = "<group>"; };
+		2EDE899016AADFD9007C3635 /* sicherheitssysteme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sicherheitssysteme.png; sourceTree = "<group>"; };
+		2EDE899116AADFD9007C3635 /* sportdiferenzial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sportdiferenzial.png; sourceTree = "<group>"; };
+		2EDE899216AADFD9007C3635 /* start_stop_system_weiß.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start_stop_system_weiß.png"; sourceTree = "<group>"; };
+		2EDE899316AADFD9007C3635 /* start_stop_system.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_stop_system.png; sourceTree = "<group>"; };
+		2EDE899416AADFD9007C3635 /* tanksystem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanksystem.png; sourceTree = "<group>"; };
+		2EDE899516AADFD9007C3635 /* waschwasserstand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waschwasserstand.png; sourceTree = "<group>"; };
+		2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss_gelb.png; sourceTree = "<group>"; };
+		2EDE899716AADFD9007C3635 /* zuendschloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss.png; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		375F8E7F16723C7D00FAD821 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		375F8E8016723C7D00FAD821 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		3773D15816A99EAD006195A5 /* navi5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi5.gif; sourceTree = "<group>"; };
+		3773D15916A99EAD006195A5 /* navi4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi4.gif; sourceTree = "<group>"; };
+		3773D15A16A99EAD006195A5 /* navi3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi3.gif; sourceTree = "<group>"; };
+		3773D15B16A99EAD006195A5 /* navi2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi2.gif; sourceTree = "<group>"; };
+		3773D15C16A99EAD006195A5 /* navi1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = navi1.gif; sourceTree = "<group>"; };
 		379F257C16A19EA000F46860 /* SNPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopupView.h; sourceTree = "<group>"; };
 		379F257D16A19EA000F46860 /* SNPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopupView.m; sourceTree = "<group>"; };
 		379F257E16A19EA000F46860 /* SNPopupView+UsingPrivateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNPopupView+UsingPrivateMethod.h"; sourceTree = "<group>"; };
@@ -268,10 +388,6 @@
 		400DF8A216690C7600D6217B /* WarningLightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLightViewController.h; sourceTree = "<group>"; };
 		400DF8A316690C7600D6217B /* WarningLightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningLightViewController.m; sourceTree = "<group>"; };
 		400DF8A416690C7600D6217B /* WarningLightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WarningLightViewController.xib; sourceTree = "<group>"; };
-		400DF8A7166910BF00D6217B /* bremsanlage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bremsanlage.png; sourceTree = "<group>"; };
-		400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feststellbremsenleuchte.png; sourceTree = "<group>"; };
-		400DF8A9166910BF00D6217B /* parkbremse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkbremse.png; sourceTree = "<group>"; };
-		400DF8AA166910BF00D6217B /* warnleuchte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchte.png; sourceTree = "<group>"; };
 		400DF8AF166912C400D6217B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warnleuchtenKategorie.png; sourceTree = "<group>"; };
 		4018C9F916A1B35100C6915B /* CarFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFavoriteViewController.h; sourceTree = "<group>"; };
@@ -645,11 +761,7 @@
 				8FF1F3591672201900B7F5DE /* Icons */,
 				40C32767166BAEAD00BC049B /* pannenhilfe.png */,
 				8FBC0D9A16976FC600155BE1 /* service.png */,
-				400DF8A7166910BF00D6217B /* bremsanlage.png */,
 				400DF8B3166918E500D6217B /* warnleuchtenKategorie.png */,
-				400DF8A8166910BF00D6217B /* feststellbremsenleuchte.png */,
-				400DF8A9166910BF00D6217B /* parkbremse.png */,
-				400DF8AA166910BF00D6217B /* warnleuchte.png */,
 				400DF8851668F1D700D6217B /* AppIcon_iPhone_gross.png */,
 				400DF8831668F1A000D6217B /* AppIcon_iPhone_klein.png */,
 				8FD1BAA51698C50900579F2B /* LocationStellingen.gpx */,
@@ -778,6 +890,63 @@
 		83460FA316A98E0A003C167A /* Warning lights */ = {
 			isa = PBXGroup;
 			children = (
+				2EDE895F16AADFD9007C3635 /* abgass_kontrollsystem.png */,
+				2EDE896016AADFD9007C3635 /* abs.png */,
+				2EDE896116AADFD9007C3635 /* adaptive_light.png */,
+				2EDE896216AADFD9007C3635 /* anfahrtsassistent.png */,
+				2EDE896316AADFD9007C3635 /* anhaenger_blinkeanlag.png */,
+				2EDE896416AADFD9007C3635 /* audi_active_lane_assist_gruen.png */,
+				2EDE896516AADFD9007C3635 /* audi_active_lane_assist.png */,
+				2EDE896616AADFD9007C3635 /* audi_adaptive_cruise_control_2.png */,
+				2EDE896716AADFD9007C3635 /* audi_adaptive_cruise_control.png */,
+				2EDE896816AADFD9007C3635 /* audi_adativ_curise_control_2.png */,
+				2EDE896916AADFD9007C3635 /* baterie_funkschluessel.png */,
+				2EDE896A16AADFD9007C3635 /* baterieladung.png */,
+				2EDE896B16AADFD9007C3635 /* blinkeanlag.png */,
+				2EDE896C16AADFD9007C3635 /* bremsanlage.png */,
+				2EDE896D16AADFD9007C3635 /* bremsbelag.png */,
+				2EDE896E16AADFD9007C3635 /* daempferregelung.png */,
+				2EDE896F16AADFD9007C3635 /* default_car.png */,
+				2EDE897016AADFD9007C3635 /* dieselpartikelfilter.png */,
+				2EDE897116AADFD9007C3635 /* drehzahlbegrenzung.png */,
+				2EDE897216AADFD9007C3635 /* dynamische_leuchtweitenregulierung.png */,
+				2EDE897316AADFD9007C3635 /* elektromechanische_lenkung_dynamiklenkung.png */,
+				2EDE897416AADFD9007C3635 /* elektromechanische_lenkung.png */,
+				2EDE897516AADFD9007C3635 /* elektromechanische_parkbremse.png */,
+				2EDE897616AADFD9007C3635 /* esc.png */,
+				2EDE897716AADFD9007C3635 /* fernlicht.png */,
+				2EDE897816AADFD9007C3635 /* generator.png */,
+				2EDE897916AADFD9007C3635 /* geschwindigkeitsregelanlage.png */,
+				2EDE897A16AADFD9007C3635 /* geschwindigkeitswarnanlage_1.png */,
+				2EDE897B16AADFD9007C3635 /* geschwindigkeitswarnanlage_2.png */,
+				2EDE897C16AADFD9007C3635 /* getriebe.png */,
+				2EDE897D16AADFD9007C3635 /* komfortschlussel.png */,
+				2EDE897E16AADFD9007C3635 /* kuehlsystem.png */,
+				2EDE897F16AADFD9007C3635 /* lampenausfallkontrolle.png */,
+				2EDE898016AADFD9007C3635 /* lenkungsverriegelung.png */,
+				2EDE898116AADFD9007C3635 /* licht-_regensensor.png */,
+				2EDE898216AADFD9007C3635 /* motoroeldruck.png */,
+				2EDE898316AADFD9007C3635 /* motoroelsensor.png */,
+				2EDE898416AADFD9007C3635 /* motoroelstand_gelb.png */,
+				2EDE898516AADFD9007C3635 /* motoroelstand.png */,
+				2EDE898616AADFD9007C3635 /* motorsteuerung_benzin.png */,
+				2EDE898716AADFD9007C3635 /* motorsteuerung_diesel.png */,
+				2EDE898816AADFD9007C3635 /* motortemperatur.png */,
+				2EDE898916AADFD9007C3635 /* nebelscheinwerfer.png */,
+				2EDE898A16AADFD9007C3635 /* nebelschlussleuchte.png */,
+				2EDE898B16AADFD9007C3635 /* parkbremse.png */,
+				2EDE898C16AADFD9007C3635 /* pausenempfehlung.png */,
+				2EDE898D16AADFD9007C3635 /* reifendruck.png */,
+				2EDE898E16AADFD9007C3635 /* scheibenwischer.png */,
+				2EDE898F16AADFD9007C3635 /* sicherheitsgurt.png */,
+				2EDE899016AADFD9007C3635 /* sicherheitssysteme.png */,
+				2EDE899116AADFD9007C3635 /* sportdiferenzial.png */,
+				2EDE899216AADFD9007C3635 /* start_stop_system_weiß.png */,
+				2EDE899316AADFD9007C3635 /* start_stop_system.png */,
+				2EDE899416AADFD9007C3635 /* tanksystem.png */,
+				2EDE899516AADFD9007C3635 /* waschwasserstand.png */,
+				2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */,
+				2EDE899716AADFD9007C3635 /* zuendschloss.png */,
 			);
 			name = "Warning lights";
 			sourceTree = "<group>";
@@ -844,6 +1013,11 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
+				3773D15816A99EAD006195A5 /* navi5.gif */,
+				3773D15916A99EAD006195A5 /* navi4.gif */,
+				3773D15A16A99EAD006195A5 /* navi3.gif */,
+				3773D15B16A99EAD006195A5 /* navi2.gif */,
+				3773D15C16A99EAD006195A5 /* navi1.gif */,
 				8FF1F3621672282300B7F5DE /* reifenwechsel_schritt_10.jpeg */,
 				8FF1F3631672282300B7F5DE /* reifenwechsel_schritt_20.jpeg */,
 				2EA3C0191699845A00D3F313 /* used.jpg */,
@@ -961,10 +1135,6 @@
 				400DF88D1669056900D6217B /* WarningCategoryViewController.xib in Resources */,
 				400DF89E1669085E00D6217B /* WarningLightCollectionViewController.xib in Resources */,
 				400DF8A616690C7600D6217B /* WarningLightViewController.xib in Resources */,
-				400DF8AB166910BF00D6217B /* bremsanlage.png in Resources */,
-				400DF8AC166910BF00D6217B /* feststellbremsenleuchte.png in Resources */,
-				400DF8AD166910BF00D6217B /* parkbremse.png in Resources */,
-				400DF8AE166910BF00D6217B /* warnleuchte.png in Resources */,
 				400DF8B4166918E500D6217B /* warnleuchtenKategorie.png in Resources */,
 				661E1A43166B759D00493F54 /* CategoryViewController.xib in Resources */,
 				40C32768166BAEAD00BC049B /* pannenhilfe.png in Resources */,
@@ -1034,6 +1204,68 @@
 				40C4622A16A9739600401DDE /* warnleuchte_58x58.png in Resources */,
 				83460F9F16A98DE7003C167A /* einstellungen_58x58.png in Resources */,
 				83460FA216A98E02003C167A /* einstellungen_29x29.png in Resources */,
+				3773D15D16A99EAD006195A5 /* navi5.gif in Resources */,
+				3773D15E16A99EAD006195A5 /* navi4.gif in Resources */,
+				3773D15F16A99EAD006195A5 /* navi3.gif in Resources */,
+				3773D16016A99EAD006195A5 /* navi2.gif in Resources */,
+				3773D16116A99EAD006195A5 /* navi1.gif in Resources */,
+				2EDE899816AADFD9007C3635 /* abgass_kontrollsystem.png in Resources */,
+				2EDE899916AADFD9007C3635 /* abs.png in Resources */,
+				2EDE899A16AADFD9007C3635 /* adaptive_light.png in Resources */,
+				2EDE899B16AADFD9007C3635 /* anfahrtsassistent.png in Resources */,
+				2EDE899C16AADFD9007C3635 /* anhaenger_blinkeanlag.png in Resources */,
+				2EDE899D16AADFD9007C3635 /* audi_active_lane_assist_gruen.png in Resources */,
+				2EDE899E16AADFD9007C3635 /* audi_active_lane_assist.png in Resources */,
+				2EDE899F16AADFD9007C3635 /* audi_adaptive_cruise_control_2.png in Resources */,
+				2EDE89A016AADFD9007C3635 /* audi_adaptive_cruise_control.png in Resources */,
+				2EDE89A116AADFD9007C3635 /* audi_adativ_curise_control_2.png in Resources */,
+				2EDE89A216AADFD9007C3635 /* baterie_funkschluessel.png in Resources */,
+				2EDE89A316AADFD9007C3635 /* baterieladung.png in Resources */,
+				2EDE89A416AADFD9007C3635 /* blinkeanlag.png in Resources */,
+				2EDE89A516AADFD9007C3635 /* bremsanlage.png in Resources */,
+				2EDE89A616AADFD9007C3635 /* bremsbelag.png in Resources */,
+				2EDE89A716AADFD9007C3635 /* daempferregelung.png in Resources */,
+				2EDE89A816AADFD9007C3635 /* default_car.png in Resources */,
+				2EDE89A916AADFD9007C3635 /* dieselpartikelfilter.png in Resources */,
+				2EDE89AA16AADFD9007C3635 /* drehzahlbegrenzung.png in Resources */,
+				2EDE89AB16AADFD9007C3635 /* dynamische_leuchtweitenregulierung.png in Resources */,
+				2EDE89AC16AADFD9007C3635 /* elektromechanische_lenkung_dynamiklenkung.png in Resources */,
+				2EDE89AD16AADFD9007C3635 /* elektromechanische_lenkung.png in Resources */,
+				2EDE89AE16AADFD9007C3635 /* elektromechanische_parkbremse.png in Resources */,
+				2EDE89AF16AADFD9007C3635 /* esc.png in Resources */,
+				2EDE89B016AADFD9007C3635 /* fernlicht.png in Resources */,
+				2EDE89B116AADFD9007C3635 /* generator.png in Resources */,
+				2EDE89B216AADFD9007C3635 /* geschwindigkeitsregelanlage.png in Resources */,
+				2EDE89B316AADFD9007C3635 /* geschwindigkeitswarnanlage_1.png in Resources */,
+				2EDE89B416AADFD9007C3635 /* geschwindigkeitswarnanlage_2.png in Resources */,
+				2EDE89B516AADFD9007C3635 /* getriebe.png in Resources */,
+				2EDE89B616AADFD9007C3635 /* komfortschlussel.png in Resources */,
+				2EDE89B716AADFD9007C3635 /* kuehlsystem.png in Resources */,
+				2EDE89B816AADFD9007C3635 /* lampenausfallkontrolle.png in Resources */,
+				2EDE89B916AADFD9007C3635 /* lenkungsverriegelung.png in Resources */,
+				2EDE89BA16AADFD9007C3635 /* licht-_regensensor.png in Resources */,
+				2EDE89BB16AADFD9007C3635 /* motoroeldruck.png in Resources */,
+				2EDE89BC16AADFD9007C3635 /* motoroelsensor.png in Resources */,
+				2EDE89BD16AADFD9007C3635 /* motoroelstand_gelb.png in Resources */,
+				2EDE89BE16AADFD9007C3635 /* motoroelstand.png in Resources */,
+				2EDE89BF16AADFD9007C3635 /* motorsteuerung_benzin.png in Resources */,
+				2EDE89C016AADFD9007C3635 /* motorsteuerung_diesel.png in Resources */,
+				2EDE89C116AADFD9007C3635 /* motortemperatur.png in Resources */,
+				2EDE89C216AADFD9007C3635 /* nebelscheinwerfer.png in Resources */,
+				2EDE89C316AADFD9007C3635 /* nebelschlussleuchte.png in Resources */,
+				2EDE89C416AADFD9007C3635 /* parkbremse.png in Resources */,
+				2EDE89C516AADFD9007C3635 /* pausenempfehlung.png in Resources */,
+				2EDE89C616AADFD9007C3635 /* reifendruck.png in Resources */,
+				2EDE89C716AADFD9007C3635 /* scheibenwischer.png in Resources */,
+				2EDE89C816AADFD9007C3635 /* sicherheitsgurt.png in Resources */,
+				2EDE89C916AADFD9007C3635 /* sicherheitssysteme.png in Resources */,
+				2EDE89CA16AADFD9007C3635 /* sportdiferenzial.png in Resources */,
+				2EDE89CB16AADFD9007C3635 /* start_stop_system_weiß.png in Resources */,
+				2EDE89CC16AADFD9007C3635 /* start_stop_system.png in Resources */,
+				2EDE89CD16AADFD9007C3635 /* tanksystem.png in Resources */,
+				2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */,
+				2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */,
+				2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

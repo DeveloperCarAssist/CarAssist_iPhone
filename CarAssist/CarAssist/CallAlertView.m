@@ -21,7 +21,7 @@
 
 -(id) initCall:(UINavigationController *)controller andMessage: (NSString*) message
 {
-    self = [super initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und Ihre Daten sowie Ihren Standord per E-Mail an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anrufen", @"Mail verschicken und Anrufen",nil];
+    self = [super initWithTitle:@"ADAC kontaktieren" message:@"Wollen Sie den ADAC anrufen und Ihre Daten sowie Ihren Standort per E-Mail an den ADAC senden?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anrufen", @"Mail verschicken und Anrufen",nil];
     if (self) {
         self.controller = controller;
         self.text = message;

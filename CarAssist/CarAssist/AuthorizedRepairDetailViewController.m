@@ -13,6 +13,7 @@
 - (void) setupMapView:(MKMapView *)mapView withShop:(AuthorizedRepair *) shop;
 @property (nonatomic) AuthorizedRepair *shop;
 @property (nonatomic) CLLocationManager *locationManager;
+@property (nonatomic) NSArray *weekdays;
 @end
 
 @implementation AuthorizedRepairDetailViewController
@@ -22,6 +23,15 @@
     self = [super init];
     if (self) {
         self.shop = shop;
+        self.weekdays = [NSArray arrayWithObjects:
+                         @"Montag",
+                         @"Dienstag",
+                         @"Mittwoch",
+                         @"Donnerstag",
+                         @"Freitag",
+                         @"Samstag",
+                         @"Sonntag",
+                         nil];
         if(self.locationManager == Nil)
         {
             CLLocationManager *manager = [[CLLocationManager alloc] init];
@@ -99,7 +109,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -109,6 +119,8 @@
             return 1; // Karte
         case 1:
             return 2; // Telefon, Route berechnen
+        case 2:
+            return 7; // Öffnungszeiten, Jeder Wochentag ein Eintrag
         default:
             return 0;
     }
@@ -118,11 +130,11 @@
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"default"];
     
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
+
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
                                       reuseIdentifier:@"default"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
 
     if(indexPath.section == 0)
     {
@@ -145,6 +157,13 @@
             cell.textLabel.text = @"Route berechnen";
             cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         }
+ 
+    }
+    
+    if(indexPath.section == 2)
+    {
+        cell.detailTextLabel.text = [self.shop.hours objectAtIndex:indexPath.row];
+        cell.textLabel.text = [self.weekdays objectAtIndex: indexPath.row];
     }
     
     
@@ -206,6 +225,20 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     [self tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section) {
+        case 2:
+            sectionName = @"Öffnungszeiten";
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
 }
 
 /*

@@ -88,8 +88,10 @@
 {
     self.openEarsEventsObserver = [[OpenEarsEventsObserver alloc] init];
     self.pocketsphinxController = [[PocketsphinxController alloc] init];
+    
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
-    NSArray *words = [NSArray arrayWithObjects:@"NEXT", @"BACK", nil];
+    
+    NSArray *words = [NSArray arrayWithObjects:@"NEXT", @"BACK", @"SEX", @"RACK",@"LACK",@"HECK", nil];
     NSString *name = @"NameIWantForMyLanguageModelFiles";
     NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name];
     
@@ -111,11 +113,11 @@
     }
     [self.openEarsEventsObserver setDelegate:self];
     [self.pocketsphinxController startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath languageModelIsJSGF:NO];
+    [self.pocketsphinxController returnNullHypotheses];
 
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    // Abmeldung am notification center, wenn das Objekt selbst gelöscht wird
     [self.openEarsEventsObserver setDelegate:nil];
     [self.pocketsphinxController stopListening];
 
@@ -125,6 +127,9 @@
 
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
 	//NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+    if([recognitionScore intValue] < 0)
+    {
+        
     if([hypothesis isEqualToString: @"NEXT"])
     {
         if(self.pageControl.currentPage != [ self.pageControl numberOfPages]-1)
@@ -132,6 +137,7 @@
     self.pageControl.currentPage = self.pageControl.currentPage+1;
            }
     }
+        
     if([hypothesis isEqualToString: @"BACK"])
     {
         if(self.pageControl.currentPage != 0)
@@ -141,21 +147,26 @@
     }
     CGPoint offset = CGPointMake(self.pageControl.currentPage * self.scrollView.frame.size.width, 0);
     [self.scrollView setContentOffset:offset animated:YES];
+    }
 }
 
 - (void) pocketsphinxDidStartCalibration {
 }
 
 - (void) pocketsphinxDidCompleteCalibration {
+    //NSLog(@"Calibration");
 }
 
 - (void) pocketsphinxDidStartListening {
+    //NSLog(@"Start Listening");
 }
 
 - (void) pocketsphinxDidDetectSpeech {
+    //NSLog(@"Detect Speech");
 }
 
 - (void) pocketsphinxDidDetectFinishedSpeech {
+   //NSLog(@"Detect finished Speech");
 }
 
 - (void) pocketsphinxDidStopListening {

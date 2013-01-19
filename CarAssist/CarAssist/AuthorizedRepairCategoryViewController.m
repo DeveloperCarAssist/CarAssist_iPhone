@@ -56,6 +56,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"GPS" style:UIBarButtonItemStyleBordered target:self action:@selector(gpsButtonTouched)];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.categoryTableView reloadData];
+}
+
 -(void) gpsButtonTouched
 {
     if (self.isGPS) {
@@ -77,10 +83,31 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *keys = [self.categoryService.items allKeys];
-    NSString *key = [keys objectAtIndex:indexPath.section];
-    NSArray *items = [self.categoryService.items objectForKey:key];
-    AuthorizedRepair *shop = [items objectAtIndex:indexPath.row];
+    NSInteger newSection;
+
+    AuthorizedRepair *shop;
+    if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"]) {
+        if (indexPath.section == 0)
+        {
+            shop = self.profile.car.garage;
+        }
+        else
+        {
+            newSection = indexPath.section -1;
+        }
+    }
+    else
+    {
+        newSection = indexPath.section;
+    }
+    
+    if(!shop)
+    {
+        NSArray *keys = [self.categoryService.items allKeys];
+        NSString *key = [keys objectAtIndex:newSection];
+        NSArray *items = [self.categoryService.items objectForKey:key];
+        shop = [items objectAtIndex:indexPath.row];
+    }
     
     AuthorizedRepairDetailViewController *controller = [[AuthorizedRepairDetailViewController alloc] initWithAuthorizedRepair:shop];
     [self.navigationController pushViewController:controller animated:YES];
@@ -88,8 +115,96 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell;
+    if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"])
+    {
+        if (indexPath.section == 0)
+        {
+            //  Zelle für den Favoriten
+            
+            UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                                              reuseIdentifier:@"standard"];
+            cell.textLabel.text = self.profile.car.garage.name;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            [self decorateCell:cell withItem:self.profile.car.garage]; // Anzeige der Entfernung im Favoriten berechnen
+            
+            return cell;
+        }
+        else
+        {
+            NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 1];
+    
+            UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:newIndexPath];
+            return cell;
+        }
+    }
+    else
+    {
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"]) {
+        return [super numberOfSectionsInTableView:tableView] + 1; 
+    }
+    else
+    {
+        return [super numberOfSectionsInTableView:tableView];
+    }
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"]) {
+        if (section == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return [super tableView:tableView numberOfRowsInSection:section - 1];
+        }
+    }
+    else
+    {
+        return [super tableView:tableView numberOfRowsInSection:section];
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"]) {
+        if (section == 0) {
+        
+            UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
+            //!todo hier noch schöneren Hintergrund einbauen
+            sectionView.backgroundColor = [UIColor lightGrayColor];
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
+            label.textColor = [UIColor blackColor];
+            label.backgroundColor = [UIColor clearColor];
+            label.text = @"Favorit";
+            label.textAlignment = NSTextAlignmentCenter;
+            label.font = [UIFont boldSystemFontOfSize:18];
+        
+        
+            [sectionView addSubview:label];
+            return sectionView;
+        
+        }
+        else
+        {
+            return [super tableView:tableView viewForHeaderInSection:section - 1];
+        }
+    }
+    else
+    {
+        return [super tableView:tableView viewForHeaderInSection:section];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -99,9 +214,14 @@
     
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blueColor];
     self.isGPS = YES;
+    
+    CLLocation *loc = [locations lastObject];
+    
+    // Favorit mit Benutzerkoordinaten versehen
+    self.profile.car.garage.userLocation = loc;
     // Service mit aktuellen Koordinaten initialisieren
     Car *car = [[Profile getProfile] car];
-    self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car andUserLocation:[locations lastObject]];
+    self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car andUserLocation:loc];
 
     [self.categoryTableView reloadData];
 

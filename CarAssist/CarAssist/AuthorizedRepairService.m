@@ -134,6 +134,7 @@
     garage.postalcode = @"22529";
     garage.city = @"Hamburg";
     garage.phone = @"040 / 55301-10";
+    garage.hours = [NSArray arrayWithObjects:@"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"07.00 - 19.00 Uhr", @"09.00 - 14.00 Uhr", @"11.00 - 17.00 Uhr", nil];
     
     [allItems addObject:garage];
     
