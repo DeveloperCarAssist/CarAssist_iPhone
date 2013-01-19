@@ -23,7 +23,15 @@
     self = [super init];
     if (self) {
         self.shop = shop;
-        self.weekdays = [NSArray arrayWithObjects:@"Mo:",@"Di:",@"Mi:",@"Do:",@"Fr:",@"Sa:",@"So:", nil];
+        self.weekdays = [NSArray arrayWithObjects:
+                         @"Montag",
+                         @"Dienstag",
+                         @"Mittwoch",
+                         @"Donnerstag",
+                         @"Freitag",
+                         @"Samstag",
+                         @"Sonntag",
+                         nil];
         if(self.locationManager == Nil)
         {
             CLLocationManager *manager = [[CLLocationManager alloc] init];

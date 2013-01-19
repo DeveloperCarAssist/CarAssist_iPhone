@@ -13,6 +13,7 @@
 
 @property (nonatomic) IBOutlet UIImageView* warningLightImageView;
 @property (nonatomic) IBOutlet UITextView* warningLightTextView;
+@property (nonatomic) IBOutlet UITextView* warningLightNameView;
 @property (nonatomic) WarningLight* warningLight;
 @property (nonatomic) IBOutlet UILabel* warningLightImageLabel;
 

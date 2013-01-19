@@ -33,7 +33,11 @@
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_stoerung_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
-    self.title = self.warningLight.name;
+    //self.title = self.warningLight.name;
+    self.warningLightNameView.text = self.warningLight.name;
+    self.warningLightNameView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.warningLightNameView.layer.borderWidth = 1.0f;
+    
     self.warningLightTextView.text = self.warningLight.info;
     self.warningLightTextView.layer.borderColor = [UIColor blackColor].CGColor;
     self.warningLightTextView.layer.borderWidth = 1.0f;
