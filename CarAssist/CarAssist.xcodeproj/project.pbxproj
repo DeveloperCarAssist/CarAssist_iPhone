@@ -111,6 +111,11 @@
 		379F25A916A1B40500F46860 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379F259A16A1B40500F46860 /* Slt.framework */; };
 		379F25AC16A1B44400F46860 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379F25AB16A1B44400F46860 /* AudioToolbox.framework */; };
 		379F25AE16A1B44C00F46860 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379F25AD16A1B44C00F46860 /* AVFoundation.framework */; };
+		37A14B0A16AAF718009A0184 /* MotorHebel.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37A14B0916AAF717009A0184 /* MotorHebel.JPG */; };
+		37A14B0C16AAF738009A0184 /* MotorHebelbetaetigen.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37A14B0B16AAF738009A0184 /* MotorHebelbetaetigen.JPG */; };
+		37A14B0E16AAF7DF009A0184 /* Motorhaube.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37A14B0D16AAF7DF009A0184 /* Motorhaube.JPG */; };
+		37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37A14B0F16AAF83A009A0184 /* OelStandmesserOrt.JPG */; };
+		37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37A14B1116AAF8BB009A0184 /* Oelstab.JPG */; };
 		37A4A3BA167CC29700FAA3B5 /* AutoSitz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */; };
 		37A4A3C8167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4A3C7167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m */; };
 		37B54FF9169DEFAD00043CBC /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B54FF7169DEFAD00043CBC /* CallViewController.m */; };
@@ -338,6 +343,11 @@
 		379F259A16A1B40500F46860 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		379F25AB16A1B44400F46860 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		379F25AD16A1B44C00F46860 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		37A14B0916AAF717009A0184 /* MotorHebel.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MotorHebel.JPG; sourceTree = "<group>"; };
+		37A14B0B16AAF738009A0184 /* MotorHebelbetaetigen.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MotorHebelbetaetigen.JPG; sourceTree = "<group>"; };
+		37A14B0D16AAF7DF009A0184 /* Motorhaube.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Motorhaube.JPG; sourceTree = "<group>"; };
+		37A14B0F16AAF83A009A0184 /* OelStandmesserOrt.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OelStandmesserOrt.JPG; sourceTree = "<group>"; };
+		37A14B1116AAF8BB009A0184 /* Oelstab.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oelstab.JPG; sourceTree = "<group>"; };
 		37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AutoSitz.jpg; sourceTree = "<group>"; };
 		37A4A3C6167CD3E600FAA3B5 /* RoadsideAssitanceCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadsideAssitanceCaller.h; sourceTree = "<group>"; };
 		37A4A3C7167CD3E600FAA3B5 /* RoadsideAssitanceCaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadsideAssitanceCaller.m; sourceTree = "<group>"; };
@@ -1013,6 +1023,11 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
+				37A14B1116AAF8BB009A0184 /* Oelstab.JPG */,
+				37A14B0F16AAF83A009A0184 /* OelStandmesserOrt.JPG */,
+				37A14B0D16AAF7DF009A0184 /* Motorhaube.JPG */,
+				37A14B0B16AAF738009A0184 /* MotorHebelbetaetigen.JPG */,
+				37A14B0916AAF717009A0184 /* MotorHebel.JPG */,
 				3773D15816A99EAD006195A5 /* navi5.gif */,
 				3773D15916A99EAD006195A5 /* navi4.gif */,
 				3773D15A16A99EAD006195A5 /* navi3.gif */,
@@ -1266,6 +1281,11 @@
 				2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */,
 				2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */,
 				2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */,
+				37A14B0A16AAF718009A0184 /* MotorHebel.JPG in Resources */,
+				37A14B0C16AAF738009A0184 /* MotorHebelbetaetigen.JPG in Resources */,
+				37A14B0E16AAF7DF009A0184 /* Motorhaube.JPG in Resources */,
+				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
+				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

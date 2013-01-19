@@ -21,19 +21,24 @@
     self = [super initWithCar:car];
     if(self)
     {
-        switch (car.unid)
-        {
+        switch (car.manufacturerID)
+        {//audi, bmw golf
             case 1:
-//                [self initServiceGuidesWithExampleDataBmwZ4];
-//                [self initDictionary];
-//                break;
-            case 2:
-//                [self initServiceGuidesWithExampleDataVWGolfIV];
-//                [self initDictionary];
-//                break;
-            default:
+                //      [self initServiceGuidesWithExampleDataAudi];
                 [self initGuidesForUXTest];
                 [self initDictionary];
+                break;
+            case 2:
+                [self initServiceGuidesWithExampleDataBMW];
+                [self initDictionary];
+                break;
+            case 3:
+                [self initServiceGuidesWithExampleDataVWGolfIV];
+                [self initDictionary];
+                break;
+            default:
+                @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"no service data for selected car" userInfo:nil];
+                break;
         }
     }
     return self;
@@ -43,7 +48,7 @@
  * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 1. Testfahrzeug
  *
  */
-- (void) initServiceGuidesWithExampleDataBmwZ4
+- (void) initServiceGuidesWithExampleDataBMW
 {
     NSMutableArray* allGuides = [NSMutableArray array];
     NSMutableArray* steps = [NSMutableArray array];
@@ -104,11 +109,51 @@
     step = [[Step alloc] initWithName: @"Kühlwasser nachfüllen" Description:@"Als erstes müssen Sie die das Auto aufbocken. Dann lösen Sie die Radmuttern des alten Reifens und nehmen den Reifen ab (Legen Sie den Reifen am besten in de Kofferaum, damit Sie ihn nicht vergessen). Jetzt nur noch den Reservereifen wieder anschrauben! Fahren Sie nicht zu schnell. Der Reservereifen ist nur für Geschwindigkeiten bis 90 Kilometer pro String ausgelegt!" AndImage:image];
     [steps addObject:step];
     
+    guide = [[Guide alloc] initWithName: @"Kühlwasser kontrollieren" CategoryName: @"Motor" AndSteps: steps];
+    [allGuides addObject:guide];
+    
+    self.allItems = allGuides;
+    self.reducedItems = allGuides;
+    
+    
+    //------------------- BMW Ölstand echte anleitung ----
+    
+    steps = [NSMutableArray array];
+    
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MotorHebel" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Motorraumöffner finden" Description:@"Bei dem Gaspedalen links ist der abgebildete Hebel." AndImage:image];
+    [steps addObject:step];
+    
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MotorHebelbetaetigen" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Motorraumöffner betätigen" Description:@"Bei dem Gaspedalen links ist der abgebildete Hebel." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Motorhaube" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Motorraum öffnen" Description:@"Drücken Sie den Hebel rein und heben sie danach die Moterhaube" AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"OelStandmesserOrt" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Ölstab rausziehen" Description:@"Ziehen sie an dem roten Ring um den Ölstab raus zu ziehen" AndImage:image];
+    [steps addObject:step];
+    
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Oelstab" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Ölstab abwischen und erneut benetzten" Description:@"Wischen sie die Oelreste mit einem Taschentuch, stecken sie den Stab wieder in die Halterung und ziehen sie ihn erneut raus" AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Oelstab" ofType:@"JPG"]];
+    step = [[Step alloc] initWithName: @"Ölstab ablesen" Description:@"Sie können nun die Ölstand messen. Auf dem Stab befindet sich 2 Linien, min und max. Zwischen diesen beiden sollte der Ölstand liegen." AndImage:image];
+    [steps addObject:step];
+    
     guide = [[Guide alloc] initWithName: @"Ölstand kontrollieren" CategoryName: @"Motor" AndSteps: steps];
     [allGuides addObject:guide];
     
     self.allItems = allGuides;
     self.reducedItems = allGuides;
+
+    
 }
 
 /**
@@ -130,6 +175,8 @@
     
     step = [[Step alloc] initWithName: @"Info" Description:@"In dieser Anleitung befinden sich Texte für den Golf." AndImage:nil ];
     [steps addObject:step];
+    
+    
     
     Guide* guide = [[Guide alloc] initWithName: @"Reservereifen montieren" CategoryName: @"Reifen" AndSteps: steps];
     [allGuides addObject:guide];
