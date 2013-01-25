@@ -9,4 +9,7 @@
 #import "CategoryViewController.h"
 
 @interface AuthorizedRepairCategoryViewController : CategoryViewController
+
+- (AuthorizedRepairCategoryViewController*) initWithGPS;
+
 @end

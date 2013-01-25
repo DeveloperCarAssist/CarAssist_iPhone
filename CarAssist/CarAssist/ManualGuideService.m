@@ -29,8 +29,9 @@
                 [self initDictionary];
                 break;
             case 2:
-//TODO                [self initServiceGuidesWithExampleDataBmwZ4];
-//                [self initServiceGuidesWithExampleDataBMW];
+//TODO: Achtung: Derzeit wird mit den Daten von VW initialisiert.
+// initWithExampleDataBMW bzw. initWithExampleDataBMWZ4 sind nicht vollständig!
+                [self initServiceGuidesWithExampleDataVWGolfIV];
                 [self initDictionary];
                 break;
             case 3:
@@ -49,6 +50,7 @@
  * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 1. Testfahrzeug
  *
  */
+/*
 - (void) initServiceGuidesWithExampleDataBmwZ4
 {
     NSMutableArray* allGuides = [NSMutableArray array];
@@ -80,6 +82,8 @@
     self.allItems = allGuides;
     self.reducedItems = allGuides;
 }
+*/
+
 
 /**
  * Initialisiert (noch hart gecoded) die Schritt-für-Schritt-Anleitungen der Servicerubrik für das 2. Testfahrzeug
@@ -100,7 +104,7 @@
     
     step = [[Step alloc] initWithName: @"Lendenwirbelstütze* einstellen(3)" Description:@"Durh Drehen des Handrades läßt sich die Polsterpartie im Lendenwirbelbereich mehr oder weniger auswölben. Dadurch wird de natürliche Krümmung der Wirbelsäule besonders wirksam unterstützt, so daß die Sitzhaltung vor allem auf langen Strecken ermüdungsfreier wird." AndImage:image ];
     [steps addObject:step];
-    
+ 
     step = [[Step alloc] initWithName: @"Lehneneignung einstellen(4)" Description:@"Lehne entlasten und Handrad drehen." AndImage:image ];
     [steps addObject:step];
     
@@ -117,6 +121,8 @@
     Step *s;
     Guide *g;
     
+    // Uhrzeit einstellen
+    
     NSMutableArray* steps = [NSMutableArray array];
     
     s = [[Step alloc] initWithName: @"Stunden einstellen" Description:@"Zum Einstellen der Uhrzeit ist rechts unterhalb des Drehzahlmessers ein Stellknopf angeordnet. Durch drehen gegen den Uhrzeigersinn bis zum Anschlag werden die Stunden eingestellt" AndImage:[self loadPngImage: @"golf_uhrzeit_1" ]];
@@ -124,6 +130,34 @@
     
     s = [[Step alloc] initWithName: @"Minuten einstellen" Description:@"Durch drehen im Uhrzeigersinn werden die Minuten eingestell." AndImage:[self loadPngImage: @"golf_uhrzeit_2" ]];
     [steps addObject:s];
+    
+    
+    // TOM TOM NAVI
+    steps = [NSMutableArray array];
+    UIImage *image;
+     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
+     s = [[Step alloc] initWithName: @"Navi starten" Description:@"Drücke den Startknopf." AndImage:image];
+     [steps addObject:s];
+     
+     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi2" ofType:@"gif"]];
+     s = [[Step alloc] initWithName: @"Navi kalibrieren" Description:@"Diesen Schritt nur ausführen, falls Sie das Navi langfristig benutzen wollen, sonst weiter mit dem nächsten Schritt.\nGeben Sie persönliche Daten ein um die Berechnungen des Navis zu optimieren." AndImage:image];
+     [steps addObject:s];
+     
+     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi3" ofType:@"gif"]];
+     s = [[Step alloc] initWithName: @"Ziel auswählen" Description:@"Drücken Sie auf den Knopf 'Ziel eingeben' und geben Sie nun die Adresse ein, zu der Sie gelangen wollen, also Ihr Ziel." AndImage:image];
+     [steps addObject:s];
+     
+     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi4" ofType:@"gif"]];
+     s = [[Step alloc] initWithName: @"Den Anweisungen folgen" Description:@"Folgen Sie den Anweisungen des Navis und Sie gelangen zu Ihrem Ziel." AndImage:image];
+     [steps addObject:s];
+     
+     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi5" ofType:@"gif"]];
+     s = [[Step alloc] initWithName: @"Navi ausschalaten" Description:@"Schalten Sie das Navi aus indem Sie den 'Asuschalten'-Knopf betätigen." AndImage:image];
+     [steps addObject:s];
+     
+     g = [[Guide alloc] initWithName: @"Navigation" CategoryName: @"Cockpit" AndSteps: steps];
+     [allGuides addObject:g];
+     
     
 
     
@@ -296,31 +330,6 @@
     
     
     //NAVI
-    // TOM TOM NAVI
-    /*
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
-    step = [[Step alloc] initWithName: @"Navi starten" Description:@"Drücke den Startknopf." AndImage:image];
-    [steps addObject:step];
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi2" ofType:@"gif"]];
-    step = [[Step alloc] initWithName: @"Navi kalibrieren" Description:@"Diesen Schritt nur ausführen, falls Sie das Navi langfristig benutzen wollen, sonst weiter mit dem nächsten Schritt.\nGeben Sie persönliche Daten ein um die Berechnungen des Navis zu optimieren." AndImage:image];
-    [steps addObject:step];
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi3" ofType:@"gif"]];
-    step = [[Step alloc] initWithName: @"Ziel auswählen" Description:@"Drücken Sie auf den Knopf 'Ziel eingeben' und geben Sie nun die Adresse ein, zu der Sie gelangen wollen, also Ihr Ziel." AndImage:image];
-    [steps addObject:step];
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi4" ofType:@"gif"]];
-    step = [[Step alloc] initWithName: @"Den Anweisungen folgen" Description:@"Folgen Sie den Anweisungen des Navis und Sie gelangen zu Ihrem Ziel." AndImage:image];
-    [steps addObject:step];
-    
-    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi5" ofType:@"gif"]];
-    step = [[Step alloc] initWithName: @"Navi ausschalaten" Description:@"Schalten Sie das Navi aus indem Sie den 'Asuschalten'-Knopf betätigen." AndImage:image];
-    [steps addObject:step];
-    
-    guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Extra" AndSteps: steps];
-    [allGuides addObject:guide];
-    */
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_1" ofType:@"png"]];
     step = [[Step alloc] initWithName: @"Navigation starten" Description:@"(1) Funktionstaste „NAV“ drücken. (2) Steuerungstaste „Zielführung“ drücken." AndImage:image];
@@ -354,7 +363,7 @@
     self.allItems = allGuides;
     self.reducedItems = allGuides;
 }
-
+/*
 - (void) initServiceGuidesWithExampleDataBMW
 {
     NSMutableArray* allGuides = [NSMutableArray array];
@@ -542,6 +551,8 @@
     self.allItems = allGuides;
     self.reducedItems = allGuides;
 }
+ 
+ */
 
 -(UIImage *) loadPngImage:(NSString*)name
 {

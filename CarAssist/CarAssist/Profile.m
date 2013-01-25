@@ -26,13 +26,13 @@ static Profile* instance;
     {   
         _car = nil;
         self.carList = [NSMutableArray array];
-        self.vorname = @"Klaus";
-        self.nachname = @"Kastikus";
-        self.emailAdresse = @"KlauKastikus@googlemail.com";
-        self.lieblingsKEKSEEE = @"Oreo Keks";
-        self.ADAClicence = @"007";
-        self.mobilenumber = 017666666;
-        self.homeTown = @"RIP-TOWN";
+        self.vorname = @"";
+        self.nachname = @"";
+        self.emailAdresse = @"";
+        self.lieblingsKEKSEEE = @"";
+        self.ADAClicence = @"";
+        self.mobilenumber = @"";
+        self.homeTown = @"";
     }
     return self;
 }

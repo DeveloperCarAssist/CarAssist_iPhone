@@ -15,8 +15,9 @@
 @interface AuthorizedRepairCategoryViewController () <CLLocationManagerDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
-@property (nonatomic) BOOL isGPS;
+
 @property (nonatomic) Profile* profile;
+@property (nonatomic) BOOL isGPS;
 
 @end
 
@@ -36,6 +37,15 @@
         self.profile = [Profile getProfile];
         
         self.locationManager = manager;
+    }
+    return self;
+}
+
+- (AuthorizedRepairCategoryViewController*) initWithGPS
+{
+    self = [self init];
+    if (self) {
+        [self gpsButtonTouched];
     }
     return self;
 }
