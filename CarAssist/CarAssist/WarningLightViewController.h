@@ -17,6 +17,7 @@
 @property (nonatomic) WarningLight* warningLight;
 @property (nonatomic) IBOutlet UILabel* warningLightImageLabel;
 
+
 - (WarningLightViewController*) initWithWarningLight: (WarningLight*) warningLight;
 
 @end

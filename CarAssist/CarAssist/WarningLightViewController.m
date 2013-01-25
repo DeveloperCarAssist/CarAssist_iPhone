@@ -36,9 +36,7 @@
     
     //self.title = self.warningLight.name;
     self.warningLightNameView.text = self.warningLight.name;
-    self.warningLightNameView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.warningLightNameView.layer.borderWidth = 1.0f;
-    
+
     self.warningLightTextView.text = self.warningLight.info;
     self.warningLightTextView.layer.borderColor = [UIColor blackColor].CGColor;
     self.warningLightTextView.layer.borderWidth = 1.0f;
@@ -59,8 +57,7 @@
     int bigSize = MAX(self.warningLight.name.length, 18);
     CGFloat newSize = (26.0 / bigSize) * 18;
     self.warningLightNameView.font = [self.warningLightNameView.font fontWithSize: newSize];
-    
-    
+
 }
 
 -(void)callAdac
