@@ -39,6 +39,12 @@
 	// Do any additional setup after loading the view.
 }
 
+
+-(void)decorateSectionHeader:(UIView *)view withLabel:(UILabel *)label
+{
+    view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_service"] scaledToSize: view.frame.size]];
+}
+
 // Nachricht defaultCarChanged behandeln
 
 
