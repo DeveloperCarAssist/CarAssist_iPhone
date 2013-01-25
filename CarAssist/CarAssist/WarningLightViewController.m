@@ -67,7 +67,7 @@
 }
 -(void)goToWerkstatt
 {
-    AuthorizedRepairCategoryViewController* viewController = [[AuthorizedRepairCategoryViewController alloc] init];
+    AuthorizedRepairCategoryViewController* viewController = [[AuthorizedRepairCategoryViewController alloc] initWithGPS];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
