@@ -39,9 +39,6 @@
     // Hintergrundgrafik einbinden
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_gelb"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
-    //Searchbar
-    self.carSearchBar.tintColor = [UIColor lightGrayColor];
-    
     //TableView
     self.carSelectionTableView.separatorColor = [UIColor blackColor];
     
