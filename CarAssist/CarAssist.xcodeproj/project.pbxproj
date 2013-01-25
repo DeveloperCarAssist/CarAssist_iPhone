@@ -89,6 +89,10 @@
 		2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899516AADFD9007C3635 /* waschwasserstand.png */; };
 		2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */; };
 		2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899716AADFD9007C3635 /* zuendschloss.png */; };
+		2EEFE98416B2ED41004D8937 /* section_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98216B2ED41004D8937 /* section_gelb.png */; };
+		2EEFE98516B2ED41004D8937 /* section_lila.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98316B2ED41004D8937 /* section_lila.png */; };
+		2EEFE98916B2ED7E004D8937 /* background_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98716B2ED7E004D8937 /* background_gelb.png */; };
+		2EEFE98A16B2ED7E004D8937 /* background_lila.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98816B2ED7E004D8937 /* background_lila.png */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
@@ -353,6 +357,10 @@
 		2EDE899516AADFD9007C3635 /* waschwasserstand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waschwasserstand.png; sourceTree = "<group>"; };
 		2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss_gelb.png; sourceTree = "<group>"; };
 		2EDE899716AADFD9007C3635 /* zuendschloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss.png; sourceTree = "<group>"; };
+		2EEFE98216B2ED41004D8937 /* section_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_gelb.png; sourceTree = "<group>"; };
+		2EEFE98316B2ED41004D8937 /* section_lila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_lila.png; sourceTree = "<group>"; };
+		2EEFE98716B2ED7E004D8937 /* background_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_gelb.png; sourceTree = "<group>"; };
+		2EEFE98816B2ED7E004D8937 /* background_lila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_lila.png; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -1100,6 +1108,10 @@
 		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				2EEFE98716B2ED7E004D8937 /* background_gelb.png */,
+				2EEFE98816B2ED7E004D8937 /* background_lila.png */,
+				2EEFE98216B2ED41004D8937 /* section_gelb.png */,
+				2EEFE98316B2ED41004D8937 /* section_lila.png */,
 				2E5A927316B2C5550090A3A9 /* black.png */,
 				2E5A927116B2C2A80090A3A9 /* table.png */,
 				2E5A926F16B2C1F40090A3A9 /* bmw.png */,
@@ -1207,8 +1219,8 @@
 				661E1A5A166BA98C00493F54 /* StepView.h */,
 				661E1A5B166BA98C00493F54 /* StepView.m */,
 				661E1A5C166BA98C00493F54 /* StepView.xib */,
-				37A4A3C6167CD3E600FAA3B5 /* RoadsideAssistanceCaller.h */,
 				37A4A3C7167CD3E600FAA3B5 /* RoadsideAssistanceCaller.m */,
+				37A4A3C6167CD3E600FAA3B5 /* RoadsideAssistanceCaller.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1432,7 +1444,6 @@
 				37A14B0E16AAF7DF009A0184 /* Motorhaube.JPG in Resources */,
 				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
 				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
-				8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */,
 				2E5A926C16B2B5990090A3A9 /* StartScreenViewController.xib in Resources */,
 				2E5A926E16B2C1980090A3A9 /* grau.png in Resources */,
 				2E5A927016B2C1F40090A3A9 /* bmw.png in Resources */,
@@ -1464,6 +1475,10 @@
 				83AC690816B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png in Resources */,
 				83AC690916B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png in Resources */,
 				83AC690A16B2D1E600B24F54 /* lenkrad_4_speichen_design.png in Resources */,
+				2EEFE98416B2ED41004D8937 /* section_gelb.png in Resources */,
+				2EEFE98516B2ED41004D8937 /* section_lila.png in Resources */,
+				2EEFE98916B2ED7E004D8937 /* background_gelb.png in Resources */,
+				2EEFE98A16B2ED7E004D8937 /* background_lila.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

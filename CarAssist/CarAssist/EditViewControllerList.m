@@ -34,10 +34,7 @@
     
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
-    
-    //Searchbar
-    self.valueSearchBar.tintColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_gelb"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     //TableView
     self.valueSelectionTableView.separatorColor = [UIColor blackColor];
@@ -65,12 +62,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.searchableService.items allKeys].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.searchableService.reducedItems.count;
+    NSArray* keys = [self.searchableService.items allKeys];
+    NSString* key = [keys objectAtIndex:section];
+    NSArray* itemsInSection = [self.searchableService.items objectForKey: key];
+    
+    return itemsInSection.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,38 +83,51 @@
                                       reuseIdentifier:@"standard"];
     }
 
-    cell.textLabel.text = [[self.searchableService.reducedItems objectAtIndex:indexPath.row] name];
+    NSArray* keys = [self.searchableService.items allKeys];
+    NSString* key = [keys objectAtIndex:indexPath.section];
+    NSArray* itemsInSection = [self.searchableService.items objectForKey: key];
+    
+    cell.textLabel.text = [[itemsInSection objectAtIndex:indexPath.row] name];
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
+    
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
 
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    
-//    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
-//    //!todo hier noch schöner Hintergrund einbinden
-//    sectionView.backgroundColor = [UIColor lightGrayColor];
-//    
-//    UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
-//    label.textColor = [UIColor blackColor];
-//    label.backgroundColor = [UIColor clearColor];
-//    label.text = @"Werkstätten";
-//    label.textAlignment = NSTextAlignmentCenter;
-//    label.font = [UIFont boldSystemFontOfSize:18];
-//    
-//    
-//    [sectionView addSubview:label];
-//    return sectionView;
-//}
-
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
+    NSArray *keys = [self.searchableService.items allKeys];
+    NSString *key = [keys objectAtIndex:section];
+    
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
+    //!todo hier noch schöneren Hintergrund einbauen
+    sectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
+    label.textColor = [UIColor blackColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = key;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:18];
+    
+    sectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_gelb"] scaledToSize: sectionView.frame.size]];
+    
+    [sectionView addSubview:label];
+    return sectionView;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.value = [self.searchableService.reducedItems objectAtIndex:indexPath.row];
-    self.valueRepresentation = [[self.searchableService.reducedItems objectAtIndex:indexPath.row] name];
+    NSArray* keys = [self.searchableService.items allKeys];
+    NSString* key = [keys objectAtIndex:indexPath.section];
+    NSArray* itemsInSection = [self.searchableService.items objectForKey: key];
+    
+    self.value = [itemsInSection objectAtIndex:indexPath.row];
+    self.valueRepresentation = [[itemsInSection objectAtIndex:indexPath.row] name];
 
     [self saveSetting];
     [self.navigationController popViewControllerAnimated:YES];
