@@ -81,6 +81,9 @@
     }
     
 }
+
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger newSection;
@@ -179,10 +182,10 @@
 {
     if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"]) {
         if (section == 0) {
-        
+
             UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
-            //!todo hier noch schöneren Hintergrund einbauen
-            sectionView.backgroundColor = [UIColor lightGrayColor];
+
+            sectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_stoerung"] scaledToSize: sectionView.frame.size]];
             
             UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
             label.textColor = [UIColor blackColor];
@@ -194,7 +197,6 @@
         
             [sectionView addSubview:label];
             return sectionView;
-        
         }
         else
         {
@@ -206,6 +208,12 @@
         return [super tableView:tableView viewForHeaderInSection:section];
     }
 }
+
+-(void)decorateSectionHeader:(UIView *)view withLabel:(UILabel *)label
+{
+    view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_stoerung"] scaledToSize: view.frame.size]];
+}
+
 
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations

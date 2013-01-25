@@ -9,6 +9,7 @@
 #import "CategoryViewController.h"
 #import "GuideViewController.h"
 #import "SearchableItem.h"
+#import "Utils.h"
 #import "Car.h"
 #import "SNPopupView.h"
 
@@ -34,7 +35,8 @@
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAnywhere:)];
     
     //Saerchbar
-    self.categorySearchBar.tintColor = [UIColor lightGrayColor];
+    self.categorySearchBar.tintColor = [UIColor blackColor];
+
     
     //Tableview
     self.categoryTableView.separatorColor = [UIColor blackColor];
@@ -123,11 +125,17 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont boldSystemFontOfSize:18];
     
+    [self decorateSectionHeader:sectionView withLabel:label];
     
     [sectionView addSubview:label];
-    return sectionView;
+    return sectionView;    
 }
 
+
+-(void)decorateSectionHeader:(UIView *)view withLabel:(UILabel *)label
+{
+    // Schablonenmethode
+}
 
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
