@@ -24,7 +24,7 @@
         self.equipmentPackage.radio=@"Standard";
         self.vehicalIdentNumber = @"";
         self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
-        self.owner = @"Unbekannt";
+        self.owner = @"";
     }
     return self;
 }
@@ -41,7 +41,7 @@
         self.manufacturer = @"BMW";
         self.equipmentPackage.radio = @"Standard";
         self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
-        self.owner=@"Unbekannt";
+        self.owner=@"";
         self.vehicalIdentNumber=@"";
     }
     return self;
@@ -60,7 +60,7 @@
         self.equipmentPackage.radio=@"Standard";
         self.vehicalIdentNumber = @"";
         self.equipmentPackage.navigationDevice = @"Kein Navigationsgerät vorhanden";
-        self.owner = @"Unbekannt";
+        self.owner = @"";
     }
     return self;
 }
@@ -131,7 +131,7 @@
     
     self.model = @"Standard";
     self.manufacturer = @"Standard";
-    self.owner = @"Unbekannt";
+    self.owner = @"";
     self.gearbox = @"Standard";
     self.insurance = @"Standard";
     self.garage = [[AuthorizedRepair alloc] initWithName:@"Keine Werkstatt" Category:@"non" andLocation:CLLocationCoordinate2DMake(53.58939, 10.02297)];

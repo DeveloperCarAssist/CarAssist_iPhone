@@ -126,7 +126,13 @@
     Car *car = [self.profil.carList objectAtIndex: indexPath.row];
     
     cell.favorite = (car == self.profil.car);
-    cell.textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
+    if([car.owner isEqualToString:@""])
+    {
+        cell.textLabel.text =  [NSString stringWithFormat:@" %@",car.model];        
+    } else {
+        cell.textLabel.text =  [NSString stringWithFormat:@" %@ - %@ ",car.model, car.owner ];
+    }
+
     cell.textLabel.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor clearColor];
     

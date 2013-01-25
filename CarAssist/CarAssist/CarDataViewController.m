@@ -134,7 +134,16 @@
     editViewController.title = @"Bezeichnung";
     editViewController.message = @"Bitte geben eine Bezeichnung ein";
     
-    SettingCell* descriptionSetting = [[SettingCell alloc] initEditableWithTitle:@"Bezeichnung" Value:self.car.owner ValueRepresentation:self.car.owner AndEditViewController:editViewController];
+    NSString *carOwner;
+    if([self.car.owner isEqualToString:@""])
+    {
+        carOwner = @"unbenannt";
+    }
+    else
+    {
+        carOwner = self.car.owner;
+    }
+    SettingCell* descriptionSetting = [[SettingCell alloc] initEditableWithTitle:@"Bezeichnung" Value:self.car.owner ValueRepresentation:carOwner AndEditViewController:editViewController];
     
     [descriptionSetting.editViewController setSaveBlock:^(NSObject* value, NSString* valueRepresentation) {
         self.car.owner = (NSString*) value;
