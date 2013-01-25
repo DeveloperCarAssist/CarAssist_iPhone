@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StartScreenViewController.h"
 
 
 @implementation AppDelegate
@@ -53,7 +54,7 @@
     self.tabBarController.viewControllers = viewControllers;
     //Die Nächste Zeile sorgt dafür, dass man im Profil startet
     self.tabBarController.selectedViewController=self.settingsNavigationController;
-
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
