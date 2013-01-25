@@ -80,7 +80,7 @@
     if(indexPath.row == 4)
     {
         cell.textLabel.text=@"HandyNummer";
-        cell.detailTextLabel.text= [NSString stringWithFormat:@"%lld", self.profile.mobilenumber];
+        cell.detailTextLabel.text= self.profile.mobilenumber;
     }
     if(indexPath.row == 5)
     {
@@ -154,16 +154,7 @@
             self.profile.emailAdresse=text;
         }
         if ([title isEqualToString: @"HandyNummer" ]) {
-            long long number = [text longLongValue];
-            if( pow(10,(text.length-1)) > number )
-            {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Handynummer Eingeben" message:@"Bitte geben sie eine Gültige Handynummer ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                
-                [alertView show];
-            }
-            else{
-                self.profile.mobilenumber=number;
-            }
+            self.profile.mobilenumber = text;
         }
         if ([title isEqualToString: @"Heimat Stadt" ]) {
             self.profile.homeTown=text;

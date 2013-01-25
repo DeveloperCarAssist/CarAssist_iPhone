@@ -27,7 +27,7 @@
     NSMutableArray* warningLights = [NSMutableArray array];
     
     UIImage* image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsanlage" ofType:@"png"]];
-    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"Bremsanalge" Info:@"Bremsanlage gestört. Unverzüglich nächsten Fachbetrieb aufsuchen, um den Schaden beheben zu lassen. Auf dem Weg dorthin mit geringer Geschwindigkeit fahren und sich dabei auf viel längere Bremswege und einen erhöhten Pedaldruck einstellen." AndImage:image];
+    WarningLight* warningLight = [[WarningLight alloc] initWithName:@"Bremsanlage" Info:@"Bremsanlage gestört. Unverzüglich die nächste Fachwerkstatt aufsuchen, um den Schaden beheben zu lassen. Auf dem Weg dorthin mit geringer Geschwindigkeit fahren, sich dabei auf viel längere Bremswege und einen erhöhten Pedaldruck einstellen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parkbremse" ofType:@"png"]];
@@ -39,15 +39,15 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"elektromechanische_lenkung" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Elektromechanische Lenkung" Info:@"Elektromechanische Lenkung ausgefallen. Lenkung umgehend von einem Fachbetrieb prüfen lassen." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Elektromechanische Lenkung" Info:@"Elektromechanische Lenkung ausgefallen. Lenkung umgehend von einem Fachwerkstatt prüfen lassen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"generator" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Generator" Info:@"Generator gestört. Fachbetrieb aufsuchen. Elektrische Anlage prüfen lassen. Nicht erforderliche elektrische Verbraucher ausschalten. Fahrzeugbatterie wird während der nächsten Fahrt nicht vom Generator geladen." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Generator" Info:@"Generator gestört. Fachwerkstatt aufsuchen. Elektrische Anlage prüfen lassen. Nicht erforderliche elektrische Verbraucher ausschalten. Fahrzeugbatterie wird während der nächsten Fahrt nicht vom Generator geladen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"motoroeldruck" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Motoröldruck" Info:@"Der Motoröldruck ist zu gering. Motor Abstellen, Motorölstand prüfen- Blinkt die Warnleuchte obwohl der Motorölstand in Ordnung ist, nicht weiterfahren. Fachmännische Hilfe in Anspruch nehmen." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Motoröldruck" Info:@"Der Motoröldruck ist zu gering. Motor abstellen, Motorölstand prüfen. Blinkt die Warnleuchte, obwohl der Motorölstand in Ordnung ist, nicht weiterfahren. Fachmännische Hilfe in Anspruch nehmen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"motoroelstand" ofType:@"png"]];
@@ -75,15 +75,15 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_adativ_curise_control_2" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Adaptive cruise controll" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Adaptive Cruise Control" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"esc" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Elektronische Stabilisierungskontrolle" Info:@"Blinkt: ESC regelt. Leuchtet: Zündung aus- und einschalten. Gegebenenfalls eine kurze Wegstrecke fahren. Fassl das Symbol danach trotzdem noch leuchtet, bitte Fachbetrieb aufsuchen." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Elektronische Stabilisierungskontrolle" Info:@"Blinkt: ESC regelt. Leuchtet: Zündung aus- und einschalten. Gegebenenfalls eine kurze Wegstrecke fahren. Falls das Symbol danach trotzdem noch leuchtet, bitte Fachwerkstatt aufsuchen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"abs" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Anti-Blockier-System (ABS)" Info:@"Das ABS ist gestört oder ausgefallen. Fachbetrieb aufsuchen. Das Fahrzeug kann ohne ABS gebremst werden." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Anti-Blockier-System (ABS)" Info:@"Das ABS ist gestört oder ausgefallen. Fachwerkstatt aufsuchen. Das Fahrzeug kann ohne ABS gebremst werden." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sicherheitssysteme" ofType:@"png"]];
@@ -91,7 +91,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bremsbelag" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Bremsbelag" Info:@"Bremsbeläge verschlissen. Sofort einen Fachbetrieb aufsuchen. Alle Bremsbeläge prüfen und ggf. ersetzen lassen." AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Bremsbelag" Info:@"Bremsbeläge verschlissen. Sofort eine Fachwerkstatt aufsuchen. Alle Bremsbeläge prüfen und ggf. ersetzen lassen." AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"elektromechanische_parkbremse" ofType:@"png"]];
@@ -143,7 +143,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"komfortschlussel" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Komfortschlussel" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Komfortschlüssel" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"baterie_funkschluessel" ofType:@"png"]];
@@ -167,7 +167,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"adaptive_light" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Adaptive light" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Adaptive Light" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"licht-_regensensor" ofType:@"png"]];
@@ -175,7 +175,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_active_lane_assist" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"Audi active lane assist" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Audi Active Lane Assist" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"daempferregelung" ofType:@"png"]];
@@ -211,7 +211,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_adaptive_cruise_control" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"adaptive cruise control" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Adaptive Cruise Control" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"anfahrtsassistent" ofType:@"png"]];
@@ -219,7 +219,7 @@
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_active_lane_assist_gruen" ofType:@"png"]];
-    warningLight = [[WarningLight alloc] initWithName:@"active lane assist" Info:@"" AndImage:image];
+    warningLight = [[WarningLight alloc] initWithName:@"Active Lane Assist" Info:@"" AndImage:image];
     [warningLights addObject:warningLight];
     
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"start_stop_system" ofType:@"png"]];

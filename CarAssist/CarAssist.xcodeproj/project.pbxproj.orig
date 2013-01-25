@@ -89,6 +89,10 @@
 		2EDE89CE16AADFD9007C3635 /* waschwasserstand.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899516AADFD9007C3635 /* waschwasserstand.png */; };
 		2EDE89CF16AADFD9007C3635 /* zuendschloss_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */; };
 		2EDE89D016AADFD9007C3635 /* zuendschloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE899716AADFD9007C3635 /* zuendschloss.png */; };
+		2EEFE98416B2ED41004D8937 /* section_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98216B2ED41004D8937 /* section_gelb.png */; };
+		2EEFE98516B2ED41004D8937 /* section_lila.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98316B2ED41004D8937 /* section_lila.png */; };
+		2EEFE98916B2ED7E004D8937 /* background_gelb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98716B2ED7E004D8937 /* background_gelb.png */; };
+		2EEFE98A16B2ED7E004D8937 /* background_lila.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFE98816B2ED7E004D8937 /* background_lila.png */; };
 		375F8E74167226CC00FAD821 /* tabbar_service_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E73167226CC00FAD821 /* tabbar_service_small.png */; };
 		375F8E7916722A3000FAD821 /* tabbar_stoerung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */; };
 		375F8E8116723C7D00FAD821 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F8E7F16723C7D00FAD821 /* SettingsViewController.m */; };
@@ -190,11 +194,39 @@
 		661E1A49166B8A4300493F54 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A48166B8A4300493F54 /* Step.m */; };
 		661E1A5D166BA98C00493F54 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661E1A5B166BA98C00493F54 /* StepView.m */; };
 		661E1A5E166BA98C00493F54 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661E1A5C166BA98C00493F54 /* StepView.xib */; };
-		8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8327874416AAF93B006BD4DD /* mmi_navigation_plus.png */; };
 		83460F9F16A98DE7003C167A /* einstellungen_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 83460F9E16A98DE7003C167A /* einstellungen_58x58.png */; };
 		83460FA216A98E02003C167A /* einstellungen_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 83460FA116A98E02003C167A /* einstellungen_29x29.png */; };
 		83460FC916A99BF5003C167A /* SettingsValueService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83460FC816A99BF5003C167A /* SettingsValueService.m */; };
 		83728A43167CCB7300DC1456 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83728A42167CCB7300DC1456 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		83AC68DD16B2B8F700B24F54 /* nicht_vorhanden.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68DC16B2B8F700B24F54 /* nicht_vorhanden.png */; };
+		83AC68EA16B2C30800B24F54 /* a4_avant_attraction.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68E916B2C30800B24F54 /* a4_avant_attraction.png */; };
+		83AC68EC16B2C60A00B24F54 /* a4_avant_ambition.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68EB16B2C60A00B24F54 /* a4_avant_ambition.png */; };
+		83AC68EE16B2C68B00B24F54 /* a4_avant_ambiente.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68ED16B2C68B00B24F54 /* a4_avant_ambiente.png */; };
+		83AC68F016B2C7B700B24F54 /* mmi_navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68EF16B2C7B700B24F54 /* mmi_navigation.png */; };
+		83AC68F216B2C81200B24F54 /* mmi_navigation_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68F116B2C81200B24F54 /* mmi_navigation_plus.png */; };
+		83AC68F416B2C8AC00B24F54 /* radioanlage_chorus.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68F316B2C8AC00B24F54 /* radioanlage_chorus.png */; };
+		83AC68F916B2C9BE00B24F54 /* radioanlage_symphony.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68F616B2C9BE00B24F54 /* radioanlage_symphony.png */; };
+		83AC68FA16B2C9BE00B24F54 /* radioanlage_concert.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68F716B2C9BE00B24F54 /* radioanlage_concert.png */; };
+		83AC68FB16B2C9BE00B24F54 /* cd_wechsler.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68F816B2C9BE00B24F54 /* cd_wechsler.png */; };
+		83AC690016B2CFDF00B24F54 /* multifunktionssportlederlenkrad_3_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC68FF16B2CFDF00B24F54 /* multifunktionssportlederlenkrad_3_speichen_design.png */; };
+		83AC690216B2D06F00B24F54 /* sportlederlenkrad_3_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690116B2D06F00B24F54 /* sportlederlenkrad_3_speichen_design.png */; };
+		83AC690716B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690316B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png */; };
+		83AC690816B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690416B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png */; };
+		83AC690916B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690516B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png */; };
+		83AC690A16B2D1E600B24F54 /* lenkrad_4_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690616B2D1E600B24F54 /* lenkrad_4_speichen_design.png */; };
+		83AC691116B2D79A00B24F54 /* cosinus_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691016B2D79A00B24F54 /* cosinus_sitze.png */; };
+		83AC691616B2D81300B24F54 /* feinnappa_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691316B2D81300B24F54 /* feinnappa_sitze.png */; };
+		83AC691716B2D81300B24F54 /* milano_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691416B2D81300B24F54 /* milano_sitze.png */; };
+		83AC691816B2D81300B24F54 /* alcantara_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691516B2D81300B24F54 /* alcantara_sitze.png */; };
+		83AC691A16B2D90C00B24F54 /* silhouette_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691916B2D90C00B24F54 /* silhouette_sitze.png */; };
+		83AC691C16B2D94800B24F54 /* titangraue_silhouette_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */; };
+		83AC691E16B2D9A800B24F54 /* atrium_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691D16B2D9A800B24F54 /* atrium_sitze.png */; };
+		83AC692316B2DD2B00B24F54 /* allianz.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC692216B2DD2B00B24F54 /* allianz.png */; };
+		83AC692716B2DE8A00B24F54 /* huk_coburg.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC692616B2DE8A00B24F54 /* huk_coburg.png */; };
+		83AC693116B2E83900B24F54 /* vhv.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693016B2E83900B24F54 /* vhv.png */; };
+		83AC693516B2EA2100B24F54 /* direct_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693416B2EA2100B24F54 /* direct_line.png */; };
+		83AC693716B2EB1D00B24F54 /* ergo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693616B2EB1D00B24F54 /* ergo.png */; };
+		83AC693D16B2EEC200B24F54 /* ohne_navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693C16B2EEC200B24F54 /* ohne_navigation.png */; };
 		8F02C5FE16AAF82800C5B680 /* golf_uhrzeit_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */; };
 		8F02C5FF16AAF82800C5B680 /* golf_uhrzeit_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */; };
 		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
@@ -338,6 +370,10 @@
 		2EDE899516AADFD9007C3635 /* waschwasserstand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waschwasserstand.png; sourceTree = "<group>"; };
 		2EDE899616AADFD9007C3635 /* zuendschloss_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss_gelb.png; sourceTree = "<group>"; };
 		2EDE899716AADFD9007C3635 /* zuendschloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuendschloss.png; sourceTree = "<group>"; };
+		2EEFE98216B2ED41004D8937 /* section_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_gelb.png; sourceTree = "<group>"; };
+		2EEFE98316B2ED41004D8937 /* section_lila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_lila.png; sourceTree = "<group>"; };
+		2EEFE98716B2ED7E004D8937 /* background_gelb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_gelb.png; sourceTree = "<group>"; };
+		2EEFE98816B2ED7E004D8937 /* background_lila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_lila.png; sourceTree = "<group>"; };
 		375F8E73167226CC00FAD821 /* tabbar_service_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_service_small.png; sourceTree = "<group>"; };
 		375F8E7816722A3000FAD821 /* tabbar_stoerung_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_stoerung_small.png; sourceTree = "<group>"; };
 		375F8E7E16723C7D00FAD821 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -476,7 +512,6 @@
 		661E1A5A166BA98C00493F54 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepView.h; sourceTree = "<group>"; };
 		661E1A5B166BA98C00493F54 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		661E1A5C166BA98C00493F54 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepView.xib; sourceTree = "<group>"; };
-		8327874416AAF93B006BD4DD /* mmi_navigation_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmi_navigation_plus.png; sourceTree = "<group>"; };
 		83460F9E16A98DE7003C167A /* einstellungen_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = einstellungen_58x58.png; sourceTree = "<group>"; };
 		83460FA116A98E02003C167A /* einstellungen_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = einstellungen_29x29.png; sourceTree = "<group>"; };
 		83460FC716A99BF5003C167A /* SettingsValueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsValueService.h; sourceTree = "<group>"; };
@@ -484,6 +519,35 @@
 		83728A42167CCB7300DC1456 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8379325B16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8379325C16A19F4D000D6F9C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83AC68DC16B2B8F700B24F54 /* nicht_vorhanden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nicht_vorhanden.png; sourceTree = "<group>"; };
+		83AC68E916B2C30800B24F54 /* a4_avant_attraction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a4_avant_attraction.png; sourceTree = "<group>"; };
+		83AC68EB16B2C60A00B24F54 /* a4_avant_ambition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a4_avant_ambition.png; sourceTree = "<group>"; };
+		83AC68ED16B2C68B00B24F54 /* a4_avant_ambiente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a4_avant_ambiente.png; sourceTree = "<group>"; };
+		83AC68EF16B2C7B700B24F54 /* mmi_navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmi_navigation.png; sourceTree = "<group>"; };
+		83AC68F116B2C81200B24F54 /* mmi_navigation_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmi_navigation_plus.png; sourceTree = "<group>"; };
+		83AC68F316B2C8AC00B24F54 /* radioanlage_chorus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioanlage_chorus.png; sourceTree = "<group>"; };
+		83AC68F616B2C9BE00B24F54 /* radioanlage_symphony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioanlage_symphony.png; sourceTree = "<group>"; };
+		83AC68F716B2C9BE00B24F54 /* radioanlage_concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioanlage_concert.png; sourceTree = "<group>"; };
+		83AC68F816B2C9BE00B24F54 /* cd_wechsler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_wechsler.png; sourceTree = "<group>"; };
+		83AC68FF16B2CFDF00B24F54 /* multifunktionssportlederlenkrad_3_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_3_speichen_design.png; sourceTree = "<group>"; };
+		83AC690116B2D06F00B24F54 /* sportlederlenkrad_3_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sportlederlenkrad_3_speichen_design.png; sourceTree = "<group>"; };
+		83AC690316B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png; sourceTree = "<group>"; };
+		83AC690416B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_4_speichen_design.png; sourceTree = "<group>"; };
+		83AC690516B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png; sourceTree = "<group>"; };
+		83AC690616B2D1E600B24F54 /* lenkrad_4_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenkrad_4_speichen_design.png; sourceTree = "<group>"; };
+		83AC691016B2D79A00B24F54 /* cosinus_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cosinus_sitze.png; sourceTree = "<group>"; };
+		83AC691316B2D81300B24F54 /* feinnappa_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feinnappa_sitze.png; sourceTree = "<group>"; };
+		83AC691416B2D81300B24F54 /* milano_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milano_sitze.png; sourceTree = "<group>"; };
+		83AC691516B2D81300B24F54 /* alcantara_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alcantara_sitze.png; sourceTree = "<group>"; };
+		83AC691916B2D90C00B24F54 /* silhouette_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silhouette_sitze.png; sourceTree = "<group>"; };
+		83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titangraue_silhouette_sitze.png; sourceTree = "<group>"; };
+		83AC691D16B2D9A800B24F54 /* atrium_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atrium_sitze.png; sourceTree = "<group>"; };
+		83AC692216B2DD2B00B24F54 /* allianz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allianz.png; sourceTree = "<group>"; };
+		83AC692616B2DE8A00B24F54 /* huk_coburg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huk_coburg.png; sourceTree = "<group>"; };
+		83AC693016B2E83900B24F54 /* vhv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vhv.png; sourceTree = "<group>"; };
+		83AC693416B2EA2100B24F54 /* direct_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direct_line.png; sourceTree = "<group>"; };
+		83AC693616B2EB1D00B24F54 /* ergo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ergo.png; sourceTree = "<group>"; };
+		83AC693C16B2EEC200B24F54 /* ohne_navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ohne_navigation.png; sourceTree = "<group>"; };
 		8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_1.png; sourceTree = "<group>"; };
 		8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_2.png; sourceTree = "<group>"; };
 		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
@@ -802,6 +866,18 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83AC691F16B2DA1100B24F54 /* Insurance */,
+				83AC690B16B2D2FA00B24F54 /* Seats */,
+				83AC691016B2D79A00B24F54 /* cosinus_sitze.png */,
+				83AC691316B2D81300B24F54 /* feinnappa_sitze.png */,
+				83AC691416B2D81300B24F54 /* milano_sitze.png */,
+				83AC691516B2D81300B24F54 /* alcantara_sitze.png */,
+				83AC691916B2D90C00B24F54 /* silhouette_sitze.png */,
+				83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */,
+				83AC691D16B2D9A800B24F54 /* atrium_sitze.png */,
+				83AC68FE16B2CB4D00B24F54 /* SteeringWheel */,
+				83AC68F516B2C8AF00B24F54 /* Radio */,
+				83AC68E616B2BEDD00B24F54 /* EquipmentPackage */,
 				8327874316AAF6B7006BD4DD /* Navigation */,
 				83460FA316A98E0A003C167A /* Warning lights */,
 				37A4A3B9167CC29700FAA3B5 /* AutoSitz.jpg */,
@@ -943,7 +1019,10 @@
 		8327874316AAF6B7006BD4DD /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				8327874416AAF93B006BD4DD /* mmi_navigation_plus.png */,
+				83AC68DC16B2B8F700B24F54 /* nicht_vorhanden.png */,
+				83AC693C16B2EEC200B24F54 /* ohne_navigation.png */,
+				83AC68EF16B2C7B700B24F54 /* mmi_navigation.png */,
+				83AC68F116B2C81200B24F54 /* mmi_navigation_plus.png */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -1012,6 +1091,59 @@
 			name = "Warning lights";
 			sourceTree = "<group>";
 		};
+		83AC68E616B2BEDD00B24F54 /* EquipmentPackage */ = {
+			isa = PBXGroup;
+			children = (
+				83AC68E916B2C30800B24F54 /* a4_avant_attraction.png */,
+				83AC68EB16B2C60A00B24F54 /* a4_avant_ambition.png */,
+				83AC68ED16B2C68B00B24F54 /* a4_avant_ambiente.png */,
+			);
+			name = EquipmentPackage;
+			sourceTree = "<group>";
+		};
+		83AC68F516B2C8AF00B24F54 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				83AC68F316B2C8AC00B24F54 /* radioanlage_chorus.png */,
+				83AC68F616B2C9BE00B24F54 /* radioanlage_symphony.png */,
+				83AC68F716B2C9BE00B24F54 /* radioanlage_concert.png */,
+				83AC68F816B2C9BE00B24F54 /* cd_wechsler.png */,
+			);
+			name = Radio;
+			sourceTree = "<group>";
+		};
+		83AC68FE16B2CB4D00B24F54 /* SteeringWheel */ = {
+			isa = PBXGroup;
+			children = (
+				83AC68FF16B2CFDF00B24F54 /* multifunktionssportlederlenkrad_3_speichen_design.png */,
+				83AC690116B2D06F00B24F54 /* sportlederlenkrad_3_speichen_design.png */,
+				83AC690316B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png */,
+				83AC690416B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png */,
+				83AC690516B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png */,
+				83AC690616B2D1E600B24F54 /* lenkrad_4_speichen_design.png */,
+			);
+			name = SteeringWheel;
+			sourceTree = "<group>";
+		};
+		83AC690B16B2D2FA00B24F54 /* Seats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Seats;
+			sourceTree = "<group>";
+		};
+		83AC691F16B2DA1100B24F54 /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				83AC692216B2DD2B00B24F54 /* allianz.png */,
+				83AC692616B2DE8A00B24F54 /* huk_coburg.png */,
+				83AC693016B2E83900B24F54 /* vhv.png */,
+				83AC693416B2EA2100B24F54 /* direct_line.png */,
+				83AC693616B2EB1D00B24F54 /* ergo.png */,
+			);
+			name = Insurance;
+			sourceTree = "<group>";
+		};
 		8F1F10FD168503FA007DDFAD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,17 +1155,18 @@
 		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
+				2EEFE98716B2ED7E004D8937 /* background_gelb.png */,
+				2EEFE98816B2ED7E004D8937 /* background_lila.png */,
+				2EEFE98216B2ED41004D8937 /* section_gelb.png */,
+				2EEFE98316B2ED41004D8937 /* section_lila.png */,
 				2E5A927316B2C5550090A3A9 /* black.png */,
 				2E5A927116B2C2A80090A3A9 /* table.png */,
 				2E5A926F16B2C1F40090A3A9 /* bmw.png */,
 				2E5A926D16B2C1980090A3A9 /* grau.png */,
-=======
 				8F410E8416B2BDF4006CAADA /* section_bedienung.png */,
 				8F410E8516B2BDF4006CAADA /* section_profil.png */,
 				8F410E8616B2BDF4006CAADA /* section_service.png */,
 				8F410E8716B2BDF4006CAADA /* section_stoerung.png */,
->>>>>>> 97600fc85ad80d2094b70391377467c0b5cb807f
 				8FF793BB167B6573008ADB97 /* background_bedienung_hell.png */,
 				8FF793BC167B6573008ADB97 /* background_profil_hell.png */,
 				8FF793BD167B6573008ADB97 /* background_service_hell.png */,
@@ -1133,8 +1266,8 @@
 				661E1A5A166BA98C00493F54 /* StepView.h */,
 				661E1A5B166BA98C00493F54 /* StepView.m */,
 				661E1A5C166BA98C00493F54 /* StepView.xib */,
-				37A4A3C6167CD3E600FAA3B5 /* RoadsideAssistanceCaller.h */,
 				37A4A3C7167CD3E600FAA3B5 /* RoadsideAssistanceCaller.m */,
+				37A4A3C6167CD3E600FAA3B5 /* RoadsideAssistanceCaller.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1358,14 +1491,11 @@
 				37A14B0E16AAF7DF009A0184 /* Motorhaube.JPG in Resources */,
 				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
 				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
-				8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */,
-<<<<<<< HEAD
 				2E5A926C16B2B5990090A3A9 /* StartScreenViewController.xib in Resources */,
 				2E5A926E16B2C1980090A3A9 /* grau.png in Resources */,
 				2E5A927016B2C1F40090A3A9 /* bmw.png in Resources */,
 				2E5A927216B2C2A80090A3A9 /* table.png in Resources */,
 				2E5A927416B2C5550090A3A9 /* black.png in Resources */,
-=======
 				8F410E7D16B2BCA9006CAADA /* audi_navi_schritt_1.png in Resources */,
 				8F410E7E16B2BCA9006CAADA /* audi_navi_schritt_2.png in Resources */,
 				8F410E7F16B2BCA9006CAADA /* audi_navi_schritt_3.png in Resources */,
@@ -1376,7 +1506,42 @@
 				8F410E8916B2BDF4006CAADA /* section_profil.png in Resources */,
 				8F410E8A16B2BDF4006CAADA /* section_service.png in Resources */,
 				8F410E8B16B2BDF4006CAADA /* section_stoerung.png in Resources */,
->>>>>>> 97600fc85ad80d2094b70391377467c0b5cb807f
+				83AC68DD16B2B8F700B24F54 /* nicht_vorhanden.png in Resources */,
+				83AC68EA16B2C30800B24F54 /* a4_avant_attraction.png in Resources */,
+				83AC68EC16B2C60A00B24F54 /* a4_avant_ambition.png in Resources */,
+				83AC68EE16B2C68B00B24F54 /* a4_avant_ambiente.png in Resources */,
+				83AC68F016B2C7B700B24F54 /* mmi_navigation.png in Resources */,
+				83AC68F216B2C81200B24F54 /* mmi_navigation_plus.png in Resources */,
+				83AC68F416B2C8AC00B24F54 /* radioanlage_chorus.png in Resources */,
+				83AC68F916B2C9BE00B24F54 /* radioanlage_symphony.png in Resources */,
+				83AC68FA16B2C9BE00B24F54 /* radioanlage_concert.png in Resources */,
+				83AC68FB16B2C9BE00B24F54 /* cd_wechsler.png in Resources */,
+				83AC690016B2CFDF00B24F54 /* multifunktionssportlederlenkrad_3_speichen_design.png in Resources */,
+				83AC690216B2D06F00B24F54 /* sportlederlenkrad_3_speichen_design.png in Resources */,
+				83AC690716B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen.png in Resources */,
+				83AC690816B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png in Resources */,
+				83AC690916B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png in Resources */,
+				83AC690A16B2D1E600B24F54 /* lenkrad_4_speichen_design.png in Resources */,
+<<<<<<< HEAD
+				2EEFE98416B2ED41004D8937 /* section_gelb.png in Resources */,
+				2EEFE98516B2ED41004D8937 /* section_lila.png in Resources */,
+				2EEFE98916B2ED7E004D8937 /* background_gelb.png in Resources */,
+				2EEFE98A16B2ED7E004D8937 /* background_lila.png in Resources */,
+=======
+				83AC691116B2D79A00B24F54 /* cosinus_sitze.png in Resources */,
+				83AC691616B2D81300B24F54 /* feinnappa_sitze.png in Resources */,
+				83AC691716B2D81300B24F54 /* milano_sitze.png in Resources */,
+				83AC691816B2D81300B24F54 /* alcantara_sitze.png in Resources */,
+				83AC691A16B2D90C00B24F54 /* silhouette_sitze.png in Resources */,
+				83AC691C16B2D94800B24F54 /* titangraue_silhouette_sitze.png in Resources */,
+				83AC691E16B2D9A800B24F54 /* atrium_sitze.png in Resources */,
+				83AC692316B2DD2B00B24F54 /* allianz.png in Resources */,
+				83AC692716B2DE8A00B24F54 /* huk_coburg.png in Resources */,
+				83AC693116B2E83900B24F54 /* vhv.png in Resources */,
+				83AC693516B2EA2100B24F54 /* direct_line.png in Resources */,
+				83AC693716B2EB1D00B24F54 /* ergo.png in Resources */,
+				83AC693D16B2EEC200B24F54 /* ohne_navigation.png in Resources */,
+>>>>>>> 86d7449e3aabb33907eb42adf2fa43db93413c21
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

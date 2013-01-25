@@ -112,12 +112,18 @@
     NSMutableArray* valueRepresentations = [NSMutableArray array];
     NSMutableArray* images = [NSMutableArray array];
     [values addObject:@"Allianz"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"allianz" ofType:@"png"]]];
     [values addObject:@"HUK Coburg"];
-    [values addObject:@"Mannheimer"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"huk_coburg" ofType:@"png"]]];
+    [values addObject:@"Ergo"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ergo" ofType:@"png"]]];
     [values addObject:@"VHV Versicherung"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vhv" ofType:@"png"]]];
     [values addObject:@"Direct Line"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"direct_line" ofType:@"png"]]];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
+    [self.settingImageRepresentations setObject:images forKey:settingName];
     
     settingName = @"Ausstattungspaket";
     values = [NSMutableArray array];
@@ -143,7 +149,7 @@
     values = [NSMutableArray array];
     images = [NSMutableArray array];
     [values addObject:@"Kein Navigationsgerät"];
-    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nicht_vorhanden" ofType:@"png"]]];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ohne_navigation" ofType:@"png"]]];
     [values addObject:@"MMI® Navigation"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"mmi_navigation" ofType:@"png"]]];
     [values addObject:@"MMI® Navigation plus"];
@@ -170,33 +176,42 @@
     settingName = @"Lenkrad";
     values = [NSMutableArray array];
     images = [NSMutableArray array];
-    [values addObject:@"Sportlederlenkrad im 3-Speichen-Design"];
+    [values addObject:@"Sportlederlenkrad"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sportlederlenkrad_3_speichen_design" ofType:@"png"]]];
-    [values addObject:@"Multifunktions-Sportlederlenkrad im 3-Speichen-Design"];
+    [values addObject:@"Multifunktions-Lederlenkrad"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_3_speichen_design" ofType:@"png"]]];
-    [values addObject:@"Lenkrad im 4-Speichen-Design"];
+    [values addObject:@"4-Speichen-Lenkrad"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"lenkrad_4_speichen_design" ofType:@"png"]]];
-    [values addObject:@"Multifunktions-Sportlederlenkrad im 3-Speichen-Design, unten abgeflacht"];
-    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht" ofType:@"png"]]];
-    [values addObject:@"Multifunktions-Sportlederlenkrad im 3-Speichen-Design mit Schaltwippen"];
-    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen" ofType:@"png"]]];
-    [values addObject:@"Multifunktions-Lederlenkrad im 4-Speichen-Design"];
+    [values addObject:@"4-Speichen Lederlenkrad"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_4_speichen_design" ofType:@"png"]]];
+    [values addObject:@"Abgeflachtes Lederlenkrad"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht" ofType:@"png"]]];
+    [values addObject:@"Lederlenkrad + Schaltwippen"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"multifunktionssportlederlenkrad_3_speichen_design_mit_schaltwippen" ofType:@"png"]]];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
     [self.settingImageRepresentations setObject:images forKey:settingName];
     
     settingName = @"Sitze";
     values = [NSMutableArray array];
+    images = [NSMutableArray array];
     [values addObject:@"Stoff Silhouette"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"silhouette_sitze" ofType:@"png"]]];
     [values addObject:@"Alcantara/Leder-Kombination"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"alcantara_sitze" ofType:@"png"]]];
     [values addObject:@"Leder Milano"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"milano_sitze" ofType:@"png"]]];
     [values addObject:@"Leder Feinnappa"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"feinnappa_sitze" ofType:@"png"]]];
     [values addObject:@"Titangraue Cosinus Sitze"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cosinus_sitze" ofType:@"png"]]];
     [values addObject:@"Titangraue Atrium Sitze"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"atrium_sitze" ofType:@"png"]]];
     [values addObject:@"Titangraue Silhouette Sitze"];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"titangraue_silhouette_sitze" ofType:@"png"]]];
     [self.settingValues setObject:values forKey:settingName];
     [self.settingValuesRepresentations setObject:values forKey:settingName];
+    [self.settingImageRepresentations setObject:images forKey:settingName];
 }
     
     
