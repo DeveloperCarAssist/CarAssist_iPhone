@@ -149,7 +149,7 @@
     values = [NSMutableArray array];
     images = [NSMutableArray array];
     [values addObject:@"Kein Navigationsgerät"];
-    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nicht_vorhanden" ofType:@"png"]]];
+    [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ohne_navigation" ofType:@"png"]]];
     [values addObject:@"MMI® Navigation"];
     [images addObject:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"mmi_navigation" ofType:@"png"]]];
     [values addObject:@"MMI® Navigation plus"];
