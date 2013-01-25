@@ -210,6 +210,18 @@
 		83AC690816B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690416B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png */; };
 		83AC690916B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690516B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png */; };
 		83AC690A16B2D1E600B24F54 /* lenkrad_4_speichen_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC690616B2D1E600B24F54 /* lenkrad_4_speichen_design.png */; };
+		83AC691116B2D79A00B24F54 /* cosinus_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691016B2D79A00B24F54 /* cosinus_sitze.png */; };
+		83AC691616B2D81300B24F54 /* feinnappa_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691316B2D81300B24F54 /* feinnappa_sitze.png */; };
+		83AC691716B2D81300B24F54 /* milano_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691416B2D81300B24F54 /* milano_sitze.png */; };
+		83AC691816B2D81300B24F54 /* alcantara_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691516B2D81300B24F54 /* alcantara_sitze.png */; };
+		83AC691A16B2D90C00B24F54 /* silhouette_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691916B2D90C00B24F54 /* silhouette_sitze.png */; };
+		83AC691C16B2D94800B24F54 /* titangraue_silhouette_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */; };
+		83AC691E16B2D9A800B24F54 /* atrium_sitze.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC691D16B2D9A800B24F54 /* atrium_sitze.png */; };
+		83AC692316B2DD2B00B24F54 /* allianz.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC692216B2DD2B00B24F54 /* allianz.png */; };
+		83AC692716B2DE8A00B24F54 /* huk_coburg.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC692616B2DE8A00B24F54 /* huk_coburg.png */; };
+		83AC693116B2E83900B24F54 /* vhv.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693016B2E83900B24F54 /* vhv.png */; };
+		83AC693516B2EA2100B24F54 /* direct_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693416B2EA2100B24F54 /* direct_line.png */; };
+		83AC693716B2EB1D00B24F54 /* ergo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AC693616B2EB1D00B24F54 /* ergo.png */; };
 		8F02C5FE16AAF82800C5B680 /* golf_uhrzeit_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */; };
 		8F02C5FF16AAF82800C5B680 /* golf_uhrzeit_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */; };
 		8F1F1100168509DD007DDFAD /* AuthorizedRepairService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F10FF168509DD007DDFAD /* AuthorizedRepairService.m */; };
@@ -514,6 +526,18 @@
 		83AC690416B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_4_speichen_design.png; sourceTree = "<group>"; };
 		83AC690516B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png; sourceTree = "<group>"; };
 		83AC690616B2D1E600B24F54 /* lenkrad_4_speichen_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenkrad_4_speichen_design.png; sourceTree = "<group>"; };
+		83AC691016B2D79A00B24F54 /* cosinus_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cosinus_sitze.png; sourceTree = "<group>"; };
+		83AC691316B2D81300B24F54 /* feinnappa_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feinnappa_sitze.png; sourceTree = "<group>"; };
+		83AC691416B2D81300B24F54 /* milano_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milano_sitze.png; sourceTree = "<group>"; };
+		83AC691516B2D81300B24F54 /* alcantara_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alcantara_sitze.png; sourceTree = "<group>"; };
+		83AC691916B2D90C00B24F54 /* silhouette_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silhouette_sitze.png; sourceTree = "<group>"; };
+		83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titangraue_silhouette_sitze.png; sourceTree = "<group>"; };
+		83AC691D16B2D9A800B24F54 /* atrium_sitze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atrium_sitze.png; sourceTree = "<group>"; };
+		83AC692216B2DD2B00B24F54 /* allianz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allianz.png; sourceTree = "<group>"; };
+		83AC692616B2DE8A00B24F54 /* huk_coburg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huk_coburg.png; sourceTree = "<group>"; };
+		83AC693016B2E83900B24F54 /* vhv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vhv.png; sourceTree = "<group>"; };
+		83AC693416B2EA2100B24F54 /* direct_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direct_line.png; sourceTree = "<group>"; };
+		83AC693616B2EB1D00B24F54 /* ergo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ergo.png; sourceTree = "<group>"; };
 		8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_1.png; sourceTree = "<group>"; };
 		8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf_uhrzeit_2.png; sourceTree = "<group>"; };
 		8F1F10F9168503F4007DDFAD /* SearchableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableItem.h; sourceTree = "<group>"; };
@@ -832,7 +856,15 @@
 		400DF8871668F1E600D6217B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83AC691F16B2DA1100B24F54 /* Insurance */,
 				83AC690B16B2D2FA00B24F54 /* Seats */,
+				83AC691016B2D79A00B24F54 /* cosinus_sitze.png */,
+				83AC691316B2D81300B24F54 /* feinnappa_sitze.png */,
+				83AC691416B2D81300B24F54 /* milano_sitze.png */,
+				83AC691516B2D81300B24F54 /* alcantara_sitze.png */,
+				83AC691916B2D90C00B24F54 /* silhouette_sitze.png */,
+				83AC691B16B2D94800B24F54 /* titangraue_silhouette_sitze.png */,
+				83AC691D16B2D9A800B24F54 /* atrium_sitze.png */,
 				83AC68FE16B2CB4D00B24F54 /* SteeringWheel */,
 				83AC68F516B2C8AF00B24F54 /* Radio */,
 				83AC68E616B2BEDD00B24F54 /* EquipmentPackage */,
@@ -1087,6 +1119,18 @@
 			children = (
 			);
 			name = Seats;
+			sourceTree = "<group>";
+		};
+		83AC691F16B2DA1100B24F54 /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				83AC692216B2DD2B00B24F54 /* allianz.png */,
+				83AC692616B2DE8A00B24F54 /* huk_coburg.png */,
+				83AC693016B2E83900B24F54 /* vhv.png */,
+				83AC693416B2EA2100B24F54 /* direct_line.png */,
+				83AC693616B2EB1D00B24F54 /* ergo.png */,
+			);
+			name = Insurance;
 			sourceTree = "<group>";
 		};
 		8F1F10FD168503FA007DDFAD /* Shared */ = {
@@ -1432,7 +1476,6 @@
 				37A14B0E16AAF7DF009A0184 /* Motorhaube.JPG in Resources */,
 				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
 				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
-				8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */,
 				2E5A926C16B2B5990090A3A9 /* StartScreenViewController.xib in Resources */,
 				2E5A926E16B2C1980090A3A9 /* grau.png in Resources */,
 				2E5A927016B2C1F40090A3A9 /* bmw.png in Resources */,
@@ -1464,6 +1507,18 @@
 				83AC690816B2D1E600B24F54 /* multifunktionssportlederlenkrad_4_speichen_design.png in Resources */,
 				83AC690916B2D1E600B24F54 /* multifunktionssportlederlenkrad_3_speichen_design_unten_abgeflacht.png in Resources */,
 				83AC690A16B2D1E600B24F54 /* lenkrad_4_speichen_design.png in Resources */,
+				83AC691116B2D79A00B24F54 /* cosinus_sitze.png in Resources */,
+				83AC691616B2D81300B24F54 /* feinnappa_sitze.png in Resources */,
+				83AC691716B2D81300B24F54 /* milano_sitze.png in Resources */,
+				83AC691816B2D81300B24F54 /* alcantara_sitze.png in Resources */,
+				83AC691A16B2D90C00B24F54 /* silhouette_sitze.png in Resources */,
+				83AC691C16B2D94800B24F54 /* titangraue_silhouette_sitze.png in Resources */,
+				83AC691E16B2D9A800B24F54 /* atrium_sitze.png in Resources */,
+				83AC692316B2DD2B00B24F54 /* allianz.png in Resources */,
+				83AC692716B2DE8A00B24F54 /* huk_coburg.png in Resources */,
+				83AC693116B2E83900B24F54 /* vhv.png in Resources */,
+				83AC693516B2EA2100B24F54 /* direct_line.png in Resources */,
+				83AC693716B2EB1D00B24F54 /* ergo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
