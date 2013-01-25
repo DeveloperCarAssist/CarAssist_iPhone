@@ -199,6 +199,16 @@
 		8F24E65716A1864900F8991C /* CarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F24E65516A1864900F8991C /* CarDataViewController.xib */; };
 		8F2F6568166BA73D00613701 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F6566166BA73D00613701 /* GuideViewController.m */; };
 		8F2F6569166BA73D00613701 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F6567166BA73D00613701 /* GuideViewController.xib */; };
+		8F410E7D16B2BCA9006CAADA /* audi_navi_schritt_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7716B2BCA9006CAADA /* audi_navi_schritt_1.png */; };
+		8F410E7E16B2BCA9006CAADA /* audi_navi_schritt_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7816B2BCA9006CAADA /* audi_navi_schritt_2.png */; };
+		8F410E7F16B2BCA9006CAADA /* audi_navi_schritt_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7916B2BCA9006CAADA /* audi_navi_schritt_3.png */; };
+		8F410E8016B2BCA9006CAADA /* audi_navi_schritt_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7A16B2BCA9006CAADA /* audi_navi_schritt_4.png */; };
+		8F410E8116B2BCA9006CAADA /* audi_navi_schritt_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7B16B2BCA9006CAADA /* audi_navi_schritt_5.png */; };
+		8F410E8216B2BCA9006CAADA /* audi_navi_schritt_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E7C16B2BCA9006CAADA /* audi_navi_schritt_6.png */; };
+		8F410E8816B2BDF4006CAADA /* section_bedienung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E8416B2BDF4006CAADA /* section_bedienung.png */; };
+		8F410E8916B2BDF4006CAADA /* section_profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E8516B2BDF4006CAADA /* section_profil.png */; };
+		8F410E8A16B2BDF4006CAADA /* section_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E8616B2BDF4006CAADA /* section_service.png */; };
+		8F410E8B16B2BDF4006CAADA /* section_stoerung.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F410E8716B2BDF4006CAADA /* section_stoerung.png */; };
 		8F796D17167B82390011C02F /* ManualCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D16167B82390011C02F /* ManualCategoryViewController.m */; };
 		8F796D1E167B84F00011C02F /* ManualGuideService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F796D1D167B84F00011C02F /* ManualGuideService.m */; };
 		8F796D25167B8A3F0011C02F /* tabbar_bedienung_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F796D23167B8A3E0011C02F /* tabbar_bedienung_small.png */; };
@@ -475,6 +485,16 @@
 		8F2F6565166BA73D00613701 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		8F2F6566166BA73D00613701 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		8F2F6567166BA73D00613701 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		8F410E7716B2BCA9006CAADA /* audi_navi_schritt_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_1.png; sourceTree = "<group>"; };
+		8F410E7816B2BCA9006CAADA /* audi_navi_schritt_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_2.png; sourceTree = "<group>"; };
+		8F410E7916B2BCA9006CAADA /* audi_navi_schritt_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_3.png; sourceTree = "<group>"; };
+		8F410E7A16B2BCA9006CAADA /* audi_navi_schritt_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_4.png; sourceTree = "<group>"; };
+		8F410E7B16B2BCA9006CAADA /* audi_navi_schritt_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_5.png; sourceTree = "<group>"; };
+		8F410E7C16B2BCA9006CAADA /* audi_navi_schritt_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audi_navi_schritt_6.png; sourceTree = "<group>"; };
+		8F410E8416B2BDF4006CAADA /* section_bedienung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_bedienung.png; sourceTree = "<group>"; };
+		8F410E8516B2BDF4006CAADA /* section_profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_profil.png; sourceTree = "<group>"; };
+		8F410E8616B2BDF4006CAADA /* section_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_service.png; sourceTree = "<group>"; };
+		8F410E8716B2BDF4006CAADA /* section_stoerung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_stoerung.png; sourceTree = "<group>"; };
 		8F796D15167B82390011C02F /* ManualCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualCategoryViewController.h; sourceTree = "<group>"; };
 		8F796D16167B82390011C02F /* ManualCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualCategoryViewController.m; sourceTree = "<group>"; };
 		8F796D1C167B84F00011C02F /* ManualGuideService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualGuideService.h; sourceTree = "<group>"; };
@@ -987,6 +1007,10 @@
 		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				8F410E8416B2BDF4006CAADA /* section_bedienung.png */,
+				8F410E8516B2BDF4006CAADA /* section_profil.png */,
+				8F410E8616B2BDF4006CAADA /* section_service.png */,
+				8F410E8716B2BDF4006CAADA /* section_stoerung.png */,
 				8FF793BB167B6573008ADB97 /* background_bedienung_hell.png */,
 				8FF793BC167B6573008ADB97 /* background_profil_hell.png */,
 				8FF793BD167B6573008ADB97 /* background_service_hell.png */,
@@ -1038,6 +1062,12 @@
 		8FF1F361167227F100B7F5DE /* ServiceImages */ = {
 			isa = PBXGroup;
 			children = (
+				8F410E7716B2BCA9006CAADA /* audi_navi_schritt_1.png */,
+				8F410E7816B2BCA9006CAADA /* audi_navi_schritt_2.png */,
+				8F410E7916B2BCA9006CAADA /* audi_navi_schritt_3.png */,
+				8F410E7A16B2BCA9006CAADA /* audi_navi_schritt_4.png */,
+				8F410E7B16B2BCA9006CAADA /* audi_navi_schritt_5.png */,
+				8F410E7C16B2BCA9006CAADA /* audi_navi_schritt_6.png */,
 				8F02C5FC16AAF82800C5B680 /* golf_uhrzeit_1.png */,
 				8F02C5FD16AAF82800C5B680 /* golf_uhrzeit_2.png */,
 				37A14B1116AAF8BB009A0184 /* Oelstab.JPG */,
@@ -1306,6 +1336,16 @@
 				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
 				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
 				8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */,
+				8F410E7D16B2BCA9006CAADA /* audi_navi_schritt_1.png in Resources */,
+				8F410E7E16B2BCA9006CAADA /* audi_navi_schritt_2.png in Resources */,
+				8F410E7F16B2BCA9006CAADA /* audi_navi_schritt_3.png in Resources */,
+				8F410E8016B2BCA9006CAADA /* audi_navi_schritt_4.png in Resources */,
+				8F410E8116B2BCA9006CAADA /* audi_navi_schritt_5.png in Resources */,
+				8F410E8216B2BCA9006CAADA /* audi_navi_schritt_6.png in Resources */,
+				8F410E8816B2BDF4006CAADA /* section_bedienung.png in Resources */,
+				8F410E8916B2BDF4006CAADA /* section_profil.png in Resources */,
+				8F410E8A16B2BDF4006CAADA /* section_service.png in Resources */,
+				8F410E8B16B2BDF4006CAADA /* section_stoerung.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
