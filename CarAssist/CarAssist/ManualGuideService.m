@@ -296,7 +296,8 @@
     
     
     //NAVI
-    
+    // TOM TOM NAVI
+    /*
     image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"navi1" ofType:@"gif"]];
     step = [[Step alloc] initWithName: @"Navi starten" Description:@"Drücke den Startknopf." AndImage:image];
     [steps addObject:step];
@@ -318,6 +319,34 @@
     [steps addObject:step];
     
     guide = [[Guide alloc] initWithName: @"Navi einstellen" CategoryName: @"Extra" AndSteps: steps];
+    [allGuides addObject:guide];
+    */
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_1" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Navigation starten" Description:@"(1) Funktionstaste „NAV“ drücken. (2) Steuerungstaste „Zielführung“ drücken." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_2" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Zieladresse wählen" Description:@"(3) Steuerungsknopf drehen/drücken, um das Menü „Adresse“ zu wählen/ bestätigen." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_3" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Zielinformationen ergänzen" Description:@"(4) Steuerungsknopf drehen/drücken, um den Menüpunkt „Ort/PLZ“ zu wählen/ bestätigen." AndImage:image];
+    [steps addObject:step];
+
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_4" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Autovervollständigung" Description:@"(5) Buchstaben einzeln auf die MMI touch Bedienfläche „schreiben“ bis der gewünschte Ortsname im MMI-Display angezeigt wird. (6) Um die Eingabe zu beenden und in die Liste der gefundenen Orte zu springen, kurz auf die Bedienfläche tippen." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_5" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Zielwahl bestätigen" Description:@"Ort durch Drehen und Drücken auswählen und ggf. detaillierte Ziel-Informationen hinzufügen." AndImage:image];
+    [steps addObject:step];
+    
+    image = [UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"audi_navi_schritt_6" ofType:@"png"]];
+    step = [[Step alloc] initWithName: @"Routenberechnung starten" Description:@"(8) Menüpunkt „Zielführung starten“ wählen. (9) Zum Bestätigen Steuerungsknopf drücken. Die Route wird berechnet." AndImage:image];
+    [steps addObject:step];
+    
+    guide = [[Guide alloc] initWithName: @"Navigation" CategoryName: @"Ausstattung" AndSteps: steps];
     [allGuides addObject:guide];
     
     //NAVI ende
