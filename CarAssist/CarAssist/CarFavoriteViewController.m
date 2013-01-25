@@ -13,6 +13,7 @@
 #import "CarFavoriteViewCell.h"
 #import "Utils.h"
 #import "CarListService.h"
+#import "StartScreenViewController.h"
 
 @interface CarFavoriteViewController () <CarListSelectorDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -36,6 +37,9 @@
 
 - (void)viewDidLoad
 {
+    StartScreenViewController* startController = [[StartScreenViewController alloc] init];
+    [self presentViewController:startController animated:NO completion:nil];
+    
     [super viewDidLoad];
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action: @selector(addCarButtonClicked)];
     [self.navigationItem setRightBarButtonItem: addButton];
@@ -47,6 +51,10 @@
     
     //TableView
     self.carFavoriteTableView.separatorColor = [UIColor blackColor];
+    
+    NSArray* allAudis = [self.carListService.cars objectForKey:@"Audi"];
+    self.profil.car = [allAudis objectAtIndex:3];
+    [self.profil.carList addObject:self.profil.car];
 }
 
 -(void)addCarButtonClicked
