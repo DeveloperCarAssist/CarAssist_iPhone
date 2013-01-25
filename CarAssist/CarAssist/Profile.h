@@ -10,8 +10,7 @@
 #import "Car.h"
 
 @interface Profile : NSObject
-@property (nonatomic) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE,*ADAClicence, *homeTown;
-@property (nonatomic) long long mobilenumber;
+@property (nonatomic) NSString *vorname, *nachname,*emailAdresse,*lieblingsKEKSEEE,*ADAClicence, *homeTown, *mobilenumber;
 @property (nonatomic) NSMutableArray *carList;
 @property (nonatomic) Car *car;
 

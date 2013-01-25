@@ -124,9 +124,54 @@
     mailViewController.mailComposeDelegate = self;
     NSArray *array =  [[NSArray alloc] initWithObjects:@"CarAssistReport@ADAC.de", nil];
     [mailViewController setToRecipients:array];
+
     Profile *profil = [Profile getProfile];
-    [mailViewController setSubject:[NSString stringWithFormat: @"Pannennotruf: %@ , %@ %@", profil.ADAClicence,profil.nachname,profil.vorname]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe: %@ \n ADAC Nummer: %@ \n Vorname: %@ \n Nachname: %@  \n Fahrzeug: %@ \n Hersteller: %@ \n Letzter Bekannter Ort in GPS-Coordinaten: %e %e", self.warning, profil.ADAClicence,profil.nachname,profil.vorname,profil.car.model,profil.car.manufacturer,loc.coordinate.latitude,loc.coordinate.longitude] isHTML:NO];
+    
+    
+    
+    NSMutableString* title = [NSString stringWithFormat: @"Pannennotruf:"];
+    NSMutableString* text = [[NSMutableString alloc] initWithString: @"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe:"];
+    
+    
+    if(profil.ADAClicence.length != 0)
+    {
+        [text appendString: @"\n ADAC Nummer:"];
+        [text appendString: profil.ADAClicence];
+        [title appendString: profil.ADAClicence];
+    }
+    if(profil.vorname.length != 0)
+    {
+        [text appendString: @"\n Vorname:"];
+        [text appendString: profil.vorname];
+        [title appendString: @"," ];
+        [title appendString: profil.vorname ];
+    }
+    if(profil.nachname.length != 0)
+    {
+        [text appendString: @"\n Nachname:"];
+        [text appendString: profil.nachname];
+        [title appendString: profil.nachname ];
+    }
+    if(profil.ADAClicence.length != 0)
+    {
+        [text appendString: @"\n ADAC Nummer:"];
+        [text appendString: profil.ADAClicence];
+    } 
+        [text appendString: @"\n Fahrzeug:"];
+        [text appendString: profil.car.model];
+    
+        [text appendString: @"\n Hersteller:"];
+        [text appendString: profil.car.manufacturer];
+    
+    if(loc != Nil)
+    {
+        [text appendString: @"\n Letzter Bekannter Ord in GPS-Koordianten:"];
+        [text appendString: [NSString stringWithFormat:@" %e %e", loc.coordinate.latitude,loc.coordinate.longitude]];
+        
+    }
+    
+    [mailViewController setSubject: title];
+    [mailViewController setMessageBody: text isHTML:NO];
     
     [self presentViewController:mailViewController animated:NO completion: Nil];
 }
