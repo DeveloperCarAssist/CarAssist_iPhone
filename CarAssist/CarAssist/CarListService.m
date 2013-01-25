@@ -144,6 +144,11 @@ static CarListService* instance;
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataVW];
+    car.model = @"Golf IV 1.6";
+    car.vehicalIdentNumber = @"WBAUC110954SD0104";
+    [allCars addObject:car];
+    
+    car = [[Car alloc] initWithExampleDataVW];
     car.model = @"Scirocco";
     car.vehicalIdentNumber = @"WBAUC110954SD0104";
     [allCars addObject:car];
