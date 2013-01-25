@@ -37,7 +37,7 @@
      
     
     // Hintergrundgrafik einbinden
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_gelb"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     
     //Searchbar
     self.carSearchBar.tintColor = [UIColor lightGrayColor];
@@ -112,10 +112,11 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    NSString *key = [[self.carListService.cars allKeys] objectAtIndex:section];
+    NSArray *keys = [self.carListService.cars allKeys];
+    NSString *key = [keys objectAtIndex:section];
     
     UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
-    //!todo hier noch schöner Hintergrund einbinden
+    //!todo hier noch schöneren Hintergrund einbauen
     sectionView.backgroundColor = [UIColor lightGrayColor];
     
     UILabel *label = [[UILabel alloc] initWithFrame:sectionView.frame];
@@ -125,10 +126,12 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont boldSystemFontOfSize:18];
     
+    sectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_gelb"] scaledToSize: sectionView.frame.size]];
     
     [sectionView addSubview:label];
     return sectionView;
 }
+
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

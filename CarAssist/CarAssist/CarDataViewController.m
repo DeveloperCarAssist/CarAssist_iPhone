@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_profil_hell"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"background_gelb"] scaledToSize:[[UIScreen mainScreen] bounds].size]];
     self.tableview.backgroundView = nil;
     self.tableview.backgroundColor = [UIColor clearColor];
     
