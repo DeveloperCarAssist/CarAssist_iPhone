@@ -1023,14 +1023,17 @@
 		8F7D518C1678779A00E41D4D /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				2E5A927316B2C5550090A3A9 /* black.png */,
 				2E5A927116B2C2A80090A3A9 /* table.png */,
 				2E5A926F16B2C1F40090A3A9 /* bmw.png */,
 				2E5A926D16B2C1980090A3A9 /* grau.png */,
+=======
 				8F410E8416B2BDF4006CAADA /* section_bedienung.png */,
 				8F410E8516B2BDF4006CAADA /* section_profil.png */,
 				8F410E8616B2BDF4006CAADA /* section_service.png */,
 				8F410E8716B2BDF4006CAADA /* section_stoerung.png */,
+>>>>>>> 97600fc85ad80d2094b70391377467c0b5cb807f
 				8FF793BB167B6573008ADB97 /* background_bedienung_hell.png */,
 				8FF793BC167B6573008ADB97 /* background_profil_hell.png */,
 				8FF793BD167B6573008ADB97 /* background_service_hell.png */,
@@ -1356,11 +1359,13 @@
 				37A14B1016AAF83B009A0184 /* OelStandmesserOrt.JPG in Resources */,
 				37A14B1216AAF8BB009A0184 /* Oelstab.JPG in Resources */,
 				8327874516AAF93B006BD4DD /* mmi_navigation_plus.png in Resources */,
+<<<<<<< HEAD
 				2E5A926C16B2B5990090A3A9 /* StartScreenViewController.xib in Resources */,
 				2E5A926E16B2C1980090A3A9 /* grau.png in Resources */,
 				2E5A927016B2C1F40090A3A9 /* bmw.png in Resources */,
 				2E5A927216B2C2A80090A3A9 /* table.png in Resources */,
 				2E5A927416B2C5550090A3A9 /* black.png in Resources */,
+=======
 				8F410E7D16B2BCA9006CAADA /* audi_navi_schritt_1.png in Resources */,
 				8F410E7E16B2BCA9006CAADA /* audi_navi_schritt_2.png in Resources */,
 				8F410E7F16B2BCA9006CAADA /* audi_navi_schritt_3.png in Resources */,
@@ -1371,6 +1376,7 @@
 				8F410E8916B2BDF4006CAADA /* section_profil.png in Resources */,
 				8F410E8A16B2BDF4006CAADA /* section_service.png in Resources */,
 				8F410E8B16B2BDF4006CAADA /* section_stoerung.png in Resources */,
+>>>>>>> 97600fc85ad80d2094b70391377467c0b5cb807f
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
