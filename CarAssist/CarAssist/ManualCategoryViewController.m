@@ -51,4 +51,10 @@
     [self.categoryTableView reloadData];
 }
 
+
+-(void)decorateSectionHeader:(UIView *)view withLabel:(UILabel *)label
+{
+    view.backgroundColor = [[UIColor alloc] initWithPatternImage:[Utils imageWithImage:[UIImage imageNamed:@"section_bedienung"] scaledToSize: view.frame.size]];
+}
+
 @end

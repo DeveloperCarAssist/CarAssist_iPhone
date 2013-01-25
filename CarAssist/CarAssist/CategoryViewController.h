@@ -17,4 +17,5 @@
 @property (nonatomic) UITapGestureRecognizer* tapRecognizer;
 
 -(void)decorateCell:(UITableViewCell *)cell withItem:(id<SearchableItem>)item;
+-(void)decorateSectionHeader:(UIView *)view withLabel:(UILabel *)label;
 @end
