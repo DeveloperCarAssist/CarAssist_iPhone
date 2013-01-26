@@ -128,13 +128,19 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSArray *keys = [self.categoryService.items allKeys];
+    NSString *key = [keys objectAtIndex:indexPath.section];
+    NSArray *guidesOfCategory = [self.categoryService.items objectForKey: key];
+    AuthorizedRepair* garage = [guidesOfCategory objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell = nil;
+    
     if (![self.profile.car.garage.name isEqualToString:@"Keine Werkstatt"])
     {
         if (indexPath.section == 0)
         {
             //  Zelle für den Favoriten
-            
-            UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                                               reuseIdentifier:@"standard"];
             cell.textLabel.text = self.profile.car.garage.name;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -142,20 +148,30 @@
             
             [self decorateCell:cell withItem:self.profile.car.garage]; // Anzeige der Entfernung im Favoriten berechnen
             
-            return cell;
         }
         else
         {
             NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 1];
     
-            UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:newIndexPath];
-            return cell;
+             cell = [super tableView:tableView cellForRowAtIndexPath:newIndexPath];
         }
     }
     else
     {
-        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+        cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
+    
+    // Anzeigen, ob Werkstatt offen hat.
+    if ([self isOpen:garage.hours]) {
+        [cell.imageView setImage:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"open" ofType:@"png"]]];
+    }
+    else
+    {
+        [cell.imageView setImage:[UIImage  imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"closed" ofType:@"png"]]];
+    }
+    
+    
+    return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -274,6 +290,72 @@
 {
     Car *car = [[Profile getProfile] car];
     self.categoryService = [[AuthorizedRepairService alloc] initWithCar:car];
+}
+
+- (BOOL) isOpen:(NSArray*) houres
+{
+    NSDate *now = [NSDate date];
+    NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
+    [weekday setDateFormat: @"EEEE"];
+    NSString* weekdayString = [weekday stringFromDate:now];
+    
+    if ([weekdayString isEqualToString:@"Monday"]) {
+        return [self open:[houres objectAtIndex:0]];
+    }
+    if ([weekdayString isEqualToString:@"Tuesday"]) {
+        return [self open:[houres objectAtIndex:1]];
+    }
+    if ([weekdayString isEqualToString:@"Wednesday"]) {
+        return [self open:[houres objectAtIndex:2]];
+    }
+    if ([weekdayString isEqualToString:@"Thursday"]) {
+        return [self open:[houres objectAtIndex:3]];
+    }
+    if ([weekdayString isEqualToString:@"Friday"]) {
+        return [self open:[houres objectAtIndex:4]];
+    }
+    if ([weekdayString isEqualToString:@"Saturday"]) {
+        return [self open:[houres objectAtIndex:5]];
+    }
+    if ([weekdayString isEqualToString:@"Sunday"]) {
+        return [self open:[houres objectAtIndex:6]];
+    }
+    return NO;
+}
+
+- (BOOL) open:(NSString*) interval
+{    
+    NSArray* houres = [interval componentsSeparatedByString:@" "];
+
+    NSString* openingString = [houres objectAtIndex:0];
+    NSArray* openingArray = [openingString componentsSeparatedByString:@":"];
+    NSString* closingString = [houres objectAtIndex:2];
+    NSArray* closingArray = [closingString componentsSeparatedByString:@":"];
+    
+    int openingHour = [[openingArray objectAtIndex:0] intValue];
+    int openingMinute = [[openingArray objectAtIndex:1] intValue];
+    
+    int closingHour = [[closingArray objectAtIndex:0] intValue];
+    int closingMinute = [[closingArray objectAtIndex:1] intValue];
+    
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit) fromDate:now];
+
+    int currentHour = components.hour;
+    int currentMinute = components.minute;
+    
+    if (currentHour > openingHour &&  currentHour < closingHour) {
+        return YES;
+    }
+    if (currentHour == openingHour && currentMinute > openingMinute) {
+        return YES;
+    }
+    if (currentHour == closingHour && currentHour < closingMinute) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end
