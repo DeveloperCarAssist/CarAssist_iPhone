@@ -324,7 +324,11 @@
 }
 
 - (BOOL) open:(NSString*) interval
-{    
+{
+    if ([interval isEqualToString:@"Geschlossen" ]) {
+        return NO;
+    }
+    
     NSArray* houres = [interval componentsSeparatedByString:@" "];
 
     NSString* openingString = [houres objectAtIndex:0];
