@@ -248,7 +248,7 @@
     garage.postalcode = @"21217";
     garage.city = @"Seevetal";
     garage.phone = @"040/7684083";
-    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"0:.00 - 14:00 Uhr", @"Geschlossen", nil];
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"11:00 - 14:00 Uhr", @"Geschlossen", nil];
     
     [allItems addObject:garage];
     
