@@ -237,7 +237,7 @@
     garage.postalcode = @"25337";
     garage.city = @"Kölln-Reisiek";
     garage.phone = @"04121/571400";
-    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09:00 - 14:00 Uhr", @"Geschlossen", nil];
+    garage.hours = [NSArray arrayWithObjects:@"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"08:00 - 18:30 Uhr", @"09:00 - 14:00 Uhr", @"11:00 - 17:00 Uhr", nil];
     
     [allItems addObject:garage];
 
