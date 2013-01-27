@@ -102,7 +102,7 @@ static CarListService* instance;
     
     car = [[Car alloc] initWithExampleDataAudi];
     car.model = @"S8";
-    car.vehicalIdentNumber = @"WAUZZZ8X5DB017631";
+    car.vehicalIdentNumber = @"WAUZZZ8X5DB017639";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataAudi];

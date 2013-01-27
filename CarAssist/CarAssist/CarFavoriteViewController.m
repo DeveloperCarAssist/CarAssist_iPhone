@@ -247,7 +247,7 @@
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    Car* selectedCar = [self.carListService returnCarByVehicleIdentNumber:@"WAUZZZ8X5DB017634"];
+    Car* selectedCar = [self.carListService returnCarByVehicleIdentNumber:@"WAUZZZ8X5DB017639"];
     
     [self carHasBeenSelected: selectedCar];
     [self dismissViewControllerAnimated:YES completion:nil];
