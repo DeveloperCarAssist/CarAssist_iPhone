@@ -129,7 +129,7 @@
     
     
     
-    NSMutableString* title = [NSString stringWithFormat: @"Pannennotruf:"];
+    NSMutableString* title = [NSMutableString stringWithFormat: @"Pannennotruf:"];
     NSMutableString* text = [[NSMutableString alloc] initWithString: @"Bitte geben sie ihre Probleme ein. \n Anbei sind noch einige Daten für die Pannenhilfe:"];
     
     
