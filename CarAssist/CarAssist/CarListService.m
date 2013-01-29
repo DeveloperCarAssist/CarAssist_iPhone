@@ -193,7 +193,6 @@ static CarListService* instance;
     car = [[Car alloc] initWithExampleDataBMW];
     car.model = @"316i E36";
     car.vehicalIdentNumber = @"WBAUC11030VM01040";
-    car.owner = @"Eriks Auto";
     [allCars addObject:car];
     
     car = [[Car alloc] initWithExampleDataBMW];
