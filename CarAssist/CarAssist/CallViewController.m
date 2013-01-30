@@ -94,10 +94,10 @@
 
 -(void) callADAC
 {
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:040555555"]])
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:017684844934"]])
     {
         
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:040555555"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:017684844934"]];
     }
     else
     {
