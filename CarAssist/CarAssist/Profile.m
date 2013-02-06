@@ -26,14 +26,13 @@ static Profile* instance;
     {   
         _car = nil;
         self.carList = [NSMutableArray array];
-        // TODO: Werte für Präsentation hart codiert - später wieder entfernen!
-        self.vorname = @"Fiona";
-        self.nachname = @"Brinkmann";
-        self.emailAdresse = @"fiona@brinkmann.de";
+        self.vorname = @"";
+        self.nachname = @"";
+        self.emailAdresse = @"";
         self.lieblingsKEKSEEE = @"";
-        self.ADAClicence = @"362754126";
-        self.mobilenumber = @"015182147693";
-        self.homeTown = @"Hamburg";
+        self.ADAClicence = @"";
+        self.mobilenumber = @"";
+        self.homeTown = @"";
     }
     return self;
 }
